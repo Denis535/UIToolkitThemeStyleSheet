@@ -1,0 +1,22 @@
+{
+    "name": "com.uitoolkit-theme-style-sheet",
+    "version": "1.0.0",
+    "displayName": "UIToolkit Theme Style Sheet",
+    "description": "This package provides you with beautiful styles and some elements for UIToolkit.",
+    "author": {
+        "name": "Denis535"
+    },
+    "unity": "2023.2",
+    "dependencies": {
+        "com.unity.modules.ui": "1.0.0",
+        "com.unity.modules.uielements": "1.0.0"
+    },
+    "keywords": [
+        "UI",
+        "UIElements",
+        "UIToolkit",
+        "Theme Style Sheet",
+        "Dark Theme Style Sheet"
+    ],
+    "hideInEditor": false
+}
