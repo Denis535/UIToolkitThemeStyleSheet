@@ -1,0 +1,38 @@
+.unity-toggle .unity-toggle__input .unity-toggle__checkmark {
+  background-color: #e5e6e6;
+  background-image: url('../../Images/Check.png');
+  -unity-background-image-tint-color: rgba(0,0,0,0);
+  border-left-color: rgba(99,77,54,0.5);
+  border-right-color: rgba(99,77,54,0.5);
+  border-top-color: rgba(99,77,54,0.5);
+  border-bottom-color: rgba(99,77,54,0.5);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.unity-toggle .unity-toggle__input:checked .unity-toggle__checkmark {
+  -unity-background-image-tint-color: #1a1a1a;
+}
+.unity-toggle .unity-toggle__input .unity-toggle__checkmark {
+  width: 16px;
+  height: 16px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.unity-toggle .unity-toggle__input .unity-toggle__checkmark {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+}

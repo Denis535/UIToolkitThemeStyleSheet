@@ -1,0 +1,180 @@
+.unity-box {
+  background-color: rgba(0,0,0,0);
+  border-left-color: #634d36;
+  border-right-color: #634d36;
+  border-top-color: #634d36;
+  border-bottom-color: #634d36;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-box:hover {
+  border-left-color: #a68059;
+  border-right-color: #a68059;
+  border-top-color: #a68059;
+  border-bottom-color: #a68059;
+}
+.unity-box.light2 {
+  color: #e6e6e6;
+  background-color: #373839;
+  border-left-color: #634d36;
+  border-right-color: #634d36;
+  border-top-color: #634d36;
+  border-bottom-color: #634d36;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-box.light2:hover {
+  border-left-color: #a68059;
+  border-right-color: #a68059;
+  border-top-color: #a68059;
+  border-bottom-color: #a68059;
+}
+.unity-box.light {
+  color: #e6e6e6;
+  background-color: #343637;
+  border-left-color: #634d36;
+  border-right-color: #634d36;
+  border-top-color: #634d36;
+  border-bottom-color: #634d36;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-box.light:hover {
+  border-left-color: #a68059;
+  border-right-color: #a68059;
+  border-top-color: #a68059;
+  border-bottom-color: #a68059;
+}
+.unity-box.gray {
+  color: #e6e6e6;
+  background-color: #323334;
+  border-left-color: #634d36;
+  border-right-color: #634d36;
+  border-top-color: #634d36;
+  border-bottom-color: #634d36;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-box.gray:hover {
+  border-left-color: #a68059;
+  border-right-color: #a68059;
+  border-top-color: #a68059;
+  border-bottom-color: #a68059;
+}
+.unity-box.dark {
+  color: #e6e6e6;
+  background-color: #2f3031;
+  border-left-color: #634d36;
+  border-right-color: #634d36;
+  border-top-color: #634d36;
+  border-bottom-color: #634d36;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-box.dark:hover {
+  border-left-color: #a68059;
+  border-right-color: #a68059;
+  border-top-color: #a68059;
+  border-bottom-color: #a68059;
+}
+.unity-box.dark2 {
+  color: #e6e6e6;
+  background-color: #2d2e2f;
+  border-left-color: #634d36;
+  border-right-color: #634d36;
+  border-top-color: #634d36;
+  border-bottom-color: #634d36;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-box.dark2:hover {
+  border-left-color: #a68059;
+  border-right-color: #a68059;
+  border-top-color: #a68059;
+  border-bottom-color: #a68059;
+}
+.unity-box {
+  width: auto;
+  height: auto;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.unity-box.small {
+  width: auto;
+  height: auto;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.unity-box.medium {
+  width: auto;
+  height: auto;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.unity-box.large {
+  width: auto;
+  height: auto;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.unity-box {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}

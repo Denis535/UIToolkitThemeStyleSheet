@@ -1,0 +1,59 @@
+@import "../Internal/_Theme"
+
+// selector
+selector--field--------normal                 = '.unity-base-popup-field'
+selector--field--------hover                  = '.unity-base-popup-field:hover'
+selector--field--------active                 = '.unity-base-popup-field:active'
+selector--field--------normal--focus          = '.unity-base-popup-field:focus'
+selector--field--------hover---focus          = '.unity-base-popup-field:focus:hover'
+selector--field--------active--focus          = '.unity-base-popup-field:focus:active'
+selector--field--------normal--invalid        = '.unity-base-popup-field.invalid'
+selector--field--------hover---invalid        = '.unity-base-popup-field.invalid:hover'
+selector--field--------active--invalid        = '.unity-base-popup-field.invalid:active'
+selector--field--------normal--invalid--focus = '.unity-base-popup-field.invalid:focus'
+selector--field--------hover---invalid--focus = '.unity-base-popup-field.invalid:focus:hover'
+selector--field--------active--invalid--focus = '.unity-base-popup-field.invalid:focus:active'
+// selector
+selector--field-label--normal                 = '.unity-base-popup-field                      .unity-base-popup-field__label'
+selector--field-label--hover                  = '.unity-base-popup-field:hover                .unity-base-popup-field__label'
+selector--field-label--active                 = '.unity-base-popup-field:active               .unity-base-popup-field__label'
+selector--field-label--normal--focus          = '.unity-base-popup-field:focus                .unity-base-popup-field__label'
+selector--field-label--hover---focus          = '.unity-base-popup-field:focus:hover          .unity-base-popup-field__label'
+selector--field-label--active--focus          = '.unity-base-popup-field:focus:active         .unity-base-popup-field__label'
+selector--field-label--normal--invalid        = '.unity-base-popup-field.invalid              .unity-base-popup-field__label'
+selector--field-label--hover---invalid        = '.unity-base-popup-field.invalid:hover        .unity-base-popup-field__label'
+selector--field-label--active--invalid        = '.unity-base-popup-field.invalid:active       .unity-base-popup-field__label'
+selector--field-label--normal--invalid--focus = '.unity-base-popup-field.invalid:focus        .unity-base-popup-field__label'
+selector--field-label--hover---invalid--focus = '.unity-base-popup-field.invalid:focus:hover  .unity-base-popup-field__label'
+selector--field-label--active--invalid--focus = '.unity-base-popup-field.invalid:focus:active .unity-base-popup-field__label'
+// selector
+selector--field-input--normal                 = '.unity-base-popup-field                      .unity-base-popup-field__input'
+selector--field-input--hover                  = '.unity-base-popup-field:hover                .unity-base-popup-field__input'
+selector--field-input--active                 = '.unity-base-popup-field:active               .unity-base-popup-field__input'
+selector--field-input--normal--focus          = '.unity-base-popup-field:focus                .unity-base-popup-field__input'
+selector--field-input--hover---focus          = '.unity-base-popup-field:focus:hover          .unity-base-popup-field__input'
+selector--field-input--active--focus          = '.unity-base-popup-field:focus:active         .unity-base-popup-field__input'
+selector--field-input--normal--invalid        = '.unity-base-popup-field.invalid              .unity-base-popup-field__input'
+selector--field-input--hover---invalid        = '.unity-base-popup-field.invalid:hover        .unity-base-popup-field__input'
+selector--field-input--active--invalid        = '.unity-base-popup-field.invalid:active       .unity-base-popup-field__input'
+selector--field-input--normal--invalid--focus = '.unity-base-popup-field.invalid:focus        .unity-base-popup-field__input'
+selector--field-input--hover---invalid--focus = '.unity-base-popup-field.invalid:focus:hover  .unity-base-popup-field__input'
+selector--field-input--active--invalid--focus = '.unity-base-popup-field.invalid:focus:active .unity-base-popup-field__input'
+// selector
+selector--text---------normal                 = '.unity-base-popup-field                      .unity-base-popup-field__input .unity-base-popup-field__text'
+selector--arrow--------normal                 = '.unity-base-popup-field                      .unity-base-popup-field__input .unity-base-popup-field__arrow'
+
+// view
+add-style(text---normal) theme(                             )
+add-style(arrow--normal) theme(dropdown-field--arrow--normal)
+flush()
+
+// layout
+add-style(text---normal) layout(null, auto, auto, (0px), (0px), (0px))
+add-style(arrow--normal) layout(null, 12px, 12px, (2px), (0px), (0px))
+flush()
+
+// flex
+add-style(text---normal) flex(1, 1, auto, auto)
+add-style(arrow--normal) flex(0, 1, auto, auto)
+flush()

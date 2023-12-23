@@ -1,0 +1,25 @@
+@import "../Internal/_Theme"
+
+// selector
+selector----------scope--normal = '.scope'
+selector--small---scope--normal = '.scope.small'
+selector--medium--scope--normal = '.scope.medium'
+selector--large---scope--normal = '.scope.large'
+selector--column--scope--normal = '.scope.column'
+selector--row-----scope--normal = '.scope.row'
+
+// view
+add-style(        scope--normal) theme()
+flush()
+
+// layout
+add-style(        scope--normal) layout(null, auto, auto, (0px), (0px), (0px                ))
+add-style(small---scope--normal) layout(null, auto, auto, (0px), (0px), (6px  6px  5px  5px ))
+add-style(medium--scope--normal) layout(null, auto, auto, (0px), (0px), (12px 12px 10px 10px))
+add-style(large---scope--normal) layout(null, auto, auto, (0px), (0px), (24px 24px 20px 20px))
+flush()
+
+// flex
+add-style(column--scope--normal) flex(0, 1, auto, auto) flex2(column, flex-start, stretch)
+add-style(row-----scope--normal) flex(0, 1, auto, auto) flex2(row,    flex-start, stretch)
+flush()

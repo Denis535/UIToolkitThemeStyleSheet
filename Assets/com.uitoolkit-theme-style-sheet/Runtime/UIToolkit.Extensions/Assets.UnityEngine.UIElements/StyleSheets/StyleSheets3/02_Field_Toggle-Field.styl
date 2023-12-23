@@ -1,0 +1,57 @@
+@import "../Internal/_Theme"
+
+// selector
+selector--field--------normal                 = '.unity-toggle'
+selector--field--------hover                  = '.unity-toggle:hover'
+selector--field--------active                 = '.unity-toggle:active'
+selector--field--------normal--focus          = '.unity-toggle:focus'
+selector--field--------hover---focus          = '.unity-toggle:focus:hover'
+selector--field--------active--focus          = '.unity-toggle:focus:active'
+selector--field--------normal--invalid        = '.unity-toggle.invalid'
+selector--field--------hover---invalid        = '.unity-toggle.invalid:hover'
+selector--field--------active--invalid        = '.unity-toggle.invalid:active'
+selector--field--------normal--invalid--focus = '.unity-toggle.invalid:focus'
+selector--field--------hover---invalid--focus = '.unity-toggle.invalid:focus:hover'
+selector--field--------active--invalid--focus = '.unity-toggle.invalid:focus:active'
+// selector
+selector--field-label--normal                 = '.unity-toggle                      .unity-toggle__label'
+selector--field-label--hover                  = '.unity-toggle:hover                .unity-toggle__label'
+selector--field-label--active                 = '.unity-toggle:active               .unity-toggle__label'
+selector--field-label--normal--focus          = '.unity-toggle:focus                .unity-toggle__label'
+selector--field-label--hover---focus          = '.unity-toggle:focus:hover          .unity-toggle__label'
+selector--field-label--active--focus          = '.unity-toggle:focus:active         .unity-toggle__label'
+selector--field-label--normal--invalid        = '.unity-toggle.invalid              .unity-toggle__label'
+selector--field-label--hover---invalid        = '.unity-toggle.invalid:hover        .unity-toggle__label'
+selector--field-label--active--invalid        = '.unity-toggle.invalid:active       .unity-toggle__label'
+selector--field-label--normal--invalid--focus = '.unity-toggle.invalid:focus        .unity-toggle__label'
+selector--field-label--hover---invalid--focus = '.unity-toggle.invalid:focus:hover  .unity-toggle__label'
+selector--field-label--active--invalid--focus = '.unity-toggle.invalid:focus:active .unity-toggle__label'
+// selector
+selector--field-input--normal                 = '.unity-toggle                      .unity-toggle__input'
+selector--field-input--hover                  = '.unity-toggle:hover                .unity-toggle__input'
+selector--field-input--active                 = '.unity-toggle:active               .unity-toggle__input'
+selector--field-input--normal--focus          = '.unity-toggle:focus                .unity-toggle__input'
+selector--field-input--hover---focus          = '.unity-toggle:focus:hover          .unity-toggle__input'
+selector--field-input--active--focus          = '.unity-toggle:focus:active         .unity-toggle__input'
+selector--field-input--normal--invalid        = '.unity-toggle.invalid              .unity-toggle__input'
+selector--field-input--hover---invalid        = '.unity-toggle.invalid:hover        .unity-toggle__input'
+selector--field-input--active--invalid        = '.unity-toggle.invalid:active       .unity-toggle__input'
+selector--field-input--normal--invalid--focus = '.unity-toggle.invalid:focus        .unity-toggle__input'
+selector--field-input--hover---invalid--focus = '.unity-toggle.invalid:focus:hover  .unity-toggle__input'
+selector--field-input--active--invalid--focus = '.unity-toggle.invalid:focus:active .unity-toggle__input'
+// selector
+selector--checkmark----normal                 = '.unity-toggle                      .unity-toggle__input         .unity-toggle__checkmark'
+selector--checkmark----checked                = '.unity-toggle                      .unity-toggle__input:checked .unity-toggle__checkmark'
+
+// view
+add-style(checkmark--normal ) theme(toggle-field--checkmark--normal )
+add-style(checkmark--checked) theme(toggle-field--checkmark--checked)
+flush()
+
+// layout
+add-style(checkmark--normal) layout(null, 16px, 16px, (0px), (1px), (0px))
+flush()
+
+// flex
+add-style(checkmark--normal) flex(0, 1, auto, auto)
+flush()

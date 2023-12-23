@@ -1,0 +1,47 @@
+@import "../Internal/_Theme"
+
+// selector
+selector----------group--normal = '.group'
+selector----------group--hover  = '.group:hover'
+selector--light2--group--normal = '.group.light2'
+selector--light2--group--hover  = '.group.light2:hover'
+selector--light---group--normal = '.group.light'
+selector--light---group--hover  = '.group.light:hover'
+selector--gray----group--normal = '.group.gray'
+selector--gray----group--hover  = '.group.gray:hover'
+selector--dark----group--normal = '.group.dark'
+selector--dark----group--hover  = '.group.dark:hover'
+selector--dark2---group--normal = '.group.dark2'
+selector--dark2---group--hover  = '.group.dark2:hover'
+selector--small---group--normal = '.group.small'
+selector--medium--group--normal = '.group.medium'
+selector--large---group--normal = '.group.large'
+selector--column--group--normal = '.group.column'
+selector--row-----group--normal = '.group.row'
+
+// view
+add-style(        group--normal) theme(        view--normal)
+add-style(        group--hover ) theme(        view--hover )
+add-style(light2--group--normal) theme(light2--view--normal)
+add-style(light2--group--hover ) theme(light2--view--hover )
+add-style(light---group--normal) theme(light---view--normal)
+add-style(light---group--hover ) theme(light---view--hover )
+add-style(gray----group--normal) theme(gray----view--normal)
+add-style(gray----group--hover ) theme(gray----view--hover )
+add-style(dark----group--normal) theme(dark----view--normal)
+add-style(dark----group--hover ) theme(dark----view--hover )
+add-style(dark2---group--normal) theme(dark2---view--normal)
+add-style(dark2---group--hover ) theme(dark2---view--hover )
+flush()
+
+// layout
+add-style(        group--normal) layout(null, auto, auto, (4px), (1px), (0px                ))
+add-style(small---group--normal) layout(null, auto, auto, (4px), (1px), (6px  6px  5px  5px ))
+add-style(medium--group--normal) layout(null, auto, auto, (4px), (1px), (12px 12px 10px 10px))
+add-style(large---group--normal) layout(null, auto, auto, (4px), (1px), (24px 24px 20px 20px))
+flush()
+
+// flex
+add-style(column--group--normal) flex(0, 1, auto, auto) flex2(column, flex-start, stretch)
+add-style(row-----group--normal) flex(0, 1, auto, auto) flex2(row,    flex-start, stretch)
+flush()

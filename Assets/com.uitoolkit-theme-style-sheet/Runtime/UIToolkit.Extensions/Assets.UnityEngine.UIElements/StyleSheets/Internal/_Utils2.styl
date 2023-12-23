@@ -1,0 +1,64 @@
+// create-theme
+create-theme(args)
+    args
+
+// add-style
+add-style(selector, format = '%s')
+    flush()
+    define('context', {}, true)
+    context.selector = s(format, unquote(replace('(\s+)', ' ', get-value(get-key('selector', selector)))))
+    context.styles   = ()
+
+// theme
+theme(key = null)
+    push(context.styles, @block {
+        add-theme(key)
+    })
+
+// view
+font(url = null, size = null, style = null)
+    push(context.styles, @block {
+        add-font(url, size, style)
+    })
+text(align = null, outline = null, shadow = null)
+    push(context.styles, @block {
+        add-text(align, outline, shadow)
+    })
+
+// view
+view(color = null, background-color = null, background-image = null, border-color = null, border-radius = null)
+    push(context.styles, @block {
+        add-view(color, background-color, background-image, border-color, border-radius)
+    })
+
+// layout
+layout(position = null, width = null, height = null, margin = null, border = null, padding = null)
+    push(context.styles, @block {
+        add-layout(position, width, height, margin, border, padding)
+    })
+
+// flex
+flex(flex-grow = null, flex-shrink = null, flex-basis = null, align-self = null)
+    push(context.styles, @block {
+        add-flex(flex-grow, flex-shrink, flex-basis, align-self)
+    })
+flex2(flex-direction = null, justify-content = null, align-items = null)
+    push(context.styles, @block {
+        add-flex2(flex-direction, justify-content, align-items)
+    })
+
+// property
+property(name, value)
+    push(context.styles, @block {
+        add-property(name, value)
+    })
+
+// flush
+flush()
+    if context is defined and context != null
+        selector = context.selector
+        styles   = context.styles
+        {selector}
+            for style in styles
+                {style}
+    define('context', null, true)
