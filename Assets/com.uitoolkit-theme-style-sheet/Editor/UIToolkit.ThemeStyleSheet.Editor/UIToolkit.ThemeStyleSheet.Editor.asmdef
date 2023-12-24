@@ -1,8 +1,10 @@
 {
-    "name": "UIToolkit.Extensions",
-    "rootNamespace": "UnityEngine",
+    "name": "UIToolkit.ThemeStyleSheet.Editor",
+    "rootNamespace": "UnityEditor.UIElements",
     "references": [],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
