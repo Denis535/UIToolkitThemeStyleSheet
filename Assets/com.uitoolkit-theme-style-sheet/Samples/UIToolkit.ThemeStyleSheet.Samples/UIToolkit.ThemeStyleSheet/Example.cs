@@ -27,7 +27,7 @@ namespace UIToolkit.ThemeStyleSheet {
             using (var root = VisualElementFactory.Widget().AsScope()) {
                 
                 
-                return root;
+                return root.VisualElement;
             }
         }
 

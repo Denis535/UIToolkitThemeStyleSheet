@@ -8,42 +8,42 @@ namespace UnityEngine.UIElements {
     public static partial class VisualElementFactory {
 
         // Widget
-        public static VisualElement Widget() {
-            var result = Create<VisualElement>( "widget-view", "widget-view" );
+        public static View Widget() {
+            var result = Create<View>( "widget-view", "widget-view" );
             return AddToCurrentScope( result );
         }
-        public static VisualElement LeftWidget() {
-            var result = Create<VisualElement>( "left-widget-view", "left-widget-view" );
+        public static View LeftWidget() {
+            var result = Create<View>( "left-widget-view", "left-widget-view" );
             return AddToCurrentScope( result );
         }
-        public static VisualElement SmallWidget() {
-            var result = Create<VisualElement>( "small-widget-view", "small-widget-view" );
+        public static View SmallWidget() {
+            var result = Create<View>( "small-widget-view", "small-widget-view" );
             return AddToCurrentScope( result );
         }
-        public static VisualElement MediumWidget() {
-            var result = Create<VisualElement>( "medium-widget-view", "medium-widget-view" );
+        public static View MediumWidget() {
+            var result = Create<View>( "medium-widget-view", "medium-widget-view" );
             return AddToCurrentScope( result );
         }
-        public static VisualElement LargeWidget() {
-            var result = Create<VisualElement>( "large-widget-view", "large-widget-view" );
+        public static View LargeWidget() {
+            var result = Create<View>( "large-widget-view", "large-widget-view" );
             return AddToCurrentScope( result );
         }
 
         // Widget
-        public static VisualElement DialogWidget() {
-            var result = Create<VisualElement>( "dialog-widget-view", "dialog-widget-view" );
+        public static View DialogWidget() {
+            var result = Create<View>( "dialog-widget-view", "dialog-widget-view" );
             return AddToCurrentScope( result );
         }
-        public static VisualElement InfoDialogWidget() {
-            var result = Create<VisualElement>( "info-dialog-widget-view", "info-dialog-widget-view" );
+        public static View InfoDialogWidget() {
+            var result = Create<View>( "info-dialog-widget-view", "info-dialog-widget-view" );
             return AddToCurrentScope( result );
         }
-        public static VisualElement WarningDialogWidget() {
-            var result = Create<VisualElement>( "warning-dialog-widget-view", "warning-dialog-widget-view" );
+        public static View WarningDialogWidget() {
+            var result = Create<View>( "warning-dialog-widget-view", "warning-dialog-widget-view" );
             return AddToCurrentScope( result );
         }
-        public static VisualElement ErrorDialogWidget() {
-            var result = Create<VisualElement>( "error-dialog-widget-view", "error-dialog-widget-view" );
+        public static View ErrorDialogWidget() {
+            var result = Create<View>( "error-dialog-widget-view", "error-dialog-widget-view" );
             return AddToCurrentScope( result );
         }
 
