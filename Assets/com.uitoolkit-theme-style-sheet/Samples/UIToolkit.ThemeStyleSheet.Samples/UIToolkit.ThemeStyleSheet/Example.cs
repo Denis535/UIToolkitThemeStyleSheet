@@ -1,3 +1,4 @@
+#nullable enable
 namespace UIToolkit.ThemeStyleSheet {
     using System;
     using System.Collections;
@@ -10,6 +11,7 @@ namespace UIToolkit.ThemeStyleSheet {
         // Awake
         public void Awake() {
             var document = GetComponent<UIDocument>();
+            document.rootVisualElement.Add( CreateVisualElement() );
         }
         public void OnDestroy() {
         }
@@ -18,6 +20,15 @@ namespace UIToolkit.ThemeStyleSheet {
         public void Start() {
         }
         public void Update() {
+        }
+
+        // Helpers
+        private static VisualElement CreateVisualElement() {
+            using (var root = VisualElementFactory.Widget().AsScope()) {
+                
+                
+                return root;
+            }
         }
 
     }

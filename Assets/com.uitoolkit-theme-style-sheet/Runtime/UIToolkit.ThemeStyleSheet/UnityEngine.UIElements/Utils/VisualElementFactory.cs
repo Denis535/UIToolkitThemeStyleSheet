@@ -6,7 +6,7 @@ namespace UnityEngine.UIElements {
     using System.Linq;
     using UnityEngine;
 
-    public static partial class UIFactory {
+    public static partial class VisualElementFactory {
 
         public static Func<object?, string?>? StringSelector { get; set; }
 
@@ -16,8 +16,7 @@ namespace UnityEngine.UIElements {
             {
                 result.text = text;
             }
-            VisualElementScope.Current?.Add( result );
-            return result;
+            return AddToCurrentScope( result );
         }
 
         // Button
@@ -26,16 +25,14 @@ namespace UnityEngine.UIElements {
             {
                 result.text = text;
             }
-            VisualElementScope.Current?.Add( result );
-            return result;
+            return AddToCurrentScope( result );
         }
         public static RepeatButton RepeatButton(string? text) {
             var result = Create<RepeatButton>( null );
             {
                 result.text = text;
             }
-            VisualElementScope.Current?.Add( result );
-            return result;
+            return AddToCurrentScope( result );
         }
 
         // Field
@@ -48,8 +45,7 @@ namespace UnityEngine.UIElements {
                 result.multiline = isMultiline;
                 result.isReadOnly = false;
             }
-            VisualElementScope.Current?.Add( result );
-            return result;
+            return AddToCurrentScope( result );
         }
         public static TextField TextFieldReadOnly(string? label, string? value, int maxLength, bool isMultiline) {
             var result = Create<TextField>( null );
@@ -60,8 +56,7 @@ namespace UnityEngine.UIElements {
                 result.multiline = isMultiline;
                 result.isReadOnly = true;
             }
-            VisualElementScope.Current?.Add( result );
-            return result;
+            return AddToCurrentScope( result );
         }
         public static PopupField<object?> PopupField(string? label, object? value, object?[]? choices) {
             var result = Create<PopupField<object?>>( null );
@@ -72,8 +67,7 @@ namespace UnityEngine.UIElements {
                 result.value = value;
                 result.choices = choices?.ToList();
             }
-            VisualElementScope.Current?.Add( result );
-            return result;
+            return AddToCurrentScope( result );
         }
         public static DropdownField DropdownField(string? label, string? value, string?[]? choices) {
             var result = Create<DropdownField>( null );
@@ -84,8 +78,7 @@ namespace UnityEngine.UIElements {
                 result.value = value;
                 result.choices = choices?.ToList();
             }
-            VisualElementScope.Current?.Add( result );
-            return result;
+            return AddToCurrentScope( result );
         }
         public static Slider Slider(string? label, float value, float min, float max) {
             var result = Create<Slider>( null );
@@ -95,8 +88,7 @@ namespace UnityEngine.UIElements {
                 result.lowValue = min;
                 result.highValue = max;
             }
-            VisualElementScope.Current?.Add( result );
-            return result;
+            return AddToCurrentScope( result );
         }
         public static SliderInt SliderInt(string? label, int value, int min, int max) {
             var result = Create<SliderInt>( null );
@@ -106,8 +98,7 @@ namespace UnityEngine.UIElements {
                 result.lowValue = min;
                 result.highValue = max;
             }
-            VisualElementScope.Current?.Add( result );
-            return result;
+            return AddToCurrentScope( result );
         }
         public static Toggle Toggle(string? label, bool value) {
             var result = Create<Toggle>( null );
@@ -115,8 +106,7 @@ namespace UnityEngine.UIElements {
                 result.label = label;
                 result.value = value;
             }
-            VisualElementScope.Current?.Add( result );
-            return result;
+            return AddToCurrentScope( result );
         }
 
         // Helpers
@@ -128,6 +118,10 @@ namespace UnityEngine.UIElements {
                 result.AddToClassList( @class );
             }
             return result;
+        }
+        private static T AddToCurrentScope<T>(T visualElement) where T : VisualElement {
+            VisualElementScope.Current?.Add( visualElement );
+            return visualElement;
         }
 
     }

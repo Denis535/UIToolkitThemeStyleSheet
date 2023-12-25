@@ -1,4 +1,3 @@
-#if UNITY_EDITOR
 #nullable enable
 namespace System {
     using System;
@@ -35,4 +34,3 @@ namespace System {
 
     }
 }
-#endif
