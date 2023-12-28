@@ -9,7 +9,7 @@ namespace UnityEngine.UIElements {
     public static partial class VisualElementExtensions {
 
         // SetUp
-        public static T SetUp<T>(this T element, string? name) where T : VisualElement {
+        public static T Name<T>(this T element, string? name) where T : VisualElement {
             element.name = name;
             return element;
         }
