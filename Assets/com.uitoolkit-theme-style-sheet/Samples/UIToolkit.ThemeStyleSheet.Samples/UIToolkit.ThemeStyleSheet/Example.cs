@@ -33,12 +33,10 @@ namespace UIToolkit.ThemeStyleSheet {
                             VisualElementFactory.Label( "UIToolkit Theme Style Sheet" );
                         }
                         using (VisualElementFactory.Content().AsScope()) {
-                            // ScrollView
                             using (VisualElementFactory.ScrollView().Classes( "dark", "medium", "grow-1" ).AsScope()) {
                                 for (var y = 0; y < 8; y++) {
                                     using (VisualElementFactory.RowScope().AsScope()) {
                                         for (var x = 0; x < 8; x++) {
-
                                             var styles = new[] { "light2", "light", "gray", "dark", "dark2" };
                                             using (VisualElementFactory.ColumnGroup().AsScope()) {
                                                 for (var y2 = 0; y2 < 5; y2++) {
@@ -52,10 +50,6 @@ namespace UIToolkit.ThemeStyleSheet {
                                                     }
                                                 }
                                             }
-
-                                            //using (VisualElementFactory.Box().Classes( styles[ x % 5 ], "justify-content-center", "align-items-center" ).AsScope()) {
-                                            //    VisualElementFactory.Label( styles[ x % 5 ] ).Classes( "medium" );
-                                            //}
                                         }
                                     }
                                 }
