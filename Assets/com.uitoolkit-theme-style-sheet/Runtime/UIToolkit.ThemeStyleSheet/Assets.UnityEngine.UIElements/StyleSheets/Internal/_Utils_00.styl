@@ -80,10 +80,11 @@ add-flex(flex-grow = null, flex-shrink = null, flex-basis = null, align-self = n
     add-property2 'flex-shrink'     flex-shrink
     add-property2 'flex-basis'      flex-basis
     add-property2 'align-self'      align-self
-add-flex2(flex-direction = null, justify-content = null, align-items = null)
+add-flex2(flex-direction = null, justify-content = null, align-items = null, align-content = null)
     add-property2 'flex-direction'  flex-direction
     add-property2 'justify-content' justify-content
     add-property2 'align-items'     align-items
+    add-property2 'align-content'   align-content
 
 // img
 img(url, color, scale-mode, slice-left = null, slice-right = null, slice-top = null, slice-bottom = null, slice-scale = null)
@@ -179,13 +180,13 @@ get-native-property(property)
     return 'flex-grow'                   if property == 'flex-grow'
     return 'flex-shrink'                 if property == 'flex-shrink'
     return 'flex-basis'                  if property == 'flex-basis'
-    return 'align-self'                  if property == 'align-self'
+    return 'align-self'                  if property == 'align-self'      // stretch center start end
     // flex
-    return 'flex-direction'              if property == 'flex-direction'
-    return 'flex-wrap'                   if property == 'flex-wrap'
-    return 'justify-content'             if property == 'justify-content'
-    return 'align-items'                 if property == 'align-items'
-    return 'align-content'               if property == 'align-content'
+    return 'flex-direction'              if property == 'flex-direction'  // column column-reverse row row-reverse
+    return 'flex-wrap'                   if property == 'flex-wrap'       // nowrap wrap wrap-reverse
+    return 'justify-content'             if property == 'justify-content' // start center space-between space-around (Justification of children on the main axis of this container)
+    return 'align-items'                 if property == 'align-items'     // stretch center start end                (Alignment of children on the cross axis of this container)
+    return 'align-content'               if property == 'align-content'   // start center space-between space-around (Alignment of children (the whole area) on the cross axis (if they span over multiple lines in this container))
     // misc
     property
 

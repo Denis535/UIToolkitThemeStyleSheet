@@ -72,9 +72,6 @@
 .unity-scroll-view #unity-content-viewport {
   overflow: hidden;
 }
-.unity-scroll-view #unity-content-container {
-  overflow: scroll;
-}
 .unity-scroll-view {
   width: auto;
   height: auto;
@@ -212,7 +209,7 @@
   align-self: auto;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: flex-start;
 }
 .unity-scroll-view.reverse #unity-content-viewport {
   flex-grow: 1;
@@ -221,7 +218,7 @@
   align-self: auto;
   flex-direction: column-reverse;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: flex-start;
 }
 .unity-scroll-view #unity-content-container {
   flex-grow: 0;
@@ -230,5 +227,5 @@
   align-self: auto;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: flex-start;
 }
