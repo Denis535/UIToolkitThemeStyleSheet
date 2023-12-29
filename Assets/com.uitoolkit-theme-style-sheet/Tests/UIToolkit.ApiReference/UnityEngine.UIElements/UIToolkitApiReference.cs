@@ -40,6 +40,7 @@ namespace UnityEngine.UIElements {
                 typeof( BoundsIntField ),
                 typeof( EnumField ),
                 typeof( RadioButtonGroup ),
+                typeof( ToggleButtonGroup ),
                 // Field/Text
                 typeof( TextInputBaseField<> ),
                 typeof( TextField ),
@@ -82,8 +83,9 @@ namespace UnityEngine.UIElements {
                 // Container
                 typeof( TemplateContainer ),
                 typeof( IMGUIContainer ),
-                // Foldout
-                typeof( Foldout ),
+                // View/Tab
+                typeof( TabView ),
+                typeof( Tab ),
                 // View/Scroll
                 typeof( ScrollView ),
                 typeof( Scroller ),
@@ -99,6 +101,8 @@ namespace UnityEngine.UIElements {
                 typeof( BaseTreeView ),
                 typeof( TreeView ),
                 typeof( MultiColumnTreeView ),
+                // Foldout
+                typeof( Foldout ),
                 // Box
                 typeof( Box ),
                 typeof( GroupBox ),

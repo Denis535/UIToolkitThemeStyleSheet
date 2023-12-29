@@ -83,6 +83,30 @@ namespace UnityEngine.UIElements {
             return AddToCurrentScope( result );
         }
 
+        // TabView
+        public static TabView TabView() {
+            var result = Create<TabView>( "tab-view" );
+            return AddToCurrentScope( result );
+        }
+        public static Tab Tab(string label, bool isCloseable) {
+            var result = Create<Tab>( "tab" );
+            {
+                result.label = label;
+                result.closeable = isCloseable;
+            }
+            return AddToCurrentScope( result );
+        }
+
+        // ScrollView
+        public static ScrollView ScrollView() {
+            var result = Create<ScrollView>( "scroll-view" );
+            {
+                result.horizontalScroller.highButton.BringToFront();
+                result.verticalScroller.highButton.BringToFront();
+            }
+            return AddToCurrentScope( result );
+        }
+
         // Slot
         public static Slot Slot() {
             var result = Create<Slot>( "slot" );
@@ -106,16 +130,6 @@ namespace UnityEngine.UIElements {
         }
         public static RowGroup RowGroup() {
             var result = Create<RowGroup>( "group" );
-            return AddToCurrentScope( result );
-        }
-
-        // ScrollView
-        public static ScrollView ScrollView() {
-            var result = Create<ScrollView>( "scroll-view" );
-            {
-                result.horizontalScroller.highButton.BringToFront();
-                result.verticalScroller.highButton.BringToFront();
-            }
             return AddToCurrentScope( result );
         }
 
