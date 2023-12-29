@@ -35,18 +35,31 @@ namespace UIToolkit.ThemeStyleSheet {
                         using (VisualElementFactory.Content().AsScope()) {
                             // ScrollView
                             using (VisualElementFactory.ScrollView().Classes( "dark", "medium", "grow-1" ).AsScope()) {
-                                var styles = new[] { "light2", "light", "gray", "dark", "dark2" };
-                                for (var y = 0; y < 30; y++) {
+                                for (var y = 0; y < 8; y++) {
                                     using (VisualElementFactory.RowScope().AsScope()) {
-                                        for (var x = 0; x < 30; x++) {
-                                            using (VisualElementFactory.Box().Classes( styles[ x % 5 ], "width-auto", "height-auto", "flex-0", "shrink-0", "justify-content-center", "align-items-center" ).AsScope()) {
-                                                VisualElementFactory.Label( styles[ x % 5 ] ).Classes( "medium" );
+                                        for (var x = 0; x < 8; x++) {
+
+                                            var styles = new[] { "light2", "light", "gray", "dark", "dark2" };
+                                            using (VisualElementFactory.ColumnGroup().AsScope()) {
+                                                for (var y2 = 0; y2 < 5; y2++) {
+                                                    using (VisualElementFactory.RowScope().AsScope()) {
+                                                        for (var x2 = 0; x2 < 5; x2++) {
+                                                            var style = styles[ Mathf.Max( x2, y2 ) ];
+                                                            using (VisualElementFactory.Box().Classes( style, "width-100px", "height-100px", "justify-content-center", "align-items-center" ).AsScope()) {
+                                                                VisualElementFactory.Label( style ).Classes( "medium" );
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                             }
+
+                                            //using (VisualElementFactory.Box().Classes( styles[ x % 5 ], "justify-content-center", "align-items-center" ).AsScope()) {
+                                            //    VisualElementFactory.Label( styles[ x % 5 ] ).Classes( "medium" );
+                                            //}
                                         }
                                     }
                                 }
                             }
-
                         }
                         using (VisualElementFactory.Footer().AsScope()) {
                             VisualElementFactory.Button( "Submit" );
