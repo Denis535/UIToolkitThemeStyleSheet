@@ -1,5 +1,5 @@
 #nullable enable
-namespace UIToolkit.ThemeStyleSheet {
+namespace UIToolkit.ThemeStyleSheet.Samples {
     using System;
     using System.Collections;
     using System.Collections.Generic;

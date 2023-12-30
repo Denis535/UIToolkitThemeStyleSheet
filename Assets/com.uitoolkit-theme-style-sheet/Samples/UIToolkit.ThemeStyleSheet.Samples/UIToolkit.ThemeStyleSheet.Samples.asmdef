@@ -1,6 +1,6 @@
 {
     "name": "UIToolkit.ThemeStyleSheet.Samples",
-    "rootNamespace": "UIToolkit.ThemeStyleSheet",
+    "rootNamespace": "UIToolkit.ThemeStyleSheet.Samples",
     "references": [
         "GUID:46823ce0bf49ac548b0182c513dd3fdb"
     ],
