@@ -10,6 +10,12 @@ namespace UnityEngine.UIElements {
 
         public static Func<object?, string?>? StringSelector { get; set; }
 
+        // VisualElement
+        public static VisualElement VisualElement() {
+            var result = Create<VisualElement>( null );
+            return AddToCurrentScope( result );
+        }
+
         // Label
         public static Label Label(string? text) {
             var result = Create<Label>( null );

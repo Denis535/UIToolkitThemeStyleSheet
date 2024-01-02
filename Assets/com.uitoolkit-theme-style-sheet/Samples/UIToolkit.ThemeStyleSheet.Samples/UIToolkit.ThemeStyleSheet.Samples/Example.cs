@@ -26,25 +26,6 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
 
         // Helpers
         private VisualElement CreateVisualElement() {
-            //using (var root = VisualElementFactory.TabView().Style( i => i.flexGrow = 1 ).AsScope()) {
-            //    using (VisualElementFactory.Tab( "Tab 1", false ).AsScope()) {
-            //        using (VisualElementFactory.Box().Style( i => i.height = new Length( 600, LengthUnit.Pixel ) ).AsScope()) {
-            //            VisualElementFactory.Label( "box 1" );
-            //        }
-            //    }
-            //    using (VisualElementFactory.Tab( "Tab 2", false ).AsScope()) {
-            //        using (VisualElementFactory.Box().Style( i => i.height = new Length( 600, LengthUnit.Pixel ) ).AsScope()) {
-            //            VisualElementFactory.Label( "box 2" );
-            //        }
-            //    }
-            //    using (VisualElementFactory.Tab( "Tab 3", false ).AsScope()) {
-            //        using (VisualElementFactory.Box().Style( i => i.height = new Length( 600, LengthUnit.Pixel ) ).AsScope()) {
-            //            VisualElementFactory.Label( "box 3" );
-            //        }
-            //    }
-            //    return root.VisualElement;
-            //}
-
             using (var root = VisualElementFactory.Widget().Classes( "grow-1" ).Style( i => i.backgroundImage = background ).Style( i => i.unityBackgroundScaleMode = ScaleMode.StretchToFill ).AsScope()) {
                 using (VisualElementFactory.LargeWidget().AsScope()) {
                     using (VisualElementFactory.Card().AsScope()) {
@@ -52,45 +33,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                             VisualElementFactory.Label( "UIToolkit Theme Style Sheet" );
                         }
                         using (VisualElementFactory.Content().AsScope()) {
-                            using (VisualElementFactory.TabView().Classes( "dark", "medium", "grow-1" ).AsScope()) {
-                                using (VisualElementFactory.Tab( "Tab 1", false ).AsScope()) {
-                                    using (VisualElementFactory.Box().Classes( "gray", "margin-0pc", "grow-1", "justify-content-center", "align-items-center" ).AsScope()) {
-                                        VisualElementFactory.Label( "Box 1" ).Classes( "medium" );
-                                    }
-                                }
-                                using (VisualElementFactory.Tab( "Tab 2", false ).AsScope()) {
-                                    using (VisualElementFactory.Box().Classes( "gray", "margin-0pc", "grow-1", "justify-content-center", "align-items-center" ).AsScope()) {
-                                        VisualElementFactory.Label( "Box 2" ).Classes( "medium" );
-                                    }
-                                }
-                                using (VisualElementFactory.Tab( "Tab 3", false ).AsScope()) {
-                                    using (VisualElementFactory.Box().Classes( "gray", "margin-0pc", "grow-1", "justify-content-center", "align-items-center" ).AsScope()) {
-                                        VisualElementFactory.Label( "Box 3" ).Classes( "medium" );
-                                    }
-                                }
-                            }
-
-                            //using (VisualElementFactory.ScrollView().Classes( "dark", "medium", "grow-1" ).AsScope()) {
-                            //    for (var y = 0; y < 8; y++) {
-                            //        using (VisualElementFactory.RowScope().AsScope()) {
-                            //            for (var x = 0; x < 8; x++) {
-                            //                var styles = new[] { "light2", "light", "gray", "dark", "dark2" };
-                            //                using (VisualElementFactory.ColumnGroup().AsScope()) {
-                            //                    for (var y2 = 0; y2 < 5; y2++) {
-                            //                        using (VisualElementFactory.RowScope().AsScope()) {
-                            //                            for (var x2 = 0; x2 < 5; x2++) {
-                            //                                var style = styles[ Mathf.Max( x2, y2 ) ];
-                            //                                using (VisualElementFactory.Box().Classes( style, "width-100px", "height-100px", "justify-content-center", "align-items-center" ).AsScope()) {
-                            //                                    VisualElementFactory.Label( style ).Classes( "medium" );
-                            //                                }
-                            //                            }
-                            //                        }
-                            //                    }
-                            //                }
-                            //            }
-                            //        }
-                            //    }
-                            //}
+                            CreateTabView();
                         }
                         using (VisualElementFactory.Footer().AsScope()) {
                             VisualElementFactory.Button( "Submit" );
@@ -99,6 +42,118 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     }
                 }
                 return root.VisualElement;
+            }
+        }
+        private static void CreateTabView() {
+            using (VisualElementFactory.TabView().Classes( "dark", "medium", "grow-1" ).AsScope()) {
+                CreateTab_ScrollView();
+                CreateTab_Group();
+                CreateTab_Box();
+                CreateTab_Misc();
+            }
+        }
+        private static void CreateTab_ScrollView() {
+            using (VisualElementFactory.Tab( "Scroll View", false ).AsScope()) {
+                using (VisualElementFactory.ScrollView().Classes( "dark", "medium", "grow-1" ).AsScope()) {
+                    VisualElementFactory.Label( "Scroll View" ).Style( i => i.width = new Length( 1920, LengthUnit.Pixel ) ).Style( i => i.height = new Length( 1080, LengthUnit.Pixel ) );
+                }
+            }
+        }
+        private static void CreateTab_Group() {
+            using (VisualElementFactory.Tab( "Group", false ).AsScope()) {
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Group( 0 ); Group( 1 ); Group( 2 ); Group( 3 ); Group( 4 ); Group( 3 ); Group( 2 ); Group( 1 ); Group( 0 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Group( 1 ); Group( 2 ); Group( 3 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 3 ); Group( 2 ); Group( 1 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Group( 2 ); Group( 3 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 3 ); Group( 2 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Group( 3 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 3 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Group( 3 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 3 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Group( 2 ); Group( 3 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 3 ); Group( 2 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Group( 1 ); Group( 2 ); Group( 3 ); Group( 4 ); Group( 4 ); Group( 4 ); Group( 3 ); Group( 2 ); Group( 1 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Group( 0 ); Group( 1 ); Group( 2 ); Group( 3 ); Group( 4 ); Group( 3 ); Group( 2 ); Group( 1 ); Group( 0 );
+                }
+            }
+        }
+        private static void CreateTab_Box() {
+            using (VisualElementFactory.Tab( "Box", false ).AsScope()) {
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Box( 0 ); Box( 1 ); Box( 2 ); Box( 3 ); Box( 4 ); Box( 3 ); Box( 2 ); Box( 1 ); Box( 0 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Box( 1 ); Box( 2 ); Box( 3 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 3 ); Box( 2 ); Box( 1 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Box( 2 ); Box( 3 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 3 ); Box( 2 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Box( 3 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 3 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Box( 3 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 3 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Box( 2 ); Box( 3 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 3 ); Box( 2 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Box( 1 ); Box( 2 ); Box( 3 ); Box( 4 ); Box( 4 ); Box( 4 ); Box( 3 ); Box( 2 ); Box( 1 );
+                }
+                using (VisualElementFactory.RowScope().AsScope()) {
+                    Box( 0 ); Box( 1 ); Box( 2 ); Box( 3 ); Box( 4 ); Box( 3 ); Box( 2 ); Box( 1 ); Box( 0 );
+                }
+            }
+        }
+        private static void CreateTab_Misc() {
+            using (VisualElementFactory.Tab( "Misc", false ).AsScope()) {
+                VisualElementFactory.Label( "Misc" );
+            }
+        }
+
+        // Helpers
+        private static ColumnGroup Group(int style) {
+            var style_ = style switch {
+                0 => "dark2",
+                1 => "dark",
+                2 => "gray",
+                3 => "light",
+                4 => "light2",
+                _ => throw new Exception( "Style is invalid: " + style ),
+            };
+            using (var result = VisualElementFactory.ColumnGroup().Classes( style_, "width-50px", "height-50px", "justify-content-center", "align-items-center" ).AsScope()) {
+                VisualElementFactory.Label( style.ToString() ).Classes( "medium" );
+                return result;
+            }
+        }
+        private static Box Box(int style) {
+            var style_ = style switch {
+                0 => "dark2",
+                1 => "dark",
+                2 => "gray",
+                3 => "light",
+                4 => "light2",
+                _ => throw new Exception( "Style is invalid: " + style ),
+            };
+            using (var result = VisualElementFactory.Box().Classes( style_, "width-50px", "height-50px", "justify-content-center", "align-items-center" ).AsScope()) {
+                VisualElementFactory.Label( style.ToString() ).Classes( "medium" );
+                return result;
             }
         }
 

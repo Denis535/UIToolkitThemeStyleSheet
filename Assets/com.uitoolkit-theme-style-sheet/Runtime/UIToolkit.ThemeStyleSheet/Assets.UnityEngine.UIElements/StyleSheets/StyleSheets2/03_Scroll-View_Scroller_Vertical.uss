@@ -1,0 +1,353 @@
+.unity-scroller--vertical .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-tracker {
+  color: #e6e6e6;
+  background-color: #2a2b2c;
+  border-left-color: #634d36;
+  border-right-color: #634d36;
+  border-top-color: #634d36;
+  border-bottom-color: #634d36;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-scroller--vertical .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-dragger {
+  color: #e6e6e6;
+  background-color: #393b3c;
+  border-left-color: #634d36;
+  border-right-color: #634d36;
+  border-top-color: #634d36;
+  border-bottom-color: #634d36;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-scroller--vertical .unity-base-slider .unity-base-slider__input #unity-drag-container:hover #unity-dragger:hover {
+  color: #fff;
+  background-color: #3e4041;
+  border-left-color: #a68059;
+  border-right-color: #a68059;
+  border-top-color: #a68059;
+  border-bottom-color: #a68059;
+}
+.unity-scroller--vertical .unity-base-slider .unity-base-slider__input #unity-drag-container:active #unity-dragger:active {
+  color: #808080;
+  background-color: #373839;
+  border-left-color: #423324;
+  border-right-color: #423324;
+  border-top-color: #423324;
+  border-bottom-color: #423324;
+}
+.unity-scroller--vertical .unity-base-slider:focus .unity-base-slider__input #unity-drag-container #unity-dragger {
+  color: #197fe6;
+  border-left-color: #1466b8;
+  border-right-color: #1466b8;
+  border-top-color: #1466b8;
+  border-bottom-color: #1466b8;
+}
+.unity-scroller--vertical .unity-base-slider:focus .unity-base-slider__input #unity-drag-container:hover #unity-dragger:hover {
+  color: #39f;
+  border-left-color: #197fe6;
+  border-right-color: #197fe6;
+  border-top-color: #197fe6;
+  border-bottom-color: #197fe6;
+}
+.unity-scroller--vertical .unity-base-slider:focus .unity-base-slider__input #unity-drag-container:active #unity-dragger:active {
+  color: #1466b8;
+  border-left-color: #0a335c;
+  border-right-color: #0a335c;
+  border-top-color: #0a335c;
+  border-bottom-color: #0a335c;
+}
+.unity-scroller--vertical #unity-low-button {
+  background-image: url('../../Images/Arrow_Up.png');
+  -unity-background-image-tint-color: #e6e6e6;
+  border-left-color: #634d36;
+  border-right-color: #634d36;
+  border-top-color: #634d36;
+  border-bottom-color: #634d36;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-scroller--vertical #unity-low-button:hover {
+  -unity-background-image-tint-color: #fff;
+  border-left-color: #a68059;
+  border-right-color: #a68059;
+  border-top-color: #a68059;
+  border-bottom-color: #a68059;
+}
+.unity-scroller--vertical #unity-low-button:active {
+  -unity-background-image-tint-color: #808080;
+  border-left-color: #423324;
+  border-right-color: #423324;
+  border-top-color: #423324;
+  border-bottom-color: #423324;
+}
+.unity-scroller--vertical #unity-low-button:focus {
+  -unity-background-image-tint-color: #197fe6;
+  border-left-color: #1466b8;
+  border-right-color: #1466b8;
+  border-top-color: #1466b8;
+  border-bottom-color: #1466b8;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-scroller--vertical #unity-low-button:focus:hover {
+  -unity-background-image-tint-color: #39f;
+  border-left-color: #197fe6;
+  border-right-color: #197fe6;
+  border-top-color: #197fe6;
+  border-bottom-color: #197fe6;
+}
+.unity-scroller--vertical #unity-low-button:focus:active {
+  -unity-background-image-tint-color: #1466b8;
+  border-left-color: #0a335c;
+  border-right-color: #0a335c;
+  border-top-color: #0a335c;
+  border-bottom-color: #0a335c;
+}
+.unity-scroller--vertical #unity-high-button {
+  background-image: url('../../Images/Arrow_Down.png');
+  -unity-background-image-tint-color: #e6e6e6;
+  border-left-color: #634d36;
+  border-right-color: #634d36;
+  border-top-color: #634d36;
+  border-bottom-color: #634d36;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-scroller--vertical #unity-high-button:hover {
+  -unity-background-image-tint-color: #fff;
+  border-left-color: #a68059;
+  border-right-color: #a68059;
+  border-top-color: #a68059;
+  border-bottom-color: #a68059;
+}
+.unity-scroller--vertical #unity-high-button:active {
+  -unity-background-image-tint-color: #808080;
+  border-left-color: #423324;
+  border-right-color: #423324;
+  border-top-color: #423324;
+  border-bottom-color: #423324;
+}
+.unity-scroller--vertical #unity-high-button:focus {
+  background-image: url('../../Images/Arrow_Down.png');
+  -unity-background-image-tint-color: #197fe6;
+  border-left-color: #1466b8;
+  border-right-color: #1466b8;
+  border-top-color: #1466b8;
+  border-bottom-color: #1466b8;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-scroller--vertical #unity-high-button:focus:hover {
+  -unity-background-image-tint-color: #39f;
+  border-left-color: #197fe6;
+  border-right-color: #197fe6;
+  border-top-color: #197fe6;
+  border-bottom-color: #197fe6;
+}
+.unity-scroller--vertical #unity-high-button:focus:active {
+  -unity-background-image-tint-color: #1466b8;
+  border-left-color: #0a335c;
+  border-right-color: #0a335c;
+  border-top-color: #0a335c;
+  border-bottom-color: #0a335c;
+}
+.unity-scroller--vertical {
+  width: auto;
+  height: auto;
+  margin-left: 0px;
+  margin-right: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.unity-scroller--vertical .unity-base-slider {
+  width: auto;
+  height: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.unity-scroller--vertical .unity-base-slider .unity-base-slider__input {
+  width: auto;
+  height: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.unity-scroller--vertical .unity-base-slider .unity-base-slider__input #unity-drag-container {
+  width: auto;
+  height: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.unity-scroller--vertical .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-tracker {
+  width: 24px;
+  height: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.unity-scroller--vertical .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-dragger {
+  position: absolute;
+  width: 24px;
+  height: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.unity-scroller--vertical #unity-low-button {
+  width: 24px;
+  height: 24px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.unity-scroller--vertical #unity-high-button {
+  width: 24px;
+  height: 24px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.unity-scroller--vertical {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.unity-scroller--vertical .unity-base-slider {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.unity-scroller--vertical .unity-base-slider .unity-base-slider__input {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.unity-scroller--vertical .unity-base-slider .unity-base-slider__input #unity-drag-container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.unity-scroller--vertical .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-tracker {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+}
+.unity-scroller--vertical .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-dragger {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+}
+.unity-scroller--vertical #unity-low-button {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: auto;
+}
+.unity-scroller--vertical #unity-high-button {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: auto;
+}
