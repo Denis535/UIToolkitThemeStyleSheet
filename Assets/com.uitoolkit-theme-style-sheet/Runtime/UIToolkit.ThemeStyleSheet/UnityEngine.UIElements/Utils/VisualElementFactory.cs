@@ -86,7 +86,7 @@ namespace UnityEngine.UIElements {
             }
             return AddToCurrentScope( result );
         }
-        public static Slider Slider(string? label, float value, float min, float max) {
+        public static Slider SliderField(string? label, float value, float min, float max) {
             var result = Create<Slider>( null );
             {
                 result.label = label;
@@ -96,7 +96,7 @@ namespace UnityEngine.UIElements {
             }
             return AddToCurrentScope( result );
         }
-        public static SliderInt SliderInt(string? label, int value, int min, int max) {
+        public static SliderInt IntSliderField(string? label, int value, int min, int max) {
             var result = Create<SliderInt>( null );
             {
                 result.label = label;
@@ -106,7 +106,7 @@ namespace UnityEngine.UIElements {
             }
             return AddToCurrentScope( result );
         }
-        public static Toggle Toggle(string? label, bool value) {
+        public static Toggle ToggleField(string? label, bool value) {
             var result = Create<Toggle>( null );
             {
                 result.label = label;

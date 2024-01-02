@@ -53,14 +53,17 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             }
         }
         private static void CreateTab_ScrollView() {
-            using (VisualElementFactory.Tab( "Scroll View", false ).AsScope()) {
-                using (VisualElementFactory.ScrollView().Classes( "dark", "medium", "grow-1" ).AsScope()) {
-                    VisualElementFactory.Label( "Scroll View" ).Style( i => i.width = new Length( 1920, LengthUnit.Pixel ) ).Style( i => i.height = new Length( 1080, LengthUnit.Pixel ) );
+            using (VisualElementFactory.Tab( "Scroll View" ).AsScope()) {
+                using (VisualElementFactory.ScrollView().Classes( null, "medium", "grow-1" ).AsScope()) {
+                    VisualElementFactory.Box().Classes( "gray" )
+                        .Style( i => i.width = new Length( 1920, LengthUnit.Pixel ) )
+                        .Style( i => i.height = new Length( 1080, LengthUnit.Pixel ) )
+                        .Style( i => i.marginLeft = i.marginRight = i.marginTop = i.marginBottom = new Length( 0, LengthUnit.Pixel ) );
                 }
             }
         }
         private static void CreateTab_Group() {
-            using (VisualElementFactory.Tab( "Group", false ).AsScope()) {
+            using (VisualElementFactory.Tab( "Group" ).AsScope()) {
                 using (VisualElementFactory.RowScope().AsScope()) {
                     Group( 0 ); Group( 1 ); Group( 2 ); Group( 3 ); Group( 4 ); Group( 3 ); Group( 2 ); Group( 1 ); Group( 0 );
                 }
@@ -91,7 +94,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             }
         }
         private static void CreateTab_Box() {
-            using (VisualElementFactory.Tab( "Box", false ).AsScope()) {
+            using (VisualElementFactory.Tab( "Box" ).AsScope()) {
                 using (VisualElementFactory.RowScope().AsScope()) {
                     Box( 0 ); Box( 1 ); Box( 2 ); Box( 3 ); Box( 4 ); Box( 3 ); Box( 2 ); Box( 1 ); Box( 0 );
                 }
@@ -122,8 +125,17 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             }
         }
         private static void CreateTab_Misc() {
-            using (VisualElementFactory.Tab( "Misc", false ).AsScope()) {
-                VisualElementFactory.Label( "Misc" );
+            using (VisualElementFactory.Tab( "Misc" ).AsScope()) {
+                VisualElementFactory.Label( "Label" );
+                VisualElementFactory.Button( "Button" );
+                VisualElementFactory.RepeatButton( "Repeat Button" );
+                VisualElementFactory.TextField( "Text Field", "Hello World !!!", 64, false );
+                VisualElementFactory.TextFieldReadOnly( "Read Only Text Field", "Hello World !!!", 64, false );
+                VisualElementFactory.PopupField( "Popup Field", null, new[] { "Item 1", "Item 2", "Item 3" } );
+                VisualElementFactory.DropdownField( "Dropdown Field", null, new[] { "Item 1", "Item 2", "Item 3" } );
+                VisualElementFactory.SliderField( "Slider Field", 5, 0, 10 );
+                VisualElementFactory.IntSliderField( "Int Slider Field", 5, 0, 10 );
+                VisualElementFactory.ToggleField( "Toggle Field", false );
             }
         }
 

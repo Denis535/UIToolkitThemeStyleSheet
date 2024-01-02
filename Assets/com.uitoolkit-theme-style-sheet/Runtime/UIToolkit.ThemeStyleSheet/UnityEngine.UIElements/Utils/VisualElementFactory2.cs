@@ -88,11 +88,10 @@ namespace UnityEngine.UIElements {
             var result = Create<TabView>( "tab-view" );
             return AddToCurrentScope( result );
         }
-        public static Tab Tab(string label, bool isCloseable) {
+        public static Tab Tab(string label) {
             var result = Create<Tab>( "tab" );
             {
                 result.label = label;
-                result.closeable = isCloseable;
             }
             return AddToCurrentScope( result );
         }

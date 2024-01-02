@@ -14,3 +14,6 @@ PanelRootElement TemplateContainer {
   flex-basis: auto;
   align-self: auto;
 }
+.unity-hidden {
+  display: none;
+}
