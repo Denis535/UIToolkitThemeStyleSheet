@@ -1,14 +1,3 @@
-// create-theme
-create-theme(args)
-    args
-
-// add-style
-add-style(selector, format = '%s')
-    flush()
-    define('context', {}, true)
-    context.selector = s(format, unquote(replace('(\s+)', ' ', get-value(get-key('selector', selector)))))
-    context.styles   = ()
-
 // theme
 theme(key = null)
     push(context.styles, @block {
@@ -52,6 +41,13 @@ property(name, value)
     push(context.styles, @block {
         add-property(name, value)
     })
+
+// add-style
+add-style(selector, format = '%s')
+    flush()
+    define('context', {}, true)
+    context.selector = s(format, unquote(replace('(\s+)', ' ', get-value(get-key('selector', selector)))))
+    context.styles   = ()
 
 // flush
 flush()
