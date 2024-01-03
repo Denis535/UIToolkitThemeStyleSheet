@@ -40,10 +40,17 @@ namespace UnityEngine.UIElements {
     public static class VisualElementScopeExtensions {
 
         public static VisualElementScope<T> AsScope<T>(this T visualElement) where T : VisualElement {
+            VisualElementScope.Current?.Add( visualElement );
             return new VisualElementScope<T>( visualElement );
         }
         public static VisualElementScope<T> AsScope<T>(this T visualElement, out T @out) where T : VisualElement {
+            VisualElementScope.Current?.Add( visualElement );
             return new VisualElementScope<T>( @out = visualElement );
+        }
+
+        public static T AddToScope<T>(this T visualElement) where T : VisualElement {
+            VisualElementScope.Current!.Add( visualElement );
+            return visualElement;
         }
 
     }

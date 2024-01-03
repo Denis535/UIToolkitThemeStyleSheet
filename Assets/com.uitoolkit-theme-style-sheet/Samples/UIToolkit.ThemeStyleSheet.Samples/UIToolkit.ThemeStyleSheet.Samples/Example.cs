@@ -55,10 +55,11 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
         private static void CreateTab_ScrollView() {
             using (VisualElementFactory.Tab( "Scroll View" ).AsScope()) {
                 using (VisualElementFactory.ScrollView().Classes( null, "medium", "grow-1" ).AsScope()) {
-                    VisualElementFactory.Box().Classes( "gray" )
+                    VisualElementFactory.VisualElement()
                         .Style( i => i.width = new Length( 1920, LengthUnit.Pixel ) )
                         .Style( i => i.height = new Length( 1080, LengthUnit.Pixel ) )
-                        .Style( i => i.marginLeft = i.marginRight = i.marginTop = i.marginBottom = new Length( 0, LengthUnit.Pixel ) );
+                        .Style( i => i.marginLeft = i.marginRight = i.marginTop = i.marginBottom = new Length( 0, LengthUnit.Pixel ) )
+                        .AddToScope();
                 }
             }
         }
@@ -92,6 +93,20 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     Group( 0 ); Group( 1 ); Group( 2 ); Group( 3 ); Group( 4 ); Group( 3 ); Group( 2 ); Group( 1 ); Group( 0 );
                 }
             }
+            static ColumnGroup Group(int style) {
+                var style_ = style switch {
+                    0 => "dark2",
+                    1 => "dark",
+                    2 => "gray",
+                    3 => "light",
+                    4 => "light2",
+                    _ => throw new Exception( "Style is invalid: " + style ),
+                };
+                using (var result = VisualElementFactory.ColumnGroup().Classes( style_, "width-75px", "height-75px", "justify-content-center", "align-items-center" ).AsScope()) {
+                    VisualElementFactory.Label( style.ToString() ).Classes( "medium" ).AddToScope();
+                    return result;
+                }
+            }
         }
         private static void CreateTab_Box() {
             using (VisualElementFactory.Tab( "Box" ).AsScope()) {
@@ -123,49 +138,33 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     Box( 0 ); Box( 1 ); Box( 2 ); Box( 3 ); Box( 4 ); Box( 3 ); Box( 2 ); Box( 1 ); Box( 0 );
                 }
             }
+            static Box Box(int style) {
+                var style_ = style switch {
+                    0 => "dark2",
+                    1 => "dark",
+                    2 => "gray",
+                    3 => "light",
+                    4 => "light2",
+                    _ => throw new Exception( "Style is invalid: " + style ),
+                };
+                using (var result = VisualElementFactory.Box().Classes( style_, "width-75px", "height-75px", "justify-content-center", "align-items-center" ).AsScope()) {
+                    VisualElementFactory.Label( style.ToString() ).Classes( "medium" ).AddToScope();
+                    return result;
+                }
+            }
         }
         private static void CreateTab_Misc() {
             using (VisualElementFactory.Tab( "Misc" ).AsScope()) {
-                VisualElementFactory.Label( "Label" );
-                VisualElementFactory.Button( "Button" );
-                VisualElementFactory.RepeatButton( "Repeat Button" );
-                VisualElementFactory.TextField( "Text Field", "Hello World !!!", 64, false );
-                VisualElementFactory.TextFieldReadOnly( "Read Only Text Field", "Hello World !!!", 64, false );
-                VisualElementFactory.PopupField( "Popup Field", null, new[] { "Item 1", "Item 2", "Item 3" } );
-                VisualElementFactory.DropdownField( "Dropdown Field", null, new[] { "Item 1", "Item 2", "Item 3" } );
-                VisualElementFactory.SliderField( "Slider Field", 5, 0, 10 );
-                VisualElementFactory.IntSliderField( "Int Slider Field", 5, 0, 10 );
-                VisualElementFactory.ToggleField( "Toggle Field", false );
-            }
-        }
-
-        // Helpers
-        private static ColumnGroup Group(int style) {
-            var style_ = style switch {
-                0 => "dark2",
-                1 => "dark",
-                2 => "gray",
-                3 => "light",
-                4 => "light2",
-                _ => throw new Exception( "Style is invalid: " + style ),
-            };
-            using (var result = VisualElementFactory.ColumnGroup().Classes( style_, "width-50px", "height-50px", "justify-content-center", "align-items-center" ).AsScope()) {
-                VisualElementFactory.Label( style.ToString() ).Classes( "medium" );
-                return result;
-            }
-        }
-        private static Box Box(int style) {
-            var style_ = style switch {
-                0 => "dark2",
-                1 => "dark",
-                2 => "gray",
-                3 => "light",
-                4 => "light2",
-                _ => throw new Exception( "Style is invalid: " + style ),
-            };
-            using (var result = VisualElementFactory.Box().Classes( style_, "width-50px", "height-50px", "justify-content-center", "align-items-center" ).AsScope()) {
-                VisualElementFactory.Label( style.ToString() ).Classes( "medium" );
-                return result;
+                VisualElementFactory.Label( "Label" ).AddToScope();
+                VisualElementFactory.Button( "Button" ).AddToScope();
+                VisualElementFactory.RepeatButton( "Repeat Button" ).AddToScope();
+                VisualElementFactory.TextField( "Text Field", "Hello World !!!", 64, false ).AddToScope();
+                VisualElementFactory.ReadOnlyTextField( "Read Only Text Field", "Hello World !!!", 64, false ).AddToScope();
+                VisualElementFactory.PopupField( "Popup Field", "Item 1", new[] { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10" } ).AddToScope();
+                VisualElementFactory.DropdownField( "Dropdown Field", "Item 1", new[] { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10", "Item 11", "Item 12", "Item 13", "Item 14", "Item 15", "Item 16", "Item 17", "Item 18", "Item 19", "Item 20" } ).AddToScope();
+                VisualElementFactory.SliderField( "Slider Field", 5, 0, 10 ).AddToScope();
+                VisualElementFactory.IntSliderField( "Int Slider Field", 5, 0, 10 ).AddToScope();
+                VisualElementFactory.ToggleField( "Toggle Field", true ).AddToScope();
             }
         }
 
