@@ -36421,18 +36421,6 @@
 .justify-content-space-around.visual-element {
   justify-content: space-around;
 }
-.align-items-start.visual-element {
-  align-items: flex-start;
-}
-.align-items-end.visual-element {
-  align-items: flex-end;
-}
-.align-items-center.visual-element {
-  align-items: center;
-}
-.align-items-stretch.visual-element {
-  align-items: stretch;
-}
 .align-content-start.visual-element {
   align-content: flex-start;
 }
@@ -36444,6 +36432,18 @@
 }
 .align-content-stretch.visual-element {
   align-content: stretch;
+}
+.align-items-start.visual-element {
+  align-items: flex-start;
+}
+.align-items-end.visual-element {
+  align-items: flex-end;
+}
+.align-items-center.visual-element {
+  align-items: center;
+}
+.align-items-stretch.visual-element {
+  align-items: stretch;
 }
 /* transform */
 .transform-origin-center.visual-element {

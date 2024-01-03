@@ -56,6 +56,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             using (VisualElementFactory.Tab( "Scroll View" ).AsScope()) {
                 using (VisualElementFactory.ScrollView().Classes( null, "medium", "grow-1" ).AsScope()) {
                     VisualElementFactory.VisualElement()
+                        .Style( i => i.backgroundColor = Color.HSVToRGB( 0f, 0f, 0.1f ) )
                         .Style( i => i.width = new Length( 1920, LengthUnit.Pixel ) )
                         .Style( i => i.height = new Length( 1080, LengthUnit.Pixel ) )
                         .Style( i => i.marginLeft = i.marginRight = i.marginTop = i.marginBottom = new Length( 0, LengthUnit.Pixel ) )
@@ -162,8 +163,8 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 VisualElementFactory.ReadOnlyTextField( "Read Only Text Field", "Hello World !!!", 64, false ).AddToScope();
                 VisualElementFactory.PopupField( "Popup Field", "Item 1", new[] { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10" } ).AddToScope();
                 VisualElementFactory.DropdownField( "Dropdown Field", "Item 1", new[] { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10", "Item 11", "Item 12", "Item 13", "Item 14", "Item 15", "Item 16", "Item 17", "Item 18", "Item 19", "Item 20" } ).AddToScope();
-                VisualElementFactory.SliderField( "Slider Field", 5, 0, 10 ).AddToScope();
-                VisualElementFactory.IntSliderField( "Int Slider Field", 5, 0, 10 ).AddToScope();
+                VisualElementFactory.SliderField( "Slider Field", 1, 0, 2 ).AddToScope();
+                VisualElementFactory.IntSliderField( "Int Slider Field", 1, 0, 2 ).AddToScope();
                 VisualElementFactory.ToggleField( "Toggle Field", true ).AddToScope();
             }
         }
