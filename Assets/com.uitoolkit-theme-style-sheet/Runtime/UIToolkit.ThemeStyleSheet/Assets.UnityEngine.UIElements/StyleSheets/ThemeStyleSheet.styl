@@ -1,20 +1,38 @@
-@import url("StyleSheets3/00_Label.uss")
-@import url("StyleSheets3/01_Button.uss")
-@import url("StyleSheets3/02_Field.uss")
-@import url("StyleSheets3/02_Field_Text-Field.uss")
-@import url("StyleSheets3/02_Field_Popup-Field.uss")
-@import url("StyleSheets3/02_Field_Slider-Field.uss")
-@import url("StyleSheets3/02_Field_Toggle-Field.uss")
-@import url("StyleSheets3/03_Dropdown.uss")
+@import "Internal/_Theme"
 
-@import url("StyleSheets2/00_View.uss")
-@import url("StyleSheets2/01_Card.uss")
-@import url("StyleSheets2/02_Tab-View.uss")
-@import url("StyleSheets2/03_Scroll-View.uss")
-@import url("StyleSheets2/03_Scroll-View_Scroller_Horizontal.uss")
-@import url("StyleSheets2/03_Scroll-View_Scroller_Vertical.uss")
-@import url("StyleSheets2/04_Scope.uss")
-@import url("StyleSheets2/05_Group.uss")
-@import url("StyleSheets2/06_Box.uss")
+@import url("StyleSheets2/00_Label.uss")
+@import url("StyleSheets2/01_Button.uss")
+@import url("StyleSheets2/02_Field.uss")
+@import url("StyleSheets2/02_Field_Text-Field.uss")
+@import url("StyleSheets2/02_Field_Popup-Field.uss")
+@import url("StyleSheets2/02_Field_Slider-Field.uss")
+@import url("StyleSheets2/02_Field_Toggle-Field.uss")
+@import url("StyleSheets2/03_Dropdown.uss")
 
-@import url("StyleSheets1/00_Root.uss")
+@import url("StyleSheets1/00_View.uss")
+@import url("StyleSheets1/01_Card.uss")
+@import url("StyleSheets1/02_Tab-View.uss")
+@import url("StyleSheets1/03_Scroll-View.uss")
+@import url("StyleSheets1/03_Scroll-View_Scroller_Horizontal.uss")
+@import url("StyleSheets1/03_Scroll-View_Scroller_Vertical.uss")
+@import url("StyleSheets1/04_Scope.uss")
+@import url("StyleSheets1/05_Group.uss")
+@import url("StyleSheets1/06_Box.uss")
+
+// PanelRootElement
+PanelRootElement
+    add-font('../Fonts/NotInter/NotInter-Regular.ttf', 14px, normal)
+    add-view()
+    add-layout()
+    add-flex(1, 1, auto, auto)
+    add-flex2(column, flex-start, stretch)
+
+PanelRootElement TemplateContainer
+    add-view()
+    add-layout()
+    add-flex(1, 1, auto, auto)
+    add-flex2(column, flex-start, stretch)
+
+// utils
+.unity-hidden
+    display none

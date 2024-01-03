@@ -30,14 +30,14 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 using (VisualElementFactory.LargeWidget().AsScope()) {
                     using (VisualElementFactory.Card().AsScope()) {
                         using (VisualElementFactory.Header().AsScope()) {
-                            VisualElementFactory.Label( "UIToolkit Theme Style Sheet" );
+                            VisualElementFactory.Label( "UIToolkit Theme Style Sheet" ).AddToScope();
                         }
                         using (VisualElementFactory.Content().AsScope()) {
                             CreateTabView();
                         }
                         using (VisualElementFactory.Footer().AsScope()) {
-                            VisualElementFactory.Button( "Submit" );
-                            VisualElementFactory.Button( "Cancel" );
+                            VisualElementFactory.Button( "Submit" ).AddToScope();
+                            VisualElementFactory.Button( "Cancel" ).AddToScope();
                         }
                     }
                 }
