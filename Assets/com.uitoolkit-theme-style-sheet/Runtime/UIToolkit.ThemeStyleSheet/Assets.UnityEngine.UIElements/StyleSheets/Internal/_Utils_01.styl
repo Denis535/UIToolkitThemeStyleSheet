@@ -43,10 +43,17 @@ property(name, value)
     })
 
 // add-style
-add-style(selector, format = '%s')
+add-style(arg0, arg1 = null)
+    if typeof(arg0) == 'ident'
+        selector = get-value(get-key('selector', arg0))
+        selector = unquote(replace('(\s+)', ' ', selector))
+    else if typeof(arg1) == 'ident'
+        arg0 = '%s' if arg0 == null
+        selector = s(arg0, unquote(get-value(get-key('selector', arg1))))
+        selector = unquote(replace('(\s+)', ' ', selector))
     flush()
     define('context', {}, true)
-    context.selector = s(format, unquote(replace('(\s+)', ' ', get-value(get-key('selector', selector)))))
+    context.selector = selector
     context.styles   = ()
 
 // flush

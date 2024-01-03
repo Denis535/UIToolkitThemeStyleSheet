@@ -189,8 +189,8 @@ get-native-property(property)
     return 'flex-direction'              if property == 'flex-direction'  // column column-reverse row row-reverse
     return 'flex-wrap'                   if property == 'flex-wrap'       // nowrap wrap wrap-reverse
     return 'justify-content'             if property == 'justify-content' // start center space-between space-around (Justification of children on the main axis of this container)
-    return 'align-items'                 if property == 'align-items'     // stretch center start end                (Alignment of children on the cross axis of this container)
     return 'align-content'               if property == 'align-content'   // start center space-between space-around (Alignment of children (the whole area) on the cross axis (if they span over multiple lines in this container))
+    return 'align-items'                 if property == 'align-items'     // stretch center start end                (Alignment of children on the cross axis of this container)
     // misc
     property
 
