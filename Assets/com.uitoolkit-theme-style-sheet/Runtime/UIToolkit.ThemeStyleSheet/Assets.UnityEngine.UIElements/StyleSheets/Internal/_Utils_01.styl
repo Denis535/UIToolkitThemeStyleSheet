@@ -44,7 +44,7 @@ property(name, value)
 
 // add-style
 add-style(format, arg = null)
-    if typeof(format) == 'ident'
+    if !(typeof(format) == 'string' or format == null)
         arg = format
         format = null
     if format == null
@@ -52,7 +52,7 @@ add-style(format, arg = null)
     
     selector = s(format, unquote(get-value(get-key('selector', arg))))
     selector = replace('(\s+)', ' ', selector)
-    
+
     flush()
     define('context', {}, true)
     context.selector = selector
