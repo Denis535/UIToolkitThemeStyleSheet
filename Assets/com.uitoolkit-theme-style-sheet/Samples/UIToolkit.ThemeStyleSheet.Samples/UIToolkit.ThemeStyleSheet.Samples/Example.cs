@@ -8,8 +8,6 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
 
     public class Example : MonoBehaviour {
 
-        [SerializeField] private Texture2D background = null!;
-
         // Awake
         public void Awake() {
             var document = GetComponent<UIDocument>();
@@ -26,7 +24,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
 
         // Helpers
         private VisualElement CreateVisualElement() {
-            using (var root = VisualElementFactory.Widget().Classes( "grow-1" ).Style( i => i.backgroundImage = background ).Style( i => i.unityBackgroundScaleMode = ScaleMode.StretchToFill ).AsScope()) {
+            using (var root = VisualElementFactory.Widget().Classes( "grow-1" ).AsScope()) {
                 using (VisualElementFactory.LargeWidget().AsScope()) {
                     using (VisualElementFactory.Card().AsScope()) {
                         using (VisualElementFactory.Header().AsScope()) {
