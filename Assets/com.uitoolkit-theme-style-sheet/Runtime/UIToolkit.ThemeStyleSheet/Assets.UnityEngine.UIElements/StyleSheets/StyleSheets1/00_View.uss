@@ -111,7 +111,11 @@
   padding-bottom: 0px;
   translate: -50% -50%;
 }
-.modal-widget-view {
+.modal-widget-view,
+.dialog-widget-view,
+.info-dialog-widget-view,
+.warning-dialog-widget-view,
+.error-dialog-widget-view {
   position: absolute;
   left: 50%;
   top: 49%;
