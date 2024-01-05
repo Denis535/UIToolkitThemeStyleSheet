@@ -15,11 +15,11 @@ selector--dark2-scroll-view---------------normal = '.unity-scroll-view.dark2'
 selector--dark2-scroll-view---------------hover  = '.unity-scroll-view.dark2:hover'
 selector--viewport-and-vertical-scroller--normal = '.unity-scroll-view         #unity-content-and-vertical-scroll-container'
 selector--viewport------------------------normal = '.unity-scroll-view         #unity-content-viewport'
+selector--small-viewport------------------normal = '.unity-scroll-view.small   #unity-content-viewport'
+selector--medium-viewport-----------------normal = '.unity-scroll-view.medium  #unity-content-viewport'
+selector--large-viewport------------------normal = '.unity-scroll-view.large   #unity-content-viewport'
 selector--reverse-viewport----------------normal = '.unity-scroll-view.reverse #unity-content-viewport'
 selector--content-------------------------normal = '.unity-scroll-view         #unity-content-container'
-selector--small-content-------------------normal = '.unity-scroll-view.small   #unity-content-container'
-selector--medium-content------------------normal = '.unity-scroll-view.medium  #unity-content-container'
-selector--large-content-------------------normal = '.unity-scroll-view.large   #unity-content-container'
 
 // view
 add-style(scroll-view---------------------normal) theme(scope---------normal)
@@ -40,19 +40,19 @@ add-style(content-------------------------normal) theme(                    )
 flush()
 
 // layout
-add-style(scroll-view---------------------normal) layout(null, auto, auto, (4px), (1px), (0px                ))
-add-style(viewport-and-vertical-scroller--normal) layout(null, auto, auto, (0px), (0px), (0px                ))
-add-style(viewport------------------------normal) layout(null, auto, auto, (0px), (0px), (0px                ))
-add-style(content-------------------------normal) layout(null, auto, auto, (0px), (0px), (0px                ))
-add-style(small-content-------------------normal) layout(null, auto, auto, (0px), (0px), (6px  6px  5px  5px ))
-add-style(medium-content------------------normal) layout(null, auto, auto, (0px), (0px), (12px 12px 10px 10px))
-add-style(large-content-------------------normal) layout(null, auto, auto, (0px), (0px), (24px 24px 20px 20px))
+add-style(scroll-view---------------------normal) layout(null, auto, auto, (4px                ), (1px), (0px))
+add-style(viewport-and-vertical-scroller--normal) layout(null, auto, auto, (0px                ), (0px), (0px))
+add-style(viewport------------------------normal) layout(null, auto, auto, (0px                ), (0px), (0px))
+add-style(small-viewport------------------normal) layout(null, auto, auto, (6px  6px  5px  5px ), (0px), (0px))
+add-style(medium-viewport-----------------normal) layout(null, auto, auto, (12px 12px 10px 10px), (0px), (0px))
+add-style(large-viewport------------------normal) layout(null, auto, auto, (24px 24px 20px 20px), (0px), (0px))
+add-style(content-------------------------normal) layout(null, auto, auto, (0px                ), (0px), (0px))
 flush()
 
 // flex
-add-style(scroll-view---------------------normal) flex(0, 1, auto, auto) flex2(column,         flex-start, stretch   )
-add-style(viewport-and-vertical-scroller--normal) flex(1, 1, auto, auto) flex2(row,            flex-start, stretch   )
-add-style(viewport------------------------normal) flex(1, 1, auto, auto) flex2(column,         flex-start, flex-start)
-add-style(reverse-viewport----------------normal) flex(1, 1, auto, auto) flex2(column-reverse, flex-start, flex-start)
-add-style(content-------------------------normal) flex(0, 0, auto, auto) flex2(column,         flex-start, flex-start)
+add-style(scroll-view---------------------normal) flex(0, 1, auto, auto) flex2(column,         flex-start, stretch)
+add-style(viewport-and-vertical-scroller--normal) flex(1, 1, auto, auto) flex2(row,            flex-start, stretch)
+add-style(viewport------------------------normal) flex(1, 1, auto, auto) flex2(column,         flex-start, stretch)
+add-style(reverse-viewport----------------normal) flex(1, 1, auto, auto) flex2(column-reverse, flex-start, stretch)
+add-style(content-------------------------normal) flex(0, 0, auto, auto) flex2(column,         flex-start, stretch)
 flush()

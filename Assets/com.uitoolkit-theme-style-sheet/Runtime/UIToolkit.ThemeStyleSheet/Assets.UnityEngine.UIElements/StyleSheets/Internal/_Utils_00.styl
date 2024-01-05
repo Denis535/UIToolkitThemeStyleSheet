@@ -105,6 +105,7 @@ img(url, color, scale-mode, slice-left = null, slice-right = null, slice-top = n
 
 // misc
 add-property2(property, value)
+    property = get-string(property)
     property = get-native-property(property)
     property = get-unity-property(property)
     if value != null
