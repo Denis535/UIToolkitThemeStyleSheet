@@ -20,8 +20,10 @@ namespace UnityEngine.UIElements {
             stack.Pop();
         }
 
-        public static implicit operator VisualElement(VisualElementScope scope) {
-            return scope.VisualElement;
+        public static void Add(params VisualElement[] children) {
+            foreach (var child in children) {
+                Current!.Add( child );
+            }
         }
 
     }
@@ -30,10 +32,6 @@ namespace UnityEngine.UIElements {
         public new T VisualElement => (T) base.VisualElement;
 
         public VisualElementScope(T visualElement) : base( visualElement ) {
-        }
-
-        public static implicit operator T(VisualElementScope<T> scope) {
-            return scope.VisualElement;
         }
 
     }
@@ -46,11 +44,6 @@ namespace UnityEngine.UIElements {
         public static VisualElementScope<T> AsScope<T>(this T visualElement, out T @out) where T : VisualElement {
             VisualElementScope.Current?.Add( visualElement );
             return new VisualElementScope<T>( @out = visualElement );
-        }
-
-        public static T AddToScope<T>(this T visualElement) where T : VisualElement {
-            VisualElementScope.Current!.Add( visualElement );
-            return visualElement;
         }
 
     }

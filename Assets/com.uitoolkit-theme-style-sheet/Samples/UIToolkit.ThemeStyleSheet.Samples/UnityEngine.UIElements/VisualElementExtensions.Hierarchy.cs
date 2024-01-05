@@ -74,61 +74,66 @@ namespace UnityEngine.UIElements {
         //public static void Insert(this VisualElement element, int index, VisualElement child) {
         //    element.Insert( index, child );
         //}
-        public static void InsertBefore(this VisualElement element, VisualElement index, VisualElement child) {
-            var index_ = element.IndexOf( index );
-            element.Insert( index_, child );
-        }
-        public static void InsertAfter(this VisualElement element, VisualElement index, VisualElement child) {
-            var index_ = element.IndexOf( index ) + 1;
-            element.Insert( index_, child );
-        }
+        //public static void InsertBefore(this VisualElement element, VisualElement index, VisualElement child) {
+        //    var index_ = element.IndexOf( index );
+        //    element.Insert( index_, child );
+        //}
+        //public static void InsertAfter(this VisualElement element, VisualElement index, VisualElement child) {
+        //    var index_ = element.IndexOf( index ) + 1;
+        //    element.Insert( index_, child );
+        //}
         //public static void Remove(this VisualElement element, VisualElement child) {
         //    element.Remove( child );
         //}
         //public static void RemoveAt(this VisualElement element, int index) {
         //    element.RemoveAt( index );
         //}
-        public static void Replace(this VisualElement element, VisualElement oldChild, VisualElement newChild) {
-            var index = element.IndexOf( oldChild );
-            element.RemoveAt( index );
-            element.Insert( index, newChild );
-        }
+        //public static void Replace(this VisualElement element, VisualElement oldChild, VisualElement newChild) {
+        //    var index = element.IndexOf( oldChild );
+        //    element.RemoveAt( index );
+        //    element.Insert( index, newChild );
+        //}
 
         // Add
-        public static void Add(this VisualElement element, params VisualElement[] children) {
-            foreach (var child in children) {
-                element.Add( child );
-            }
-        }
-        public static void Insert(this VisualElement element, int index, params VisualElement[] children) {
-            foreach (var child in children) {
-                element.Insert( index++, child );
-            }
-        }
-        public static void InsertBefore(this VisualElement element, VisualElement index, params VisualElement[] children) {
-            var index_ = element.IndexOf( index );
-            foreach (var child in children) {
-                element.Insert( index_++, child );
-            }
-        }
-        public static void InsertAfter(this VisualElement element, VisualElement index, params VisualElement[] children) {
-            var index_ = element.IndexOf( index ) + 1;
-            foreach (var child in children) {
-                element.Insert( index_++, child );
-            }
-        }
-        public static void Remove(this VisualElement element, params VisualElement[] children) {
-            foreach (var child in children) {
-                element.Remove( child );
-            }
-        }
-        public static void Replace(this VisualElement element, VisualElement oldChild, params VisualElement[] newChildren) {
-            var index = element.IndexOf( oldChild );
-            element.RemoveAt( index );
-            foreach (var child in newChildren) {
-                element.Insert( index++, child );
-            }
-        }
+        //public static void Add(this VisualElement element, params VisualElement[] children) {
+        //    foreach (var child in children) {
+        //        element.Add( child );
+        //    }
+        //}
+        //public static void Insert(this VisualElement element, int index, params VisualElement[] children) {
+        //    foreach (var child in children) {
+        //        element.Insert( index++, child );
+        //    }
+        //}
+        //public static void InsertBefore(this VisualElement element, VisualElement index, params VisualElement[] children) {
+        //    var index_ = element.IndexOf( index );
+        //    foreach (var child in children) {
+        //        element.Insert( index_++, child );
+        //    }
+        //}
+        //public static void InsertAfter(this VisualElement element, VisualElement index, params VisualElement[] children) {
+        //    var index_ = element.IndexOf( index ) + 1;
+        //    foreach (var child in children) {
+        //        element.Insert( index_++, child );
+        //    }
+        //}
+        //public static void Remove(this VisualElement element, params VisualElement[] children) {
+        //    foreach (var child in children) {
+        //        element.Remove( child );
+        //    }
+        //}
+        //public static void RemoveAt(this VisualElement element, int index, int count) {
+        //    for (var i = 0; i < count; i++) {
+        //        element.RemoveAt( index );
+        //    }
+        //}
+        //public static void Replace(this VisualElement element, VisualElement oldChild, params VisualElement[] newChildren) {
+        //    var index = element.IndexOf( oldChild );
+        //    element.RemoveAt( index );
+        //    foreach (var child in newChildren) {
+        //        element.Insert( index++, child );
+        //    }
+        //}
 
     }
 }
