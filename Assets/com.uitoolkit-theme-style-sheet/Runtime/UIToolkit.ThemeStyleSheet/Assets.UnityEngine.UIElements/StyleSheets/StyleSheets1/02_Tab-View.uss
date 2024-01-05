@@ -28,14 +28,6 @@
   border-top-color: #423324;
   border-bottom-color: #423324;
 }
-.unity-tab-view .unity-tab__header:checked {
-  color: #808080;
-  background-color: #373839;
-  border-left-color: #423324;
-  border-right-color: #423324;
-  border-top-color: #423324;
-  border-bottom-color: #423324;
-}
 .unity-tab-view .unity-tab-view__content-container {
   background-color: rgba(0,0,0,0);
   border-left-color: #856647;
