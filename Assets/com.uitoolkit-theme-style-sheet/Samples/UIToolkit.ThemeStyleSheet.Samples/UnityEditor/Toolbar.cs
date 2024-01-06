@@ -1,5 +1,5 @@
 #nullable enable
-namespace UnityEditor.UIElements {
+namespace UnityEditor {
     using System;
     using System.Collections;
     using System.Collections.Generic;

@@ -4,85 +4,83 @@
 selector--tab-view-----------normal  = '.unity-tab-view'
 selector--headers------------normal  = '.unity-tab-view        .unity-tab-view__header-container'
 selector--tabs---------------normal  = '.unity-tab-view        .unity-tab-view__content-container'
-selector--tabs---------------hover   = '.unity-tab-view        .unity-tab-view__content-container:hover'
-selector--light2-tabs--------normal  = '.unity-tab-view.light2 .unity-tab-view__content-container'
-selector--light2-tabs--------hover   = '.unity-tab-view.light2 .unity-tab-view__content-container:hover'
-selector--light-tabs---------normal  = '.unity-tab-view.light  .unity-tab-view__content-container'
-selector--light-tabs---------hover   = '.unity-tab-view.light  .unity-tab-view__content-container:hover'
-selector--gray-tabs----------normal  = '.unity-tab-view.gray   .unity-tab-view__content-container'
-selector--gray-tabs----------hover   = '.unity-tab-view.gray   .unity-tab-view__content-container:hover'
-selector--dark-tabs----------normal  = '.unity-tab-view.dark   .unity-tab-view__content-container'
-selector--dark-tabs----------hover   = '.unity-tab-view.dark   .unity-tab-view__content-container:hover'
-selector--dark2-tabs---------normal  = '.unity-tab-view.dark2  .unity-tab-view__content-container'
-selector--dark2-tabs---------hover   = '.unity-tab-view.dark2  .unity-tab-view__content-container:hover'
-selector--small-tabs---------normal  = '.unity-tab-view.small  .unity-tab-view__content-container'
-selector--medium-tabs--------normal  = '.unity-tab-view.medium .unity-tab-view__content-container'
-selector--large-tabs---------normal  = '.unity-tab-view.large  .unity-tab-view__content-container'
 // selector
 selector--header-------------normal  = '.unity-tab-view        .unity-tab__header'
 selector--header-------------hover   = '.unity-tab-view        .unity-tab__header:hover'
-selector--header-------------active  = '.unity-tab-view        .unity-tab__header:active'
 selector--header-------------checked = '.unity-tab-view        .unity-tab__header:checked'
 selector--header-icon--------normal  = '.unity-tab-view        .unity-tab__header         .unity-tab__header-image'
 selector--header-icon--------hover   = '.unity-tab-view        .unity-tab__header:hover   .unity-tab__header-image'
-selector--header-icon--------active  = '.unity-tab-view        .unity-tab__header:active  .unity-tab__header-image'
 selector--header-icon--------checked = '.unity-tab-view        .unity-tab__header:checked .unity-tab__header-image'
 selector--empty-header-icon--normal  = '.unity-tab-view        .unity-tab__header         .unity-tab__header-image--empty'
 selector--header-text--------normal  = '.unity-tab-view        .unity-tab__header         .unity-tab__header-label'
 selector--header-text--------hover   = '.unity-tab-view        .unity-tab__header:hover   .unity-tab__header-label'
-selector--header-text--------active  = '.unity-tab-view        .unity-tab__header:active  .unity-tab__header-label'
 selector--header-text--------checked = '.unity-tab-view        .unity-tab__header:checked .unity-tab__header-label'
 selector--header-underline---normal  = '.unity-tab-view        .unity-tab__header         .unity-tab__header-underline'
 selector--header-underline---hover   = '.unity-tab-view        .unity-tab__header:hover   .unity-tab__header-underline'
-selector--header-underline---active  = '.unity-tab-view        .unity-tab__header:active  .unity-tab__header-underline'
 selector--header-underline---checked = '.unity-tab-view        .unity-tab__header:checked .unity-tab__header-underline'
 // selector
 selector--tab----------------normal  = '.unity-tab-view        .unity-tab'
+selector--tab----------------hover   = '.unity-tab-view        .unity-tab:hover'
 selector--tab----------------checked = '.unity-tab-view        .unity-tab:checked'
+selector--light2-tab---------normal  = '.unity-tab-view.light2 .unity-tab'
+selector--light2-tab---------hover   = '.unity-tab-view.light2 .unity-tab'
+selector--light-tab----------normal  = '.unity-tab-view.light  .unity-tab'
+selector--light-tab----------hover   = '.unity-tab-view.light  .unity-tab'
+selector--gray-tab-----------normal  = '.unity-tab-view.gray   .unity-tab'
+selector--gray-tab-----------hover   = '.unity-tab-view.gray   .unity-tab'
+selector--dark-tab-----------normal  = '.unity-tab-view.dark   .unity-tab'
+selector--dark-tab-----------hover   = '.unity-tab-view.dark   .unity-tab'
+selector--dark2-tab----------normal  = '.unity-tab-view.dark2  .unity-tab'
+selector--dark2-tab----------hover   = '.unity-tab-view.dark2  .unity-tab'
+selector--small-tab----------normal  = '.unity-tab-view.small  .unity-tab'
+selector--medium-tab---------normal  = '.unity-tab-view.medium .unity-tab'
+selector--large-tab----------normal  = '.unity-tab-view.large  .unity-tab'
 selector--tab-content--------normal  = '.unity-tab-view        .unity-tab         .unity-tab__content-container'
+selector--tab-content--------hover   = '.unity-tab-view        .unity-tab:hover   .unity-tab__content-container'
 selector--tab-content--------checked = '.unity-tab-view        .unity-tab:checked .unity-tab__content-container'
 
 // view
 add-style(tab-view----------normal ) theme(                                  )
 add-style(headers-----------normal ) theme(                                  )
-add-style(tabs--------------normal ) theme(scope----------------------normal )
-add-style(tabs--------------hover  ) theme(scope----------------------hover  )
-add-style(light2-tabs-------normal ) theme(light2-scope---------------normal )
-add-style(light2-tabs-------hover  ) theme(light2-scope---------------hover  )
-add-style(light-tabs--------normal ) theme(light-scope----------------normal )
-add-style(light-tabs--------hover  ) theme(light-scope----------------hover  )
-add-style(gray-tabs---------normal ) theme(gray-scope-----------------normal )
-add-style(gray-tabs---------hover  ) theme(gray-scope-----------------hover  )
-add-style(dark-tabs---------normal ) theme(dark-scope-----------------normal )
-add-style(dark-tabs---------hover  ) theme(dark-scope-----------------hover  )
-add-style(dark2-tabs--------normal ) theme(dark2-scope----------------normal )
-add-style(dark2-tabs--------hover  ) theme(dark2-scope----------------hover  )
+add-style(tabs--------------normal ) theme(                                  )
 flush()
 // view
 add-style(header------------normal ) theme(button---------------------normal ) font(null, null, bold) text(middle-center, null, null)
 add-style(header------------hover  ) theme(button---------------------hover  )
-add-style(header------------active ) theme(button---------------------active )
 add-style(header------------checked) theme(                                  )
 add-style(header-icon-------normal ) theme(                                  )
+add-style(header-icon-------hover  ) theme(                                  )
+add-style(header-icon-------checked) theme(                                  )
 add-style(header-text-------normal ) theme(                                  )
+add-style(header-text-------hover  ) theme(                                  )
+add-style(header-text-------checked) theme(                                  )
 add-style(header-underline--normal ) theme(tab-view-header-underline--normal )
 add-style(header-underline--hover  ) theme(tab-view-header-underline--hover  )
-add-style(header-underline--active ) theme(tab-view-header-underline--active )
 add-style(header-underline--checked) theme(tab-view-header-underline--checked)
 flush()
 // view
-add-style(tab---------------normal ) theme(                                  ) property(display, none)
+add-style(tab---------------normal ) theme(scope-----------------------normal) property(display, none)
+add-style(tab---------------hover  ) theme(scope-----------------------hover )
 add-style(tab---------------checked) theme(                                  ) property(display, flex)
+add-style(light2-tab--------normal ) theme(light2-scope----------------normal)
+add-style(light2-tab--------hover  ) theme(light2-scope----------------hover )
+add-style(light-tab---------normal ) theme(light-scope-----------------normal)
+add-style(light-tab---------hover  ) theme(light-scope-----------------hover )
+add-style(gray-tab----------normal ) theme(gray-scope------------------normal)
+add-style(gray-tab----------hover  ) theme(gray-scope------------------hover )
+add-style(dark-tab----------normal ) theme(dark-scope------------------normal)
+add-style(dark-tab----------hover  ) theme(dark-scope------------------hover )
+add-style(dark2-tab---------normal ) theme(dark2-scope-----------------normal)
+add-style(dark2-tab---------hover  ) theme(dark2-scope-----------------hover )
 add-style(tab-content-------normal ) theme(                                  )
+add-style(tab-content-------hover  ) theme(                                  )
+add-style(tab-content-------checked) theme(                                  )
 flush()
 
 // layout
 add-style(tab-view----------normal) layout(null,                        auto, auto, (4px            ), (0px), (0px                ))
 add-style(headers-----------normal) layout(null,                        auto, auto, (0px 0px 0px 2px), (0px), (0px                ))
-add-style(tabs--------------normal) layout(null,                        auto, auto, (0px            ), (1px), (0px                ))
-add-style(small-tabs--------normal) layout(null,                        auto, auto, (0px            ), (1px), (6px  6px  5px  5px ))
-add-style(medium-tabs-------normal) layout(null,                        auto, auto, (0px            ), (1px), (12px 12px 10px 10px))
-add-style(large-tabs--------normal) layout(null,                        auto, auto, (0px            ), (1px), (24px 24px 20px 20px))
+add-style(tabs--------------normal) layout(null,                        auto, auto, (0px            ), (0px), (0px                ))
 flush()
 // layout
 add-style(header------------normal) layout(null,                        auto, auto, (0px            ), (1px), (12px 12px 10px 10px))
@@ -91,7 +89,10 @@ add-style(header-text-------normal) layout(null,                        auto, au
 add-style(header-underline--normal) layout(absolute null null null 0px, 100%, 5px,  (0px            ), (1px), (0px                ))
 flush()
 // layout
-add-style(tab---------------normal) layout(null,                        auto, auto, (0px            ), (0px), (0px                ))
+add-style(tab---------------normal) layout(null,                        auto, auto, (0px            ), (1px), (0px                ))
+add-style(small-tab---------normal) layout(null,                        auto, auto, (0px            ), (1px), (6px  6px  5px  5px ))
+add-style(medium-tab--------normal) layout(null,                        auto, auto, (0px            ), (1px), (12px 12px 10px 10px))
+add-style(large-tab---------normal) layout(null,                        auto, auto, (0px            ), (1px), (24px 24px 20px 20px))
 add-style(tab-content-------normal) layout(null,                        auto, auto, (0px            ), (0px), (0px                ))
 flush()
 
