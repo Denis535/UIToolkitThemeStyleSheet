@@ -9,8 +9,6 @@
   border-top-right-radius: 6px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  font-size: 100%;
-  -unity-font-style: normal;
 }
 .card .header {
   color: #e6e6e6;
@@ -37,8 +35,6 @@
   border-top-right-radius: 6px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  font-size: 100%;
-  -unity-font-style: normal;
 }
 .card .footer {
   color: #e6e6e6;
@@ -77,6 +73,8 @@
   border-top-right-radius: 6px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  font-size: 130%;
+  -unity-font-style: bold;
 }
 .dialog-card .content {
   color: #e6e6e6;
@@ -90,7 +88,6 @@
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   font-size: 120%;
-  -unity-font-style: bold;
 }
 .dialog-card .footer {
   color: #e6e6e6;
@@ -103,6 +100,8 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  font-size: 120%;
+  -unity-font-style: bold;
 }
 .info-dialog-card {
   color: #e6e6e6;
@@ -127,6 +126,8 @@
   border-top-right-radius: 6px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  font-size: 130%;
+  -unity-font-style: bold;
 }
 .info-dialog-card .content {
   color: #e6e6e6;
@@ -140,7 +141,6 @@
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   font-size: 120%;
-  -unity-font-style: bold;
 }
 .info-dialog-card .footer {
   color: #e6e6e6;
@@ -153,6 +153,8 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  font-size: 120%;
+  -unity-font-style: bold;
 }
 .warning-dialog-card {
   color: #e6e6e6;
@@ -177,6 +179,8 @@
   border-top-right-radius: 6px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  font-size: 130%;
+  -unity-font-style: bold;
 }
 .warning-dialog-card .content {
   color: #e6e6e6;
@@ -190,7 +194,6 @@
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   font-size: 120%;
-  -unity-font-style: bold;
 }
 .warning-dialog-card .footer {
   color: #e6e6e6;
@@ -203,6 +206,8 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  font-size: 120%;
+  -unity-font-style: bold;
 }
 .error-dialog-card {
   color: #e6e6e6;
@@ -227,6 +232,8 @@
   border-top-right-radius: 6px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  font-size: 130%;
+  -unity-font-style: bold;
 }
 .error-dialog-card .content {
   color: #e6e6e6;
@@ -240,7 +247,6 @@
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   font-size: 120%;
-  -unity-font-style: bold;
 }
 .error-dialog-card .footer {
   color: #e6e6e6;
@@ -253,6 +259,8 @@
   border-top-right-radius: 0px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  font-size: 120%;
+  -unity-font-style: bold;
 }
 .card {
   width: auto;

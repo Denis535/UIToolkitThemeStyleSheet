@@ -86,7 +86,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                             VisualElementScope.Add( VisualElementFactory.Label( "Left Widget" ) );
                         }
                         using (VisualElementFactory.Content().AsScope()) {
-                            VisualElementScope.Add( VisualElementFactory.Label( "Left Widget" ) );
+                            VisualElementScope.Add( VisualElementFactory.Button( "Button 1" ), VisualElementFactory.Button( "Button 2" ), VisualElementFactory.Button( "Button 3" ) );
                         }
                         using (VisualElementFactory.Footer().AsScope()) {
                             VisualElementScope.Add( VisualElementFactory.Button( "Submit" ), VisualElementFactory.Button( "Cancel" ) );
