@@ -229,26 +229,17 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                                 VisualElementFactory.TabView().Classes( "gray", "medium", "grow-1" ).Children(
                                     VisualElementFactory.Tab( "Tab 1" ).Children(
                                         VisualElementFactory.VisualElement()
-                                            .Classes( "justify-content-center", "align-items-center" )
-                                            .Style( i => i.backgroundColor = Color.red )
-                                            .Style( i => i.marginLeft = i.marginRight = i.marginTop = i.marginBottom = new Length( 0, LengthUnit.Pixel ) )
-                                            .Style( i => i.flexGrow = 1 )
+                                            .Classes( "color-light", "background-color-dark", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
                                             .Children( VisualElementFactory.Label( "Tab 1" ) )
                                     ),
                                     VisualElementFactory.Tab( "Tab 2" ).Children(
                                         VisualElementFactory.VisualElement()
-                                            .Classes( "justify-content-center", "align-items-center" )
-                                            .Style( i => i.backgroundColor = Color.green )
-                                            .Style( i => i.marginLeft = i.marginRight = i.marginTop = i.marginBottom = new Length( 0, LengthUnit.Pixel ) )
-                                            .Style( i => i.flexGrow = 1 )
+                                            .Classes( "color-light", "background-color-dark", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
                                             .Children( VisualElementFactory.Label( "Tab 2" ) )
                                     ),
                                     VisualElementFactory.Tab( "Tab 3" ).Children(
                                         VisualElementFactory.VisualElement()
-                                            .Classes( "justify-content-center", "align-items-center" )
-                                            .Style( i => i.backgroundColor = Color.blue )
-                                            .Style( i => i.marginLeft = i.marginRight = i.marginTop = i.marginBottom = new Length( 0, LengthUnit.Pixel ) )
-                                            .Style( i => i.flexGrow = 1 )
+                                            .Classes( "color-light", "background-color-dark", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
                                             .Children( VisualElementFactory.Label( "Tab 3" ) )
                                     )
                                 )
@@ -274,11 +265,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                             VisualElementScope.Add(
                                 VisualElementFactory.ScrollView().Classes( "gray", "medium", "grow-1" ).Children(
                                     VisualElementFactory.VisualElement()
-                                        .Classes( "justify-content-center", "align-items-center" )
-                                        .Style( i => i.backgroundColor = Color.red )
-                                        .Style( i => i.width = new Length( 1920, LengthUnit.Pixel ) )
-                                        .Style( i => i.height = new Length( 1080, LengthUnit.Pixel ) )
-                                        .Style( i => i.marginLeft = i.marginRight = i.marginTop = i.marginBottom = new Length( 0, LengthUnit.Pixel ) )
+                                        .Classes( "color-light", "background-color-dark", "width-150pc", "height-150pc", "margin-0px", "shrink-0", "justify-content-center", "align-items-center" )
                                         .Children( VisualElementFactory.Label( "Scroll View" ) )
                                 )
                             );
@@ -366,7 +353,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         }
                         using (VisualElementFactory.Content().AsScope()) {
                             VisualElementScope.Add(
-                                VisualElementFactory.ColumnGroup().Children(
+                                VisualElementFactory.ColumnGroup().Classes( "dark", "medium" ).Children(
                                     VisualElementFactory.Label( "Label" ),
                                     VisualElementFactory.Button( "Button" ),
                                     VisualElementFactory.RepeatButton( "Repeat Button" ),
