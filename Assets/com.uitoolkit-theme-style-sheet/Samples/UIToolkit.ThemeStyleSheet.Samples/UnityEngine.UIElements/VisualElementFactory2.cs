@@ -9,41 +9,41 @@ namespace UnityEngine.UIElements {
 
         // Widget
         public static View Widget() {
-            var result = Create<View>( "widget-view", "widget-view" );
+            var result = Create<View>( "widget", "widget" );
             return result;
         }
         public static View LeftWidget() {
-            var result = Create<View>( "left-widget-view", "left-widget-view" );
+            var result = Create<View>( "left-widget", "left-widget" );
             return result;
         }
         public static View SmallWidget() {
-            var result = Create<View>( "small-widget-view", "small-widget-view" );
+            var result = Create<View>( "small-widget", "small-widget" );
             return result;
         }
         public static View MediumWidget() {
-            var result = Create<View>( "medium-widget-view", "medium-widget-view" );
+            var result = Create<View>( "medium-widget", "medium-widget" );
             return result;
         }
         public static View LargeWidget() {
-            var result = Create<View>( "large-widget-view", "large-widget-view" );
+            var result = Create<View>( "large-widget", "large-widget" );
             return result;
         }
 
         // Widget
         public static View DialogWidget() {
-            var result = Create<View>( "dialog-widget-view", "dialog-widget-view" );
+            var result = Create<View>( "dialog-widget", "dialog-widget" );
             return result;
         }
         public static View InfoDialogWidget() {
-            var result = Create<View>( "info-dialog-widget-view", "info-dialog-widget-view" );
+            var result = Create<View>( "info-dialog-widget", "info-dialog-widget" );
             return result;
         }
         public static View WarningDialogWidget() {
-            var result = Create<View>( "warning-dialog-widget-view", "warning-dialog-widget-view" );
+            var result = Create<View>( "warning-dialog-widget", "warning-dialog-widget" );
             return result;
         }
         public static View ErrorDialogWidget() {
-            var result = Create<View>( "error-dialog-widget-view", "error-dialog-widget-view" );
+            var result = Create<View>( "error-dialog-widget", "error-dialog-widget" );
             return result;
         }
 
