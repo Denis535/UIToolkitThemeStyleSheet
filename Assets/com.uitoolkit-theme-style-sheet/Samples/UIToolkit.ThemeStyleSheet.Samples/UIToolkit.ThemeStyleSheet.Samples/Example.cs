@@ -258,7 +258,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 using (var root = VisualElementFactory.LargeWidget().AsScope()) {
                     using (VisualElementFactory.Card().AsScope()) {
                         using (VisualElementFactory.Header().AsScope()) {
-                            VisualElementScope.Add( VisualElementFactory.Label( "Tab View" ) );
+                            VisualElementScope.Add( VisualElementFactory.Label( "Scroll View" ) );
                         }
                         using (VisualElementFactory.Content().AsScope()) {
                             // ScrollView
@@ -283,7 +283,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 using (var root = VisualElementFactory.LargeWidget().AsScope()) {
                     using (VisualElementFactory.Card().AsScope()) {
                         using (VisualElementFactory.Header().AsScope()) {
-                            VisualElementScope.Add( VisualElementFactory.Label( "Tab View" ) );
+                            VisualElementScope.Add( VisualElementFactory.Label( "Group" ) );
                         }
                         using (VisualElementFactory.Content().AsScope()) {
                             VisualElementScope.Add(
@@ -316,7 +316,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 using (var root = VisualElementFactory.LargeWidget().AsScope()) {
                     using (VisualElementFactory.Card().AsScope()) {
                         using (VisualElementFactory.Header().AsScope()) {
-                            VisualElementScope.Add( VisualElementFactory.Label( "Tab View" ) );
+                            VisualElementScope.Add( VisualElementFactory.Label( "Box" ) );
                         }
                         using (VisualElementFactory.Content().AsScope()) {
                             VisualElementScope.Add(
@@ -349,7 +349,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 using (var root = VisualElementFactory.LargeWidget().AsScope()) {
                     using (VisualElementFactory.Card().AsScope()) {
                         using (VisualElementFactory.Header().AsScope()) {
-                            VisualElementScope.Add( VisualElementFactory.Label( "Tab View" ) );
+                            VisualElementScope.Add( VisualElementFactory.Label( "Misc" ) );
                         }
                         using (VisualElementFactory.Content().AsScope()) {
                             VisualElementScope.Add(

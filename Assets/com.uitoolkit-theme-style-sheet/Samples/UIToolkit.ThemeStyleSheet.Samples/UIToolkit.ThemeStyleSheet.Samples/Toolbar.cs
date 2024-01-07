@@ -14,14 +14,14 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
     public static class Toolbar {
 
         // TakeScreenshot
-        [MenuItem( "UIToolkit Theme Style Sheet/Take Screenshot (Game) _F12", priority = 400 )]
+        [MenuItem( "UIToolkitThemeStyleSheet/Take Screenshot (Game) _F12", priority = 400 )]
         internal static void TakeScreenshot_Game() {
             var path = $"Screenshots/{Application.productName}-{DateTime.UtcNow.Ticks}.png";
             ScreenCapture.CaptureScreenshot( path, 1 );
             EditorApplication.Beep();
             EditorUtility.RevealInFinder( path );
         }
-        [MenuItem( "UIToolkit Theme Style Sheet/Take Screenshot (Editor) &F12", priority = 401 )]
+        [MenuItem( "UIToolkitThemeStyleSheet/Take Screenshot (Editor) &F12", priority = 401 )]
         internal static void TakeScreenshot_Editor() {
             var position = EditorGUIUtility.GetMainWindowPosition();
             var texture = new Texture2D( (int) position.width, (int) position.height );
