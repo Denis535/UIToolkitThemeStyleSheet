@@ -2,7 +2,7 @@
     "name": "com.uitoolkit-theme-style-sheet",
     "version": "1.0.0",
     "displayName": "UIToolkit Theme Style Sheet",
-    "description": "This package provides you with beautiful styles and some elements for UIToolkit.",
+    "description": "This package provides you with beautiful theme styles and some additions and tools for UIToolkit.",
     "author": {
         "name": "Denis535"
     },
@@ -15,8 +15,15 @@
         "UI",
         "UIElements",
         "UIToolkit",
+        "GUI",
         "Theme Style Sheet",
-        "Dark Theme Style Sheet"
+        "Dark Theme Style Sheet",
+        "USS",
+        "CSS",
+        "Less",
+        "Sass",
+        "Stylus",
+        "Pug"
     ],
     "hideInEditor": false
 }

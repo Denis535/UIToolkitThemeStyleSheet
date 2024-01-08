@@ -4,5 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/com.uitoolkit-theme-style-sheet/Samples/UIToolkit.ThemeStyleSheet.Samples/Assets.UIToolkit.ThemeStyleSheet.Samples/Example.unity
+    guid: 236a751b7fc2e374fa259621dc398615
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

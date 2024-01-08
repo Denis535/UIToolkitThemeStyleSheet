@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 #nullable enable
 namespace UIToolkit.ThemeStyleSheet.Samples {
     using System;
@@ -123,3 +124,4 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
 
     }
 }
+#endif
