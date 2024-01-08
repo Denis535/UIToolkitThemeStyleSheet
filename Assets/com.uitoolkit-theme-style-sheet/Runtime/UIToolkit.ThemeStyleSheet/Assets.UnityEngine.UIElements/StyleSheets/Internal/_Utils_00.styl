@@ -1,12 +1,12 @@
 // create-theme
 create-theme(args)
-    args
-
-// add-theme
-add-theme(key)
-    if key != null
-        theme = get-value(get-key('theme', key))
-        add-view(theme[0], theme[1], theme[2], theme[3], theme[4])
+    return {
+        color:             args[0],
+        background-color:  args[1],
+        background-image:  args[2],
+        border-color:      args[3],
+        border-radius:     args[4]
+    }
 
 // add-view
 add-font(url = null, size = null, style = null)
@@ -18,6 +18,12 @@ add-text(align = null, outline = null, shadow = null)
     add-property2 'text-align'          align
     add-property2 'text-outline'        outline
     add-property2 'text-shadow'         shadow
+
+// add-view
+add-theme(key)
+    if key != null
+        theme = get-value(get-key('theme', key))
+        add-view(theme.color, theme.background-color, theme.background-image, theme.border-color, theme.border-radius)
 
 // add-view
 add-view(color = null, background-color = null, background-image = null, border-color = null, border-radius = null)
