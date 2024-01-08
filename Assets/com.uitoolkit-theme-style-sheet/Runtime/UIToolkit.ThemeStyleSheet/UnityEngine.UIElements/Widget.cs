@@ -5,12 +5,12 @@ namespace UnityEngine.UIElements {
     using System.Collections.Generic;
     using UnityEngine.Scripting;
 
-    public class View : VisualElement {
+    public class Widget : VisualElement {
         [Preserve]
-        public new class UxmlFactory : UxmlFactory<View, UxmlTraits> { }
+        public new class UxmlFactory : UxmlFactory<Widget, UxmlTraits> { }
 
-        public View() {
-            AddToClassList( "view" );
+        public Widget() {
+            AddToClassList( "widget" );
         }
 
     }

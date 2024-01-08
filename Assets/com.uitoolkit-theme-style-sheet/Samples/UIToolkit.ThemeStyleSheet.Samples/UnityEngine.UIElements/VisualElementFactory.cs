@@ -5,6 +5,7 @@ namespace UnityEngine.UIElements {
     using System.Collections.Generic;
     using System.Linq;
     using UnityEngine;
+    using UnityEngine.UIElements.Experimental;
 
     public static partial class VisualElementFactory {
 
@@ -30,6 +31,9 @@ namespace UnityEngine.UIElements {
             var result = Create<Button>( null );
             {
                 result.text = text;
+                result.OnClick( evt => {
+
+                } );
             }
             return result;
         }
@@ -37,6 +41,9 @@ namespace UnityEngine.UIElements {
             var result = Create<RepeatButton>( null );
             {
                 result.text = text;
+                result.OnClick( evt => {
+
+                } );
             }
             return result;
         }
@@ -50,6 +57,9 @@ namespace UnityEngine.UIElements {
                 result.maxLength = maxLength;
                 result.multiline = isMultiline;
                 result.isReadOnly = false;
+                result.OnChange( evt => {
+
+                } );
             }
             return result;
         }
@@ -61,6 +71,9 @@ namespace UnityEngine.UIElements {
                 result.maxLength = maxLength;
                 result.multiline = isMultiline;
                 result.isReadOnly = true;
+                result.OnChange( evt => {
+
+                } );
             }
             return result;
         }
@@ -72,6 +85,9 @@ namespace UnityEngine.UIElements {
                 result.label = label;
                 result.value = value;
                 result.choices = choices?.ToList();
+                result.OnChange( evt => {
+
+                } );
             }
             return result;
         }
@@ -83,6 +99,9 @@ namespace UnityEngine.UIElements {
                 result.label = label;
                 result.value = value;
                 result.choices = choices?.ToList();
+                result.OnChange( evt => {
+
+                } );
             }
             return result;
         }
@@ -93,6 +112,9 @@ namespace UnityEngine.UIElements {
                 result.value = value;
                 result.lowValue = min;
                 result.highValue = max;
+                result.OnChange( evt => {
+
+                } );
             }
             return result;
         }
@@ -103,6 +125,9 @@ namespace UnityEngine.UIElements {
                 result.value = value;
                 result.lowValue = min;
                 result.highValue = max;
+                result.OnChange( evt => {
+
+                } );
             }
             return result;
         }
@@ -111,6 +136,9 @@ namespace UnityEngine.UIElements {
             {
                 result.label = label;
                 result.value = value;
+                result.OnChange( evt => {
+
+                } );
             }
             return result;
         }
@@ -124,6 +152,21 @@ namespace UnityEngine.UIElements {
                 result.AddToClassList( @class );
             }
             return result;
+        }
+        // Helpers
+        private static void PlayWidgetAppearanceAnimation(Widget view) {
+            var animation = ValueAnimation<float>.Create( view, Mathf.LerpUnclamped );
+            animation.valueUpdated = (view, t) => {
+                var tx = Easing.OutBack( Easing.InPower( t, 2 ), 4 );
+                var ty = Easing.OutBack( Easing.OutPower( t, 2 ), 4 );
+                var x = Mathf.LerpUnclamped( 0.8f, 1f, tx );
+                var y = Mathf.LerpUnclamped( 0.8f, 1f, ty );
+                view.transform.scale = new Vector3( x, y, 1 );
+            };
+            animation.from = 0;
+            animation.to = 1;
+            animation.durationMs = 500;
+            animation.Start();
         }
 
     }

@@ -14,7 +14,9 @@ This package provides you with beautiful theme styles and some additions and too
 - Views
     - TabView
     - ScrollView
-    - Scopes
+- Scopes
+    - Slot
+    - Scope
     - Group
     - Box
 - Elements

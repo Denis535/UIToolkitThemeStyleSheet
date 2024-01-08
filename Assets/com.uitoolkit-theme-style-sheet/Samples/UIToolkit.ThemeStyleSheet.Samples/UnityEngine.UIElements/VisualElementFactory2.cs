@@ -8,42 +8,56 @@ namespace UnityEngine.UIElements {
     public static partial class VisualElementFactory {
 
         // Widget
-        public static View Widget() {
-            var result = Create<View>( "widget", "widget" );
+        public static Widget Widget() {
+            var result = Create<Widget>( "widget" );
             return result;
         }
-        public static View LeftWidget() {
-            var result = Create<View>( "left-widget", "left-widget" );
+        public static Widget LeftWidget() {
+            var result = Create<Widget>( "left-widget", "left-widget" );
             return result;
         }
-        public static View SmallWidget() {
-            var result = Create<View>( "small-widget", "small-widget" );
+        public static Widget SmallWidget() {
+            var result = Create<Widget>( "small-widget", "small-widget" );
             return result;
         }
-        public static View MediumWidget() {
-            var result = Create<View>( "medium-widget", "medium-widget" );
+        public static Widget MediumWidget() {
+            var result = Create<Widget>( "medium-widget", "medium-widget" );
             return result;
         }
-        public static View LargeWidget() {
-            var result = Create<View>( "large-widget", "large-widget" );
+        public static Widget LargeWidget() {
+            var result = Create<Widget>( "large-widget", "large-widget" );
             return result;
         }
 
         // Widget
-        public static View DialogWidget() {
-            var result = Create<View>( "dialog-widget", "dialog-widget" );
+        public static Widget DialogWidget() {
+            var result = Create<Widget>( "dialog-widget", "dialog-widget" );
+            {
+                result.OnAttachToPanel( evt => {
+                    PlayWidgetAppearanceAnimation( result );
+                } );
+            }
             return result;
         }
-        public static View InfoDialogWidget() {
-            var result = Create<View>( "info-dialog-widget", "info-dialog-widget" );
+        public static Widget InfoDialogWidget() {
+            var result = Create<Widget>( "info-dialog-widget", "info-dialog-widget" );
+            result.OnAttachToPanel( evt => {
+                PlayWidgetAppearanceAnimation( result );
+            } );
             return result;
         }
-        public static View WarningDialogWidget() {
-            var result = Create<View>( "warning-dialog-widget", "warning-dialog-widget" );
+        public static Widget WarningDialogWidget() {
+            var result = Create<Widget>( "warning-dialog-widget", "warning-dialog-widget" );
+            result.OnAttachToPanel( evt => {
+                PlayWidgetAppearanceAnimation( result );
+            } );
             return result;
         }
-        public static View ErrorDialogWidget() {
-            var result = Create<View>( "error-dialog-widget", "error-dialog-widget" );
+        public static Widget ErrorDialogWidget() {
+            var result = Create<Widget>( "error-dialog-widget", "error-dialog-widget" );
+            result.OnAttachToPanel( evt => {
+                PlayWidgetAppearanceAnimation( result );
+            } );
             return result;
         }
 
