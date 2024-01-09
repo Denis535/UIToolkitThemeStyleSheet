@@ -1,5 +1,5 @@
 # Overview
-This package provides you with beautiful theme styles and some additions and tools for UIToolkit.
+This package provides you with beautiful theme style sheets and some additions and tools for UIToolkit.
 
 - Widgets
     - Widget

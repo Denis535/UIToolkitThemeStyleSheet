@@ -12,12 +12,17 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
 
         // Document
         private UIDocument Document { get; set; } = default!;
+        // AudioSource
+        private AudioSource AudioSource { get; set; } = default!;
 
         // Awake
         public void Awake() {
             Document = GetComponent<UIDocument>();
+            AudioSource = GetComponent<AudioSource>();
+            VisualElementFactory.Initialize( AudioSource );
         }
         public void OnDestroy() {
+            VisualElementFactory.Deinitialize();
         }
 
         // Start
@@ -357,8 +362,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                                     VisualElementFactory.Label( "Label" ),
                                     VisualElementFactory.Button( "Button" ),
                                     VisualElementFactory.RepeatButton( "Repeat Button" ),
-                                    VisualElementFactory.TextField( "Text Field", "Hello World !!!", 64, false ),
-                                    VisualElementFactory.ReadOnlyTextField( "Read Only Text Field", "Hello World !!!", 64, false ).Classes( "invalid" ),
+                                    VisualElementFactory.TextField( "Text Field", "Text", 64, false ).Classes( "invalid" ),
                                     VisualElementFactory.PopupField( "Popup Field", "Item 1", new[] { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10" } ),
                                     VisualElementFactory.DropdownField( "Dropdown Field", "Item 1", new[] { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10", "Item 11", "Item 12", "Item 13", "Item 14", "Item 15", "Item 16", "Item 17", "Item 18", "Item 19", "Item 20" } ),
                                     VisualElementFactory.SliderField( "Slider Field", 1, 0, 2 ),

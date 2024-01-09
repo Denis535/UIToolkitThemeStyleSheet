@@ -32,11 +32,9 @@ namespace UnityEngine.UIElements {
         // Widget
         public static Widget DialogWidget() {
             var result = Create<Widget>( "dialog-widget", "dialog-widget" );
-            {
-                result.OnAttachToPanel( evt => {
-                    PlayWidgetAppearanceAnimation( result );
-                } );
-            }
+            result.OnAttachToPanel( evt => {
+                PlayWidgetAppearanceAnimation( result );
+            } );
             return result;
         }
         public static Widget InfoDialogWidget() {
@@ -104,19 +102,15 @@ namespace UnityEngine.UIElements {
         }
         public static Tab Tab(string label) {
             var result = Create<Tab>( "tab" );
-            {
-                result.label = label;
-            }
+            result.label = label;
             return result;
         }
 
         // ScrollView
         public static ScrollView ScrollView() {
             var result = Create<ScrollView>( "scroll-view" );
-            {
-                result.horizontalScroller.highButton.BringToFront();
-                result.verticalScroller.highButton.BringToFront();
-            }
+            result.horizontalScroller.highButton.BringToFront();
+            result.verticalScroller.highButton.BringToFront();
             return result;
         }
 
