@@ -1,113 +1,118 @@
 #nullable enable
-namespace UnityEngine.UIElements {
+namespace UIToolkit.ThemeStyleSheet.Samples {
     using System;
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
+    using UnityEngine.UIElements;
 
-    public static partial class VisualElementFactory {
+    public partial class VisualElementFactory {
 
         // Widget
-        public static Widget Widget() {
+        public Widget Widget() {
             var result = Create<Widget>( "widget" );
             return result;
         }
-        public static Widget LeftWidget() {
+        public Widget LeftWidget() {
             var result = Create<Widget>( "left-widget", "left-widget" );
             return result;
         }
-        public static Widget SmallWidget() {
+        public Widget SmallWidget() {
             var result = Create<Widget>( "small-widget", "small-widget" );
             return result;
         }
-        public static Widget MediumWidget() {
+        public Widget MediumWidget() {
             var result = Create<Widget>( "medium-widget", "medium-widget" );
             return result;
         }
-        public static Widget LargeWidget() {
+        public Widget LargeWidget() {
             var result = Create<Widget>( "large-widget", "large-widget" );
             return result;
         }
 
         // Widget
-        public static Widget DialogWidget() {
+        public Widget DialogWidget() {
             var result = Create<Widget>( "dialog-widget", "dialog-widget" );
             result.OnAttachToPanel( evt => {
-                PlayWidgetAppearanceAnimation( result );
+                PlayAttach( evt );
+                PlayAttach( result );
             } );
             return result;
         }
-        public static Widget InfoDialogWidget() {
+        public Widget InfoDialogWidget() {
             var result = Create<Widget>( "info-dialog-widget", "info-dialog-widget" );
             result.OnAttachToPanel( evt => {
-                PlayWidgetAppearanceAnimation( result );
+                PlayAttach( evt );
+                PlayAttach( result );
             } );
             return result;
         }
-        public static Widget WarningDialogWidget() {
+        public Widget WarningDialogWidget() {
             var result = Create<Widget>( "warning-dialog-widget", "warning-dialog-widget" );
             result.OnAttachToPanel( evt => {
-                PlayWidgetAppearanceAnimation( result );
+                PlayAttach( evt );
+                PlayAttach( result );
             } );
             return result;
         }
-        public static Widget ErrorDialogWidget() {
+        public Widget ErrorDialogWidget() {
             var result = Create<Widget>( "error-dialog-widget", "error-dialog-widget" );
             result.OnAttachToPanel( evt => {
-                PlayWidgetAppearanceAnimation( result );
+                PlayAttach( evt );
+                PlayAttach( result );
             } );
             return result;
         }
 
         // Card
-        public static Card Card() {
+        public Card Card() {
             var result = Create<Card>( "card" );
             return result;
         }
-        public static Header Header() {
+        public Header Header() {
             var result = Create<Header>( "header" );
             return result;
         }
-        public static Content Content() {
+        public Content Content() {
             var result = Create<Content>( "content" );
             return result;
         }
-        public static Footer Footer() {
+        public Footer Footer() {
             var result = Create<Footer>( "footer" );
             return result;
         }
 
         // Card
-        public static Card DialogCard() {
+        public Card DialogCard() {
             var result = Create<Card>( "dialog-card", "dialog-card" );
             return result;
         }
-        public static Card InfoDialogCard() {
+        public Card InfoDialogCard() {
             var result = Create<Card>( "info-dialog-card", "info-dialog-card" );
             return result;
         }
-        public static Card WarningDialogCard() {
+        public Card WarningDialogCard() {
             var result = Create<Card>( "warning-dialog-card", "warning-dialog-card" );
             return result;
         }
-        public static Card ErrorDialogCard() {
+        public Card ErrorDialogCard() {
             var result = Create<Card>( "error-dialog-card", "error-dialog-card" );
             return result;
         }
 
         // TabView
-        public static TabView TabView() {
+        public TabView TabView() {
             var result = Create<TabView>( "tab-view" );
             return result;
         }
-        public static Tab Tab(string label) {
+        public Tab Tab(string label) {
             var result = Create<Tab>( "tab" );
             result.label = label;
             return result;
         }
 
         // ScrollView
-        public static ScrollView ScrollView() {
+        public ScrollView ScrollView() {
             var result = Create<ScrollView>( "scroll-view" );
             result.horizontalScroller.highButton.BringToFront();
             result.verticalScroller.highButton.BringToFront();
@@ -115,33 +120,33 @@ namespace UnityEngine.UIElements {
         }
 
         // Slot
-        public static Slot Slot() {
+        public Slot Slot() {
             var result = Create<Slot>( "slot" );
             return result;
         }
 
         // Scope
-        public static ColumnScope ColumnScope() {
+        public ColumnScope ColumnScope() {
             var result = Create<ColumnScope>( "scope" );
             return result;
         }
-        public static RowScope RowScope() {
+        public RowScope RowScope() {
             var result = Create<RowScope>( "scope" );
             return result;
         }
 
         // Group
-        public static ColumnGroup ColumnGroup() {
+        public ColumnGroup ColumnGroup() {
             var result = Create<ColumnGroup>( "group" );
             return result;
         }
-        public static RowGroup RowGroup() {
+        public RowGroup RowGroup() {
             var result = Create<RowGroup>( "group" );
             return result;
         }
 
         // Box
-        public static Box Box() {
+        public Box Box() {
             var result = Create<Box>( "box" );
             return result;
         }

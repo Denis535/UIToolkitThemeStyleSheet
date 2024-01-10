@@ -8,6 +8,35 @@ namespace UnityEngine.UIElements {
 
     public static partial class VisualElementExtensions {
 
+        // IsAttached
+        public static bool IsAttached(this VisualElement element) {
+            return element.panel != null;
+        }
+
+        // IsDisplayed
+        public static bool IsDisplayed(this VisualElement element) {
+            return element.style.display == DisplayStyle.Flex;
+        }
+        public static void SetDisplayed(this VisualElement element, bool value) {
+            if (value) {
+                element.style.display = DisplayStyle.Flex;
+            } else {
+                element.style.display = DisplayStyle.None;
+            }
+        }
+
+        // IsValid
+        public static bool IsValid(this VisualElement element) {
+            return !element.ClassListContains( "invalid" );
+        }
+        public static void SetValid(this VisualElement element, bool value) {
+            if (value) {
+                element.RemoveFromClassList( "invalid" );
+            } else {
+                element.AddToClassList( "invalid" );
+            }
+        }
+
         // SetUp
         public static T Name<T>(this T element, string? name) where T : VisualElement {
             element.name = name;
@@ -33,10 +62,10 @@ namespace UnityEngine.UIElements {
             element.userData = userData;
             return element;
         }
-        public static T Pipe<T>(this T element, Action<T> callback) where T : VisualElement {
-            callback( element );
-            return element;
-        }
+        //public static T Pipe<T>(this T element, Action<T> callback) where T : VisualElement {
+        //    callback( element );
+        //    return element;
+        //}
 
         // SetUp
         public static T Parent<T>(this T element, VisualElement? parent) where T : VisualElement {
