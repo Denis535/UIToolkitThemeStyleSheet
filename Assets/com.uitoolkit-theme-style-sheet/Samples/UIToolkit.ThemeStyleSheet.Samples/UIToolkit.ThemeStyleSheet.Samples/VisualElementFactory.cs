@@ -121,12 +121,12 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
         // TabView
         public TabView TabView() {
             var result = Create<TabView>( "tab-view" );
-            result.OnClick( PlayClick );
             return result;
         }
         public Tab Tab(string label) {
             var result = Create<Tab>( "tab" );
             result.label = label;
+            result.tabHeader.OnClick( PlayClick );
             return result;
         }
 

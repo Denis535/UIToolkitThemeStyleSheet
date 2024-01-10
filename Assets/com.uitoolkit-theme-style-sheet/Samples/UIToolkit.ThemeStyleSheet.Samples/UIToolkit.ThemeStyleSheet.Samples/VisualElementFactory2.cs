@@ -26,7 +26,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             AudioSource.PlayOneShot( errorAppearance );
             PlayAppearance( (VisualElement) evt.target );
         }
-        private void PlayAppearance(VisualElement element) {
+        private static void PlayAppearance(VisualElement element) {
             var animation = ValueAnimation<float>.Create( element, Mathf.LerpUnclamped );
             animation.valueUpdated = (view, t) => {
                 var tx = Easing.OutBack( Easing.InPower( t, 2 ), 4 );
