@@ -5,149 +5,96 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
     using System.Collections.Generic;
     using UnityEngine;
     using UnityEngine.UIElements;
+    using UnityEngine.UIElements.Experimental;
 
     public partial class VisualElementFactory {
 
-        // Widget
-        public Widget Widget() {
-            var result = Create<Widget>( "widget" );
-            return result;
+        // Helpers
+        private void PlayAppearance(AttachToPanelEvent evt) {
+            AudioSource.PlayOneShot( appearance );
+            PlayAppearance( (VisualElement) evt.target );
         }
-        public Widget LeftWidget() {
-            var result = Create<Widget>( "left-widget", "left-widget" );
-            return result;
+        private void PlayInfoAppearance(AttachToPanelEvent evt) {
+            AudioSource.PlayOneShot( infoAppearance );
+            PlayAppearance( (VisualElement) evt.target );
         }
-        public Widget SmallWidget() {
-            var result = Create<Widget>( "small-widget", "small-widget" );
-            return result;
+        private void PlayWarningAppearance(AttachToPanelEvent evt) {
+            AudioSource.PlayOneShot( warningAppearance );
+            PlayAppearance( (VisualElement) evt.target );
         }
-        public Widget MediumWidget() {
-            var result = Create<Widget>( "medium-widget", "medium-widget" );
-            return result;
+        private void PlayErrorAppearance(AttachToPanelEvent evt) {
+            AudioSource.PlayOneShot( errorAppearance );
+            PlayAppearance( (VisualElement) evt.target );
         }
-        public Widget LargeWidget() {
-            var result = Create<Widget>( "large-widget", "large-widget" );
-            return result;
+        private void PlayAppearance(VisualElement element) {
+            var animation = ValueAnimation<float>.Create( element, Mathf.LerpUnclamped );
+            animation.valueUpdated = (view, t) => {
+                var tx = Easing.OutBack( Easing.InPower( t, 2 ), 4 );
+                var ty = Easing.OutBack( Easing.OutPower( t, 2 ), 4 );
+                var x = Mathf.LerpUnclamped( 0.8f, 1f, tx );
+                var y = Mathf.LerpUnclamped( 0.8f, 1f, ty );
+                view.transform.scale = new Vector3( x, y, 1 );
+            };
+            animation.from = 0;
+            animation.to = 1;
+            animation.durationMs = 500;
+            animation.Start();
         }
-
-        // Widget
-        public Widget DialogWidget() {
-            var result = Create<Widget>( "dialog-widget", "dialog-widget" );
-            result.OnAttachToPanel( evt => {
-                PlayAttach( evt );
-                PlayAttach( result );
-            } );
-            return result;
+        // Helpers
+        private void PlayFocus(FocusEvent evt) {
+            if (evt.direction != FocusChangeDirection.none && evt.direction != FocusChangeDirection.unspecified) {
+                AudioSource.PlayOneShot( focus );
+            }
         }
-        public Widget InfoDialogWidget() {
-            var result = Create<Widget>( "info-dialog-widget", "info-dialog-widget" );
-            result.OnAttachToPanel( evt => {
-                PlayAttach( evt );
-                PlayAttach( result );
-            } );
-            return result;
+        // Helpers
+        private void PlayClick(ClickEvent evt) {
+            var target = (VisualElement) evt.target;
+            AudioSource.PlayOneShot( target.IsValid() ? click : invalidClick );
         }
-        public Widget WarningDialogWidget() {
-            var result = Create<Widget>( "warning-dialog-widget", "warning-dialog-widget" );
-            result.OnAttachToPanel( evt => {
-                PlayAttach( evt );
-                PlayAttach( result );
-            } );
-            return result;
+        private void PlaySelect(ClickEvent evt) {
+            var target = (VisualElement) evt.target;
+            AudioSource.PlayOneShot( target.IsValid() ? selectClick : invalidClick );
         }
-        public Widget ErrorDialogWidget() {
-            var result = Create<Widget>( "error-dialog-widget", "error-dialog-widget" );
-            result.OnAttachToPanel( evt => {
-                PlayAttach( evt );
-                PlayAttach( result );
-            } );
-            return result;
+        private void PlaySubmit(ClickEvent evt) {
+            var target = (VisualElement) evt.target;
+            AudioSource.PlayOneShot( target.IsValid() ? submitClick : invalidClick );
         }
-
-        // Card
-        public Card Card() {
-            var result = Create<Card>( "card" );
-            return result;
+        private void PlayCancel(ClickEvent evt) {
+            var target = (VisualElement) evt.target;
+            AudioSource.PlayOneShot( target.IsValid() ? cancelClick : invalidClick );
         }
-        public Header Header() {
-            var result = Create<Header>( "header" );
-            return result;
+        // Helpers
+        private void PlayChange(ChangeEvent<object> evt) {
+            if (evt.newValue != evt.previousValue) {
+                AudioSource.PlayOneShot( tik );
+            }
         }
-        public Content Content() {
-            var result = Create<Content>( "content" );
-            return result;
+        private void PlayChange(ChangeEvent<string> evt) {
+            if (evt.newValue != evt.previousValue) {
+                AudioSource.PlayOneShot( tik );
+            }
         }
-        public Footer Footer() {
-            var result = Create<Footer>( "footer" );
-            return result;
+        private void PlayChange(ChangeEvent<float> evt) {
+            if (Mathf.FloorToInt( evt.newValue * 100 ) != Mathf.FloorToInt( evt.previousValue * 100 )) {
+                AudioSource.PlayOneShot( tik );
+            }
         }
-
-        // Card
-        public Card DialogCard() {
-            var result = Create<Card>( "dialog-card", "dialog-card" );
-            return result;
+        private void PlayChange(ChangeEvent<int> evt) {
+            if (evt.newValue != evt.previousValue) {
+                AudioSource.PlayOneShot( tik );
+            }
         }
-        public Card InfoDialogCard() {
-            var result = Create<Card>( "info-dialog-card", "info-dialog-card" );
-            return result;
+        private void PlayChange(ChangeEvent<bool> evt) {
+            if (evt.newValue != evt.previousValue) {
+                AudioSource.PlayOneShot( tik );
+            }
         }
-        public Card WarningDialogCard() {
-            var result = Create<Card>( "warning-dialog-card", "warning-dialog-card" );
-            return result;
-        }
-        public Card ErrorDialogCard() {
-            var result = Create<Card>( "error-dialog-card", "error-dialog-card" );
-            return result;
-        }
-
-        // TabView
-        public TabView TabView() {
-            var result = Create<TabView>( "tab-view" );
-            return result;
-        }
-        public Tab Tab(string label) {
-            var result = Create<Tab>( "tab" );
-            result.label = label;
-            return result;
-        }
-
-        // ScrollView
-        public ScrollView ScrollView() {
-            var result = Create<ScrollView>( "scroll-view" );
-            result.horizontalScroller.highButton.BringToFront();
-            result.verticalScroller.highButton.BringToFront();
-            return result;
-        }
-
-        // Slot
-        public Slot Slot() {
-            var result = Create<Slot>( "slot" );
-            return result;
-        }
-
-        // Scope
-        public ColumnScope ColumnScope() {
-            var result = Create<ColumnScope>( "scope" );
-            return result;
-        }
-        public RowScope RowScope() {
-            var result = Create<RowScope>( "scope" );
-            return result;
-        }
-
-        // Group
-        public ColumnGroup ColumnGroup() {
-            var result = Create<ColumnGroup>( "group" );
-            return result;
-        }
-        public RowGroup RowGroup() {
-            var result = Create<RowGroup>( "group" );
-            return result;
-        }
-
-        // Box
-        public Box Box() {
-            var result = Create<Box>( "box" );
+        // Helpers
+        private static T Create<T>(string? name, string? @class = null) where T : VisualElement, new() {
+            var result = new T();
+            result.name = name;
+            result.AddToClassList( "visual-element" );
+            result.AddToClassList( @class );
             return result;
         }
 

@@ -291,16 +291,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3fbfc73264ec04e8fda1624cccfb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  window: {fileID: 8300000, guid: e2fc352bb54640d4a981f907463d6a30, type: 3}
-  infoWindow: {fileID: 8300000, guid: 6f858bef183d22c4ca5552b9f5334fbb, type: 3}
-  warningWindow: {fileID: 8300000, guid: 88fa19d9cb9f4f64eb95c999107e23d5, type: 3}
-  errorWindow: {fileID: 8300000, guid: e674a46fba1b904408734501df9b5d9c, type: 3}
+  appearance: {fileID: 8300000, guid: e2fc352bb54640d4a981f907463d6a30, type: 3}
+  infoAppearance: {fileID: 8300000, guid: 6f858bef183d22c4ca5552b9f5334fbb, type: 3}
+  warningAppearance: {fileID: 8300000, guid: 88fa19d9cb9f4f64eb95c999107e23d5, type: 3}
+  errorAppearance: {fileID: 8300000, guid: e674a46fba1b904408734501df9b5d9c, type: 3}
   focus: {fileID: 8300000, guid: a6350f0c683b916438b503fec3c819da, type: 3}
   click: {fileID: 8300000, guid: f69a2be50210f2e49a583a3383b41109, type: 3}
-  select: {fileID: 8300000, guid: f4cf1526c16e2f1438eb618590d01b28, type: 3}
-  submitSelect: {fileID: 8300000, guid: 73930756309b68c4b9734a5487d7f37a, type: 3}
-  cancelSelect: {fileID: 8300000, guid: 07f59ca142e32844eab981a76a8c1297, type: 3}
-  invalidSelect: {fileID: 8300000, guid: 872e78f8c6d256e47b4269e339a7cd2a, type: 3}
+  selectClick: {fileID: 8300000, guid: f4cf1526c16e2f1438eb618590d01b28, type: 3}
+  submitClick: {fileID: 8300000, guid: 73930756309b68c4b9734a5487d7f37a, type: 3}
+  cancelClick: {fileID: 8300000, guid: 07f59ca142e32844eab981a76a8c1297, type: 3}
+  invalidClick: {fileID: 8300000, guid: 872e78f8c6d256e47b4269e339a7cd2a, type: 3}
   tik: {fileID: 8300000, guid: dba62c9444eafba4cb6c8276af481e53, type: 3}
 --- !u!1 &1484687551
 GameObject:
