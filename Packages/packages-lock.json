@@ -1,5 +1,21 @@
 {
   "dependencies": {
+    "com.needle.upm-in-unitypackage": {
+      "version": "0.6.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "com.uitoolkit-theme-style-sheet": {
+      "version": "file:com.uitoolkit-theme-style-sheet",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.modules.ui": "1.0.0",
+        "com.unity.modules.uielements": "1.0.0"
+      }
+    },
     "com.unity.asset-store-tools": {
       "version": "file:com.unity.asset-store-tools",
       "depth": 0,
