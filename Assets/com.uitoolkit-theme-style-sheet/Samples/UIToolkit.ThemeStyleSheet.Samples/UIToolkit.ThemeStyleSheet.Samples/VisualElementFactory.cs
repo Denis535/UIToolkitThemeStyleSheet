@@ -349,12 +349,12 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             AudioSource.PlayOneShot( target.IsValid() ? cancelClick : invalidClick );
         }
         // Helpers
-        private void PlayChange(ChangeEvent<object> evt) {
+        private void PlayChange(ChangeEvent<object?> evt) {
             if (evt.newValue != evt.previousValue) {
                 AudioSource.PlayOneShot( tik );
             }
         }
-        private void PlayChange(ChangeEvent<string> evt) {
+        private void PlayChange(ChangeEvent<string?> evt) {
             if (evt.newValue != evt.previousValue) {
                 AudioSource.PlayOneShot( tik );
             }
