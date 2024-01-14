@@ -1,7 +1,9 @@
 {
     "name": "UIToolkit.ThemeStyleSheet.Editor",
     "rootNamespace": "UnityEditor.UIElements",
-    "references": [],
+    "references": [
+        "UIToolkit.ThemeStyleSheet"
+    ],
     "includePlatforms": [
         "Editor"
     ],
