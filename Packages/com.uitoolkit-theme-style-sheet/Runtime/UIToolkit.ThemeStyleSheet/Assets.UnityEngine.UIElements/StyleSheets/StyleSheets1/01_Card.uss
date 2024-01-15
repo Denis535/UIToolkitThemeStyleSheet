@@ -657,8 +657,8 @@
   flex-basis: auto;
   align-self: auto;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 .dialog-card .footer {
   flex-grow: 0;
@@ -693,8 +693,8 @@
   flex-basis: auto;
   align-self: auto;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 .info-dialog-card .footer {
   flex-grow: 0;
@@ -729,8 +729,8 @@
   flex-basis: auto;
   align-self: auto;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 .warning-dialog-card .footer {
   flex-grow: 0;
@@ -765,8 +765,8 @@
   flex-basis: auto;
   align-self: auto;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 .error-dialog-card .footer {
   flex-grow: 0;

@@ -12,15 +12,12 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
 
         // Document
         private UIDocument Document { get; set; } = default!;
-        // AudioSource
-        private AudioSource AudioSource { get; set; } = default!;
         // Factory
         private VisualElementFactory Factory { get; set; } = default!;
 
         // Awake
         public void Awake() {
             Document = GetComponent<UIDocument>();
-            AudioSource = GetComponent<AudioSource>();
             Factory = GetComponent<VisualElementFactory>();
         }
         public void OnDestroy() {
@@ -161,7 +158,11 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                             VisualElementScope.Add( Factory.Label( "Dialog Widget" ) );
                         }
                         using (Factory.Content().AsScope()) {
-                            VisualElementScope.Add( Factory.Label( "Dialog Widget" ) );
+                            VisualElementScope.Add(
+                                Factory.ColumnGroup()
+                                    .Classes( "dark", "medium", "grow-1", "justify-content-center", "align-items-center" )
+                                    .Children( Factory.Label( "Dialog Widget" ) )
+                            );
                         }
                         using (Factory.Footer().AsScope()) {
                             VisualElementScope.Add( Factory.Submit( "Submit" ), Factory.Cancel( "Cancel" ) );
@@ -178,7 +179,11 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                             VisualElementScope.Add( Factory.Label( "Info Dialog Widget" ) );
                         }
                         using (Factory.Content().AsScope()) {
-                            VisualElementScope.Add( Factory.Label( "Info Dialog Widget" ) );
+                            VisualElementScope.Add(
+                                Factory.ColumnGroup()
+                                    .Classes( "dark", "medium", "grow-1", "justify-content-center", "align-items-center" )
+                                    .Children( Factory.Label( "Info Dialog Widget" ) )
+                            );
                         }
                         using (Factory.Footer().AsScope()) {
                             VisualElementScope.Add( Factory.Submit( "Submit" ), Factory.Cancel( "Cancel" ) );
@@ -195,7 +200,11 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                             VisualElementScope.Add( Factory.Label( "Warning Dialog Widget" ) );
                         }
                         using (Factory.Content().AsScope()) {
-                            VisualElementScope.Add( Factory.Label( "Warning Dialog Widget" ) );
+                            VisualElementScope.Add(
+                                Factory.ColumnGroup()
+                                    .Classes( "dark", "medium", "grow-1", "justify-content-center", "align-items-center" )
+                                    .Children( Factory.Label( "Warning Dialog Widget" ) )
+                            );
                         }
                         using (Factory.Footer().AsScope()) {
                             VisualElementScope.Add( Factory.Submit( "Submit" ), Factory.Cancel( "Cancel" ) );
@@ -212,7 +221,11 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                             VisualElementScope.Add( Factory.Label( "Error Dialog Widget" ) );
                         }
                         using (Factory.Content().AsScope()) {
-                            VisualElementScope.Add( Factory.Label( "Error Dialog Widget" ) );
+                            VisualElementScope.Add(
+                                Factory.ColumnGroup()
+                                    .Classes( "dark", "medium", "grow-1", "justify-content-center", "align-items-center" )
+                                    .Children( Factory.Label( "Error Dialog Widget" ) )
+                            );
                         }
                         using (Factory.Footer().AsScope()) {
                             VisualElementScope.Add( Factory.Submit( "Submit" ), Factory.Cancel( "Cancel" ) );
@@ -230,7 +243,6 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                             VisualElementScope.Add( Factory.Label( "Tab View" ) );
                         }
                         using (Factory.Content().AsScope()) {
-                            // TabView
                             VisualElementScope.Add(
                                 Factory.TabView().Classes( "gray", "medium", "grow-1" ).Children(
                                     Factory.Tab( "Tab 1" ).Children(
@@ -267,7 +279,6 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                             VisualElementScope.Add( Factory.Label( "Scroll View" ) );
                         }
                         using (Factory.Content().AsScope()) {
-                            // ScrollView
                             VisualElementScope.Add(
                                 Factory.ScrollView().Classes( "gray", "medium", "grow-1" ).Children(
                                     Factory.VisualElement()
@@ -359,7 +370,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         }
                         using (Factory.Content().AsScope()) {
                             VisualElementScope.Add(
-                                Factory.ColumnGroup().Classes( "dark", "medium" ).Children(
+                                Factory.ColumnGroup().Classes( "dark", "medium", "grow-1" ).Children(
                                     Factory.Label( "Label" ),
                                     Factory.Button( "Button" ),
                                     Factory.RepeatButton( "Repeat Button" ),
