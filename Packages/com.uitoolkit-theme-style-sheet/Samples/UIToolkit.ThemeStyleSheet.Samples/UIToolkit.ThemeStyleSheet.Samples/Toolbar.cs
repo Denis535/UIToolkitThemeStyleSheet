@@ -33,32 +33,32 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
         }
 
         // OpenAssets
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All UXML", secondaryPriority = 0 )]
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All (UXML)", secondaryPriority = 0 )]
         public static void OpenAssets_UXML() {
             OpenAssets( "Assets/(*.uxml)" );
             OpenAssets( "Packages/(*.uxml)" );
         }
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All Pug", secondaryPriority = 1 )]
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All (Pug)", secondaryPriority = 1 )]
         public static void OpenAssets_Pug() {
             OpenAssets( "Assets/(*.pug)" );
             OpenAssets( "Packages/(*.pug)" );
         }
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All USS", secondaryPriority = 2 )]
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All (USS)", secondaryPriority = 2 )]
         public static void OpenAssets_USS() {
             OpenAssets( "Assets/(*.uss)" );
             OpenAssets( "Packages/(*.uss)" );
         }
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All CSS", secondaryPriority = 3 )]
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All (CSS)", secondaryPriority = 3 )]
         public static void OpenAssets_CSS() {
             OpenAssets( "Assets/(*.css)" );
             OpenAssets( "Packages/(*.css)" );
         }
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All Sass", secondaryPriority = 4 )]
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All (Sass)", secondaryPriority = 4 )]
         public static void OpenAssets_Sass() {
             OpenAssets( "Assets/(*.sass)" );
             OpenAssets( "Packages/(*.sass)" );
         }
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All Stylus", secondaryPriority = 4 )]
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All (Stylus)", secondaryPriority = 4 )]
         public static void OpenAssets_Stylus() {
             OpenAssets( "Assets/(*.stylus|*.styl)" );
             OpenAssets( "Packages/(*.stylus|*.styl)" );
