@@ -14,15 +14,65 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
 
     public static class Toolbar {
 
+        // CreateAsset
+        [MenuItem( "Assets/Create/UI Toolkit/Pug" )]
+        public static void CreateAsset_Pug() {
+            ProjectWindowUtil.CreateAssetWithContent( "New Pug.pug", "" );
+        }
+        [MenuItem( "Assets/Create/UI Toolkit/Css" )]
+        public static void CreateAsset_Css() {
+            ProjectWindowUtil.CreateAssetWithContent( "New Css.css", "" );
+        }
+        [MenuItem( "Assets/Create/UI Toolkit/Sass" )]
+        public static void CreateAsset_Sass() {
+            ProjectWindowUtil.CreateAssetWithContent( "New Sass.sass", "" );
+        }
+        [MenuItem( "Assets/Create/UI Toolkit/Stylus" )]
+        public static void CreateAsset_Stylus() {
+            ProjectWindowUtil.CreateAssetWithContent( "New Stylus.styl", "" );
+        }
+
+        // OpenAssets
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All UXML", secondaryPriority = 0 )]
+        public static void OpenAssets_UXML() {
+            OpenAssets( "Assets/(*.uxml)" );
+            OpenAssets( "Packages/(*.uxml)" );
+        }
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All Pug", secondaryPriority = 1 )]
+        public static void OpenAssets_Pug() {
+            OpenAssets( "Assets/(*.pug)" );
+            OpenAssets( "Packages/(*.pug)" );
+        }
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All USS", secondaryPriority = 2 )]
+        public static void OpenAssets_USS() {
+            OpenAssets( "Assets/(*.uss)" );
+            OpenAssets( "Packages/(*.uss)" );
+        }
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All CSS", secondaryPriority = 3 )]
+        public static void OpenAssets_CSS() {
+            OpenAssets( "Assets/(*.css)" );
+            OpenAssets( "Packages/(*.css)" );
+        }
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All Sass", secondaryPriority = 4 )]
+        public static void OpenAssets_Sass() {
+            OpenAssets( "Assets/(*.sass)" );
+            OpenAssets( "Packages/(*.sass)" );
+        }
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All Stylus", secondaryPriority = 4 )]
+        public static void OpenAssets_Stylus() {
+            OpenAssets( "Assets/(*.stylus|*.styl)" );
+            OpenAssets( "Packages/(*.stylus|*.styl)" );
+        }
+
         // TakeScreenshot
-        [MenuItem( "UIToolkitThemeStyleSheet/Take Screenshot (Game) _F12", priority = 400 )]
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Take Screenshot (Game) _F12", secondaryPriority = 100 )]
         internal static void TakeScreenshot_Game() {
             var path = $"Screenshots/{Application.productName}-{DateTime.UtcNow.Ticks}.png";
             ScreenCapture.CaptureScreenshot( path, 1 );
             EditorApplication.Beep();
             EditorUtility.RevealInFinder( path );
         }
-        [MenuItem( "UIToolkitThemeStyleSheet/Take Screenshot (Editor) &F12", priority = 401 )]
+        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Take Screenshot (Editor) &F12", secondaryPriority = 101 )]
         internal static void TakeScreenshot_Editor() {
             var position = EditorGUIUtility.GetMainWindowPosition();
             var texture = new Texture2D( (int) position.width, (int) position.height );
@@ -35,47 +85,6 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             File.WriteAllBytes( path, bytes );
             EditorApplication.Beep();
             EditorUtility.RevealInFinder( path );
-        }
-
-        // CreateAsset
-        [MenuItem( "Assets/Create/UI Toolkit/Pug" )]
-        public static void CreateAsset_Pug() {
-            ProjectWindowUtil.CreateAssetWithContent( "New Pug.pug", "" );
-        }
-        [MenuItem( "Assets/Create/UI Toolkit/Css" )]
-        public static void CreateAsset_Css() {
-            ProjectWindowUtil.CreateAssetWithContent( "New Css.css", "" );
-        }
-        [MenuItem( "Assets/Create/UI Toolkit/Stylus" )]
-        public static void CreateAsset_Stylus() {
-            ProjectWindowUtil.CreateAssetWithContent( "New Stylus.styl", "" );
-        }
-
-        // OpenAssets
-        [MenuItem( "Assets/Open All/UI Toolkit/UXML", secondaryPriority = 0 )]
-        public static void OpenAssets_UXML() {
-            OpenAssets( "Assets/(*.uxml)" );
-            OpenAssets( "Packages/(*.uxml)" );
-        }
-        [MenuItem( "Assets/Open All/UI Toolkit/Pug", secondaryPriority = 1 )]
-        public static void OpenAssets_Pug() {
-            OpenAssets( "Assets/(*.pug)" );
-            OpenAssets( "Packages/(*.pug)" );
-        }
-        [MenuItem( "Assets/Open All/UI Toolkit/USS", secondaryPriority = 2 )]
-        public static void OpenAssets_USS() {
-            OpenAssets( "Assets/(*.uss)" );
-            OpenAssets( "Packages/(*.uss)" );
-        }
-        [MenuItem( "Assets/Open All/UI Toolkit/CSS", secondaryPriority = 3 )]
-        public static void OpenAssets_CSS() {
-            OpenAssets( "Assets/(*.css)" );
-            OpenAssets( "Packages/(*.css)" );
-        }
-        [MenuItem( "Assets/Open All/UI Toolkit/Stylus", secondaryPriority = 4 )]
-        public static void OpenAssets_Stylus() {
-            OpenAssets( "Assets/(*.stylus|*.styl)" );
-            OpenAssets( "Packages/(*.stylus|*.styl)" );
         }
 
         // Helpers
