@@ -5,7 +5,6 @@ namespace UnityEditor.UIElements {
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-    using System.Threading.Tasks;
     using UnityEditor;
     using UnityEngine;
 
@@ -192,12 +191,14 @@ namespace UnityEditor.UIElements {
         }
 
         // Helpers
-        private static async void CompileStylus(string src, string dist) {
-            var request = PackageManager.Client.List( true, true );
-            while (!request.IsCompleted) await Task.Yield();
-            var packages = request.Result.Select( i => (Name: i.name, Path: i.assetPath, ResolvedPath: i.resolvedPath) ).ToArray();
+        private static void CompileStylus(string src, string dist) {
             NodeJS.EvaluateJavaScript( CompileStylusScript, src, dist );
         }
+        //private static async Task<(string Name, string Path, string ResolvedPath)[]> GetPackages() {
+        //    var request = PackageManager.Client.List( true, true );
+        //    while (!request.IsCompleted) await Task.Yield();
+        //    return request.Result.Select( i => (Name: i.name, Path: i.assetPath, ResolvedPath: i.resolvedPath) ).ToArray();
+        //}
         private static bool IsStylus(string path) {
             return Path.GetExtension( path ) == ".styl";
         }
