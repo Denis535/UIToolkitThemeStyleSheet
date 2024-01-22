@@ -7,11 +7,10 @@ namespace System {
 
     internal static class NodeJS {
 
-        public static void EvaluateJavaScript(string script) {
-            script = script.Replace( @"""", @"\""" );
+        public static void EvaluateJavaScript(string script, params string[] args) {
             using var process = System.Diagnostics.Process.Start( new System.Diagnostics.ProcessStartInfo() {
                 FileName = "node",
-                Arguments = $@"--eval ""{script}""",
+                Arguments = $@"--eval ""{script.Replace( @"""", @"\""" )}"" {string.Join( " ", args )}",
                 UseShellExecute = false,
                 CreateNoWindow = true,
                 RedirectStandardInput = true,

@@ -5,7 +5,7 @@
     "description": "This package provides you with beautiful theme style sheets and some additions and tools for UIToolkit.",
     "author": {
         "name": "Denis535",
-        "url": "https://youtu.be/tardralpxdA"
+        "url": "https://github.com/Denis535"
     },
     "unity": "2023.2",
     "dependencies": {
@@ -25,6 +25,5 @@
         "Sass",
         "Stylus",
         "Pug"
-    ],
-    "hideInEditor": false
+    ]
 }
