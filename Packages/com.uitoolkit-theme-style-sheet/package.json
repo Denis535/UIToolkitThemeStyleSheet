@@ -5,7 +5,7 @@
     "description": "This package provides you with beautiful theme style sheets and some additions and tools for UIToolkit.",
     "author": {
         "name": "Denis535",
-        "url": "https://github.com/Denis535"
+        "url": "https://youtu.be/tardralpxdA"
     },
     "unity": "2023.2",
     "dependencies": {
@@ -17,6 +17,7 @@
         "UIElements",
         "UIToolkit",
         "GUI",
+        "Style Sheet",
         "Theme Style Sheet",
         "Dark Theme Style Sheet",
         "USS",

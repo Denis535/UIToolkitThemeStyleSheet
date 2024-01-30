@@ -245,7 +245,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             //result.formatListItemCallback = StringSelector;
             result.label = label;
             result.value = value;
-            result.choices = choices?.ToList();
+            result.choices = (choices ?? new object[ 0 ])?.ToList();
             result.OnFocus( PlayFocus );
             result.OnChange( PlayChange );
             return result;
@@ -256,7 +256,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             //result.formatListItemCallback = StringSelector;
             result.label = label;
             result.value = value;
-            result.choices = choices?.ToList();
+            result.choices = (choices ?? new string[ 0 ])?.ToList();
             result.OnFocus( PlayFocus );
             result.OnChange( PlayChange );
             return result;
