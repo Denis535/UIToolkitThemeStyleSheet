@@ -1,0 +1,10 @@
+The package contains the third-party files under their own respective licenses:
+
+- Assets.UnityEngine.UIElements/Fonts/
+https://github.com/needle-mirror/com.unity.ui/tree/master/PackageResources/Fonts
+
+- Assets.UnityEngine.UIElements/Images/
+https://github.com/needle-mirror/com.unity.ui/tree/master/PackageResources/Images/Vanilla
+
+- Assets.UnityEngine.UIElements/Sounds/
+https://assetstore.unity.com/packages/audio/sound-fx/ultimate-ui-sound-effect-pack-sfx-228228
