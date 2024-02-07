@@ -2,10 +2,10 @@
     "name": "com.uitoolkit-theme-style-sheet",
     "displayName": "UIToolkit Theme Style Sheet",
     "version": "1.0.0",
-    "description": "This package provides you with beautiful theme style sheets and some UIToolkit additions and tools.",
+    "description": "This package provides you with the beautiful theme style sheets and some UIToolkit additions and tools.",
     "author": {
         "name": "Denis535",
-        "url": "https://youtu.be/tardralpxdA"
+        "url": "https://assetstore.unity.com/publishers/90787"
     },
     "unity": "2023.2",
     "dependencies": {
@@ -14,12 +14,13 @@
     },
     "keywords": [
         "UI",
+        "GUI",
+        "Fx",
+        "Sfx",
         "UIElements",
         "UIToolkit",
-        "GUI",
         "Style Sheet",
         "Theme Style Sheet",
-        "Dark Theme Style Sheet",
         "USS",
         "CSS",
         "Less",

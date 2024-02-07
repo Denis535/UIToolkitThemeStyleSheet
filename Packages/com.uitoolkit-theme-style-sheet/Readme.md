@@ -1,5 +1,5 @@
 # Overview
-This package provides you with beautiful theme style sheets and some UIToolkit additions and tools.
+This package provides you with the beautiful theme style sheets and some UIToolkit additions and tools.
 
 # How to use it
 To use this package in your project you need to import the 'ThemeStyleSheet.tss' into your theme:
@@ -14,7 +14,7 @@ Or you can import 'ThemeStyleSheet.uss' and 'LibraryStyleSheet.uss':
 ```
 
 # Reference
-This package contains styles for next elements:
+This package contains styles for the next elements:
 - Widgets
     - Widget
     - LeftWidget
@@ -45,5 +45,6 @@ This package contains styles for next elements:
     - ToggleField
 
 # Links
+- https://assetstore.unity.com/publishers/90787
 - https://u3d.as/3cZZ
 - https://youtu.be/tardralpxdA

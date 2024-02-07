@@ -1,4 +1,4 @@
-The package contains the third-party files under their own respective licenses:
+This package contains the third-party files under their own respective licenses:
 
 - Assets.UnityEngine.UIElements/Fonts/
 https://github.com/needle-mirror/com.unity.ui/tree/master/PackageResources/Fonts
