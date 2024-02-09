@@ -11,17 +11,17 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
     public class VisualElementFactory : MonoBehaviour {
 
         // Assets
-        [SerializeField] private AudioClip appearance = default!;
-        [SerializeField] private AudioClip infoAppearance = default!;
-        [SerializeField] private AudioClip warningAppearance = default!;
-        [SerializeField] private AudioClip errorAppearance = default!;
-        [SerializeField] private AudioClip focus = default!;
         [SerializeField] private AudioClip click = default!;
         [SerializeField] private AudioClip selectClick = default!;
         [SerializeField] private AudioClip submitClick = default!;
         [SerializeField] private AudioClip cancelClick = default!;
         [SerializeField] private AudioClip invalidClick = default!;
         [SerializeField] private AudioClip tik = default!;
+        [SerializeField] private AudioClip focus = default!;
+        [SerializeField] private AudioClip alert = default!;
+        [SerializeField] private AudioClip infoAlert = default!;
+        [SerializeField] private AudioClip warningAlert = default!;
+        [SerializeField] private AudioClip errorAlert = default!;
 
         // AudioSource
         private AudioSource AudioSource { get; set; } = default!;
@@ -291,43 +291,6 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
         }
 
         // Helpers
-        private void PlayAppearance(AttachToPanelEvent evt) {
-            AudioSource.PlayOneShot( appearance );
-            PlayAppearance( (VisualElement) evt.target );
-        }
-        private void PlayInfoAppearance(AttachToPanelEvent evt) {
-            AudioSource.PlayOneShot( infoAppearance );
-            PlayAppearance( (VisualElement) evt.target );
-        }
-        private void PlayWarningAppearance(AttachToPanelEvent evt) {
-            AudioSource.PlayOneShot( warningAppearance );
-            PlayAppearance( (VisualElement) evt.target );
-        }
-        private void PlayErrorAppearance(AttachToPanelEvent evt) {
-            AudioSource.PlayOneShot( errorAppearance );
-            PlayAppearance( (VisualElement) evt.target );
-        }
-        private static void PlayAppearance(VisualElement element) {
-            var animation = ValueAnimation<float>.Create( element, Mathf.LerpUnclamped );
-            animation.valueUpdated = (view, t) => {
-                var tx = Easing.OutBack( Easing.InPower( t, 2 ), 4 );
-                var ty = Easing.OutBack( Easing.OutPower( t, 2 ), 4 );
-                var x = Mathf.LerpUnclamped( 0.8f, 1f, tx );
-                var y = Mathf.LerpUnclamped( 0.8f, 1f, ty );
-                view.transform.scale = new Vector3( x, y, 1 );
-            };
-            animation.from = 0;
-            animation.to = 1;
-            animation.durationMs = 500;
-            animation.Start();
-        }
-        // Helpers
-        private void PlayFocus(FocusEvent evt) {
-            if (evt.direction != FocusChangeDirection.none && evt.direction != FocusChangeDirection.unspecified) {
-                AudioSource.PlayOneShot( focus );
-            }
-        }
-        // Helpers
         private void PlayClick(MouseDownEvent evt) {
             var target = (VisualElement) evt.target;
             AudioSource.PlayOneShot( target.IsValid() ? click : invalidClick );
@@ -348,7 +311,6 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             var target = (VisualElement) evt.target;
             AudioSource.PlayOneShot( target.IsValid() ? cancelClick : invalidClick );
         }
-        // Helpers
         private void PlayChange(ChangeEvent<object?> evt) {
             if (evt.newValue != evt.previousValue) {
                 AudioSource.PlayOneShot( tik );
@@ -373,6 +335,43 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             if (evt.newValue != evt.previousValue) {
                 AudioSource.PlayOneShot( tik );
             }
+        }
+        // Helpers
+        private void PlayFocus(FocusEvent evt) {
+            if (evt.direction != FocusChangeDirection.none && evt.direction != FocusChangeDirection.unspecified) {
+                AudioSource.PlayOneShot( focus );
+            }
+        }
+        // Helpers
+        private void PlayAppearance(AttachToPanelEvent evt) {
+            AudioSource.PlayOneShot( alert );
+            PlayAppearance( (VisualElement) evt.target );
+        }
+        private void PlayInfoAppearance(AttachToPanelEvent evt) {
+            AudioSource.PlayOneShot( infoAlert );
+            PlayAppearance( (VisualElement) evt.target );
+        }
+        private void PlayWarningAppearance(AttachToPanelEvent evt) {
+            AudioSource.PlayOneShot( warningAlert );
+            PlayAppearance( (VisualElement) evt.target );
+        }
+        private void PlayErrorAppearance(AttachToPanelEvent evt) {
+            AudioSource.PlayOneShot( errorAlert );
+            PlayAppearance( (VisualElement) evt.target );
+        }
+        private static void PlayAppearance(VisualElement element) {
+            var animation = ValueAnimation<float>.Create( element, Mathf.LerpUnclamped );
+            animation.valueUpdated = (view, t) => {
+                var tx = Easing.OutBack( Easing.InPower( t, 2 ), 4 );
+                var ty = Easing.OutBack( Easing.OutPower( t, 2 ), 4 );
+                var x = Mathf.LerpUnclamped( 0.8f, 1f, tx );
+                var y = Mathf.LerpUnclamped( 0.8f, 1f, ty );
+                view.transform.scale = new Vector3( x, y, 1 );
+            };
+            animation.from = 0;
+            animation.to = 1;
+            animation.durationMs = 500;
+            animation.Start();
         }
         // Helpers
         private static T Create<T>(string? name, string? @class = null) where T : VisualElement, new() {

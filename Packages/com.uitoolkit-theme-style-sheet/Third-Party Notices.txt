@@ -1,12 +1,17 @@
 This package contains the third-party files under their own respective licenses:
 
 - Assets.UnityEngine.UIElements/Fonts/
-https://github.com/needle-mirror/com.unity.ui/tree/master/PackageResources/Fonts
-This is the standard unity assets, so it's licensed under the Unity Companion License for Unity-dependent projects--see: https://unity.com/ru/legal/licenses/unity-companion-license.
+This is the standard unity assets.
+It's licensed under the Unity Companion License for Unity-dependent projects--see: https://unity.com/ru/legal/licenses/unity-companion-license.
+Link: https://github.com/needle-mirror/com.unity.ui/tree/master/PackageResources/Fonts
 
 - Assets.UnityEngine.UIElements/Images/
-https://github.com/needle-mirror/com.unity.ui/tree/master/PackageResources/Images/Vanilla
-This is the standard unity assets, so it's licensed under the Unity Companion License for Unity-dependent projects--see: https://unity.com/ru/legal/licenses/unity-companion-license.
+This is the standard unity assets.
+It's licensed under the Unity Companion License for Unity-dependent projects--see: https://unity.com/ru/legal/licenses/unity-companion-license.
+Link: https://github.com/needle-mirror/com.unity.ui/tree/master/PackageResources/Images/Vanilla
 
-- Assets.UnityEngine.UIElements/Sounds/
-https://assetstore.unity.com/packages/audio/sound-fx/ultimate-ui-sound-effect-pack-sfx-228228
+- JDSherbert - Ultimate UI SFX Pack
+This package is developed by JDSherber (https://jdsherbert.itch.io/).
+It's licensed under the individual licence which you can see: https://jdsherbert.itch.io/license (or in LICENSE.pdf file).
+Link: https://itch.io/queue/c/2618629/sound-effect-sfx-packs?game_id=1631353
+Note: This package is used as an example only, so if you want to use it in your project then you must buy it.

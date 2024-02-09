@@ -89,7 +89,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                             VisualElementScope.Add( Factory.Label( "Left Widget" ) );
                         }
                         using (Factory.Content().AsScope()) {
-                            VisualElementScope.Add( Factory.Select( "Button 1" ), Factory.Select( "Button 2" ), Factory.Select( "Button 3" ) );
+                            VisualElementScope.Add( Factory.Select( "Item 1" ), Factory.Select( "Item 2" ), Factory.Select( "Item 3" ) );
                         }
                         using (Factory.Footer().AsScope()) {
                             VisualElementScope.Add( Factory.Submit( "Submit" ), Factory.Cancel( "Cancel" ) );
@@ -375,7 +375,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                                     Factory.Button( "Button" ),
                                     Factory.RepeatButton( "Repeat Button" ),
                                     Factory.TextField( "Text Field", "Text", 64, false ).Classes( "invalid" ),
-                                     //Factory.PopupField( "Popup Field", null, null ),
+                                    //Factory.PopupField( "Popup Field", null, null ),
                                     Factory.PopupField( "Popup Field", "Item 1", new[] { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10" } ),
                                     Factory.DropdownField( "Dropdown Field", "Item 1", new[] { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10", "Item 11", "Item 12", "Item 13", "Item 14", "Item 15", "Item 16", "Item 17", "Item 18", "Item 19", "Item 20" } ),
                                     Factory.SliderField( "Slider Field", 1, 0, 2 ),
