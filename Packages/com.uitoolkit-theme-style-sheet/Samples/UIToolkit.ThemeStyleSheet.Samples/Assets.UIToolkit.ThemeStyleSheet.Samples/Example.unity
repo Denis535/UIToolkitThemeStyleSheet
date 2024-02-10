@@ -128,10 +128,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 867322301}
+  - component: {fileID: 867322303}
+  - component: {fileID: 867322305}
   - component: {fileID: 867322302}
   - component: {fileID: 867322304}
-  - component: {fileID: 867322305}
-  - component: {fileID: 867322303}
   m_Layer: 0
   m_Name: Example
   m_TagString: Untagged
@@ -298,10 +298,10 @@ MonoBehaviour:
   invalidClick: {fileID: 8300000, guid: 9629782e127969f439d15c696113b49d, type: 3}
   tik: {fileID: 8300000, guid: cf11a934967b23340a4d22619832082c, type: 3}
   focus: {fileID: 8300000, guid: cf11a934967b23340a4d22619832082c, type: 3}
-  alert: {fileID: 8300000, guid: f1f1232f49e312346ac4fe3c1e5cee9f, type: 3}
-  infoAlert: {fileID: 8300000, guid: f1f1232f49e312346ac4fe3c1e5cee9f, type: 3}
-  warningAlert: {fileID: 8300000, guid: 5ae75258034a1fb4d962ea90d07ba8e1, type: 3}
-  errorAlert: {fileID: 8300000, guid: 1174d1b6cd51b6646b219f87786c503b, type: 3}
+  dialog: {fileID: 8300000, guid: f1f1232f49e312346ac4fe3c1e5cee9f, type: 3}
+  infoDialog: {fileID: 8300000, guid: f1f1232f49e312346ac4fe3c1e5cee9f, type: 3}
+  warningDialog: {fileID: 8300000, guid: 5ae75258034a1fb4d962ea90d07ba8e1, type: 3}
+  errorDialog: {fileID: 8300000, guid: 1174d1b6cd51b6646b219f87786c503b, type: 3}
 --- !u!1 &1484687551
 GameObject:
   m_ObjectHideFlags: 0

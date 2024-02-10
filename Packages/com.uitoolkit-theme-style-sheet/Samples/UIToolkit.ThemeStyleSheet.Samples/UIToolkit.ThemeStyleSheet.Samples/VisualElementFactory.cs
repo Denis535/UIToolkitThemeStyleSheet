@@ -18,10 +18,10 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
         [SerializeField] private AudioClip invalidClick = default!;
         [SerializeField] private AudioClip tik = default!;
         [SerializeField] private AudioClip focus = default!;
-        [SerializeField] private AudioClip alert = default!;
-        [SerializeField] private AudioClip infoAlert = default!;
-        [SerializeField] private AudioClip warningAlert = default!;
-        [SerializeField] private AudioClip errorAlert = default!;
+        [SerializeField] private AudioClip dialog = default!;
+        [SerializeField] private AudioClip infoDialog = default!;
+        [SerializeField] private AudioClip warningDialog = default!;
+        [SerializeField] private AudioClip errorDialog = default!;
 
         // AudioSource
         private AudioSource AudioSource { get; set; } = default!;
@@ -64,22 +64,22 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
         // Widget
         public Widget DialogWidget() {
             var result = Create<Widget>( "dialog-widget", "dialog-widget" );
-            result.OnAttachToPanel( PlayAppearance );
+            result.OnAttachToPanel( PlayDialog );
             return result;
         }
         public Widget InfoDialogWidget() {
             var result = Create<Widget>( "info-dialog-widget", "info-dialog-widget" );
-            result.OnAttachToPanel( PlayInfoAppearance );
+            result.OnAttachToPanel( PlayInfoDialog );
             return result;
         }
         public Widget WarningDialogWidget() {
             var result = Create<Widget>( "warning-dialog-widget", "warning-dialog-widget" );
-            result.OnAttachToPanel( PlayWarningAppearance );
+            result.OnAttachToPanel( PlayWarningDialog );
             return result;
         }
         public Widget ErrorDialogWidget() {
             var result = Create<Widget>( "error-dialog-widget", "error-dialog-widget" );
-            result.OnAttachToPanel( PlayErrorAppearance );
+            result.OnAttachToPanel( PlayErrorDialog );
             return result;
         }
 
@@ -343,23 +343,23 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             }
         }
         // Helpers
-        private void PlayAppearance(AttachToPanelEvent evt) {
-            AudioSource.PlayOneShot( alert );
-            PlayAppearance( (VisualElement) evt.target );
+        private void PlayDialog(AttachToPanelEvent evt) {
+            AudioSource.PlayOneShot( dialog );
+            PlayDialogAnimation( (VisualElement) evt.target );
         }
-        private void PlayInfoAppearance(AttachToPanelEvent evt) {
-            AudioSource.PlayOneShot( infoAlert );
-            PlayAppearance( (VisualElement) evt.target );
+        private void PlayInfoDialog(AttachToPanelEvent evt) {
+            AudioSource.PlayOneShot( infoDialog );
+            PlayDialogAnimation( (VisualElement) evt.target );
         }
-        private void PlayWarningAppearance(AttachToPanelEvent evt) {
-            AudioSource.PlayOneShot( warningAlert );
-            PlayAppearance( (VisualElement) evt.target );
+        private void PlayWarningDialog(AttachToPanelEvent evt) {
+            AudioSource.PlayOneShot( warningDialog );
+            PlayDialogAnimation( (VisualElement) evt.target );
         }
-        private void PlayErrorAppearance(AttachToPanelEvent evt) {
-            AudioSource.PlayOneShot( errorAlert );
-            PlayAppearance( (VisualElement) evt.target );
+        private void PlayErrorDialog(AttachToPanelEvent evt) {
+            AudioSource.PlayOneShot( errorDialog );
+            PlayDialogAnimation( (VisualElement) evt.target );
         }
-        private static void PlayAppearance(VisualElement element) {
+        private static void PlayDialogAnimation(VisualElement element) {
             var animation = ValueAnimation<float>.Create( element, Mathf.LerpUnclamped );
             animation.valueUpdated = (view, t) => {
                 var tx = Easing.OutBack( Easing.InPower( t, 2 ), 4 );
