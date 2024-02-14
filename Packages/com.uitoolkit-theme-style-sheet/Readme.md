@@ -47,4 +47,4 @@ This package contains styles for the next elements:
 # Links
 - https://assetstore.unity.com/publishers/90787
 - https://u3d.as/3cZZ
-- https://youtu.be/tardralpxdA
+- https://youtu.be/ZFo88k0nEEY
