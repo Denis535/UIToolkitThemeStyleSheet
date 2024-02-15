@@ -11,17 +11,17 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
     public class VisualElementFactory : MonoBehaviour {
 
         // Assets
-        [SerializeField] private AudioClip click = default!;
-        [SerializeField] private AudioClip selectClick = default!;
-        [SerializeField] private AudioClip submitClick = default!;
-        [SerializeField] private AudioClip cancelClick = default!;
-        [SerializeField] private AudioClip invalidClick = default!;
-        [SerializeField] private AudioClip tik = default!;
-        [SerializeField] private AudioClip focus = default!;
-        [SerializeField] private AudioClip dialog = default!;
-        [SerializeField] private AudioClip infoDialog = default!;
-        [SerializeField] private AudioClip warningDialog = default!;
-        [SerializeField] private AudioClip errorDialog = default!;
+        [SerializeField] private AudioClip? click = default;
+        [SerializeField] private AudioClip? selectClick = default;
+        [SerializeField] private AudioClip? submitClick = default;
+        [SerializeField] private AudioClip? cancelClick = default;
+        [SerializeField] private AudioClip? invalidClick = default;
+        [SerializeField] private AudioClip? tik = default;
+        [SerializeField] private AudioClip? focus = default;
+        [SerializeField] private AudioClip? dialog = default;
+        [SerializeField] private AudioClip? infoDialog = default;
+        [SerializeField] private AudioClip? warningDialog = default;
+        [SerializeField] private AudioClip? errorDialog = default;
 
         // AudioSource
         private AudioSource AudioSource { get; set; } = default!;
@@ -360,12 +360,12 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             PlayAppearance( (VisualElement) evt.target );
         }
         // Helpers
-        private void PlaySound(AudioClip clip, bool isPriority = false) {
+        private void PlaySound(AudioClip? clip, bool isPriority = false) {
             if (isPriority) {
                 AudioSource.clip = clip;
                 AudioSource.Play();
             } else {
-                if (!AudioSource.isPlaying) {
+                if (!AudioSource.isPlaying || AudioSource.clip == clip) {
                     AudioSource.clip = clip;
                     AudioSource.Play();
                 }
