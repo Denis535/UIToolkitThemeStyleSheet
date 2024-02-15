@@ -1,5 +1,5 @@
 # Overview
-This package provides you with the beautiful theme style sheets and some UIToolkit additions and tools.
+This package provides you with the beautiful UIToolkit theme style sheets and some additions and tools.
 
 # How to use it
 To use this package in your project you need to import the 'ThemeStyleSheet.tss' into your theme:

@@ -1,11 +1,11 @@
 This package contains the third-party files under their own respective licenses:
 
-- Assets.UnityEngine.UIElements/Fonts/
-This package is developed by Unity (https://unity.com/).
+- com.denis535.uitoolkit-theme-style-sheet/Runtime/UIToolkit.ThemeStyleSheet/Assets.UnityEngine.UIElements/Fonts/
+This package is developed by Unity (https://unity.com).
 This is licensed under the Unity Companion License for Unity-dependent projects--see: https://unity.com/ru/legal/licenses/unity-companion-license.
 Link: https://github.com/needle-mirror/com.unity.ui/tree/master/PackageResources/Fonts
 
-- Assets.UnityEngine.UIElements/Images/
-This package is developed by Unity (https://unity.com/).
+- com.denis535.uitoolkit-theme-style-sheet/Runtime/UIToolkit.ThemeStyleSheet/Assets.UnityEngine.UIElements/Images/
+This package is developed by Unity (https://unity.com).
 This is licensed under the Unity Companion License for Unity-dependent projects--see: https://unity.com/ru/legal/licenses/unity-companion-license.
 Link: https://github.com/needle-mirror/com.unity.ui/tree/master/PackageResources/Images

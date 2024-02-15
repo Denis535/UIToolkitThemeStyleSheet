@@ -7,8 +7,8 @@
       "dependencies": {},
       "url": "https://package.openupm.com"
     },
-    "com.uitoolkit-theme-style-sheet": {
-      "version": "file:com.uitoolkit-theme-style-sheet",
+    "com.denis535.uitoolkit-theme-style-sheet": {
+      "version": "file:com.denis535.uitoolkit-theme-style-sheet",
       "depth": 0,
       "source": "embedded",
       "dependencies": {

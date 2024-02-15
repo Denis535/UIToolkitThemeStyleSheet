@@ -1,8 +1,8 @@
 {
-    "name": "com.uitoolkit-theme-style-sheet",
+    "name": "com.denis535.uitoolkit-theme-style-sheet",
     "displayName": "UIToolkit Theme Style Sheet",
     "version": "1.0.0",
-    "description": "This package provides you with the beautiful theme style sheets and some UIToolkit additions and tools.",
+    "description": "This package provides you with the beautiful UIToolkit theme style sheets and some additions and tools.",
     "author": {
         "name": "Denis535",
         "url": "https://assetstore.unity.com/publishers/90787"
