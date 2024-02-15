@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.denis535.colorful-project-window": {
+      "version": "1.0.20",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.uitoolkit-theme-style-sheet": {
       "version": "file:com.uitoolkit-theme-style-sheet",
       "depth": 0,
