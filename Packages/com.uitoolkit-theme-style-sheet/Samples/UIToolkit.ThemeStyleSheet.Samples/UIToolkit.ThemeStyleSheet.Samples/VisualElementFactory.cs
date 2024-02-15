@@ -293,73 +293,85 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
         // Helpers
         private void PlayClick(MouseDownEvent evt) {
             var target = (VisualElement) evt.target;
-            AudioSource.PlayOneShot( target.IsValid() ? click : invalidClick );
+            PlaySound( target.IsValid() ? click : invalidClick, true );
         }
         private void PlayClick(ClickEvent evt) {
             var target = (VisualElement) evt.target;
-            AudioSource.PlayOneShot( target.IsValid() ? click : invalidClick );
+            PlaySound( target.IsValid() ? click : invalidClick, true );
         }
         private void PlaySelect(ClickEvent evt) {
             var target = (VisualElement) evt.target;
-            AudioSource.PlayOneShot( target.IsValid() ? selectClick : invalidClick );
+            PlaySound( target.IsValid() ? selectClick : invalidClick, true );
         }
         private void PlaySubmit(ClickEvent evt) {
             var target = (VisualElement) evt.target;
-            AudioSource.PlayOneShot( target.IsValid() ? submitClick : invalidClick );
+            PlaySound( target.IsValid() ? submitClick : invalidClick, true );
         }
         private void PlayCancel(ClickEvent evt) {
             var target = (VisualElement) evt.target;
-            AudioSource.PlayOneShot( target.IsValid() ? cancelClick : invalidClick );
+            PlaySound( target.IsValid() ? cancelClick : invalidClick, true );
         }
         private void PlayChange(ChangeEvent<object?> evt) {
             if (evt.newValue != evt.previousValue) {
-                AudioSource.PlayOneShot( tik );
+                PlaySound( tik );
             }
         }
         private void PlayChange(ChangeEvent<string?> evt) {
             if (evt.newValue != evt.previousValue) {
-                AudioSource.PlayOneShot( tik );
+                PlaySound( tik );
             }
         }
         private void PlayChange(ChangeEvent<float> evt) {
             if (Mathf.FloorToInt( evt.newValue * 100 ) != Mathf.FloorToInt( evt.previousValue * 100 )) {
-                AudioSource.PlayOneShot( tik );
+                PlaySound( tik );
             }
         }
         private void PlayChange(ChangeEvent<int> evt) {
             if (evt.newValue != evt.previousValue) {
-                AudioSource.PlayOneShot( tik );
+                PlaySound( tik );
             }
         }
         private void PlayChange(ChangeEvent<bool> evt) {
             if (evt.newValue != evt.previousValue) {
-                AudioSource.PlayOneShot( tik );
+                PlaySound( tik );
             }
         }
         // Helpers
         private void PlayFocus(FocusEvent evt) {
             if (evt.direction != FocusChangeDirection.none && evt.direction != FocusChangeDirection.unspecified) {
-                AudioSource.PlayOneShot( focus );
+                PlaySound( focus );
             }
         }
         // Helpers
         private void PlayDialog(AttachToPanelEvent evt) {
-            AudioSource.PlayOneShot( dialog );
-            PlayDialogAnimation( (VisualElement) evt.target );
+            PlaySound( dialog, true );
+            PlayAppearance( (VisualElement) evt.target );
         }
         private void PlayInfoDialog(AttachToPanelEvent evt) {
-            AudioSource.PlayOneShot( infoDialog );
-            PlayDialogAnimation( (VisualElement) evt.target );
+            PlaySound( infoDialog, true );
+            PlayAppearance( (VisualElement) evt.target );
         }
         private void PlayWarningDialog(AttachToPanelEvent evt) {
-            AudioSource.PlayOneShot( warningDialog );
-            PlayDialogAnimation( (VisualElement) evt.target );
+            PlaySound( warningDialog, true );
+            PlayAppearance( (VisualElement) evt.target );
         }
         private void PlayErrorDialog(AttachToPanelEvent evt) {
-            AudioSource.PlayOneShot( errorDialog );
-            PlayDialogAnimation( (VisualElement) evt.target );
+            PlaySound( errorDialog, true );
+            PlayAppearance( (VisualElement) evt.target );
         }
-        private static void PlayDialogAnimation(VisualElement element) {
+        // Helpers
+        private void PlaySound(AudioClip clip, bool isPriority = false) {
+            if (isPriority) {
+                AudioSource.clip = clip;
+                AudioSource.Play();
+            } else {
+                if (!AudioSource.isPlaying) {
+                    AudioSource.clip = clip;
+                    AudioSource.Play();
+                }
+            }
+        }
+        private static void PlayAppearance(VisualElement element) {
             var animation = ValueAnimation<float>.Create( element, Mathf.LerpUnclamped );
             animation.valueUpdated = (view, t) => {
                 var tx = Easing.OutBack( Easing.InPower( t, 2 ), 4 );
