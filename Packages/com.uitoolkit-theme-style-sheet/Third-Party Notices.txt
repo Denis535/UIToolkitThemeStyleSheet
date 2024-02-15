@@ -1,17 +1,11 @@
 This package contains the third-party files under their own respective licenses:
 
 - Assets.UnityEngine.UIElements/Fonts/
-This is the standard unity assets.
-It's licensed under the Unity Companion License for Unity-dependent projects--see: https://unity.com/ru/legal/licenses/unity-companion-license.
+This package is developed by Unity (https://unity.com/).
+This is licensed under the Unity Companion License for Unity-dependent projects--see: https://unity.com/ru/legal/licenses/unity-companion-license.
 Link: https://github.com/needle-mirror/com.unity.ui/tree/master/PackageResources/Fonts
 
 - Assets.UnityEngine.UIElements/Images/
-This is the standard unity assets.
-It's licensed under the Unity Companion License for Unity-dependent projects--see: https://unity.com/ru/legal/licenses/unity-companion-license.
-Link: https://github.com/needle-mirror/com.unity.ui/tree/master/PackageResources/Images/Vanilla
-
-- JDSherbert - Ultimate UI SFX Pack
-This package is developed by JDSherber (https://jdsherbert.itch.io/).
-It's licensed under the individual licence which you can see: https://jdsherbert.itch.io/license (JDSherbert - Ultimate UI SFX Pack/LICENSE.pdf).
-Link: https://itch.io/queue/c/2618629/sound-effect-sfx-packs?game_id=1631353
-Note: This third-party package is used as an example only, so if you want to use this in your project then you have to buy this.
+This package is developed by Unity (https://unity.com/).
+This is licensed under the Unity Companion License for Unity-dependent projects--see: https://unity.com/ru/legal/licenses/unity-companion-license.
+Link: https://github.com/needle-mirror/com.unity.ui/tree/master/PackageResources/Images
