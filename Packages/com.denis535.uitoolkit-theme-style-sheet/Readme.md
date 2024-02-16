@@ -46,6 +46,6 @@ This package contains styles for the next elements:
 
 # Links
 - https://denis535.github.io
-- https://assetstore.unity.com/publishers/90787
-- https://u3d.as/3cZZ
 - https://youtu.be/ZFo88k0nEEY
+- https://openupm.com/packages/?sort=downloads&q=denis535
+- https://assetstore.unity.com/publishers/90787
