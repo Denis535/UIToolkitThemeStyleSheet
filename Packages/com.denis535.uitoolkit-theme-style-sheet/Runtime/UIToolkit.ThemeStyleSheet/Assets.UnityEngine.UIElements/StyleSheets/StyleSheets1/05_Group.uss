@@ -133,7 +133,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.group.column {
+.column-group {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
@@ -142,7 +142,7 @@
   justify-content: flex-start;
   align-items: stretch;
 }
-.group.row {
+.row-group {
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;

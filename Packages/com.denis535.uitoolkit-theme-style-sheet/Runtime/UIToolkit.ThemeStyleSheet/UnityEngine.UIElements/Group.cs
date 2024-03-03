@@ -12,7 +12,6 @@ namespace UnityEngine.UIElements {
 
         public ColumnGroup() {
             AddToClassList( "group" );
-            AddToClassList( "column" );
             AddToClassList( "column-group" );
         }
 
@@ -23,7 +22,6 @@ namespace UnityEngine.UIElements {
 
         public RowGroup() {
             AddToClassList( "group" );
-            AddToClassList( "row" );
             AddToClassList( "row-group" );
         }
 
