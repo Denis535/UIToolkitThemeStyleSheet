@@ -370,6 +370,10 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         }
                         using (Factory.Content().AsScope()) {
                             VisualElementScope.Add(
+                                // The grow-1 must be applied last !!!
+                                // But multiple selectors are always applied after simple selectors !!!
+                                // So, selector for grow-1 must be multiple to be applied last !!!!!!!!!!!!!!!!!!!
+                                // So, I forced to write multiple selectors, like: .grow-1.visual-element !!!!!!!!!!!!!!!!!!!!!!!!!!
                                 Factory.ColumnGroup().Classes( "dark", "medium", "grow-1" ).Children(
                                     Factory.Label( "Label" ),
                                     Factory.Button( "Button" ),

@@ -1,4 +1,3 @@
-#if UNITY_EDITOR
 #nullable enable
 namespace UIToolkit.ThemeStyleSheet {
     using System;
@@ -12,7 +11,7 @@ namespace UIToolkit.ThemeStyleSheet {
     using UnityEditorInternal;
     using UnityEngine;
 
-    internal static class Toolbar {
+    public static class Toolbar {
 
         // CreateAsset
         [MenuItem( "Assets/Create/UI Toolkit/Pug" )]
@@ -133,4 +132,3 @@ namespace UIToolkit.ThemeStyleSheet {
 
     }
 }
-#endif
