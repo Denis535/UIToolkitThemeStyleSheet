@@ -16,17 +16,18 @@ namespace UnityEditor.UIElements {
             const FS = require('fs');
             const Path = require('path');
             const Stylus = require( require.resolve('stylus', { paths: [ Path.join(process.env.APPDATA, '/npm/node_modules') ] } ) );
+            Stylus.nodes.Ident = new Proxy(Stylus.nodes.Ident, {
+                construct: function(target, args) {
+                    args[0] = args[0].replaceAll(/(__)(_+)/g, '__');
+                    args[0] = args[0].replaceAll(/(--)(-+)/g, '--');
+                    return new target(...args);
+                }
+            });
 
             const src = Process.argv[1];
             const dist = Process.argv[2];
-            const source = FS.readFileSync(src, 'utf8');
-
-            Stylus.nodes.Ident = new Proxy(Stylus.nodes.Ident, {
-                construct: function(target, args) {
-                    args[0] = args[0].replaceAll(/(__)(__*)/g, '__');
-                    args[0] = args[0].replaceAll(/(--)(--*)/g, '--');
-                    return new target(...args);
-                }
+            const source = FS.readFileSync(src, 'utf8').replaceAll(/^(\/\/\/+)(.*)$/gm, function(match, p1, p2) {
+                return '// +add-selector(\'' + p2.trim() + '\')';
             });
 
             Stylus(source)
@@ -157,9 +158,10 @@ namespace UnityEditor.UIElements {
             }
 
             // extensions
-            function urlEx(url) {
-                return new Stylus.nodes.Literal('url(' + url + ')');
-            }";
+            //function urlEx(url) {
+            //    return new Stylus.nodes.Literal('url(' + url + ')');
+            //}
+            ";
 
         // OnPostprocessAllAssets
         public static void OnPostprocessAllAssets(string[] imported, string[] deleted, string[] moved, string[] movedFrom) {
@@ -194,11 +196,6 @@ namespace UnityEditor.UIElements {
         private static void CompileStylus(string src, string dist) {
             NodeJS.EvaluateJavaScript( CompileStylusScript, src, dist );
         }
-        //private static async Task<(string Name, string Path, string ResolvedPath)[]> GetPackages() {
-        //    var request = PackageManager.Client.List( true, true );
-        //    while (!request.IsCompleted) await Task.Yield();
-        //    return request.Result.Select( i => (Name: i.name, Path: i.assetPath, ResolvedPath: i.resolvedPath) ).ToArray();
-        //}
         private static bool IsStylus(string path) {
             return Path.GetExtension( path ) == ".styl";
         }
