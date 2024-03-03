@@ -1,6 +1,6 @@
 #if UNITY_EDITOR
 #nullable enable
-namespace UIToolkit.ThemeStyleSheet.Samples {
+namespace UIToolkit.ThemeStyleSheet {
     using System;
     using System.Collections;
     using System.Collections.Generic;
@@ -12,7 +12,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
     using UnityEditorInternal;
     using UnityEngine;
 
-    public static class Toolbar {
+    internal static class Toolbar {
 
         // CreateAsset
         [MenuItem( "Assets/Create/UI Toolkit/Pug" )]
@@ -32,47 +32,15 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             ProjectWindowUtil.CreateAssetWithContent( "New Stylus.styl", "" );
         }
 
-        // OpenAssets
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All (UXML)", secondaryPriority = 0 )]
-        public static void OpenAssets_UXML() {
-            OpenAssets( "Assets/(*.uxml)" );
-            OpenAssets( "Packages/(*.uxml)" );
-        }
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All (Pug)", secondaryPriority = 1 )]
-        public static void OpenAssets_Pug() {
-            OpenAssets( "Assets/(*.pug)" );
-            OpenAssets( "Packages/(*.pug)" );
-        }
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All (USS)", secondaryPriority = 2 )]
-        public static void OpenAssets_USS() {
-            OpenAssets( "Assets/(*.uss)" );
-            OpenAssets( "Packages/(*.uss)" );
-        }
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All (CSS)", secondaryPriority = 3 )]
-        public static void OpenAssets_CSS() {
-            OpenAssets( "Assets/(*.css)" );
-            OpenAssets( "Packages/(*.css)" );
-        }
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All (Sass)", secondaryPriority = 4 )]
-        public static void OpenAssets_Sass() {
-            OpenAssets( "Assets/(*.sass)" );
-            OpenAssets( "Packages/(*.sass)" );
-        }
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Open All (Stylus)", secondaryPriority = 4 )]
-        public static void OpenAssets_Stylus() {
-            OpenAssets( "Assets/(*.stylus|*.styl)" );
-            OpenAssets( "Packages/(*.stylus|*.styl)" );
-        }
-
         // TakeScreenshot
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Take Screenshot (Game) _F12", secondaryPriority = 100 )]
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Take Screenshot (Game) _F12", priority = 0 )]
         internal static void TakeScreenshot_Game() {
             var path = $"Screenshots/{Application.productName}-{DateTime.UtcNow.Ticks}.png";
             ScreenCapture.CaptureScreenshot( path, 1 );
             EditorApplication.Beep();
             EditorUtility.RevealInFinder( path );
         }
-        [MenuItem( "Tools/UIToolkitThemeStyleSheet/Take Screenshot (Editor) &F12", secondaryPriority = 101 )]
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Take Screenshot (Editor) &F12", priority = 1 )]
         internal static void TakeScreenshot_Editor() {
             var position = EditorGUIUtility.GetMainWindowPosition();
             var texture = new Texture2D( (int) position.width, (int) position.height );
@@ -87,9 +55,41 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             EditorUtility.RevealInFinder( path );
         }
 
+        // OpenAll
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (UXML)", priority = 100 )]
+        public static void OpenAll_UXML() {
+            OpenAssets( "Assets/(*.uxml)" );
+            OpenAssets( "Packages/(*.uxml)" );
+        }
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (Pug)", priority = 101 )]
+        public static void OpenAll_Pug() {
+            OpenAssets( "Assets/(*.pug)" );
+            OpenAssets( "Packages/(*.pug)" );
+        }
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (USS)", priority = 102 )]
+        public static void OpenAll_USS() {
+            OpenAssets( "Assets/(*.uss)" );
+            OpenAssets( "Packages/(*.uss)" );
+        }
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (CSS)", priority = 103 )]
+        public static void OpenAll_CSS() {
+            OpenAssets( "Assets/(*.css)" );
+            OpenAssets( "Packages/(*.css)" );
+        }
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (Sass)", priority = 104 )]
+        public static void OpenAll_Sass() {
+            OpenAssets( "Assets/(*.sass)" );
+            OpenAssets( "Packages/(*.sass)" );
+        }
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (Stylus)", priority = 105 )]
+        public static void OpenAll_Stylus() {
+            OpenAssets( "Assets/(*.stylus|*.styl)" );
+            OpenAssets( "Packages/(*.stylus|*.styl)" );
+        }
+
         // Helpers
         private static void OpenAssets(params string[] patterns) {
-            foreach (var path in GetMatches( GetPaths(), patterns )) {
+            foreach (var path in GetPaths().GetMatches( patterns )) {
                 if (!Path.GetFileName( path ).StartsWith( "_" )) {
                     AssetDatabase.OpenAsset( AssetDatabase.LoadAssetAtPath<UnityEngine.Object>( path ) );
                     Thread.Sleep( 500 );
@@ -97,7 +97,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             }
         }
         private static void OpenAssetsReverse(params string[] patterns) {
-            foreach (var path in GetMatches( GetPaths(), patterns ).Reverse()) {
+            foreach (var path in GetPaths().GetMatches( patterns ).Reverse()) {
                 if (!Path.GetFileName( path ).StartsWith( "_" )) {
                     AssetDatabase.OpenAsset( AssetDatabase.LoadAssetAtPath<UnityEngine.Object>( path ) );
                     Thread.Sleep( 500 );
@@ -121,7 +121,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             }
         }
         // Helpers
-        private static IEnumerable<string> GetMatches(IEnumerable<string> paths, string[] patterns) {
+        private static IEnumerable<string> GetMatches(this IEnumerable<string> paths, string[] patterns) {
             paths = paths.ToList();
             foreach (var pattern in patterns) {
                 var regex = new Regex( "^" + pattern.Replace( " ", "" ).Replace( "*", "(.*?)" ) + "$", RegexOptions.IgnoreCase | RegexOptions.Singleline | RegexOptions.IgnorePatternWhitespace );
