@@ -27,11 +27,13 @@ namespace UnityEditor.UIElements {
             const src = Process.argv[1];
             const dist = Process.argv[2];
             const source = FS.readFileSync(src, 'utf8')
-            .replaceAll(/(=\s*\/\/)(.*)$/gm, function(match, p1, p2) {
-                return '= \'' + p2.trim() + '\'';
+            .replaceAll(/^(selector--[\w-]+)(\s*=\s*)(.*)$/gm, function(match, identifier, _, value) {
+                return identifier +
+                    ' = ' +
+                    '\'' + value.replace(/^(\/+)/, '').replaceAll(/(\s+)/g, ' ').trim() + '\'';
             })
-            .replaceAll(/(\.\.)([\w-]+)/gm, function(match, p1, p2) {
-                return '{get-selector(' + p2.trim() + ')}';
+            .replaceAll(/(\.\.[\w-]+)/gm, function(match, selector) {
+                return '{get-selector(' + selector.replace(/^(\.+)/, '').trim() + ')}';
             });
 
             Stylus(source)
