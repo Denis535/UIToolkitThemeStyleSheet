@@ -27,13 +27,7 @@ namespace UnityEditor.UIElements {
             const src = Process.argv[1];
             const dist = Process.argv[2];
             const source = FS.readFileSync(src, 'utf8')
-            //.replaceAll(/^(\/\/\/\s*)(.*)$/gm, function(match, p1, p2) {
-            //    return '+add-selector(' + p2.trim() + ')';
-            //})
-            //.replaceAll(/^(###\s*)(.*)$/gm, function(match, p1, p2) {
-            //    return '+add-selector(' + p2.trim() + ')';
-            //})
-            .replaceAll(/^(\+\s*)(.*)$/gm, function(match, p1, p2) {
+            .replaceAll(/^(\.\.\s*)(.*)$/gm, function(match, p1, p2) {
                 return '+add-selector(' + p2.trim() + ')';
             });
 
