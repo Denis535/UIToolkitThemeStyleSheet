@@ -30,6 +30,9 @@ namespace UnityEditor.UIElements {
             //.replaceAll(/^(\/\/\/\s*)(.*)$/gm, function(match, p1, p2) {
             //    return '+add-selector(' + p2.trim() + ')';
             //})
+            //.replaceAll(/^(###\s*)(.*)$/gm, function(match, p1, p2) {
+            //    return '+add-selector(' + p2.trim() + ')';
+            //})
             .replaceAll(/^(\+\s*)(.*)$/gm, function(match, p1, p2) {
                 return '+add-selector(' + p2.trim() + ')';
             });
