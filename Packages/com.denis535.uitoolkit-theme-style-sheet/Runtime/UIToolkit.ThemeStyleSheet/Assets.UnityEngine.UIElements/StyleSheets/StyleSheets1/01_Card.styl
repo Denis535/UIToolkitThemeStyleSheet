@@ -3,30 +3,30 @@
 // selector
 selector--card--------------------normal = // .card
 selector--card--------------------hover  = // .card:hover
-selector--header------------------normal = // .card       .header
-selector--header------------------hover  = // .card:hover .header
-selector--content-----------------normal = // .card       .content
-selector--content-----------------hover  = // .card:hover .content
-selector--footer------------------normal = // .card       .footer
-selector--footer------------------hover  = // .card:hover .footer
+selector--header------------------normal = // .card                      .header
+selector--header------------------hover  = // .card:hover                .header
+selector--content-----------------normal = // .card                      .content
+selector--content-----------------hover  = // .card:hover                .content
+selector--footer------------------normal = // .card                      .footer
+selector--footer------------------hover  = // .card:hover                .footer
 // selector
 selector--dialog-card-------------normal = // .dialog-card
 selector--dialog-card-------------hover  = // .dialog-card:hover
-selector--dialog-header-----------normal = // .dialog-card       .header
-selector--dialog-header-----------hover  = // .dialog-card:hover .header
-selector--dialog-content----------normal = // .dialog-card       .content
-selector--dialog-content----------hover  = // .dialog-card:hover .content
-selector--dialog-footer-----------normal = // .dialog-card       .footer
-selector--dialog-footer-----------hover  = // .dialog-card:hover .footer
+selector--dialog-header-----------normal = // .dialog-card               .header
+selector--dialog-header-----------hover  = // .dialog-card:hover         .header
+selector--dialog-content----------normal = // .dialog-card               .content
+selector--dialog-content----------hover  = // .dialog-card:hover         .content
+selector--dialog-footer-----------normal = // .dialog-card               .footer
+selector--dialog-footer-----------hover  = // .dialog-card:hover         .footer
 // selector
 selector--info-dialog-card--------normal = // .info-dialog-card
 selector--info-dialog-card--------hover  = // .info-dialog-card:hover
-selector--info-dialog-header------normal = // .info-dialog-card       .header
-selector--info-dialog-header------hover  = // .info-dialog-card:hover .header
-selector--info-dialog-content-----normal = // .info-dialog-card       .content
-selector--info-dialog-content-----hover  = // .info-dialog-card:hover .content
-selector--info-dialog-footer------normal = // .info-dialog-card       .footer
-selector--info-dialog-footer------hover  = // .info-dialog-card:hover .footer
+selector--info-dialog-header------normal = // .info-dialog-card          .header
+selector--info-dialog-header------hover  = // .info-dialog-card:hover    .header
+selector--info-dialog-content-----normal = // .info-dialog-card          .content
+selector--info-dialog-content-----hover  = // .info-dialog-card:hover    .content
+selector--info-dialog-footer------normal = // .info-dialog-card          .footer
+selector--info-dialog-footer------hover  = // .info-dialog-card:hover    .footer
 // selector
 selector--warning-dialog-card-----normal = // .warning-dialog-card
 selector--warning-dialog-card-----hover  = // .warning-dialog-card:hover
@@ -39,12 +39,12 @@ selector--warning-dialog-footer---hover  = // .warning-dialog-card:hover .footer
 // selector
 selector--error-dialog-card-------normal = // .error-dialog-card
 selector--error-dialog-card-------hover  = // .error-dialog-card:hover
-selector--error-dialog-header-----normal = // .error-dialog-card       .header
-selector--error-dialog-header-----hover  = // .error-dialog-card:hover .header
-selector--error-dialog-content----normal = // .error-dialog-card       .content
-selector--error-dialog-content----hover  = // .error-dialog-card:hover .content
-selector--error-dialog-footer-----normal = // .error-dialog-card       .footer
-selector--error-dialog-footer-----hover  = // .error-dialog-card:hover .footer
+selector--error-dialog-header-----normal = // .error-dialog-card         .header
+selector--error-dialog-header-----hover  = // .error-dialog-card:hover   .header
+selector--error-dialog-content----normal = // .error-dialog-card         .content
+selector--error-dialog-content----hover  = // .error-dialog-card:hover   .content
+selector--error-dialog-footer-----normal = // .error-dialog-card         .footer
+selector--error-dialog-footer-----hover  = // .error-dialog-card:hover   .footer
 
 // view
 ..card--normal
@@ -165,9 +165,8 @@ selector--error-dialog-footer-----hover  = // .error-dialog-card:hover .footer
     add-layout(null, auto, auto, (0px), (0px 0px 0px 0px), (24px 24px 20px 20px))
 ..footer--normal
     add-layout(null, auto, auto, (0px), (0px 0px 1px 0px), (24px 24px 20px 20px))
-..footer--normal
-    *
-        add-layout(width: 25%)
+..footer--normal *
+    add-layout(width: 25%)
 
 // layout
 ..dialog-card--normal
@@ -178,9 +177,8 @@ selector--error-dialog-footer-----hover  = // .error-dialog-card:hover .footer
     add-layout(null, auto, auto, (0px), (0px 0px 0px 0px), (24px 24px 20px 20px))
 ..dialog-footer--normal
     add-layout(null, auto, auto, (0px), (0px 0px 1px 0px), (24px 24px 20px 20px))
-..dialog-footer--normal
-    *
-        add-layout(width: 25%)
+..dialog-footer--normal *
+    add-layout(width: 25%)
 
 // layout
 ..info-dialog-card--normal
@@ -191,9 +189,8 @@ selector--error-dialog-footer-----hover  = // .error-dialog-card:hover .footer
     add-layout(null, auto, auto, (0px), (0px 0px 0px 0px), (24px 24px 20px 20px))
 ..info-dialog-footer--normal
     add-layout(null, auto, auto, (0px), (0px 0px 1px 0px), (24px 24px 20px 20px))
-..info-dialog-footer--normal
-    *
-        add-layout(width: 25%)
+..info-dialog-footer--normal *
+    add-layout(width: 25%)
 
 // layout
 ..warning-dialog-card--normal
@@ -204,9 +201,8 @@ selector--error-dialog-footer-----hover  = // .error-dialog-card:hover .footer
     add-layout(null, auto, auto, (0px), (0px 0px 0px 0px), (24px 24px 20px 20px))
 ..warning-dialog-footer--normal
     add-layout(null, auto, auto, (0px), (0px 0px 1px 0px), (24px 24px 20px 20px))
-..warning-dialog-footer--normal
-    *
-        add-layout(width: 25%)
+..warning-dialog-footer--normal *
+    add-layout(width: 25%)
 
 // layout
 ..error-dialog-card--normal
@@ -217,9 +213,8 @@ selector--error-dialog-footer-----hover  = // .error-dialog-card:hover .footer
     add-layout(null, auto, auto, (0px), (0px 0px 0px 0px), (24px 24px 20px 20px))
 ..error-dialog-footer--normal
     add-layout(null, auto, auto, (0px), (0px 0px 1px 0px), (24px 24px 20px 20px))
-..error-dialog-footer--normal
-    *
-        add-layout(width: 25%)
+..error-dialog-footer--normal *
+    add-layout(width: 25%)
 
 // flex
 ..card--normal
