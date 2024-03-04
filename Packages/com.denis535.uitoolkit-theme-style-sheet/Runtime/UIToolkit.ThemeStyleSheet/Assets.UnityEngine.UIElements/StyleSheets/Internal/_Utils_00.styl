@@ -10,6 +10,7 @@ create-theme(args)
 
 // add-selector
 add-selector(selector)
+    selector = replace('(--+)', '--', selector)
     selector = get-value(get-key('selector', selector))
     selector = replace('(\s+)', ' ', selector)
     {selector}
