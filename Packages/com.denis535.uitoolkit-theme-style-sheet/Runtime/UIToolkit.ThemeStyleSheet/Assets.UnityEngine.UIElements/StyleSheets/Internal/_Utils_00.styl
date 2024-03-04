@@ -8,6 +8,13 @@ create-theme(args)
         border-radius:     args[4]
     }
 
+// add-selector
+add-selector(selector)
+    selector = get-value(get-key('selector', selector))
+    selector = replace('(\s+)', ' ', selector)
+    {selector}
+        {block}
+
 // add-view
 add-font(url = null, size = null, style = null)
     add-property2 'font-url'            url
