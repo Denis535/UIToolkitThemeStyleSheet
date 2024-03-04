@@ -31,7 +31,7 @@ namespace UnityEditor.UIElements {
                 return '= \'' + p2.trim() + '\'';
             })
             .replaceAll(/^(\.\.)(.*)$/gm, function(match, p1, p2) {
-                return '+add-selector(\'' + p2.trim() + '\')';
+                return '{get-selector(' + p2.trim() + ')}';
             });
 
             Stylus(source)

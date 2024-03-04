@@ -8,14 +8,6 @@ create-theme(args)
         border-radius:     args[4]
     }
 
-// add-selector
-add-selector(selector)
-    selector = replace('(--+)', '--', selector)
-    selector = get-value(get-key('selector', selector))
-    selector = replace('(\s+)', ' ', selector)
-    {selector}
-        {block}
-
 // add-view
 add-font(url = null, size = null, style = null)
     add-property2 'font-url'            url
@@ -236,11 +228,15 @@ get-unity-property(property)
     property
 
 // misc
+get-selector(key)
+    result = get-value(get-key('selector', key))
+    result = replace('(\s+)', ' ', result)
+    result
 get-key(key...)
     result =         get-string(key[0])
     result += '--' + get-string(key[1]) if key[1] != null
     result += '--' + get-string(key[2]) if key[2] != null
-    result
+    replace('(--+)', '--', result)
 get-value(key)
     if is-defined(get-string(key))
         return get-definition(get-string(key))
