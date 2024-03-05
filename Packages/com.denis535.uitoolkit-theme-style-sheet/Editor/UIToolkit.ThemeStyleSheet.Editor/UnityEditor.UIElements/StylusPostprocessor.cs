@@ -27,24 +27,21 @@ namespace UnityEditor.UIElements {
             const src = Process.argv[1];
             const dist = Process.argv[2];
             const source = FS.readFileSync(src, 'utf8')
-            // replace: selector--*** = // ***
-            // to: selector--*** = '***'
-            .replaceAll(/^(selector--[\w-]+)(\s*=\s*)(\/\/+\s*)(.+)/gm, function(match, key, p2, p3, value) {
-                return key +
-                    ' = ' +
-                    '\'' +
-                    value.trim().replaceAll(/(\s+)/g, ' ') +
-                    '\'';
-                return match;
+            // replace:
+            // = // ***
+            // to:
+            // = '***'
+            .replaceAll(/\s*=\s*\/\/+\s*(.+)/gm, function(match, value) {
+                value = value.trim().replaceAll(/(\s+)/g, ' ');
+                return ' = ' + ('\'' + value + '\'');
             })
-            // replace: .selector--***
-            // to: {get-selector('selector--***')}
-            .replaceAll(/.(selector--[\w-]+)/gm, function(match, key) {
-                return '{get-selector(' +
-                    '\'' +
-                    key.trim().replaceAll(/(--+)/g, '--') +
-                    '\'' +
-                    ')}';
+            // replace:
+            // .selector--***
+            // to:
+            // {get-selector('selector--***')}
+            .replaceAll(/.(selector--[\w-]+)/gm, function(match, identifier) {
+                identifier = identifier.trim().replaceAll(/(--+)/g, '--');
+                return '{get-selector(' + ('\'' + identifier + '\'') + ')}';
             });
 
             Stylus(source)
