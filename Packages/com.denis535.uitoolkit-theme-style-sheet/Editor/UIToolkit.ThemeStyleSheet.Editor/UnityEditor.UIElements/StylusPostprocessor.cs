@@ -41,9 +41,12 @@ namespace UnityEditor.UIElements {
                     .replaceAll(/(\s+)/g, ' ') // collapse whitespace
                     .replaceAll(/(__+)/g, '__') // collapse __
                     .replaceAll(/(--+)/g, '--'); // collapse --
+                for(const item of content.split(/\.(?=add-)/g).filter(Boolean)) {
+                    //console.log('Item: ' + item);
+                }
                 return match;
             })
-            .replaceAll(/(?<!\/\/.*).(selector--[\w-]+)/gm, function(match, identifier) { // .selector--***
+            .replaceAll(/(?<!\/\/.*)(?:\.)(selector--[\w-]+)/gm, function(match, identifier) { // .selector--***
                 identifier = identifier
                     .trim()
                     .replaceAll(/(__+)/g, '__') // collapse __
