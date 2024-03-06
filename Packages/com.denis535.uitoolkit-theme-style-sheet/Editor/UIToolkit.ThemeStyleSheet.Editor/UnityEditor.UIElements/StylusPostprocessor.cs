@@ -27,8 +27,8 @@ namespace UnityEditor.UIElements {
             const src = Process.argv[1];
             const dist = Process.argv[2];
             const source = FS.readFileSync(src, 'utf8')
-            // //@ ***
-            .replaceAll(/(?<!\/\/.*)(\/\/@\s+)(.+)/gm, function(match, comment, content) {
+            // // string: ***
+            .replaceAll(/(?<!\/\/.*)(\/\/\s*string:s*)(.*)/gm, function(match, comment, content) {
                 content = content
                     .trim()
                     .replaceAll(/(\s+)/g, ' ') // collapse whitespace
@@ -36,8 +36,8 @@ namespace UnityEditor.UIElements {
                     .replaceAll(/(--+)/g, '--'); // collapse --
                 return '\'' + content + '\'';
             })
-            // //@@ .add-***.add-***.add-***
-            .replaceAll(/(?<!\/\/.*)(\/\/@@\s+)(.+)/gm, function(match, comment, content) {
+            // // styles: .add-*** .add-*** .add-***
+            .replaceAll(/(?<!\/\/.*)(\/\/\s*styles:\s*)(.*)/gm, function(match, comment, content) {
                 content = content
                     .trim()
                     .replaceAll(/(\s+)/g, ' ') // collapse whitespace
