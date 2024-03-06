@@ -27,7 +27,8 @@ namespace UnityEditor.UIElements {
             const src = Process.argv[1];
             const dist = Process.argv[2];
             const source = FS.readFileSync(src, 'utf8')
-            .replaceAll(/(?<!\/\/.*)(\/\/@\s+)(.+)/gm, function(match, comment, content) { // //@ ***
+            // //@ ***
+            .replaceAll(/(?<!\/\/.*)(\/\/@\s+)(.+)/gm, function(match, comment, content) {
                 content = content
                     .trim()
                     .replaceAll(/(\s+)/g, ' ') // collapse whitespace
@@ -35,18 +36,17 @@ namespace UnityEditor.UIElements {
                     .replaceAll(/(--+)/g, '--'); // collapse --
                 return '\'' + content + '\'';
             })
-            .replaceAll(/(?<!\/\/.*)(\/\/@@\s+)(.+)/gm, function(match, comment, content) { // //@@ ***
+            // //@@ .add-***.add-***.add-***
+            .replaceAll(/(?<!\/\/.*)(\/\/@@\s+)(.+)/gm, function(match, comment, content) {
                 content = content
                     .trim()
                     .replaceAll(/(\s+)/g, ' ') // collapse whitespace
                     .replaceAll(/(__+)/g, '__') // collapse __
                     .replaceAll(/(--+)/g, '--'); // collapse --
-                for(const item of content.split(/\.(?=add-)/g).filter(Boolean)) {
-                    //console.log('Item: ' + item);
-                }
-                return match;
+                return '\r\n' + content.split(/\.(?=add-)/g).filter(Boolean).map(i => '    ' + i).join('\r\n');
             })
-            .replaceAll(/(?<!\/\/.*)(?:\.)(selector--[\w-]+)/gm, function(match, identifier) { // .selector--***
+            // .selector--***
+            .replaceAll(/(?<!\/\/.*)(?:\.)(selector--[\w-]+)/gm, function(match, identifier) {
                 identifier = identifier
                     .trim()
                     .replaceAll(/(__+)/g, '__') // collapse __
