@@ -28,12 +28,12 @@ namespace UnityEditor.UIElements {
             const dist = Process.argv[2];
             const source = FS.readFileSync(src, 'utf8')
             // replace:
-            // = // ***
+            // //@ ***
             // to:
             // = '***'
-            .replaceAll(/\s*=\s*\/\/+\s*(.+)/gm, function(match, value) {
+            .replaceAll(/\/\/@\s+(.+)/gm, function(match, value) {
                 value = value.trim().replaceAll(/(\s+)/g, ' ');
-                return ' = ' + ('\'' + value + '\'');
+                return '\'' + value + '\'';
             })
             // replace:
             // .selector--***
