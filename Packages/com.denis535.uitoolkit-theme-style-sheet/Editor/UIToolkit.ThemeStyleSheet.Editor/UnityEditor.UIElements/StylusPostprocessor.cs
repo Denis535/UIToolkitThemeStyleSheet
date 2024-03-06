@@ -27,20 +27,27 @@ namespace UnityEditor.UIElements {
             const src = Process.argv[1];
             const dist = Process.argv[2];
             const source = FS.readFileSync(src, 'utf8')
-            // replace:
-            // //@ ***
-            // to:
-            // = '***'
-            .replaceAll(/\/\/@\s+(.+)/gm, function(match, value) {
-                value = value.trim().replaceAll(/(\s+)/g, ' ');
-                return '\'' + value + '\'';
+            .replaceAll(/(?<!\/\/.*)(\/\/@\s+)(.+)/gm, function(match, comment, content) { // //@ ***
+                content = content
+                    .trim()
+                    .replaceAll(/(\s+)/g, ' ') // collapse whitespace
+                    .replaceAll(/(__+)/g, '__') // collapse __
+                    .replaceAll(/(--+)/g, '--'); // collapse --
+                return '\'' + content + '\'';
             })
-            // replace:
-            // .selector--***
-            // to:
-            // {get-selector('selector--***')}
-            .replaceAll(/.(selector--[\w-]+)/gm, function(match, identifier) {
-                identifier = identifier.trim().replaceAll(/(--+)/g, '--');
+            .replaceAll(/(?<!\/\/.*)(\/\/@@\s+)(.+)/gm, function(match, comment, content) { // //@@ ***
+                content = content
+                    .trim()
+                    .replaceAll(/(\s+)/g, ' ') // collapse whitespace
+                    .replaceAll(/(__+)/g, '__') // collapse __
+                    .replaceAll(/(--+)/g, '--'); // collapse --
+                return match;
+            })
+            .replaceAll(/(?<!\/\/.*).(selector--[\w-]+)/gm, function(match, identifier) { // .selector--***
+                identifier = identifier
+                    .trim()
+                    .replaceAll(/(__+)/g, '__') // collapse __
+                    .replaceAll(/(--+)/g, '--'); // collapse --
                 return '{get-selector(' + ('\'' + identifier + '\'') + ')}';
             });
 
