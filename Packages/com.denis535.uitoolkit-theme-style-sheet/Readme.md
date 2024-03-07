@@ -44,6 +44,9 @@ This package contains styles for the next elements:
     - IntSliderField
     - ToggleField
 
+# Example
+https://denis535.github.io/#clean-architecture-game-template
+
 # Links
 - https://denis535.github.io
 - https://youtu.be/ZFo88k0nEEY
