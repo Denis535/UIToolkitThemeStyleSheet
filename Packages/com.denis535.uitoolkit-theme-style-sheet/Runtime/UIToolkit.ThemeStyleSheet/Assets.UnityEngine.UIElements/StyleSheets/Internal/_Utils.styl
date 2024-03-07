@@ -96,16 +96,16 @@ add-layout-box(margin = null, border = null, padding = null)
     add-property2 'padding-bottom'      padding[3] or padding[0]
 
 // add-flex
-add-flex(flex-grow = null, flex-shrink = null, flex-basis = null, align-self = null)
+add-flex(flex-grow, flex-shrink, flex-basis, align-self)
     add-property2 'flex-grow'       flex-grow
     add-property2 'flex-shrink'     flex-shrink
     add-property2 'flex-basis'      flex-basis
     add-property2 'align-self'      align-self
-add-flex2(flex-direction = null, justify-content = null, align-items = null, align-content = null)
+add-flex2(flex-direction, justify-content, align-content, align-items)
     add-property2 'flex-direction'  flex-direction
     add-property2 'justify-content' justify-content
-    add-property2 'align-items'     align-items
     add-property2 'align-content'   align-content
+    add-property2 'align-items'     align-items
 
 // add-property
 add-property2(property, value)
