@@ -18,14 +18,14 @@ namespace UIToolkit.ThemeStyleSheet {
         public static void CreateAsset_Pug() {
             ProjectWindowUtil.CreateAssetWithContent( "New Pug.pug", "" );
         }
-        [MenuItem( "Assets/Create/UI Toolkit/Css" )]
-        public static void CreateAsset_Css() {
-            ProjectWindowUtil.CreateAssetWithContent( "New Css.css", "" );
-        }
-        [MenuItem( "Assets/Create/UI Toolkit/Sass" )]
-        public static void CreateAsset_Sass() {
-            ProjectWindowUtil.CreateAssetWithContent( "New Sass.sass", "" );
-        }
+        //[MenuItem( "Assets/Create/UI Toolkit/Css" )]
+        //public static void CreateAsset_Css() {
+        //    ProjectWindowUtil.CreateAssetWithContent( "New Css.css", "" );
+        //}
+        //[MenuItem( "Assets/Create/UI Toolkit/Sass" )]
+        //public static void CreateAsset_Sass() {
+        //    ProjectWindowUtil.CreateAssetWithContent( "New Sass.sass", "" );
+        //}
         [MenuItem( "Assets/Create/UI Toolkit/Stylus" )]
         public static void CreateAsset_Stylus() {
             ProjectWindowUtil.CreateAssetWithContent( "New Stylus.styl", "" );
@@ -65,22 +65,24 @@ namespace UIToolkit.ThemeStyleSheet {
             OpenAssets( "Assets/(*.pug)" );
             OpenAssets( "Packages/(*.pug)" );
         }
-        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (USS)", priority = 102 )]
+
+        // OpenAll
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (USS)", priority = 200 )]
         public static void OpenAll_USS() {
             OpenAssets( "Assets/(*.uss)" );
             OpenAssets( "Packages/(*.uss)" );
         }
-        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (CSS)", priority = 103 )]
-        public static void OpenAll_CSS() {
-            OpenAssets( "Assets/(*.css)" );
-            OpenAssets( "Packages/(*.css)" );
-        }
-        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (Sass)", priority = 104 )]
-        public static void OpenAll_Sass() {
-            OpenAssets( "Assets/(*.sass)" );
-            OpenAssets( "Packages/(*.sass)" );
-        }
-        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (Stylus)", priority = 105 )]
+        //[MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (CSS)", priority = 201 )]
+        //public static void OpenAll_CSS() {
+        //    OpenAssets( "Assets/(*.css)" );
+        //    OpenAssets( "Packages/(*.css)" );
+        //}
+        //[MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (Sass)", priority = 202 )]
+        //public static void OpenAll_Sass() {
+        //    OpenAssets( "Assets/(*.sass)" );
+        //    OpenAssets( "Packages/(*.sass)" );
+        //}
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Open All (Stylus)", priority = 203 )]
         public static void OpenAll_Stylus() {
             OpenAssets( "Assets/(*.stylus|*.styl)" );
             OpenAssets( "Packages/(*.stylus|*.styl)" );

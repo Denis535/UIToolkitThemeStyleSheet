@@ -2,19 +2,21 @@
 This package provides you with the beautiful UIToolkit theme style sheets and some additions and tools.
 
 # How to use it
-To use this package in your project you need to import the 'ThemeStyleSheet.tss' into your theme:
+To use this package in your project you need to import the 'ThemeStyleSheet.tss':
 ```
-@import url("Packages/com.uitoolkit-theme-style-sheet/Runtime/UIToolkit.ThemeStyleSheet/Assets.UnityEngine.UIElements/ThemeStyleSheets/ThemeStyleSheet.tss")
+@import url("Packages/com.denis535.uitoolkit-theme-style-sheet/Runtime/UIToolkit.ThemeStyleSheet/Assets.UnityEngine.UIElements/ThemeStyleSheets/ThemeStyleSheet.tss")
 ```
-
 Or you can import 'ThemeStyleSheet.uss' and 'LibraryStyleSheet.uss':
 ```
-@import url("Packages/com.uitoolkit-theme-style-sheet/Runtime/UIToolkit.ThemeStyleSheet/Assets.UnityEngine.UIElements/StyleSheets/ThemeStyleSheet.uss");
-@import url("Packages/com.uitoolkit-theme-style-sheet/Runtime/UIToolkit.ThemeStyleSheet/Assets.UnityEngine.UIElements/StyleSheets/LibraryStyleSheet.uss");
+@import url("Packages/com.denis535.uitoolkit-theme-style-sheet/Runtime/UIToolkit.ThemeStyleSheet/Assets.UnityEngine.UIElements/StyleSheets/ThemeStyleSheet.uss");
+@import url("Packages/com.denis535.uitoolkit-theme-style-sheet/Runtime/UIToolkit.ThemeStyleSheet/Assets.UnityEngine.UIElements/StyleSheets/LibraryStyleSheet.uss");
 ```
 
 # Reference
-This package contains styles for the next elements:
+This package adds support for the following formats:
+- Pug
+- Stylus (with more advanced syntax)
+This package contains styles for the following elements:
 - Widgets
     - Widget
     - LeftWidget
@@ -45,7 +47,7 @@ This package contains styles for the next elements:
     - ToggleField
 
 # Example
-https://denis535.github.io/#clean-architecture-game-template
+- https://denis535.github.io/#clean-architecture-game-template
 
 # Links
 - https://denis535.github.io
