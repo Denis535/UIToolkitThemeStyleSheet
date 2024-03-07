@@ -9,17 +9,14 @@ selector--column-scope--normal = // string: .column-scope
 selector--row-scope-----normal = // string: .row-scope
 
 // view
-add-style(scope---------normal) theme()
-flush()
+.selector--scope---------normal // styles: add-theme(null)
 
 // layout
-add-style(scope---------normal) layout(null, auto, auto, (0px), (0px), (0px                ))
-add-style(small-scope---normal) layout(null, auto, auto, (0px), (0px), (6px  6px  5px  5px ))
-add-style(medium-scope--normal) layout(null, auto, auto, (0px), (0px), (12px 12px 10px 10px))
-add-style(large-scope---normal) layout(null, auto, auto, (0px), (0px), (24px 24px 20px 20px))
-flush()
+.selector--scope---------normal // styles: add-layout(null, auto, auto, (0px), (0px), (0px                ))
+.selector--small-scope---normal // styles: add-layout(null, auto, auto, (0px), (0px), (6px  6px  5px  5px ))
+.selector--medium-scope--normal // styles: add-layout(null, auto, auto, (0px), (0px), (12px 12px 10px 10px))
+.selector--large-scope---normal // styles: add-layout(null, auto, auto, (0px), (0px), (24px 24px 20px 20px))
 
 // flex
-add-style(column-scope--normal) flex(0, 1, auto, auto) flex2(column, flex-start, stretch)
-add-style(row-scope-----normal) flex(0, 1, auto, auto) flex2(row,    flex-start, stretch)
-flush()
+.selector--column-scope--normal // styles: add-flex(0, 1, auto, auto).add-flex2(column, flex-start, stretch)
+.selector--row-scope-----normal // styles: add-flex(0, 1, auto, auto).add-flex2(row,    flex-start, stretch)
