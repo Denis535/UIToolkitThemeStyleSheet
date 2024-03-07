@@ -1,67 +1,63 @@
 @import "../Internal/_Theme"
 
 // selector
-selector--button---------normal                 = '.unity-button'
-selector--button---------hover                  = '.unity-button:hover'
-selector--button---------active                 = '.unity-button:active'
-selector--button---------focus                  = '.unity-button:focus'
-selector--button---------focus--hover           = '.unity-button:focus:hover'
-selector--button---------focus--active          = '.unity-button:focus:active'
-selector--button---------invalid                = '.unity-button.invalid'
-selector--button---------invalid--hover         = '.unity-button.invalid:hover'
-selector--button---------invalid--active        = '.unity-button.invalid:active'
-selector--button---------invalid--focus         = '.unity-button.invalid:focus'
-selector--button---------invalid--focus--hover  = '.unity-button.invalid:focus:hover'
-selector--button---------invalid--focus--active = '.unity-button.invalid:focus:active'
+selector--button---------normal                 = // string: .unity-button
+selector--button---------hover                  = // string: .unity-button:hover
+selector--button---------active                 = // string: .unity-button:active
+selector--button---------focus                  = // string: .unity-button:focus
+selector--button---------focus--hover           = // string: .unity-button:focus:hover
+selector--button---------focus--active          = // string: .unity-button:focus:active
+selector--button---------invalid                = // string: .unity-button.invalid
+selector--button---------invalid--hover         = // string: .unity-button.invalid:hover
+selector--button---------invalid--active        = // string: .unity-button.invalid:active
+selector--button---------invalid--focus         = // string: .unity-button.invalid:focus
+selector--button---------invalid--focus--hover  = // string: .unity-button.invalid:focus:hover
+selector--button---------invalid--focus--active = // string: .unity-button.invalid:focus:active
 // selector
-selector--repeat-button--normal                 = '.unity-repeat-button'
-selector--repeat-button--hover                  = '.unity-repeat-button:hover'
-selector--repeat-button--active                 = '.unity-repeat-button:active'
-selector--repeat-button--focus                  = '.unity-repeat-button:focus'
-selector--repeat-button--focus--hover           = '.unity-repeat-button:focus:hover'
-selector--repeat-button--focus--active          = '.unity-repeat-button:focus:active'
-selector--repeat-button--invalid                = '.unity-repeat-button.invalid'
-selector--repeat-button--invalid--hover         = '.unity-repeat-button.invalid:hover'
-selector--repeat-button--invalid--active        = '.unity-repeat-button.invalid:active'
-selector--repeat-button--invalid--focus         = '.unity-repeat-button.invalid:focus'
-selector--repeat-button--invalid--focus--hover  = '.unity-repeat-button.invalid:focus:hover'
-selector--repeat-button--invalid--focus--active = '.unity-repeat-button.invalid:focus:active'
+selector--repeat-button--normal                 = // string: .unity-repeat-button
+selector--repeat-button--hover                  = // string: .unity-repeat-button:hover
+selector--repeat-button--active                 = // string: .unity-repeat-button:active
+selector--repeat-button--focus                  = // string: .unity-repeat-button:focus
+selector--repeat-button--focus--hover           = // string: .unity-repeat-button:focus:hover
+selector--repeat-button--focus--active          = // string: .unity-repeat-button:focus:active
+selector--repeat-button--invalid                = // string: .unity-repeat-button.invalid
+selector--repeat-button--invalid--hover         = // string: .unity-repeat-button.invalid:hover
+selector--repeat-button--invalid--active        = // string: .unity-repeat-button.invalid:active
+selector--repeat-button--invalid--focus         = // string: .unity-repeat-button.invalid:focus
+selector--repeat-button--invalid--focus--hover  = // string: .unity-repeat-button.invalid:focus:hover
+selector--repeat-button--invalid--focus--active = // string: .unity-repeat-button.invalid:focus:active
 
 // view
-add-style(button---------normal                ) theme(button--normal                ) font(null, null, null) text(middle-center, null, null)
-add-style(button---------hover                 ) theme(button--hover                 )
-add-style(button---------active                ) theme(button--active                )
-add-style(button---------focus                 ) theme(button--focus                 )
-add-style(button---------focus--hover          ) theme(button--focus--hover          )
-add-style(button---------focus--active         ) theme(button--focus--active         )
-add-style(button---------invalid               ) theme(button--invalid               )
-add-style(button---------invalid--hover        ) theme(button--invalid--hover        )
-add-style(button---------invalid--active       ) theme(button--invalid--active       )
-add-style(button---------invalid--focus        ) theme(button--invalid--focus        )
-add-style(button---------invalid--focus--hover ) theme(button--invalid--focus--hover )
-add-style(button---------invalid--focus--active) theme(button--invalid--focus--active)
-flush()
+.selector--button---------normal                 // styles: add-theme(button--normal                ).add-font(null, null, null).add-text(middle-center, null, null)
+.selector--button---------hover                  // styles: add-theme(button--hover                 )
+.selector--button---------active                 // styles: add-theme(button--active                )
+.selector--button---------focus                  // styles: add-theme(button--focus                 )
+.selector--button---------focus--hover           // styles: add-theme(button--focus--hover          )
+.selector--button---------focus--active          // styles: add-theme(button--focus--active         )
+.selector--button---------invalid                // styles: add-theme(button--invalid               )
+.selector--button---------invalid--hover         // styles: add-theme(button--invalid--hover        )
+.selector--button---------invalid--active        // styles: add-theme(button--invalid--active       )
+.selector--button---------invalid--focus         // styles: add-theme(button--invalid--focus        )
+.selector--button---------invalid--focus--hover  // styles: add-theme(button--invalid--focus--hover )
+.selector--button---------invalid--focus--active // styles: add-theme(button--invalid--focus--active)
 // view
-add-style(repeat-button--normal                ) theme(button--normal                ) font(null, null, null) text(middle-center, null, null)
-add-style(repeat-button--hover                 ) theme(button--hover                 )
-add-style(repeat-button--active                ) theme(button--active                )
-add-style(repeat-button--focus                 ) theme(button--focus                 )
-add-style(repeat-button--focus--hover          ) theme(button--focus--hover          )
-add-style(repeat-button--focus--active         ) theme(button--focus--active         )
-add-style(repeat-button--invalid               ) theme(button--invalid               )
-add-style(repeat-button--invalid--hover        ) theme(button--invalid--hover        )
-add-style(repeat-button--invalid--active       ) theme(button--invalid--active       )
-add-style(repeat-button--invalid--focus        ) theme(button--invalid--focus        )
-add-style(repeat-button--invalid--focus--hover ) theme(button--invalid--focus--hover )
-add-style(repeat-button--invalid--focus--active) theme(button--invalid--focus--active)
-flush()
+.selector--repeat-button--normal                 // styles: add-theme(button--normal                ).add-font(null, null, null).add-text(middle-center, null, null)
+.selector--repeat-button--hover                  // styles: add-theme(button--hover                 )
+.selector--repeat-button--active                 // styles: add-theme(button--active                )
+.selector--repeat-button--focus                  // styles: add-theme(button--focus                 )
+.selector--repeat-button--focus--hover           // styles: add-theme(button--focus--hover          )
+.selector--repeat-button--focus--active          // styles: add-theme(button--focus--active         )
+.selector--repeat-button--invalid                // styles: add-theme(button--invalid               )
+.selector--repeat-button--invalid--hover         // styles: add-theme(button--invalid--hover        )
+.selector--repeat-button--invalid--active        // styles: add-theme(button--invalid--active       )
+.selector--repeat-button--invalid--focus         // styles: add-theme(button--invalid--focus        )
+.selector--repeat-button--invalid--focus--hover  // styles: add-theme(button--invalid--focus--hover )
+.selector--repeat-button--invalid--focus--active // styles: add-theme(button--invalid--focus--active)
 
 // layout
-add-style(button---------normal                ) layout(null, auto, auto, (4px), (1px), (12px 12px 10px 10px))
-add-style(repeat-button--normal                ) layout(null, auto, auto, (4px), (1px), (12px 12px 10px 10px))
-flush()
+.selector--button---------normal // styles: add-layout(null, auto, auto, (4px), (1px), (12px 12px 10px 10px))
+.selector--repeat-button--normal // styles: add-layout(null, auto, auto, (4px), (1px), (12px 12px 10px 10px))
 
 // flex
-add-style(button---------normal                ) flex(0, 1, auto, auto)
-add-style(repeat-button--normal                ) flex(0, 1, auto, auto)
-flush()
+.selector--button---------normal // styles: add-flex(0, 1, auto, auto)
+.selector--repeat-button--normal // styles: add-flex(0, 1, auto, auto)

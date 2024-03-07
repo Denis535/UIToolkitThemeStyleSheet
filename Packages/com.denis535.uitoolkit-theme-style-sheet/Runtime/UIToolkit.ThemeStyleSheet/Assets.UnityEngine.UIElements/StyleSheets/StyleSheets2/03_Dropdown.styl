@@ -1,72 +1,63 @@
 @import "../Internal/_Theme"
 
 // selector
-selector--dropdown------------------------normal  = '.unity-base-dropdown'
+selector--dropdown------------------------normal  = // string: .unity-base-dropdown
 // selector
-selector--scroll-view---------------------normal  = '.unity-base-dropdown .unity-scroll-view'
-selector--scroll-view---------------------hover   = '.unity-base-dropdown .unity-scroll-view:hover'
-selector--viewport-and-vertical-scroller--normal  = '.unity-base-dropdown .unity-scroll-view #unity-content-and-vertical-scroll-container'
-selector--viewport------------------------normal  = '.unity-base-dropdown .unity-scroll-view #unity-content-viewport'
-selector--content-------------------------normal  = '.unity-base-dropdown .unity-scroll-view #unity-content-container'
+selector--scroll-view---------------------normal  = // string: .unity-base-dropdown .unity-scroll-view
+selector--scroll-view---------------------hover   = // string: .unity-base-dropdown .unity-scroll-view:hover
+selector--viewport-and-vertical-scroller--normal  = // string: .unity-base-dropdown .unity-scroll-view #unity-content-and-vertical-scroll-container
+selector--viewport------------------------normal  = // string: .unity-base-dropdown .unity-scroll-view #unity-content-viewport
+selector--content-------------------------normal  = // string: .unity-base-dropdown .unity-scroll-view #unity-content-container
 // selector
-selector--dropdown-item-------------------normal  = '.unity-base-dropdown .unity-base-dropdown__item'
-selector--dropdown-item-------------------hover   = '.unity-base-dropdown .unity-base-dropdown__item:hover'
-selector--dropdown-item-------------------checked = '.unity-base-dropdown .unity-base-dropdown__item:checked'
-selector--checkmark-----------------------normal  = '.unity-base-dropdown .unity-base-dropdown__item         .unity-base-dropdown__checkmark'
-selector--checkmark-----------------------hover   = '.unity-base-dropdown .unity-base-dropdown__item:hover   .unity-base-dropdown__checkmark'
-selector--checkmark-----------------------checked = '.unity-base-dropdown .unity-base-dropdown__item:checked .unity-base-dropdown__checkmark'
-selector--text----------------------------normal  = '.unity-base-dropdown .unity-base-dropdown__item         .unity-base-dropdown__label'
-selector--text----------------------------hover   = '.unity-base-dropdown .unity-base-dropdown__item:hover   .unity-base-dropdown__label'
-selector--text----------------------------checked = '.unity-base-dropdown .unity-base-dropdown__item:checked .unity-base-dropdown__label'
+selector--dropdown-item-------------------normal  = // string: .unity-base-dropdown .unity-base-dropdown__item
+selector--dropdown-item-------------------hover   = // string: .unity-base-dropdown .unity-base-dropdown__item:hover
+selector--dropdown-item-------------------checked = // string: .unity-base-dropdown .unity-base-dropdown__item:checked
+selector--checkmark-----------------------normal  = // string: .unity-base-dropdown .unity-base-dropdown__item         .unity-base-dropdown__checkmark
+selector--checkmark-----------------------hover   = // string: .unity-base-dropdown .unity-base-dropdown__item:hover   .unity-base-dropdown__checkmark
+selector--checkmark-----------------------checked = // string: .unity-base-dropdown .unity-base-dropdown__item:checked .unity-base-dropdown__checkmark
+selector--text----------------------------normal  = // string: .unity-base-dropdown .unity-base-dropdown__item         .unity-base-dropdown__label
+selector--text----------------------------hover   = // string: .unity-base-dropdown .unity-base-dropdown__item:hover   .unity-base-dropdown__label
+selector--text----------------------------checked = // string: .unity-base-dropdown .unity-base-dropdown__item:checked .unity-base-dropdown__label
 
 // view
-add-style(dropdown------------------------normal ) theme(                                )
-flush()
+.selector--dropdown------------------------normal  // styles: add-theme(null                            )
 // view
-add-style(scroll-view---------------------normal ) theme(dropdown-----------------normal )
-add-style(scroll-view---------------------hover  ) theme(dropdown-----------------hover  )
-add-style(viewport-and-vertical-scroller--normal ) theme(                                )
-add-style(viewport------------------------normal ) theme(                                )
-add-style(content-------------------------normal ) theme(                                )
-flush()
+.selector--scroll-view---------------------normal  // styles: add-theme(dropdown-----------------normal )
+.selector--scroll-view---------------------hover   // styles: add-theme(dropdown-----------------hover  )
+.selector--viewport-and-vertical-scroller--normal  // styles: add-theme(null                            )
+.selector--viewport------------------------normal  // styles: add-theme(null                            )
+.selector--content-------------------------normal  // styles: add-theme(null                            )
 // view
-add-style(dropdown-item-------------------normal ) theme(dropdown-item------------normal )
-add-style(dropdown-item-------------------hover  ) theme(dropdown-item------------hover  )
-add-style(dropdown-item-------------------checked) theme(                                )
-add-style(checkmark-----------------------normal ) theme(dropdown-item-checkmark--normal )
-add-style(checkmark-----------------------hover  ) theme(dropdown-item-checkmark--hover  )
-add-style(checkmark-----------------------checked) theme(dropdown-item-checkmark--checked)
-add-style(text----------------------------normal ) theme(                                )
-add-style(text----------------------------hover  ) theme(                                )
-add-style(text----------------------------checked) theme(                                )
-flush()
+.selector--dropdown-item-------------------normal  // styles: add-theme(dropdown-item------------normal )
+.selector--dropdown-item-------------------hover   // styles: add-theme(dropdown-item------------hover  )
+.selector--dropdown-item-------------------checked // styles: add-theme(null                            )
+.selector--checkmark-----------------------normal  // styles: add-theme(dropdown-item-checkmark--normal )
+.selector--checkmark-----------------------hover   // styles: add-theme(dropdown-item-checkmark--hover  )
+.selector--checkmark-----------------------checked // styles: add-theme(dropdown-item-checkmark--checked)
+.selector--text----------------------------normal  // styles: add-theme(null                            )
+.selector--text----------------------------hover   // styles: add-theme(null                            )
+.selector--text----------------------------checked // styles: add-theme(null                            )
 
 // layout
-add-style(dropdown------------------------normal ) layout(absolute, auto, auto, (0px             ), (0px            ), (0px                ))
-flush()
+.selector--dropdown------------------------normal // styles: add-layout(absolute, auto, auto, (0px             ), (0px            ), (0px                ))
 // layout
-add-style(scroll-view---------------------normal ) layout(null,     auto, auto, (0px             ), (1px            ), (0px                ))
-add-style(viewport-and-vertical-scroller--normal ) layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
-add-style(viewport------------------------normal ) layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
-add-style(content-------------------------normal ) layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
-flush()
+.selector--scroll-view---------------------normal // styles: add-layout(null,     auto, auto, (0px             ), (1px            ), (0px                ))
+.selector--viewport-and-vertical-scroller--normal // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
+.selector--viewport------------------------normal // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
+.selector--content-------------------------normal // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
 // layout
-add-style(dropdown-item-------------------normal ) layout(null,     auto, auto, (0px             ), (0px 0px 0px 1px), (12px 12px 10px 10px))
-add-style(checkmark-----------------------normal ) layout(null,     16px, 16px, (0px 12px 0px 0px), (1px            ), (0px                ))
-add-style(text----------------------------normal ) layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
-flush()
+.selector--dropdown-item-------------------normal // styles: add-layout(null,     auto, auto, (0px             ), (0px 0px 0px 1px), (12px 12px 10px 10px))
+.selector--checkmark-----------------------normal // styles: add-layout(null,     16px, 16px, (0px 12px 0px 0px), (1px            ), (0px                ))
+.selector--text----------------------------normal // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
 
 // flex
-add-style(dropdown------------------------normal ) flex(0, 1, auto, auto) flex2(column, flex-start, stretch)
-flush()
+.selector--dropdown------------------------normal // styles: add-flex(0, 1, auto, auto).add-flex2(column, flex-start, stretch)
 // flex
-add-style(scroll-view---------------------normal ) flex(0, 1, auto, auto) flex2(column, flex-start, stretch)
-add-style(viewport-and-vertical-scroller--normal ) flex(1, 1, auto, auto) flex2(row,    flex-start, stretch)
-add-style(viewport------------------------normal ) flex(1, 1, auto, auto) flex2(column, flex-start, stretch)
-add-style(content-------------------------normal ) flex(0, 0, auto, auto) flex2(column, flex-start, stretch)
-flush()
+.selector--scroll-view---------------------normal // styles: add-flex(0, 1, auto, auto).add-flex2(column, flex-start, stretch)
+.selector--viewport-and-vertical-scroller--normal // styles: add-flex(1, 1, auto, auto).add-flex2(row,    flex-start, stretch)
+.selector--viewport------------------------normal // styles: add-flex(1, 1, auto, auto).add-flex2(column, flex-start, stretch)
+.selector--content-------------------------normal // styles: add-flex(0, 0, auto, auto).add-flex2(column, flex-start, stretch)
 // flex
-add-style(dropdown-item-------------------normal ) flex(0, 1, auto, auto) flex2(row,    flex-start, stretch)
-add-style(checkmark-----------------------normal ) flex(0, 1, auto, auto)
-add-style(text----------------------------normal ) flex(1, 1, auto, auto)
-flush()
+.selector--dropdown-item-------------------normal // styles: add-flex(0, 1, auto, auto).add-flex2(row,    flex-start, stretch)
+.selector--checkmark-----------------------normal // styles: add-flex(0, 1, auto, auto)
+.selector--text----------------------------normal // styles: add-flex(1, 1, auto, auto)
