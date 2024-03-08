@@ -125,10 +125,10 @@ add-style( '.padding-left-{key}.visual-element',                    'padding-lef
 add-style( '.padding-right-{key}.visual-element',                   'padding-right',               i, i) for i in get-style-arguments(range(0px, 200px) range(0%, 200%))
 
 /* flex/self */
-add-style( '.grow-{key}.visual-element',                            'flex-grow',                   i, i) for i in get-style-arguments(range(0, 100)                           )
-add-style( '.shrink-{key}.visual-element',                          'flex-shrink',                 i, i) for i in get-style-arguments(range(0, 100)                           )
-add-style( '.basis-{key}.visual-element',                           'flex-basis',                  i, i) for i in get-style-arguments(auto range(0px, 200px) range(0%, 100%)  )
-add-style( '.align-self-{key}.visual-element',                      'align-self',                  i, i) for i in get-style-arguments(flex-start flex-end center stretch      ) // align self on cross-axis
+add-style( '.grow-{key}.visual-element',                            'flex-grow',                   i, i) for i in get-style-arguments(range(0, 100)                         )
+add-style( '.shrink-{key}.visual-element',                          'flex-shrink',                 i, i) for i in get-style-arguments(range(0, 100)                         )
+add-style( '.basis-{key}.visual-element',                           'flex-basis',                  i, i) for i in get-style-arguments(auto range(0px, 200px) range(0%, 100%))
+add-style( '.align-self-{key}.visual-element',                      'align-self',                  i, i) for i in get-style-arguments(flex-start flex-end center stretch    ) // align self on cross-axis
 /* flex/container */
 add-style( '.{key}.visual-element',                                 'flex-direction',              i, i) for i in get-style-arguments(column column-reverse row row-reverse                )
 add-style( '.{key}.visual-element',                                 'flex-wrap',                   i, i) for i in get-style-arguments(nowrap wrap wrap-reverse                             )
