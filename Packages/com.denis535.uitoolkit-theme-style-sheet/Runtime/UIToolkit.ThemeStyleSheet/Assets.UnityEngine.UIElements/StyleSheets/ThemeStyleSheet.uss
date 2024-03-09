@@ -16,8 +16,8 @@
 @import url("StyleSheets2/05_Group.uss");
 @import url("StyleSheets2/06_Box.uss");
 PanelRootElement {
-  -unity-font: url('../Fonts/NotInter/NotInter-Regular.ttf');
-  -unity-font-definition: url('../Fonts/NotInter/NotInter-Regular.ttf');
+  -unity-font: url('../Fonts/Inter-4.0/Inter.ttc');
+  -unity-font-definition: url('../Fonts/Inter-4.0/Inter.ttc');
   font-size: 14px;
   -unity-font-style: normal;
   flex-grow: 1;
