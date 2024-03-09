@@ -23,7 +23,9 @@ img(url, color, scale-mode, slice-left = null, slice-right = null, slice-top = n
 add-theme(theme)
     if theme != null
         theme = get-value(get-key('theme', theme))
-        add-view(theme.color, theme.background-color, theme.background-image, theme.border-color, theme.border-radius)
+        add-view-foreground(theme.color)
+        add-view-background(theme.background-color, theme.background-image)
+        add-view-border(theme.border-color, theme.border-radius)
 
 // add-view
 add-font(url, size, style)
@@ -37,13 +39,13 @@ add-text(align, outline, shadow)
     add-property2 'text-shadow'         shadow
 
 // add-view
-add-view(color = null, background-color = null, background-image = null, border-color = null, border-radius = null)
-    add-view-foreground                           color
-    add-view-background                           background-color background-image
-    add-view-border                               border-color border-radius
-add-view-foreground(color = null)
+// add-view(color = null, background-color = null, background-image = null, border-color = null, border-radius = null)
+//     add-view-foreground                           color
+//     add-view-background                           background-color background-image
+//     add-view-border                               border-color border-radius
+add-view-foreground(color)
     add-property2 'color'                         color
-add-view-background(background-color = null, background-image = null)
+add-view-background(background-color, background-image)
     add-property2 'background-color'              background-color
     add-property2 'background-image-url'          background-image.url          if background-image != null
     add-property2 'background-image-color'        background-image.color        if background-image != null
@@ -53,7 +55,7 @@ add-view-background(background-color = null, background-image = null)
     add-property2 'background-image-slice-top'    background-image.slice-top    if background-image != null
     add-property2 'background-image-slice-bottom' background-image.slice-bottom if background-image != null
     add-property2 'background-image-slice-scale'  background-image.slice-scale  if background-image != null
-add-view-border(border-color = null, border-radius = null)
+add-view-border(border-color, border-radius)
     add-property2 'border-left-color'             border-color[0]
     add-property2 'border-right-color'            border-color[1] or border-color[0]
     add-property2 'border-top-color'              border-color[2] or border-color[0]
@@ -68,20 +70,20 @@ add-layout(position = null, width = null, height = null, margin = null, border =
     add-layout-position                 position, null, null, null, null
     add-layout-size                     width, height
     add-layout-box                      margin, border, padding
-add-layout-position(position = null, left = null, right = null, top = null, bottom = null)
+add-layout-position(position, left = null, right = null, top = null, bottom = null)
     add-property2 'position'            position[0]
     add-property2 'left'                left   or position[1]
     add-property2 'right'               right  or position[2]
     add-property2 'top'                 top    or position[3]
     add-property2 'bottom'              bottom or position[4]
-add-layout-size(width = null, height = null)
+add-layout-size(width, height)
     add-property2 'width'               width[0]
     add-property2 'min-width'           width[1]
     add-property2 'max-width'           width[2]
     add-property2 'height'              height[0]
     add-property2 'min-height'          height[1]
     add-property2 'max-height'          height[2]
-add-layout-box(margin = null, border = null, padding = null)
+add-layout-box(margin, border, padding)
     add-property2 'margin-left'         margin[0]
     add-property2 'margin-right'        margin[1] or margin[0]
     add-property2 'margin-top'          margin[2] or margin[0]

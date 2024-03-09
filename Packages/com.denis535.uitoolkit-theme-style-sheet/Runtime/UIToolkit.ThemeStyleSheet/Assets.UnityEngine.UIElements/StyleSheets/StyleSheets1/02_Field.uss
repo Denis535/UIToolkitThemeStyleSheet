@@ -149,7 +149,7 @@
   width: auto;
   height: auto;
   margin-left: 0px;
-  margin-right: 2px;
+  margin-right: 4px;
   margin-top: 0px;
   margin-bottom: 0px;
   border-left-width: 1px;

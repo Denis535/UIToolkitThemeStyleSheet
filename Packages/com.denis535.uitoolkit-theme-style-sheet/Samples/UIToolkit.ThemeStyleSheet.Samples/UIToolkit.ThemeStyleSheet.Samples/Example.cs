@@ -424,16 +424,16 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                             // So, selector for grow-1 must be multiple to be applied last !!!!!!!!!!!!!!!!!!!
                             // So, I forced to write multiple selectors, like: .grow-1.visual-element !!!!!!!!!!!!!!!!!!!!!!!!!!
                             factory.ColumnGroup().Classes( "dark", "medium", "grow-1" ).Children(
-                                factory.Label( "Label" ),
+                                factory.Label( "Label" ).Classes( "medium" ),
                                 factory.Button( "Button" ),
                                 factory.RepeatButton( "Repeat Button" ),
-                                factory.TextField( "Text Field", "Text", 64, false ).Classes( "invalid" ),
-                                //factory.PopupField( "Popup Field", null, null ),
-                                factory.PopupField( "Popup Field", "Item 1", new[] { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10" } ),
-                                factory.DropdownField( "Dropdown Field", "Item 1", new[] { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10", "Item 11", "Item 12", "Item 13", "Item 14", "Item 15", "Item 16", "Item 17", "Item 18", "Item 19", "Item 20" } ),
-                                factory.SliderField( "Slider Field", 1, 0, 2 ),
-                                factory.IntSliderField( "Int Slider Field", 1, 0, 2 ),
-                                factory.ToggleField( "Toggle Field", true )
+                                factory.TextField( "Text Field", "Text", 64, false ).Classes( "label-width-150px", "invalid" ),
+                                //factory.PopupField( "Popup Field", null, null ).Classes( "label-width-150px" ),
+                                factory.PopupField( "Popup Field", "Item 1", new[] { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10" } ).Classes( "label-width-150px" ),
+                                factory.DropdownField( "Dropdown Field", "Item 1", new[] { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10", "Item 11", "Item 12", "Item 13", "Item 14", "Item 15", "Item 16", "Item 17", "Item 18", "Item 19", "Item 20" } ).Classes( "label-width-150px" ),
+                                factory.SliderField( "Slider Field", 1, 0, 2 ).Classes( "label-width-150px" ),
+                                factory.IntSliderField( "Int Slider Field", 1, 0, 2 ).Classes( "label-width-150px" ),
+                                factory.ToggleField( "Toggle Field", true ).Classes( "label-width-150px" )
                             )
                         );
                     }
