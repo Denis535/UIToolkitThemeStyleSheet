@@ -21,6 +21,9 @@ selector--dropdown-item-checkmark--checked = // string: .unity-base-dropdown .un
 selector--dropdown-item-text-------normal  = // string: .unity-base-dropdown .unity-base-dropdown__item         .unity-base-dropdown__label
 selector--dropdown-item-text-------hover   = // string: .unity-base-dropdown .unity-base-dropdown__item:hover   .unity-base-dropdown__label
 selector--dropdown-item-text-------checked = // string: .unity-base-dropdown .unity-base-dropdown__item:checked .unity-base-dropdown__label
+// selector
+selector--empty-list-label---------normal  = // string: .unity-base-dropdown .unity-list-view__empty-label
+selector--empty-list-label---------hover   = // string: .unity-base-dropdown .unity-list-view__empty-label:hover
 
 // view
 .selector--dropdown-----------------normal  // styles: add-theme(null                            )
@@ -43,6 +46,9 @@ selector--dropdown-item-text-------checked = // string: .unity-base-dropdown .un
 .selector--dropdown-item-text-------normal  // styles: add-theme(null                            )
 .selector--dropdown-item-text-------hover   // styles: add-theme(null                            )
 .selector--dropdown-item-text-------checked // styles: add-theme(null                            )
+// view
+.selector--empty-list-label---------normal  // styles: add-theme(dropdown-item------------normal )
+.selector--empty-list-label---------hover   // styles: add-theme(dropdown-item------------hover  )
 
 // layout
 .selector--dropdown-----------------normal // styles: add-layout(absolute, auto, auto, (0px             ), (0px            ), (0px                ))
@@ -54,10 +60,12 @@ selector--dropdown-item-text-------checked = // string: .unity-base-dropdown .un
 .selector--scroll-view-viewport-----normal // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
 .selector--scroll-view-content------normal // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
 // layout
-.selector--list-item----------------normal // styles: add-layout(null,     auto, auto, (0px             ), (0px 0px 0px 0px), (0px   0px  0px  0px))
-.selector--dropdown-item------------normal // styles: add-layout(null,     auto, auto, (0px             ), (0px 0px 0px 0px), (12px 12px 10px 10px))
+.selector--list-item----------------normal // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px   0px  0px  0px))
+.selector--dropdown-item------------normal // styles: add-layout(null,     auto, auto, (0px             ), (0px 0px 0px 1px), (12px 12px 10px 10px))
 .selector--dropdown-item-checkmark--normal // styles: add-layout(null,     16px, 16px, (0px 12px 0px 0px), (1px            ), (0px                ))
 .selector--dropdown-item-text-------normal // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
+// layout
+.selector--empty-list-label---------normal  // styles: add-layout(null,    auto, auto, (0px             ), (0px 0px 0px 1px), (12px 12px 10px 10px))
 
 // flex
 .selector--dropdown-----------------normal // styles: add-flex(0, 1, auto, auto).add-flex2(column, flex-start, null, stretch)
@@ -73,3 +81,5 @@ selector--dropdown-item-text-------checked = // string: .unity-base-dropdown .un
 .selector--dropdown-item------------normal // styles: add-flex(0, 1, auto, auto).add-flex2(row,    flex-start, null, stretch)
 .selector--dropdown-item-checkmark--normal // styles: add-flex(0, 1, auto, auto)
 .selector--dropdown-item-text-------normal // styles: add-flex(1, 1, auto, auto)
+// flex
+.selector--empty-list-label---------normal // styles: add-flex(0, 1, auto, auto)

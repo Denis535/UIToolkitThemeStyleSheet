@@ -12,7 +12,7 @@ namespace UnityEngine.UIElements {
 
         public ColumnScope() {
             AddToClassList( "scope" );
-            AddToClassList( "column-scope" );
+            AddToClassList( "column" );
         }
 
     }
@@ -22,7 +22,7 @@ namespace UnityEngine.UIElements {
 
         public RowScope() {
             AddToClassList( "scope" );
-            AddToClassList( "row-scope" );
+            AddToClassList( "row" );
         }
 
     }
