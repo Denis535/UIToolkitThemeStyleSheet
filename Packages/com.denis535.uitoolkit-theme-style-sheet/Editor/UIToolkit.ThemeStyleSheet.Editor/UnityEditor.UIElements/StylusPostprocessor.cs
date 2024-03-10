@@ -43,7 +43,7 @@ namespace UnityEditor.UIElements {
                     .replaceAll(/(\s+)/g, ' ') // collapse whitespace
                     .replaceAll(/(__+)/g, '__') // collapse __
                     .replaceAll(/(--+)/g, '--'); // collapse --
-                return '\r\n' + content.split(/\.(?=add-)/g).filter(Boolean).map(i => '    ' + i).join('\r\n');
+                return '\r\n' + content.split(/(?<=\))\./g).filter(Boolean).map(i => '    ' + i).join('\r\n');
             })
             // .selector--***
             .replaceAll(/(?<!\/\/.*)(?:\.)(selector--[\w-]+)/gm, function(match, identifier) {
