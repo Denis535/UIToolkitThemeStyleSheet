@@ -73,7 +73,7 @@ namespace UnityEditor.UIElements {
 
         // Helpers
         private static void CompilePug(string src, string dist) {
-            NodeJS.EvaluateJavaScript( CompilePugScript, src, dist );
+            NodeJS.Evaluate( CompilePugScript, src, dist );
         }
         private static bool IsPug(string path) {
             return Path.GetExtension( path ) == ".pug";
