@@ -36,7 +36,7 @@ namespace UnityEditor.UIElements {
                     .replaceAll(/(--+)/g, '--'); // collapse --
                 return '\'' + content + '\'';
             })
-            // // styles: .add-*** .add-*** .add-***
+            // // styles: ).*** ).*** ).***
             .replaceAll(/(?<!\/\/.*)(\/\/\s*styles:\s*)(.*)/gm, function(match, comment, content) {
                 content = content
                     .trim()
