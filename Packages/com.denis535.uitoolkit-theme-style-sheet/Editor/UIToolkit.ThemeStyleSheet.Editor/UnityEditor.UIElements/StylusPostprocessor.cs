@@ -41,7 +41,7 @@ namespace UnityEditor.UIElements {
 
         // Helpers
         private static void CompileStylus(string src, string dist) {
-            NodeJS.Run( "Packages/com.denis535.uitoolkit-theme-style-sheet/Editor/UIToolkit.ThemeStyleSheet.Editor/Assets.UnityEditor.UIElements/StylusCompiler.js", src, dist );
+            NodeJS.Run( "Packages/com.denis535.uitoolkit-theme-style-sheet/Editor/UIToolkit.ThemeStyleSheet.Editor/StylusCompiler.js", src, dist );
         }
         private static bool IsStylus(string path) {
             return Path.GetExtension( path ) == ".styl";

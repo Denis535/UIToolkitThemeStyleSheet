@@ -10,38 +10,6 @@ namespace UnityEditor.UIElements {
 
     public class PugPostprocessor : AssetPostprocessor {
 
-        private const string CompilePugScript = @"
-            ""use strict"";
-            const Process = require('node:process');
-            const FS = require('fs');
-            const Path = require('path');
-            const Pug = require( require.resolve('pug', { paths: [ Path.join(process.env.APPDATA, '/npm/node_modules') ] } ) );
-
-            const src = Process.argv[1];
-            const dist = Process.argv[2];
-            const source = FS.readFileSync(src, 'utf8');
-            const options = {
-                doctype: 'xml',
-                pretty: true
-            };
-
-            Pug.render(source, options, onComplete);
-
-            // onCallback
-            function onComplete(error, result) {
-                if (error) {
-                    console.error(error);
-                    FS.writeFile(dist, '', onError);
-                } else {
-                    FS.writeFile(dist, result.replaceAll('::', '.'), onError);
-                }
-            }
-            function onError(error) {
-                if (error) {
-                    console.error(error);
-                }
-            }";
-
         // OnPostprocessAllAssets
         public static void OnPostprocessAllAssets(string[] imported, string[] deleted, string[] moved, string[] movedFrom) {
             foreach (var imported_ in imported) {
@@ -73,7 +41,7 @@ namespace UnityEditor.UIElements {
 
         // Helpers
         private static void CompilePug(string src, string dist) {
-            NodeJS.Evaluate( CompilePugScript, src, dist );
+            NodeJS.Run( "Packages/com.denis535.uitoolkit-theme-style-sheet/Editor/UIToolkit.ThemeStyleSheet.Editor/PugCompiler.js", src, dist );
         }
         private static bool IsPug(string path) {
             return Path.GetExtension( path ) == ".pug";
