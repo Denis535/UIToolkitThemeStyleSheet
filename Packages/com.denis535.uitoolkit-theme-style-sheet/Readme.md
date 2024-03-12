@@ -28,15 +28,15 @@ This package contains styles for the following elements:
     - WarningDialogWidget
     - ErrorDialogWidget
 - Views
-    - TabView
-    - ScrollView
+    - TabView    - classes: light2/light/gray/dark/dark2, small/medium/large
+    - ScrollView - classes: light2/light/gray/dark/dark2, small/medium/large, reverse
 - Scopes
     - Slot
-    - Scope
-    - Group
-    - Box
+    - Scope - classes:                               small/medium/large, column/row
+    - Group - classes: light2/light/gray/dark/dark2, small/medium/large, column/row
+    - Box   - classes: light2/light/gray/dark/dark2, small/medium/large
 - Elements
-    - Label
+    - Label - classes: small/medium/large
     - Button
     - RepeatButton
     - TextField
@@ -51,6 +51,6 @@ This package contains styles for the following elements:
 
 # Links
 - https://denis535.github.io
-- https://youtu.be/ZFo88k0nEEY
 - https://openupm.com/packages/?sort=downloads&q=denis535
 - https://assetstore.unity.com/publishers/90787
+- https://youtu.be/ZFo88k0nEEY
