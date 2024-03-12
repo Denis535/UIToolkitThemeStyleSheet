@@ -53,4 +53,7 @@ This package contains styles for the following elements:
 - https://denis535.github.io
 - https://openupm.com/packages/?sort=downloads&q=denis535
 - https://assetstore.unity.com/publishers/90787
-- https://youtu.be/ZFo88k0nEEY
+- https://www.youtube.com/channel/UCLFdZl0pFkCkHpDWmodBUFg
+
+# Post Scriptum
+If you want to support me, please rate my packages, subscribe to my YouTube channel and like my videos.
