@@ -59,4 +59,3 @@ This package contains styles for the following elements:
 
 # If you want to support me
 If you want to support me, please rate my packages, subscribe to my YouTube channel and like my videos.
-
