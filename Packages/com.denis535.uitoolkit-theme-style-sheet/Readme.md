@@ -57,5 +57,6 @@ This package contains styles for the following elements:
 - https://openupm.com/packages/?sort=downloads&q=denis535
 - https://www.youtube.com/channel/UCLFdZl0pFkCkHpDWmodBUFg
 
-# Post Scriptum
+# If you want to support me
 If you want to support me, please rate my packages, subscribe to my YouTube channel and like my videos.
+
