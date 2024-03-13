@@ -16,6 +16,7 @@ Or you can import 'ThemeStyleSheet.uss' and 'LibraryStyleSheet.uss':
 This package adds support for the following formats:
 - Pug
 - Stylus (with more advanced syntax)
+
 This package contains styles for the following elements:
 - Widgets
     - Widget
