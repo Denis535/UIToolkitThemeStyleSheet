@@ -51,9 +51,9 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     // View
                     "Tab View",
                     "Scroll View",
-                    // Group
+                    // Scope
+                    "Scope",
                     "Group",
-                    // Box
                     "Box",
                     // Misc
                     "Misc"
@@ -112,18 +112,21 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( ScrollView( Factory ) );
             }
-            // Group
+            // Scope
             if (toolbarIndex == 12 && toolbarIndex != prevToolbarIndex) {
+                Document.rootVisualElement.Clear();
+                Document.rootVisualElement.Add( Scope( Factory ) );
+            }
+            if (toolbarIndex == 13 && toolbarIndex != prevToolbarIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( Group( Factory ) );
             }
-            // Box
-            if (toolbarIndex == 13 && toolbarIndex != prevToolbarIndex) {
+            if (toolbarIndex == 14 && toolbarIndex != prevToolbarIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( Box( Factory ) );
             }
             // Misc
-            if (toolbarIndex == 14 && toolbarIndex != prevToolbarIndex) {
+            if (toolbarIndex == 15 && toolbarIndex != prevToolbarIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( Misc( Factory ) );
             }
@@ -348,6 +351,40 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             }
         }
         // Helpers
+        private static VisualElement Scope(VisualElementFactory factory) {
+            using (var root = factory.LargeWidget().AsScope()) {
+                using (factory.Card().AsScope()) {
+                    using (factory.Header().AsScope()) {
+                        VisualElementScope.Add( factory.Label( "Scope" ) );
+                    }
+                    using (factory.Content().AsScope()) {
+                        VisualElementScope.Add(
+                            factory.RowScope().Children(
+                                factory.ColumnScope().Classes( "light2", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnScope().Classes( "light", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnScope().Classes( "gray", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnScope().Classes( "dark", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnScope().Classes( "dark2", "medium", "width-200px", "height-200px" )
+                            ),
+                            factory.RowScope().Children(
+                                factory.ColumnScope().Classes( "dark2", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnScope().Classes( "dark", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnScope().Classes( "gray", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnScope().Classes( "light", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnScope().Classes( "light2", "medium", "width-200px", "height-200px" )
+                            ),
+                            factory.RowScope().Children(
+                                factory.ColumnScope().Classes( null, "medium", "width-200px", "height-200px" )
+                            )
+                        );
+                    }
+                    using (factory.Footer().AsScope()) {
+                        VisualElementScope.Add( factory.Submit( "Submit" ), factory.Cancel( "Cancel" ) );
+                    }
+                }
+                return root.VisualElement;
+            }
+        }
         private static VisualElement Group(VisualElementFactory factory) {
             using (var root = factory.LargeWidget().AsScope()) {
                 using (factory.Card().AsScope()) {
@@ -357,21 +394,21 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     using (factory.Content().AsScope()) {
                         VisualElementScope.Add(
                             factory.RowScope().Children(
-                                factory.ColumnGroup().Classes( "light2", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "light", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "gray", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "dark", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "dark2", "width-200px", "height-200px" )
+                                factory.ColumnGroup().Classes( "light2", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnGroup().Classes( "light", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnGroup().Classes( "gray", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnGroup().Classes( "dark", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnGroup().Classes( "dark2", "medium", "width-200px", "height-200px" )
                             ),
                             factory.RowScope().Children(
-                                factory.ColumnGroup().Classes( "dark2", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "dark", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "gray", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "light", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "light2", "width-200px", "height-200px" )
+                                factory.ColumnGroup().Classes( "dark2", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnGroup().Classes( "dark", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnGroup().Classes( "gray", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnGroup().Classes( "light", "medium", "width-200px", "height-200px" ),
+                                factory.ColumnGroup().Classes( "light2", "medium", "width-200px", "height-200px" )
                             ),
                             factory.RowScope().Children(
-                                factory.ColumnGroup().Classes( null, "width-200px", "height-200px" )
+                                factory.ColumnGroup().Classes( null, "medium", "width-200px", "height-200px" )
                             )
                         );
                     }
@@ -391,21 +428,21 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     using (factory.Content().AsScope()) {
                         VisualElementScope.Add(
                             factory.RowScope().Children(
-                                factory.Box().Classes( "light2", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "light", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "gray", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "dark", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "dark2", "width-200px", "height-200px" )
+                                factory.Box().Classes( "light2", "medium", "width-200px", "height-200px" ),
+                                factory.Box().Classes( "light", "medium", "width-200px", "height-200px" ),
+                                factory.Box().Classes( "gray", "medium", "width-200px", "height-200px" ),
+                                factory.Box().Classes( "dark", "medium", "width-200px", "height-200px" ),
+                                factory.Box().Classes( "dark2", "medium", "width-200px", "height-200px" )
                             ),
                             factory.RowScope().Children(
-                                factory.Box().Classes( "dark2", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "dark", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "gray", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "light", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "light2", "width-200px", "height-200px" )
+                                factory.Box().Classes( "dark2", "medium", "width-200px", "height-200px" ),
+                                factory.Box().Classes( "dark", "medium", "width-200px", "height-200px" ),
+                                factory.Box().Classes( "gray", "medium", "width-200px", "height-200px" ),
+                                factory.Box().Classes( "light", "medium", "width-200px", "height-200px" ),
+                                factory.Box().Classes( "light2", "medium", "width-200px", "height-200px" )
                             ),
                             factory.RowScope().Children(
-                                factory.Box().Classes( null, "width-200px", "height-200px" )
+                                factory.Box().Classes( null, "medium", "width-200px", "height-200px" )
                             )
                         );
                     }

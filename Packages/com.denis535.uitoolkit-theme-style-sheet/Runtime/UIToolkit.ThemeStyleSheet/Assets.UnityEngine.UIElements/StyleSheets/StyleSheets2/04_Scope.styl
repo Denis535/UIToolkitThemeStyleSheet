@@ -1,21 +1,43 @@
 @import "../Internal/_Theme"
 
 // selector
-selector--scope--normal = // string: .scope
-selector--scope--small  = // string: .scope.small
-selector--scope--medium = // string: .scope.medium
-selector--scope--large  = // string: .scope.large
-selector--scope--column = // string: .scope.column
-selector--scope--row    = // string: .scope.row
+selector--scope--normal         = // string: .scope
+selector--scope--hover          = // string: .scope:hover
+selector--scope--light2--normal = // string: .scope.light2
+selector--scope--light2--hover  = // string: .scope.light2:hover
+selector--scope--light---normal = // string: .scope.light
+selector--scope--light---hover  = // string: .scope.light:hover
+selector--scope--gray----normal = // string: .scope.gray
+selector--scope--gray----hover  = // string: .scope.gray:hover
+selector--scope--dark----normal = // string: .scope.dark
+selector--scope--dark----hover  = // string: .scope.dark:hover
+selector--scope--dark2---normal = // string: .scope.dark2
+selector--scope--dark2---hover  = // string: .scope.dark2:hover
+selector--scope--small          = // string: .scope.small
+selector--scope--medium         = // string: .scope.medium
+selector--scope--large          = // string: .scope.large
+selector--scope--column         = // string: .scope.column
+selector--scope--row            = // string: .scope.row
 
 // view
-.selector--scope--normal // styles: add-theme(null)
+.selector--scope--normal         // styles: add-theme(scope--normal        )
+.selector--scope--hover          // styles: add-theme(scope--hover         )
+.selector--scope--light2--normal // styles: add-theme(scope--light2--normal)
+.selector--scope--light2--hover  // styles: add-theme(scope--light2--hover )
+.selector--scope--light---normal // styles: add-theme(scope--light---normal)
+.selector--scope--light---hover  // styles: add-theme(scope--light---hover )
+.selector--scope--gray----normal // styles: add-theme(scope--gray----normal)
+.selector--scope--gray----hover  // styles: add-theme(scope--gray----hover )
+.selector--scope--dark----normal // styles: add-theme(scope--dark----normal)
+.selector--scope--dark----hover  // styles: add-theme(scope--dark----hover )
+.selector--scope--dark2---normal // styles: add-theme(scope--dark2---normal)
+.selector--scope--dark2---hover  // styles: add-theme(scope--dark2---hover )
 
 // layout
 .selector--scope--normal // styles: add-layout(null, auto, auto, (0px), (0px), (0px                ))
-.selector--scope--small  // styles: add-layout(null, auto, auto, (0px), (0px), (6px  6px  5px  5px ))
-.selector--scope--medium // styles: add-layout(null, auto, auto, (0px), (0px), (12px 12px 10px 10px))
-.selector--scope--large  // styles: add-layout(null, auto, auto, (0px), (0px), (24px 24px 20px 20px))
+.selector--scope--small  // styles: add-layout(null, auto, auto, (0px), (1px), (6px  6px  5px  5px ))
+.selector--scope--medium // styles: add-layout(null, auto, auto, (0px), (1px), (12px 12px 10px 10px))
+.selector--scope--large  // styles: add-layout(null, auto, auto, (0px), (1px), (24px 24px 20px 20px))
 
 // flex
 .selector--scope--column // styles: add-flex(0, 1, auto, auto).add-flex2(column, flex-start, null, stretch)

@@ -88,6 +88,12 @@ namespace UIToolkit.ThemeStyleSheet {
             OpenAssets( "Packages/(*.stylus|*.styl)" );
         }
 
+        // EmbedPackage
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Embed Package (com.denis535.uitoolkit-theme-style-sheet)", priority = 300 )]
+        public static void EmbedPackage() {
+            UnityEditor.PackageManager.Client.Embed( "com.denis535.uitoolkit-theme-style-sheet" );
+        }
+
         // Helpers
         private static void OpenAssets(params string[] patterns) {
             foreach (var path in GetPaths().GetMatches( patterns )) {
