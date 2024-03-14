@@ -32,7 +32,6 @@ This package contains styles for the following elements:
     - TabView    - classes: light2/light/gray/dark/dark2, small/medium/large
     - ScrollView - classes: light2/light/gray/dark/dark2, small/medium/large, reverse
 - Scopes
-    - Slot
     - Scope - classes:                               small/medium/large, column/row
     - Group - classes: light2/light/gray/dark/dark2, small/medium/large, column/row
     - Box   - classes: light2/light/gray/dark/dark2, small/medium/large
