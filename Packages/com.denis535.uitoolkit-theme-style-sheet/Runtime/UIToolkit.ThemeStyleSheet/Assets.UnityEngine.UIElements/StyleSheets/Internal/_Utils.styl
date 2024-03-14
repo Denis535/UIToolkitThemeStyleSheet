@@ -1,3 +1,12 @@
+// selector
+selector(key)
+    key    = replace('(--+)', '--', key)
+    key    = get-key('selector', key)
+    result = get-value(key)
+    result = replace('(\s+)', ' ', result)
+    result = replace('(\.\*)', '', result)
+    result
+
 // create-theme
 create-theme(args)
     return {
@@ -224,10 +233,6 @@ get-unity-property(property)
     property
 
 // misc
-get-selector(key)
-    result = get-value(replace('(--+)', '--', key))
-    result = replace('(\s+)', ' ', result)
-    result
 get-key(key...)
     result =         get-string(key[0])
     result += '--' + get-string(key[1]) if key[1] != null

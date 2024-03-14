@@ -16,6 +16,7 @@ const dist = Process.argv[3];
 if (src == null) throw new TypeError("Source path is required");
 if (dist == null) throw new TypeError("Distribution path is required");
 
+// console.log(readContent(src));
 Stylus(readContent(src))
     .set('filename', Path.basename(src))
     .set('paths', [Path.dirname(src)])
@@ -65,13 +66,21 @@ function readContent(path) {
                 .replaceAll(/(--+)/g, '--'); // collapse --
             return '\r\n' + content.split(/(?<=\))\./g).filter(Boolean).map(i => '    ' + i).join('\r\n');
         })
-        // .selector--***
-        .replaceAll(/(?<!\/\/.*)(?:\.)(selector--[\w-]+)/gm, function (match, identifier) {
-            identifier = identifier
+        // .selector(***)
+        .replaceAll(/(?<!\/\/.*)(?:\.selector\()(.+?)(?:\))/gm, function (match, content) {
+            content = content
                 .trim()
                 .replaceAll(/(__+)/g, '__') // collapse __
                 .replaceAll(/(--+)/g, '--'); // collapse --
-            return '{get-selector(' + ('\'' + identifier + '\'') + ')}';
+            return '{selector(' + ('\'' + content + '\'') + ')}';
+        })
+        // .selector--***
+        .replaceAll(/(?<!\/\/.*)(?:\.selector--)([\w-]+)/gm, function (match, content) {
+            content = content
+                .trim()
+                .replaceAll(/(__+)/g, '__') // collapse __
+                .replaceAll(/(--+)/g, '--'); // collapse --
+            return '{selector(' + ('\'' + content + '\'') + ')}';
         });
 }
 
