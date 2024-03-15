@@ -1,41 +1,37 @@
 @import "../Internal/_Theme"
 
 // selector
-selector--box--normal         = // string: .unity-box
-selector--box--hover          = // string: .unity-box:hover
-selector--box--light2--normal = // string: .unity-box.light2
-selector--box--light2--hover  = // string: .unity-box.light2:hover
-selector--box--light---normal = // string: .unity-box.light
-selector--box--light---hover  = // string: .unity-box.light:hover
-selector--box--gray----normal = // string: .unity-box.gray
-selector--box--gray----hover  = // string: .unity-box.gray:hover
-selector--box--dark----normal = // string: .unity-box.dark
-selector--box--dark----hover  = // string: .unity-box.dark:hover
-selector--box--dark2---normal = // string: .unity-box.dark2
-selector--box--dark2---hover  = // string: .unity-box.dark2:hover
-selector--box--small          = // string: .unity-box.small
-selector--box--medium         = // string: .unity-box.medium
-selector--box--large          = // string: .unity-box.large
+selector--box         = // string: .unity-box:*
+selector--box--light2 = // string: .unity-box.light2:*
+selector--box--light  = // string: .unity-box.light:*
+selector--box--gray   = // string: .unity-box.gray:*
+selector--box--dark   = // string: .unity-box.dark:*
+selector--box--dark2  = // string: .unity-box.dark2:*
+selector--box--small  = // string: .unity-box.small
+selector--box--medium = // string: .unity-box.medium
+selector--box--large  = // string: .unity-box.large
 
 // view
-.selector--box--normal         // styles: add-theme(box--normal        )
-.selector--box--hover          // styles: add-theme(box--hover         )
-.selector--box--light2--normal // styles: add-theme(box--light2--normal)
-.selector--box--light2--hover  // styles: add-theme(box--light2--hover )
-.selector--box--light---normal // styles: add-theme(box--light---normal)
-.selector--box--light---hover  // styles: add-theme(box--light---hover )
-.selector--box--gray----normal // styles: add-theme(box--gray----normal)
-.selector--box--gray----hover  // styles: add-theme(box--gray----hover )
-.selector--box--dark----normal // styles: add-theme(box--dark----normal)
-.selector--box--dark----hover  // styles: add-theme(box--dark----hover )
-.selector--box--dark2---normal // styles: add-theme(box--dark2---normal)
-.selector--box--dark2---hover  // styles: add-theme(box--dark2---hover )
+.selector--box               // styles: add-theme(box--normal        )
+.selector--box--light2       // styles: add-theme(box--light2--normal)
+.selector--box--light        // styles: add-theme(box--light---normal)
+.selector--box--gray         // styles: add-theme(box--gray----normal)
+.selector--box--dark         // styles: add-theme(box--dark----normal)
+.selector--box--dark2        // styles: add-theme(box--dark2---normal)
+
+// view/hover
+.selector--box:hover         // styles: add-theme(box--hover         )
+.selector--box--light2:hover // styles: add-theme(box--light2--hover )
+.selector--box--light:hover  // styles: add-theme(box--light---hover )
+.selector--box--gray:hover   // styles: add-theme(box--gray----hover )
+.selector--box--dark:hover   // styles: add-theme(box--dark----hover )
+.selector--box--dark2:hover  // styles: add-theme(box--dark2---hover )
 
 // layout
-.selector--box--normal // styles: add-layout(null, auto, auto, (4px), (1px), (0px                ))
+.selector--box         // styles: add-layout(null, auto, auto, (4px), (1px), (0px                ))
 .selector--box--small  // styles: add-layout(null, auto, auto, (4px), (1px), (6px  6px  5px  5px ))
 .selector--box--medium // styles: add-layout(null, auto, auto, (4px), (1px), (12px 12px 10px 10px))
 .selector--box--large  // styles: add-layout(null, auto, auto, (4px), (1px), (24px 24px 20px 20px))
 
 // flex
-.selector--box--normal // styles: add-flex(0, 1, auto, auto).add-flex2(column, flex-start, null, stretch)
+.selector--box // styles: add-flex(0, 1, auto, auto).add-flex2(column, flex-start, null, stretch)
