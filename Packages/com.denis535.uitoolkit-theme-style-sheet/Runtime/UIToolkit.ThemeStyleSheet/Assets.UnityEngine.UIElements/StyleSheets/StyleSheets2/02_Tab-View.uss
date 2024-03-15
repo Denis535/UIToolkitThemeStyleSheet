@@ -36,7 +36,7 @@
 }
 .unity-tab-view.light2 .unity-tab {
   color: #e6e6e6;
-  background-color: rgba(64,66,69,0.98);
+  background-color: rgba(60,61,62,0.97);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -48,7 +48,7 @@
 }
 .unity-tab-view.light .unity-tab {
   color: #e6e6e6;
-  background-color: rgba(56,59,61,0.98);
+  background-color: rgba(55,56,57,0.97);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -60,7 +60,7 @@
 }
 .unity-tab-view.gray .unity-tab {
   color: #e6e6e6;
-  background-color: rgba(49,51,53,0.98);
+  background-color: rgba(50,51,52,0.97);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -72,7 +72,7 @@
 }
 .unity-tab-view.dark .unity-tab {
   color: #e6e6e6;
-  background-color: rgba(42,43,45,0.98);
+  background-color: rgba(45,46,47,0.97);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -84,7 +84,7 @@
 }
 .unity-tab-view.dark2 .unity-tab {
   color: #e6e6e6;
-  background-color: rgba(34,36,37,0.98);
+  background-color: rgba(40,41,42,0.97);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -103,7 +103,7 @@
   border-bottom-color: #a68059;
 }
 .unity-tab-view .unity-tab__header:checked .unity-tab__header-underline {
-  background-color: rgba(229,230,230,0.25);
+  background-color: #7d8082;
   border-left-color: rgba(99,77,54,0.5);
   border-right-color: rgba(99,77,54,0.5);
   border-top-color: rgba(99,77,54,0.5);
@@ -131,8 +131,8 @@
 .unity-tab-view .unity-tab-view__header-container {
   width: auto;
   height: auto;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: -3px;
+  margin-right: -3px;
   margin-top: 0px;
   margin-bottom: 0px;
   border-left-width: 0px;
@@ -163,8 +163,8 @@
 .unity-tab-view .unity-tab__header {
   width: auto;
   height: auto;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 3px;
+  margin-right: 3px;
   margin-top: 0px;
   margin-bottom: 0px;
   border-left-width: 1px;
@@ -210,7 +210,7 @@
 }
 .unity-tab-view .unity-tab__header .unity-tab__header-underline {
   position: absolute;
-  bottom: -2px;
+  bottom: 0px;
   width: 100%;
   height: 6px;
   margin-left: 0px;

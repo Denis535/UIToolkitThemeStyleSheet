@@ -11,7 +11,7 @@
 }
 .scope.light2 {
   color: #e6e6e6;
-  background-color: rgba(64,66,69,0.98);
+  background-color: rgba(60,61,62,0.97);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -23,7 +23,7 @@
 }
 .scope.light {
   color: #e6e6e6;
-  background-color: rgba(56,59,61,0.98);
+  background-color: rgba(55,56,57,0.97);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -35,7 +35,7 @@
 }
 .scope.gray {
   color: #e6e6e6;
-  background-color: rgba(49,51,53,0.98);
+  background-color: rgba(50,51,52,0.97);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -47,7 +47,7 @@
 }
 .scope.dark {
   color: #e6e6e6;
-  background-color: rgba(42,43,45,0.98);
+  background-color: rgba(45,46,47,0.97);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -59,7 +59,7 @@
 }
 .scope.dark2 {
   color: #e6e6e6;
-  background-color: rgba(34,36,37,0.98);
+  background-color: rgba(40,41,42,0.97);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
