@@ -65,16 +65,8 @@ function readContent(path) {
                 .replaceAll(/(--+)/g, '--'); // collapse --
             return '\r\n' + content.split(/(?<=\))\./g).filter(Boolean).map(i => '    ' + i).join('\r\n');
         })
-        // // .selector(***)
-        // .replaceAll(/(?<!\/\/.*)(?:\.selector\()(.+?)(?:\))/gm, function (match, content) {
-        //     content = content
-        //         .trim()
-        //         .replaceAll(/(__+)/g, '__') // collapse __
-        //         .replaceAll(/(--+)/g, '--'); // collapse --
-        //     return '{selector(' + ('\'' + content + '\'') + ')}';
-        // })
         // .selector--***
-        .replaceAll(/(?<!\/\/.*)(?:\.selector--)([\w-]+)/gm, function (match, content) {
+        .replaceAll(/(?<!\/\/.*)(?:\.selector--)([\w-.#:]+)/gm, function (match, content) {
             content = content
                 .trim()
                 .replaceAll(/(__+)/g, '__') // collapse __

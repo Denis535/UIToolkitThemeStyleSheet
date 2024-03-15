@@ -1,10 +1,12 @@
 // selector
-selector(key)
+selector(argument)
+    key    = match('^([\w-]+)', argument, g)
     key    = replace('(--+)', '--', key)
     key    = get-key('selector', key)
+    arg    = match('(:|#|\.)(.*)', argument, g) or ''
     result = get-value(key)
     result = replace('(\s+)', ' ', result)
-    result = replace('(\.\*)', '', result)
+    result = replace('(\:\*)', arg, result)
     result
 
 // create-theme
