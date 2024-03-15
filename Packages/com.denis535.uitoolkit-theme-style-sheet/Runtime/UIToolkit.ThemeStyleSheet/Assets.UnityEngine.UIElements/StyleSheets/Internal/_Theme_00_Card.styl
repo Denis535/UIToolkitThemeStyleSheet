@@ -1,11 +1,11 @@
 @import "_Utils"
 
 // card
-theme--card--------------------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 25%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px)            )
+theme--card--------------------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 15%, 0.99) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px)            )
 theme--card--------------------hover  = create-theme(null                   null                      null                  null                     null             )
 theme--card--------------------active = create-theme(null                   null                      null                  null                     null             )
 // card
-theme--header------------------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 20%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px 6px 0px 0px))
+theme--header------------------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  2%, 18%, 0.99) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px 6px 0px 0px))
 theme--header------------------hover  = create-theme(null                   null                      null                  null                     null             )
 theme--header------------------active = create-theme(null                   null                      null                  null                     null             )
 // card
@@ -13,74 +13,74 @@ theme--content-----------------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla
 theme--content-----------------hover  = create-theme(null                   null                      null                  null                     null             )
 theme--content-----------------active = create-theme(null                   null                      null                  null                     null             )
 // card
-theme--footer------------------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 15%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (0px 0px 6px 6px))
+theme--footer------------------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  2%, 16%, 1.00) img(null, null, null) hsla(30, 30%, 40%, 1.00) (0px 0px 6px 6px))
 theme--footer------------------hover  = create-theme(null                   null                      null                  null                     null             )
 theme--footer------------------active = create-theme(null                   null                      null                  null                     null             )
 
 // card
-theme--dialog-card-------------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 25%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px)            )
-theme--dialog-card-------------hover  = create-theme(null                   null                      null                  null                     null             )
-theme--dialog-card-------------active = create-theme(null                   null                      null                  null                     null             )
+theme--dialog-card-------------normal = theme--card-----normal
+theme--dialog-card-------------hover  = theme--card-----hover
+theme--dialog-card-------------active = theme--card-----active
 // card
-theme--dialog-header-----------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 20%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px 6px 0px 0px))
-theme--dialog-header-----------hover  = create-theme(null                   null                      null                  null                     null             )
-theme--dialog-header-----------active = create-theme(null                   null                      null                  null                     null             )
+theme--dialog-header-----------normal = theme--header---normal
+theme--dialog-header-----------hover  = theme--header---hover
+theme--dialog-header-----------active = theme--header---active
 // card
-theme--dialog-content----------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(  0, 0%,   0%, 0.00) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px)            )
-theme--dialog-content----------hover  = create-theme(null                   null                      null                  null                     null             )
-theme--dialog-content----------active = create-theme(null                   null                      null                  null                     null             )
+theme--dialog-content----------normal = theme--content--normal
+theme--dialog-content----------hover  = theme--content--hover
+theme--dialog-content----------active = theme--content--active
 // card
-theme--dialog-footer-----------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 15%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (0px 0px 6px 6px))
-theme--dialog-footer-----------hover  = create-theme(null                   null                      null                  null                     null             )
-theme--dialog-footer-----------active = create-theme(null                   null                      null                  null                     null             )
+theme--dialog-footer-----------normal = theme--footer---normal
+theme--dialog-footer-----------hover  = theme--footer---hover
+theme--dialog-footer-----------active = theme--footer---active
 
 // card
-theme--info-dialog-card--------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 25%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px)            )
-theme--info-dialog-card--------hover  = create-theme(null                   null                      null                  null                     null             )
-theme--info-dialog-card--------active = create-theme(null                   null                      null                  null                     null             )
+theme--info-dialog-card--------normal = theme--card-----normal
+theme--info-dialog-card--------hover  = theme--card-----hover
+theme--info-dialog-card--------active = theme--card-----active
 // card
-theme--info-dialog-header------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(240, 50%, 20%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px 6px 0px 0px))
-theme--info-dialog-header------hover  = create-theme(null                   null                      null                  null                     null             )
-theme--info-dialog-header------active = create-theme(null                   null                      null                  null                     null             )
+theme--info-dialog-header------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(240, 35%, 20%, 0.99) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px 6px 0px 0px))
+theme--info-dialog-header------hover  = theme--header---hover
+theme--info-dialog-header------active = theme--header---active
 // card
-theme--info-dialog-content-----normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(  0, 0%,   0%, 0.00) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px)            )
-theme--info-dialog-content-----hover  = create-theme(null                   null                      null                  null                     null             )
-theme--info-dialog-content-----active = create-theme(null                   null                      null                  null                     null             )
+theme--info-dialog-content-----normal = theme--content--normal
+theme--info-dialog-content-----hover  = theme--content--hover
+theme--info-dialog-content-----active = theme--content--active
 // card
-theme--info-dialog-footer------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 15%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (0px 0px 6px 6px))
-theme--info-dialog-footer------hover  = create-theme(null                   null                      null                  null                     null             )
-theme--info-dialog-footer------active = create-theme(null                   null                      null                  null                     null             )
+theme--info-dialog-footer------normal = theme--footer---normal
+theme--info-dialog-footer------hover  = theme--footer---hover
+theme--info-dialog-footer------active = theme--footer---active
 
 // card
-theme--warning-dialog-card-----normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 25%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px)            )
-theme--warning-dialog-card-----hover  = create-theme(null                   null                      null                  null                     null             )
-theme--warning-dialog-card-----active = create-theme(null                   null                      null                  null                     null             )
+theme--warning-dialog-card-----normal = theme--card-----normal
+theme--warning-dialog-card-----hover  = theme--card-----hover
+theme--warning-dialog-card-----active = theme--card-----active
 // card
-theme--warning-dialog-header---normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla( 60, 50%, 20%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px 6px 0px 0px))
-theme--warning-dialog-header---hover  = create-theme(null                   null                      null                  null                     null             )
-theme--warning-dialog-header---active = create-theme(null                   null                      null                  null                     null             )
+theme--warning-dialog-header---normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla( 60, 35%, 20%, 0.99) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px 6px 0px 0px))
+theme--warning-dialog-header---hover  = theme--header---hover
+theme--warning-dialog-header---active = theme--header---active
 // card
-theme--warning-dialog-content--normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(  0, 0%,   0%, 0.00) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px)            )
-theme--warning-dialog-content--hover  = create-theme(null                   null                      null                  null                     null             )
-theme--warning-dialog-content--active = create-theme(null                   null                      null                  null                     null             )
+theme--warning-dialog-content--normal = theme--content--normal
+theme--warning-dialog-content--hover  = theme--content--hover
+theme--warning-dialog-content--active = theme--content--active
 // card
-theme--warning-dialog-footer---normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 15%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (0px 0px 6px 6px))
-theme--warning-dialog-footer---hover  = create-theme(null                   null                      null                  null                     null             )
-theme--warning-dialog-footer---active = create-theme(null                   null                      null                  null                     null             )
+theme--warning-dialog-footer---normal = theme--footer---normal
+theme--warning-dialog-footer---hover  = theme--footer---hover
+theme--warning-dialog-footer---active = theme--footer---active
 
 // card
-theme--error-dialog-card-------normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 25%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px)            )
-theme--error-dialog-card-------hover  = create-theme(null                   null                      null                  null                     null             )
-theme--error-dialog-card-------active = create-theme(null                   null                      null                  null                     null             )
+theme--error-dialog-card-------normal = theme--card-----normal
+theme--error-dialog-card-------hover  = theme--card-----hover
+theme--error-dialog-card-------active = theme--card-----active
 // card
-theme--error-dialog-header-----normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(  0, 50%, 20%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px 6px 0px 0px))
-theme--error-dialog-header-----hover  = create-theme(null                   null                      null                  null                     null             )
-theme--error-dialog-header-----active = create-theme(null                   null                      null                  null                     null             )
+theme--error-dialog-header-----normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(  0, 35%, 20%, 0.99) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px 6px 0px 0px))
+theme--error-dialog-header-----hover  = theme--header---hover
+theme--error-dialog-header-----active = theme--header---active
 // card
-theme--error-dialog-content----normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(  0, 0%,   0%, 0.00) img(null, null, null) hsla(30, 30%, 40%, 1.00) (6px)            )
-theme--error-dialog-content----hover  = create-theme(null                   null                      null                  null                     null             )
-theme--error-dialog-content----active = create-theme(null                   null                      null                  null                     null             )
+theme--error-dialog-content----normal = theme--content--normal
+theme--error-dialog-content----hover  = theme--content--hover
+theme--error-dialog-content----active = theme--content--active
 // card
-theme--error-dialog-footer-----normal = create-theme(hsla(0, 0%, 90%, 1.00) hsla(210,  4%, 15%, 0.90) img(null, null, null) hsla(30, 30%, 40%, 1.00) (0px 0px 6px 6px))
-theme--error-dialog-footer-----hover  = create-theme(null                   null                      null                  null                     null             )
-theme--error-dialog-footer-----active = create-theme(null                   null                      null                  null                     null             )
+theme--error-dialog-footer-----normal = theme--footer---normal
+theme--error-dialog-footer-----hover  = theme--footer---hover
+theme--error-dialog-footer-----active = theme--footer---active
