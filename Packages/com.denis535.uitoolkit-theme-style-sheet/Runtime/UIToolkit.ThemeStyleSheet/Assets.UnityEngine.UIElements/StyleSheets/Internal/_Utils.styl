@@ -18,6 +18,22 @@ create-theme(args)
         border-color:      args[3],
         border-radius:     args[4]
     }
+create-theme-with-background-color(theme, background-color)
+    return {
+        color:             theme.color,
+        background-color:  background-color,
+        background-image:  theme.background-image,
+        border-color:      theme.border-color,
+        border-radius:     theme.border-radius
+    }
+create-theme-with-background-image(theme, background-image)
+    return {
+        color:             theme.color,
+        background-color:  theme.background-color,
+        background-image:  background-image,
+        border-color:      theme.border-color,
+        border-radius:     theme.border-radius
+    }
 img(url, color, scale-mode, slice-left = null, slice-right = null, slice-top = null, slice-bottom = null, slice-scale = null)
     return {
         url:          url,
