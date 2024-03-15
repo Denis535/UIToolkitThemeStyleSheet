@@ -1,54 +1,18 @@
 @import "../Internal/_Theme"
 
 // selector
-selector--field------------------normal                 = // string: .unity-toggle
-selector--field------------------hover                  = // string: .unity-toggle:hover
-selector--field------------------active                 = // string: .unity-toggle:active
-selector--field------------------focus                  = // string: .unity-toggle:focus
-selector--field------------------focus--hover           = // string: .unity-toggle:focus:hover
-selector--field------------------focus--active          = // string: .unity-toggle:focus:active
-selector--field------------------invalid                = // string: .unity-toggle.invalid
-selector--field------------------invalid--hover         = // string: .unity-toggle.invalid:hover
-selector--field------------------invalid--active        = // string: .unity-toggle.invalid:active
-selector--field------------------invalid--focus         = // string: .unity-toggle.invalid:focus
-selector--field------------------invalid--focus--hover  = // string: .unity-toggle.invalid:focus:hover
-selector--field------------------invalid--focus--active = // string: .unity-toggle.invalid:focus:active
+selector--field                 = // string: .unity-toggle:*
+selector--field-label           = // string: .unity-toggle:* .unity-toggle__label
+selector--field-input           = // string: .unity-toggle:* .unity-toggle__input
 // selector
-selector--field-label------------normal                 = // string: .unity-toggle                      .unity-toggle__label
-selector--field-label------------hover                  = // string: .unity-toggle:hover                .unity-toggle__label
-selector--field-label------------active                 = // string: .unity-toggle:active               .unity-toggle__label
-selector--field-label------------focus                  = // string: .unity-toggle:focus                .unity-toggle__label
-selector--field-label------------focus--hover           = // string: .unity-toggle:focus:hover          .unity-toggle__label
-selector--field-label------------focus--active          = // string: .unity-toggle:focus:active         .unity-toggle__label
-selector--field-label------------invalid                = // string: .unity-toggle.invalid              .unity-toggle__label
-selector--field-label------------invalid--hover         = // string: .unity-toggle.invalid:hover        .unity-toggle__label
-selector--field-label------------invalid--active        = // string: .unity-toggle.invalid:active       .unity-toggle__label
-selector--field-label------------invalid--focus         = // string: .unity-toggle.invalid:focus        .unity-toggle__label
-selector--field-label------------invalid--focus--hover  = // string: .unity-toggle.invalid:focus:hover  .unity-toggle__label
-selector--field-label------------invalid--focus--active = // string: .unity-toggle.invalid:focus:active .unity-toggle__label
-// selector
-selector--field-input------------normal                 = // string: .unity-toggle                      .unity-toggle__input
-selector--field-input------------hover                  = // string: .unity-toggle:hover                .unity-toggle__input
-selector--field-input------------active                 = // string: .unity-toggle:active               .unity-toggle__input
-selector--field-input------------focus                  = // string: .unity-toggle:focus                .unity-toggle__input
-selector--field-input------------focus--hover           = // string: .unity-toggle:focus:hover          .unity-toggle__input
-selector--field-input------------focus--active          = // string: .unity-toggle:focus:active         .unity-toggle__input
-selector--field-input------------invalid                = // string: .unity-toggle.invalid              .unity-toggle__input
-selector--field-input------------invalid--hover         = // string: .unity-toggle.invalid:hover        .unity-toggle__input
-selector--field-input------------invalid--active        = // string: .unity-toggle.invalid:active       .unity-toggle__input
-selector--field-input------------invalid--focus         = // string: .unity-toggle.invalid:focus        .unity-toggle__input
-selector--field-input------------invalid--focus--hover  = // string: .unity-toggle.invalid:focus:hover  .unity-toggle__input
-selector--field-input------------invalid--focus--active = // string: .unity-toggle.invalid:focus:active .unity-toggle__input
-// selector
-selector--field-input-checkmark--normal                 = // string: .unity-toggle                      .unity-toggle__input         .unity-toggle__checkmark
-selector--field-input-checkmark--checked                = // string: .unity-toggle                      .unity-toggle__input:checked .unity-toggle__checkmark
+selector--field-input-checkmark = // string: .unity-toggle:* .unity-toggle__input .unity-toggle__checkmark
 
 // view
-.selector--field-input-checkmark--normal  // styles: add-theme(toggle-field-input-checkmark--normal )
-.selector--field-input-checkmark--checked // styles: add-theme(toggle-field-input-checkmark--checked)
+.selector--field-input-checkmark         // styles: add-theme(toggle-field-input-checkmark--normal )
+.selector--field-input-checkmark:checked // styles: add-theme(toggle-field-input-checkmark--checked)
 
 // layout
-.selector--field-input-checkmark--normal // styles: add-layout(null, 16px, 16px, (0px), (1px), (0px))
+.selector--field-input-checkmark // styles: add-layout(null, 16px, 16px, (0px), (1px), (0px))
 
 // flex
-.selector--field-input-checkmark--normal // styles: add-flex(0, 1, auto, auto)
+.selector--field-input-checkmark // styles: add-flex(0, 1, auto, auto)

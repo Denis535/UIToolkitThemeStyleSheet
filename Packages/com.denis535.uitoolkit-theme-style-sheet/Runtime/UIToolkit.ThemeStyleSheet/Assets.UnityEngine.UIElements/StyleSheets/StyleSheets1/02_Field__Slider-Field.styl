@@ -1,60 +1,25 @@
 @import "../Internal/_Theme"
 
 // selector
-selector--field------------------normal                 = // string: .unity-base-slider
-selector--field------------------hover                  = // string: .unity-base-slider:hover
-selector--field------------------active                 = // string: .unity-base-slider:active
-selector--field------------------focus                  = // string: .unity-base-slider:focus
-selector--field------------------focus--hover           = // string: .unity-base-slider:focus:hover
-selector--field------------------focus--active          = // string: .unity-base-slider:focus:active
-selector--field------------------invalid                = // string: .unity-base-slider.invalid
-selector--field------------------invalid--hover         = // string: .unity-base-slider.invalid:hover
-selector--field------------------invalid--active        = // string: .unity-base-slider.invalid:active
-selector--field------------------invalid--focus         = // string: .unity-base-slider.invalid:focus
-selector--field------------------invalid--focus--hover  = // string: .unity-base-slider.invalid:focus:hover
-selector--field------------------invalid--focus--active = // string: .unity-base-slider.invalid:focus:active
+selector--field                 = // string: .unity-base-slider:*
+selector--field-label           = // string: .unity-base-slider:* .unity-base-slider__label
+selector--field-input           = // string: .unity-base-slider:* .unity-base-slider__input
 // selector
-selector--field-label------------normal                 = // string: .unity-base-slider                      .unity-base-slider__label
-selector--field-label------------hover                  = // string: .unity-base-slider:hover                .unity-base-slider__label
-selector--field-label------------active                 = // string: .unity-base-slider:active               .unity-base-slider__label
-selector--field-label------------focus                  = // string: .unity-base-slider:focus                .unity-base-slider__label
-selector--field-label------------focus--hover           = // string: .unity-base-slider:focus:hover          .unity-base-slider__label
-selector--field-label------------focus--active          = // string: .unity-base-slider:focus:active         .unity-base-slider__label
-selector--field-label------------invalid                = // string: .unity-base-slider.invalid              .unity-base-slider__label
-selector--field-label------------invalid--hover         = // string: .unity-base-slider.invalid:hover        .unity-base-slider__label
-selector--field-label------------invalid--active        = // string: .unity-base-slider.invalid:active       .unity-base-slider__label
-selector--field-label------------invalid--focus         = // string: .unity-base-slider.invalid:focus        .unity-base-slider__label
-selector--field-label------------invalid--focus--hover  = // string: .unity-base-slider.invalid:focus:hover  .unity-base-slider__label
-selector--field-label------------invalid--focus--active = // string: .unity-base-slider.invalid:focus:active .unity-base-slider__label
-// selector
-selector--field-input------------normal                 = // string: .unity-base-slider                      .unity-base-slider__input
-selector--field-input------------hover                  = // string: .unity-base-slider:hover                .unity-base-slider__input
-selector--field-input------------active                 = // string: .unity-base-slider:active               .unity-base-slider__input
-selector--field-input------------focus                  = // string: .unity-base-slider:focus                .unity-base-slider__input
-selector--field-input------------focus--hover           = // string: .unity-base-slider:focus:hover          .unity-base-slider__input
-selector--field-input------------focus--active          = // string: .unity-base-slider:focus:active         .unity-base-slider__input
-selector--field-input------------invalid                = // string: .unity-base-slider.invalid              .unity-base-slider__input
-selector--field-input------------invalid--hover         = // string: .unity-base-slider.invalid:hover        .unity-base-slider__input
-selector--field-input------------invalid--active        = // string: .unity-base-slider.invalid:active       .unity-base-slider__input
-selector--field-input------------invalid--focus         = // string: .unity-base-slider.invalid:focus        .unity-base-slider__input
-selector--field-input------------invalid--focus--hover  = // string: .unity-base-slider.invalid:focus:hover  .unity-base-slider__input
-selector--field-input------------invalid--focus--active = // string: .unity-base-slider.invalid:focus:active .unity-base-slider__input
-// selector
-selector--field-input-container--normal                 = // string: .unity-base-slider                      .unity-base-slider__input #unity-drag-container
-selector--field-input-tracker----normal                 = // string: .unity-base-slider                      .unity-base-slider__input #unity-drag-container #unity-tracker
-selector--field-input-dragger----normal                 = // string: .unity-base-slider                      .unity-base-slider__input #unity-drag-container #unity-dragger
+selector--field-input-container = // string: .unity-base-slider:* .unity-base-slider__input #unity-drag-container
+selector--field-input-tracker   = // string: .unity-base-slider:* .unity-base-slider__input #unity-drag-container #unity-tracker
+selector--field-input-dragger   = // string: .unity-base-slider:* .unity-base-slider__input #unity-drag-container #unity-dragger
 
 // view
-.selector--field-input-container--normal // styles: add-theme(null                              )
-.selector--field-input-tracker----normal // styles: add-theme(slider-field-input-tracker--normal)
-.selector--field-input-dragger----normal // styles: add-theme(slider-field-input-dragger--normal)
+.selector--field-input-container // styles: add-theme(null                              )
+.selector--field-input-tracker   // styles: add-theme(slider-field-input-tracker--normal)
+.selector--field-input-dragger   // styles: add-theme(slider-field-input-dragger--normal)
 
 // layout
-.selector--field-input-container--normal // styles: add-layout(null,     auto, auto, (0px), (0px), (0px))
-.selector--field-input-tracker----normal // styles: add-layout(null,     auto,  8px, (0px), (1px), (0px))
-.selector--field-input-dragger----normal // styles: add-layout(absolute, 8px,  24px, (0px), (1px), (0px))
+.selector--field-input-container // styles: add-layout(null,     auto, auto, (0px), (0px), (0px))
+.selector--field-input-tracker   // styles: add-layout(null,     auto,  8px, (0px), (1px), (0px))
+.selector--field-input-dragger   // styles: add-layout(absolute, 8px,  24px, (0px), (1px), (0px))
 
 // flex
-.selector--field-input-container--normal // styles: add-flex(1, 1, auto, auto).add-flex2(row, flex-start, null, center)
-.selector--field-input-tracker----normal // styles: add-flex(1, 1, auto, auto)
-.selector--field-input-dragger----normal // styles: add-flex(0, 1, auto, auto)
+.selector--field-input-container // styles: add-flex(1, 1, auto, auto).add-flex2(row, flex-start, null, center)
+.selector--field-input-tracker   // styles: add-flex(1, 1, auto, auto)
+.selector--field-input-dragger   // styles: add-flex(0, 1, auto, auto)

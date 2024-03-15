@@ -1,92 +1,56 @@
 @import "../Internal/_Theme"
 
 // selector
-selector--field--------normal                 = // string: .unity-base-field
-selector--field--------hover                  = // string: .unity-base-field:hover
-selector--field--------active                 = // string: .unity-base-field:active
-selector--field--------focus                  = // string: .unity-base-field:focus
-selector--field--------focus--hover           = // string: .unity-base-field:focus:hover
-selector--field--------focus--active          = // string: .unity-base-field:focus:active
-selector--field--------invalid                = // string: .unity-base-field.invalid
-selector--field--------invalid--hover         = // string: .unity-base-field.invalid:hover
-selector--field--------invalid--active        = // string: .unity-base-field.invalid:active
-selector--field--------invalid--focus         = // string: .unity-base-field.invalid:focus
-selector--field--------invalid--focus--hover  = // string: .unity-base-field.invalid:focus:hover
-selector--field--------invalid--focus--active = // string: .unity-base-field.invalid:focus:active
-// selector
-selector--field-label--normal                 = // string: .unity-base-field                      .unity-base-field__label
-selector--field-label--hover                  = // string: .unity-base-field:hover                .unity-base-field__label
-selector--field-label--active                 = // string: .unity-base-field:active               .unity-base-field__label
-selector--field-label--focus                  = // string: .unity-base-field:focus                .unity-base-field__label
-selector--field-label--focus--hover           = // string: .unity-base-field:focus:hover          .unity-base-field__label
-selector--field-label--focus--active          = // string: .unity-base-field:focus:active         .unity-base-field__label
-selector--field-label--invalid                = // string: .unity-base-field.invalid              .unity-base-field__label
-selector--field-label--invalid--hover         = // string: .unity-base-field.invalid:hover        .unity-base-field__label
-selector--field-label--invalid--active        = // string: .unity-base-field.invalid:active       .unity-base-field__label
-selector--field-label--invalid--focus         = // string: .unity-base-field.invalid:focus        .unity-base-field__label
-selector--field-label--invalid--focus--hover  = // string: .unity-base-field.invalid:focus:hover  .unity-base-field__label
-selector--field-label--invalid--focus--active = // string: .unity-base-field.invalid:focus:active .unity-base-field__label
-// selector
-selector--field-input--normal                 = // string: .unity-base-field                      .unity-base-field__input
-selector--field-input--hover                  = // string: .unity-base-field:hover                .unity-base-field__input
-selector--field-input--active                 = // string: .unity-base-field:active               .unity-base-field__input
-selector--field-input--focus                  = // string: .unity-base-field:focus                .unity-base-field__input
-selector--field-input--focus--hover           = // string: .unity-base-field:focus:hover          .unity-base-field__input
-selector--field-input--focus--active          = // string: .unity-base-field:focus:active         .unity-base-field__input
-selector--field-input--invalid                = // string: .unity-base-field.invalid              .unity-base-field__input
-selector--field-input--invalid--hover         = // string: .unity-base-field.invalid:hover        .unity-base-field__input
-selector--field-input--invalid--active        = // string: .unity-base-field.invalid:active       .unity-base-field__input
-selector--field-input--invalid--focus         = // string: .unity-base-field.invalid:focus        .unity-base-field__input
-selector--field-input--invalid--focus--hover  = // string: .unity-base-field.invalid:focus:hover  .unity-base-field__input
-selector--field-input--invalid--focus--active = // string: .unity-base-field.invalid:focus:active .unity-base-field__input
+selector--field       = // string: .unity-base-field:*
+selector--field-label = // string: .unity-base-field:* .unity-base-field__label
+selector--field-input = // string: .unity-base-field:* .unity-base-field__input
 
 // view
-.selector--field--------normal                 // styles: add-theme(field--------normal                )
-.selector--field--------hover                  // styles: add-theme(field--------hover                 )
-.selector--field--------active                 // styles: add-theme(field--------active                )
-.selector--field--------focus                  // styles: add-theme(field--------focus                 )
-.selector--field--------focus--hover           // styles: add-theme(field--------focus--hover          )
-.selector--field--------focus--active          // styles: add-theme(field--------focus--active         )
-.selector--field--------invalid                // styles: add-theme(field--------invalid               )
-.selector--field--------invalid--hover         // styles: add-theme(field--------invalid--hover        )
-.selector--field--------invalid--active        // styles: add-theme(field--------invalid--active       )
-.selector--field--------invalid--focus         // styles: add-theme(field--------invalid--focus        )
-.selector--field--------invalid--focus--hover  // styles: add-theme(field--------invalid--focus--hover )
-.selector--field--------invalid--focus--active // styles: add-theme(field--------invalid--focus--active)
-
+.selector--field                            // styles: add-theme(field--------normal                )
+.selector--field:hover                      // styles: add-theme(field--------hover                 )
+.selector--field:active                     // styles: add-theme(field--------active                )
+.selector--field:focus                      // styles: add-theme(field--------focus                 )
+.selector--field:focus:hover                // styles: add-theme(field--------focus--hover          )
+.selector--field:focus:active               // styles: add-theme(field--------focus--active         )
+.selector--field.invalid                    // styles: add-theme(field--------invalid               )
+.selector--field.invalid:hover              // styles: add-theme(field--------invalid--hover        )
+.selector--field.invalid:active             // styles: add-theme(field--------invalid--active       )
+.selector--field.invalid:focus              // styles: add-theme(field--------invalid--focus        )
+.selector--field.invalid:focus:hover        // styles: add-theme(field--------invalid--focus--hover )
+.selector--field.invalid:focus:active       // styles: add-theme(field--------invalid--focus--active)
 // view
-.selector--field-label--normal                 // styles: add-theme(field-label--normal                ).add-font(null, null, null).add-text(middle-left, null, null)
-.selector--field-label--hover                  // styles: add-theme(field-label--hover                 )
-.selector--field-label--active                 // styles: add-theme(field-label--active                )
-.selector--field-label--focus                  // styles: add-theme(field-label--focus                 )
-.selector--field-label--focus--hover           // styles: add-theme(field-label--focus--hover          )
-.selector--field-label--focus--active          // styles: add-theme(field-label--focus--active         )
-.selector--field-label--invalid                // styles: add-theme(field-label--invalid               )
-.selector--field-label--invalid--hover         // styles: add-theme(field-label--invalid--hover        )
-.selector--field-label--invalid--active        // styles: add-theme(field-label--invalid--active       )
-.selector--field-label--invalid--focus         // styles: add-theme(field-label--invalid--focus        )
-.selector--field-label--invalid--focus--hover  // styles: add-theme(field-label--invalid--focus--hover )
-.selector--field-label--invalid--focus--active // styles: add-theme(field-label--invalid--focus--active)
+.selector--field-label                      // styles: add-theme(field-label--normal                ).add-font(null, null, null).add-text(middle-left, null, null)
+.selector--field-label:hover                // styles: add-theme(field-label--hover                 )
+.selector--field-label:active               // styles: add-theme(field-label--active                )
+.selector--field-label:focus                // styles: add-theme(field-label--focus                 )
+.selector--field-label:focus:hover          // styles: add-theme(field-label--focus--hover          )
+.selector--field-label:focus:active         // styles: add-theme(field-label--focus--active         )
+.selector--field-label.invalid              // styles: add-theme(field-label--invalid               )
+.selector--field-label.invalid:hover        // styles: add-theme(field-label--invalid--hover        )
+.selector--field-label.invalid:active       // styles: add-theme(field-label--invalid--active       )
+.selector--field-label.invalid:focus        // styles: add-theme(field-label--invalid--focus        )
+.selector--field-label.invalid:focus:hover  // styles: add-theme(field-label--invalid--focus--hover )
+.selector--field-label.invalid:focus:active // styles: add-theme(field-label--invalid--focus--active)
 // view
-.selector--field-input--normal                 // styles: add-theme(field-input--normal                ).add-font(null, null, null).add-text(middle-left, null, null)
-.selector--field-input--hover                  // styles: add-theme(field-input--hover                 )
-.selector--field-input--active                 // styles: add-theme(field-input--active                )
-.selector--field-input--focus                  // styles: add-theme(field-input--focus                 )
-.selector--field-input--focus--hover           // styles: add-theme(field-input--focus--hover          )
-.selector--field-input--focus--active          // styles: add-theme(field-input--focus--active         )
-.selector--field-input--invalid                // styles: add-theme(field-input--invalid               )
-.selector--field-input--invalid--hover         // styles: add-theme(field-input--invalid--hover        )
-.selector--field-input--invalid--active        // styles: add-theme(field-input--invalid--active       )
-.selector--field-input--invalid--focus         // styles: add-theme(field-input--invalid--focus        )
-.selector--field-input--invalid--focus--hover  // styles: add-theme(field-input--invalid--focus--hover )
-.selector--field-input--invalid--focus--active // styles: add-theme(field-input--invalid--focus--active)
+.selector--field-input                      // styles: add-theme(field-input--normal                ).add-font(null, null, null).add-text(middle-left, null, null)
+.selector--field-input:hover                // styles: add-theme(field-input--hover                 )
+.selector--field-input:active               // styles: add-theme(field-input--active                )
+.selector--field-input:focus                // styles: add-theme(field-input--focus                 )
+.selector--field-input:focus:hover          // styles: add-theme(field-input--focus--hover          )
+.selector--field-input:focus:active         // styles: add-theme(field-input--focus--active         )
+.selector--field-input.invalid              // styles: add-theme(field-input--invalid               )
+.selector--field-input.invalid:hover        // styles: add-theme(field-input--invalid--hover        )
+.selector--field-input.invalid:active       // styles: add-theme(field-input--invalid--active       )
+.selector--field-input.invalid:focus        // styles: add-theme(field-input--invalid--focus        )
+.selector--field-input.invalid:focus:hover  // styles: add-theme(field-input--invalid--focus--hover )
+.selector--field-input.invalid:focus:active // styles: add-theme(field-input--invalid--focus--active)
 
 // layout
-.selector--field--------normal // styles: add-layout(null, auto, auto, (4px            ), (0px), (0px                ))
-.selector--field-label--normal // styles: add-layout(null, auto, auto, (0px 4px 0px 0px), (1px), (12px 12px 10px 10px))
-.selector--field-input--normal // styles: add-layout(null, auto, auto, (0px            ), (1px), (12px 12px 10px 10px))
+.selector--field       // styles: add-layout(null, auto, auto, (4px            ), (0px), (0px                ))
+.selector--field-label // styles: add-layout(null, auto, auto, (0px 4px 0px 0px), (1px), (12px 12px 10px 10px))
+.selector--field-input // styles: add-layout(null, auto, auto, (0px            ), (1px), (12px 12px 10px 10px))
 
 // flex
-.selector--field--------normal // styles: add-flex(0, 1, auto, auto).add-flex2(row, flex-start, null, stretch)
-.selector--field-label--normal // styles: add-flex(0, 1, auto, auto)
-.selector--field-input--normal // styles: add-flex(1, 1, auto, auto).add-flex2(row, flex-end,   null, stretch)
+.selector--field       // styles: add-flex(0, 1, auto, auto).add-flex2(row, flex-start, null, stretch)
+.selector--field-label // styles: add-flex(0, 1, auto, auto)
+.selector--field-input // styles: add-flex(1, 1, auto, auto).add-flex2(row, flex-end,   null, stretch)

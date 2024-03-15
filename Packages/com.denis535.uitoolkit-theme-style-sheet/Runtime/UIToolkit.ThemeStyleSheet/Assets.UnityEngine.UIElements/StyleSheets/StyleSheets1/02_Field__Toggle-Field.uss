@@ -11,7 +11,7 @@
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.unity-toggle .unity-toggle__input:checked .unity-toggle__checkmark {
+.unity-toggle:checked .unity-toggle__input .unity-toggle__checkmark {
   -unity-background-image-tint-color: #1a1a1a;
 }
 .unity-toggle .unity-toggle__input .unity-toggle__checkmark {
