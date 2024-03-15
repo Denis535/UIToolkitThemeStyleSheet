@@ -36,7 +36,7 @@
 }
 .unity-tab-view.light2 .unity-tab {
   color: #e6e6e6;
-  background-color: rgba(73,77,80,0.9);
+  background-color: rgba(64,66,69,0.98);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -48,7 +48,7 @@
 }
 .unity-tab-view.light .unity-tab {
   color: #e6e6e6;
-  background-color: rgba(61,64,66,0.9);
+  background-color: rgba(56,59,61,0.98);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -60,7 +60,7 @@
 }
 .unity-tab-view.gray .unity-tab {
   color: #e6e6e6;
-  background-color: rgba(49,51,53,0.9);
+  background-color: rgba(49,51,53,0.98);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -72,7 +72,7 @@
 }
 .unity-tab-view.dark .unity-tab {
   color: #e6e6e6;
-  background-color: rgba(37,38,40,0.9);
+  background-color: rgba(42,43,45,0.98);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
@@ -84,7 +84,7 @@
 }
 .unity-tab-view.dark2 .unity-tab {
   color: #e6e6e6;
-  background-color: rgba(24,26,27,0.9);
+  background-color: rgba(34,36,37,0.98);
   border-left-color: #856647;
   border-right-color: #856647;
   border-top-color: #856647;
