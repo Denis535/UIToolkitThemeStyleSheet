@@ -5,14 +5,13 @@ selector--dropdown                                  = // string: .unity-base-dro
 selector--dropdown-container                        = // string: .unity-base-dropdown .unity-base-dropdown__container-outer
 // selector
 selector--list-view                                 = // string: .unity-base-dropdown .unity-list-view
-selector--list-view-empty-list-label                = // string: .unity-base-dropdown .unity-list-view__empty-label:*
-// selector
 selector--scroll-view                               = // string: .unity-base-dropdown .unity-scroll-view
 selector--scroll-view-content-and-vertical-scroller = // string: .unity-base-dropdown .unity-scroll-view #unity-content-and-vertical-scroll-container
 selector--scroll-view-content                       = // string: .unity-base-dropdown .unity-scroll-view #unity-content-viewport
 selector--scroll-view-container                     = // string: .unity-base-dropdown .unity-scroll-view #unity-content-container
 // selector
 selector--list-item                                 = // string: .unity-base-dropdown .unity-list-view__item:*
+selector--list-item-empty-list-label                = // string: .unity-base-dropdown .unity-list-view__empty-label:*
 selector--dropdown-item                             = // string: .unity-base-dropdown .unity-base-dropdown__item:*
 selector--dropdown-item-checkmark                   = // string: .unity-base-dropdown .unity-base-dropdown__item:* .unity-base-dropdown__checkmark
 selector--dropdown-item-text                        = // string: .unity-base-dropdown .unity-base-dropdown__item:* .unity-base-dropdown__label
@@ -22,9 +21,6 @@ selector--dropdown-item-text                        = // string: .unity-base-dro
 .selector--dropdown-container                        // styles: add-theme(null                            )
 // view
 .selector--list-view                                 // styles: add-theme(null                            )
-.selector--list-view-empty-list-label                // styles: add-theme(dropdown-item------------normal )
-.selector--list-view-empty-list-label:hover          // styles: add-theme(dropdown-item------------hover  )
-// view
 .selector--scroll-view                               // styles: add-theme(dropdown-----------------normal )
 .selector--scroll-view:hover                         // styles: add-theme(dropdown-----------------hover  )
 .selector--scroll-view-content-and-vertical-scroller // styles: add-theme(null                            )
@@ -32,6 +28,8 @@ selector--dropdown-item-text                        = // string: .unity-base-dro
 .selector--scroll-view-container                     // styles: add-theme(null                            )
 // view
 .selector--list-item                                 // styles: add-theme(null                            )
+.selector--list-item-empty-list-label                // styles: add-theme(dropdown-item------------normal )
+.selector--list-item-empty-list-label:hover          // styles: add-theme(dropdown-item------------hover  )
 .selector--dropdown-item                             // styles: add-theme(dropdown-item------------normal )
 .selector--dropdown-item:hover                       // styles: add-theme(dropdown-item------------hover  )
 .selector--dropdown-item:checked                     // styles: add-theme(null                            )
@@ -47,14 +45,13 @@ selector--dropdown-item-text                        = // string: .unity-base-dro
 .selector--dropdown-container                        // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
 // layout
 .selector--list-view                                 // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
-.selector--list-view-empty-list-label                // styles: add-layout(null,     auto, auto, (0px             ), (0px 0px 0px 1px), (12px 12px 10px 10px))
-// layout
 .selector--scroll-view                               // styles: add-layout(null,     auto, auto, (0px             ), (1px            ), (0px                ))
 .selector--scroll-view-content-and-vertical-scroller // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
 .selector--scroll-view-content                       // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
 .selector--scroll-view-container                     // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
 // layout
 .selector--list-item                                 // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px   0px  0px  0px))
+.selector--list-item-empty-list-label                // styles: add-layout(null,     auto, auto, (0px             ), (0px 0px 0px 1px), (12px 12px 10px 10px))
 .selector--dropdown-item                             // styles: add-layout(null,     auto, auto, (0px             ), (0px 0px 0px 1px), (12px 12px 10px 10px))
 .selector--dropdown-item-checkmark                   // styles: add-layout(null,     16px, 16px, (0px 12px 0px 0px), (1px            ), (0px                ))
 .selector--dropdown-item-text                        // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
@@ -64,14 +61,13 @@ selector--dropdown-item-text                        = // string: .unity-base-dro
 .selector--dropdown-container                        // styles: add-flex(0, 1, auto, auto).add-flex2(column, flex-start, null, stretch)
 // flex
 .selector--list-view                                 // styles: add-flex(0, 1, auto, auto).add-flex2(column, flex-start, null, stretch)
-.selector--list-view-empty-list-label                // styles: add-flex(0, 1, auto, auto)
-// flex
 .selector--scroll-view                               // styles: add-flex(0, 1, auto, auto).add-flex2(column, flex-start, null, stretch)
 .selector--scroll-view-content-and-vertical-scroller // styles: add-flex(1, 1, auto, auto).add-flex2(row,    flex-start, null, stretch)
 .selector--scroll-view-content                       // styles: add-flex(1, 1, auto, auto).add-flex2(column, flex-start, null, stretch)
 .selector--scroll-view-container                     // styles: add-flex(0, 0, auto, auto).add-flex2(column, flex-start, null, stretch)
 // flex
 .selector--list-item                                 // styles: add-flex(0, 1, auto, auto).add-flex2(column, flex-start, null, stretch)
+.selector--list-item-empty-list-label                // styles: add-flex(0, 1, auto, auto)
 .selector--dropdown-item                             // styles: add-flex(0, 1, auto, auto).add-flex2(row,    flex-start, null, stretch)
 .selector--dropdown-item-checkmark                   // styles: add-flex(0, 1, auto, auto)
 .selector--dropdown-item-text                        // styles: add-flex(1, 1, auto, auto)
