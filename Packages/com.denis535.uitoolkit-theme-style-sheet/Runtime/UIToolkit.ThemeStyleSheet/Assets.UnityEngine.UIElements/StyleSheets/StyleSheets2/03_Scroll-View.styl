@@ -1,12 +1,12 @@
 @import "../Internal/_Theme"
 
 // selector
-selector--scroll-view                               = // string: .unity-scroll-view:*
-selector--scroll-view--light2                       = // string: .unity-scroll-view.light2:*
-selector--scroll-view--light                        = // string: .unity-scroll-view.light:*
-selector--scroll-view--gray                         = // string: .unity-scroll-view.gray:*
-selector--scroll-view--dark                         = // string: .unity-scroll-view.dark:*
-selector--scroll-view--dark2                        = // string: .unity-scroll-view.dark2:*
+selector--scroll-view                               = // string: .unity-scroll-view.%
+selector--scroll-view--light2                       = // string: .unity-scroll-view.light2.%
+selector--scroll-view--light                        = // string: .unity-scroll-view.light.%
+selector--scroll-view--gray                         = // string: .unity-scroll-view.gray.%
+selector--scroll-view--dark                         = // string: .unity-scroll-view.dark.%
+selector--scroll-view--dark2                        = // string: .unity-scroll-view.dark2.%
 selector--scroll-view--no-outline                   = // string: .unity-scroll-view.no-outline
 selector--scroll-view-content-and-vertical-scroller = // string: .unity-scroll-view            #unity-content-and-vertical-scroll-container
 selector--scroll-view-content                       = // string: .unity-scroll-view            #unity-content-viewport
@@ -36,7 +36,7 @@ selector--scroll-view-container                     = // string: .unity-scroll-v
 
 // layout
 .selector--scroll-view                               // styles: add-layout(null, auto, auto, (4px                ), (1px), (0px ))
-.selector--scroll-view--no-outline                   // styles: add-layout(null, null, null, (null               ), (0px), (null))
+.selector--scroll-view--no-outline                   // styles: add-layout(border: 0px                                           )
 .selector--scroll-view-content-and-vertical-scroller // styles: add-layout(null, auto, auto, (0px                ), (0px), (0px ))
 .selector--scroll-view-content                       // styles: add-layout(null, auto, auto, (0px                ), (0px), (0px ))
 .selector--scroll-view-content--small                // styles: add-layout(null, auto, auto, (6px  6px  5px  5px ), (0px), (0px ))
