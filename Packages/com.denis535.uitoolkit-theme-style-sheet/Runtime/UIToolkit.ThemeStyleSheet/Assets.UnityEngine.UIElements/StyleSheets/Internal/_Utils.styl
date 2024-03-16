@@ -10,31 +10,17 @@ selector(argument)
     result
 
 // create-theme
-create-theme(args)
+bg(args)
     return {
-        color:             args[0],
-        background-color:  args[1],
-        background-image:  args[2],
-        border-color:      args[3],
-        border-radius:     args[4]
+        background-color: args[0],
+        background-image: args[1]
     }
-create-theme-with-background-color(theme, background-color)
+bd(args)
     return {
-        color:             theme.color,
-        background-color:  background-color,
-        background-image:  theme.background-image,
-        border-color:      theme.border-color,
-        border-radius:     theme.border-radius
+        border-color:  args[0],
+        border-radius: args[1]
     }
-create-theme-with-background-image(theme, background-image)
-    return {
-        color:             theme.color,
-        background-color:  theme.background-color,
-        background-image:  background-image,
-        border-color:      theme.border-color,
-        border-radius:     theme.border-radius
-    }
-img(url, color, scale-mode, slice-left = null, slice-right = null, slice-top = null, slice-bottom = null, slice-scale = null)
+img(url, color, scale-mode = null, slice-left = null, slice-right = null, slice-top = null, slice-bottom = null, slice-scale = null)
     return {
         url:          url,
         color:        color,
@@ -50,9 +36,9 @@ img(url, color, scale-mode, slice-left = null, slice-right = null, slice-top = n
 add-theme(theme)
     if theme != null
         theme = get-value(get-key('theme', theme))
-        add-view-foreground(theme.color)
-        add-view-background(theme.background-color, theme.background-image)
-        add-view-border(theme.border-color, theme.border-radius)
+        add-view-foreground(theme[0])
+        add-view-background(theme[1].background-color, theme[1].background-image)
+        add-view-border(theme[2].border-color, theme[2].border-radius)
 
 // add-view
 add-font(url, size, style)

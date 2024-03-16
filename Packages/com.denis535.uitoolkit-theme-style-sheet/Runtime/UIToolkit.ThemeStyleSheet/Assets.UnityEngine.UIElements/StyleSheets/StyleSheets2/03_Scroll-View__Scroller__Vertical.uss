@@ -109,7 +109,6 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--vertical #unity-high-button:focus {
-  background-image: url('../../Images/Arrow_Down.png');
   -unity-background-image-tint-color: #197fe6;
   border-left-color: #1466b8;
   border-right-color: #1466b8;
