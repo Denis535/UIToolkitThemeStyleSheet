@@ -290,6 +290,12 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.unity-tab-view.no-outline .unity-tab {
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+}
 .unity-tab-view .unity-tab .unity-tab__content-container {
   width: auto;
   height: auto;
