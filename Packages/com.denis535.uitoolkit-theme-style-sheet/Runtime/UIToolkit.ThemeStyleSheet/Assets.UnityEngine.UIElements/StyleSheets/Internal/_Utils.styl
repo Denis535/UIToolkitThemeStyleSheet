@@ -1,24 +1,13 @@
-// selector
-selector(argument)
-    key    = match('^([\w-]+)', argument, g)
-    arg    = match('([.#:].*)', argument, g) or ''
-    key    = replace('(--+)', '--', key)
-    key    = get-key('selector', key)
-    result = get-value(key)
-    result = replace('(\s+)', ' ', result)
-    result = replace('(\:\*)', arg, result)
-    result
-
 // create-theme
-bg(args)
+bg(arguments)
     return {
-        background-color: args[0],
-        background-image: args[1]
+        background-color: arguments[0],
+        background-image: arguments[1]
     }
-bd(args)
+bd(arguments)
     return {
-        border-color:  args[0],
-        border-radius: args[1]
+        border-color:  arguments[0],
+        border-radius: arguments[1]
     }
 img(url, color, scale-mode = null, slice-left = null, slice-right = null, slice-top = null, slice-bottom = null, slice-scale = null)
     return {
@@ -31,6 +20,17 @@ img(url, color, scale-mode = null, slice-left = null, slice-right = null, slice-
         slice-bottom: slice-bottom,
         slice-scale:  slice-scale,
     }
+
+// selector
+selector(argument)
+    key    = match('^([\w-]+)', argument, g)
+    arg    = match('([.#:].*)', argument, g) or ''
+    key    = replace('(--+)', '--', key)
+    key    = get-key('selector', key)
+    result = get-value(key)
+    result = replace('(\s+)', ' ', result)
+    result = replace('(\:\*)', arg, result)
+    result
 
 // add-theme
 add-theme(theme)

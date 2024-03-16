@@ -1,59 +1,64 @@
 @import "../_Utils"
 
+left-arrow  = '../../Images/Arrow_Left.png'
+right-arrow = '../../Images/Arrow_Right.png'
+up-arrow    = '../../Images/Arrow_Up.png'
+down-arrow  = '../../Images/Arrow_Down.png'
+
 // scroll-view-tracker
-theme--scroll-view-tracker--normal                   = hsla(  0,   0%,  90%, 1.00) bg(hsla(210,  2%, 17%, 1.00) img(null, null)                                                 ) bd(hsla( 30,  30%, 30%, 1.00) 4px )
-theme--scroll-view-tracker--hover                    = null                        bg(null                      null                                                            ) bd(null                       null)
-theme--scroll-view-tracker--active                   = null                        bg(null                      null                                                            ) bd(null                       null)
+theme--scroll-view-tracker--normal                   = hsla(  0,   0%,  90%, 1.00) bg(hsla(210,  2%, 17%, 1.00) img(null, null)                              ) bd(hsla( 30,  30%, 30%, 1.00) 4px )
+theme--scroll-view-tracker--hover                    = null                        bg(null                      null                                         ) bd(null                       null)
+theme--scroll-view-tracker--active                   = null                        bg(null                      null                                         ) bd(null                       null)
 
 // scroll-view-dragger
-theme--scroll-view-dragger--normal                   = hsla(  0,   0%,  90%, 1.00) bg(hsla(210,  2%, 23%, 1.00) img(null, null)                                                 ) bd(hsla( 30,  30%, 30%, 1.00) 4px )
-theme--scroll-view-dragger--hover                    = hsla(  0,   0%, 100%, 1.00) bg(hsla(210,  2%, 25%, 1.00) null                                                            ) bd(hsla( 30,  30%, 50%, 1.00) null)
-theme--scroll-view-dragger--active                   = hsla(  0,   0%,  50%, 1.00) bg(hsla(210,  2%, 22%, 1.00) null                                                            ) bd(hsla( 30,  30%, 20%, 1.00) null)
+theme--scroll-view-dragger--normal                   = hsla(  0,   0%,  90%, 1.00) bg(hsla(210,  2%, 23%, 1.00) img(null, null)                              ) bd(hsla( 30,  30%, 30%, 1.00) 4px )
+theme--scroll-view-dragger--hover                    = hsla(  0,   0%, 100%, 1.00) bg(hsla(210,  2%, 25%, 1.00) null                                         ) bd(hsla( 30,  30%, 50%, 1.00) null)
+theme--scroll-view-dragger--active                   = hsla(  0,   0%,  50%, 1.00) bg(hsla(210,  2%, 22%, 1.00) null                                         ) bd(hsla( 30,  30%, 20%, 1.00) null)
 // scroll-view-dragger
-theme--scroll-view-dragger--focus                    = hsla(210,  80%,  50%, 1.00) bg(null                      null                                                            ) bd(hsla(210,  80%, 40%, 1.00) null)
-theme--scroll-view-dragger--focus--hover             = hsla(210, 100%,  60%, 1.00) bg(null                      null                                                            ) bd(hsla(210,  80%, 50%, 1.00) null)
-theme--scroll-view-dragger--focus--active            = hsla(210,  80%,  40%, 1.00) bg(null                      null                                                            ) bd(hsla(210,  80%, 20%, 1.00) null)
+theme--scroll-view-dragger--focus                    = hsla(210,  80%,  50%, 1.00) bg(null                      null                                         ) bd(hsla(210,  80%, 40%, 1.00) null)
+theme--scroll-view-dragger--focus--hover             = hsla(210, 100%,  60%, 1.00) bg(null                      null                                         ) bd(hsla(210,  80%, 50%, 1.00) null)
+theme--scroll-view-dragger--focus--active            = hsla(210,  80%,  40%, 1.00) bg(null                      null                                         ) bd(hsla(210,  80%, 20%, 1.00) null)
 // scroll-view-dragger
-theme--scroll-view-dragger--invalid                  = hsla(  0,  80%,  50%, 1.00) bg(null                      null                                                            ) bd(hsla(  0,  80%, 40%, 1.00) null)
-theme--scroll-view-dragger--invalid--hover           = hsla(  0, 100%,  60%, 1.00) bg(null                      null                                                            ) bd(hsla(  0,  80%, 50%, 1.00) null)
-theme--scroll-view-dragger--invalid--active          = hsla(  0,  80%,  40%, 1.00) bg(null                      null                                                            ) bd(hsla(  0,  80%, 20%, 1.00) null)
+theme--scroll-view-dragger--invalid                  = hsla(  0,  80%,  50%, 1.00) bg(null                      null                                         ) bd(hsla(  0,  80%, 40%, 1.00) null)
+theme--scroll-view-dragger--invalid--hover           = hsla(  0, 100%,  60%, 1.00) bg(null                      null                                         ) bd(hsla(  0,  80%, 50%, 1.00) null)
+theme--scroll-view-dragger--invalid--active          = hsla(  0,  80%,  40%, 1.00) bg(null                      null                                         ) bd(hsla(  0,  80%, 20%, 1.00) null)
 // scroll-view-dragger
-theme--scroll-view-dragger--invalid--focus           = hsla(  0,  80%,  50%, 1.00) bg(null                      null                                                            ) bd(hsla(210,  80%, 40%, 1.00) null)
-theme--scroll-view-dragger--invalid--focus--hover    = hsla(  0, 100%,  60%, 1.00) bg(null                      null                                                            ) bd(hsla(210,  80%, 50%, 1.00) null)
-theme--scroll-view-dragger--invalid--focus--active   = hsla(  0,  80%,  40%, 1.00) bg(null                      null                                                            ) bd(hsla(210,  80%, 20%, 1.00) null)
+theme--scroll-view-dragger--invalid--focus           = hsla(  0,  80%,  50%, 1.00) bg(null                      null                                         ) bd(hsla(210,  80%, 40%, 1.00) null)
+theme--scroll-view-dragger--invalid--focus--hover    = hsla(  0, 100%,  60%, 1.00) bg(null                      null                                         ) bd(hsla(210,  80%, 50%, 1.00) null)
+theme--scroll-view-dragger--invalid--focus--active   = hsla(  0,  80%,  40%, 1.00) bg(null                      null                                         ) bd(hsla(210,  80%, 20%, 1.00) null)
 
 // scroll-view-left-arrow-button
-theme--scroll-view-left-arrow-button---normal        = null                        bg(null                      img('../../Images/Arrow_Left.png',  hsla(  0,   0%,  90%, 1.00))) bd(hsla( 30,  30%, 30%, 1.00) 4px )
-theme--scroll-view-left-arrow-button---hover         = null                        bg(null                      img(null,                           hsla(  0,   0%, 100%, 1.00))) bd(hsla( 30,  30%, 50%, 1.00) null)
-theme--scroll-view-left-arrow-button---active        = null                        bg(null                      img(null,                           hsla(  0,   0%,  50%, 1.00))) bd(hsla( 30,  30%, 20%, 1.00) null)
+theme--scroll-view-left-arrow-button---normal        = null                        bg(null                      img(left-arrow,  hsla(  0,   0%,  90%, 1.00))) bd(hsla( 30,  30%, 30%, 1.00) 4px )
+theme--scroll-view-left-arrow-button---hover         = null                        bg(null                      img(null,        hsla(  0,   0%, 100%, 1.00))) bd(hsla( 30,  30%, 50%, 1.00) null)
+theme--scroll-view-left-arrow-button---active        = null                        bg(null                      img(null,        hsla(  0,   0%,  50%, 1.00))) bd(hsla( 30,  30%, 20%, 1.00) null)
 // scroll-view-left-arrow-button
-theme--scroll-view-left-arrow-button---focus         = null                        bg(null                      img(null,                           hsla(210,  80%,  50%, 1.00))) bd(hsla(210,  80%, 40%, 1.00) 4px )
-theme--scroll-view-left-arrow-button---focus--hover  = null                        bg(null                      img(null,                           hsla(210, 100%,  60%, 1.00))) bd(hsla(210,  80%, 50%, 1.00) null)
-theme--scroll-view-left-arrow-button---focus--active = null                        bg(null                      img(null,                           hsla(210,  80%,  40%, 1.00))) bd(hsla(210,  80%, 20%, 1.00) null)
+theme--scroll-view-left-arrow-button---focus         = null                        bg(null                      img(null,        hsla(210,  80%,  50%, 1.00))) bd(hsla(210,  80%, 40%, 1.00) 4px )
+theme--scroll-view-left-arrow-button---focus--hover  = null                        bg(null                      img(null,        hsla(210, 100%,  60%, 1.00))) bd(hsla(210,  80%, 50%, 1.00) null)
+theme--scroll-view-left-arrow-button---focus--active = null                        bg(null                      img(null,        hsla(210,  80%,  40%, 1.00))) bd(hsla(210,  80%, 20%, 1.00) null)
 
 // scroll-view-right-arrow-button
-theme--scroll-view-right-arrow-button--normal        = null                        bg(null                      img('../../Images/Arrow_Right.png', hsla(  0,   0%,  90%, 1.00))) bd(hsla( 30,  30%, 30%, 1.00) 4px )
-theme--scroll-view-right-arrow-button--hover         = null                        bg(null                      img(null,                           hsla(  0,   0%, 100%, 1.00))) bd(hsla( 30,  30%, 50%, 1.00) null)
-theme--scroll-view-right-arrow-button--active        = null                        bg(null                      img(null,                           hsla(  0,   0%,  50%, 1.00))) bd(hsla( 30,  30%, 20%, 1.00) null)
+theme--scroll-view-right-arrow-button--normal        = null                        bg(null                      img(right-arrow, hsla(  0,   0%,  90%, 1.00))) bd(hsla( 30,  30%, 30%, 1.00) 4px )
+theme--scroll-view-right-arrow-button--hover         = null                        bg(null                      img(null,        hsla(  0,   0%, 100%, 1.00))) bd(hsla( 30,  30%, 50%, 1.00) null)
+theme--scroll-view-right-arrow-button--active        = null                        bg(null                      img(null,        hsla(  0,   0%,  50%, 1.00))) bd(hsla( 30,  30%, 20%, 1.00) null)
 // scroll-view-right-arrow-button
-theme--scroll-view-right-arrow-button--focus         = null                        bg(null                      img(null,                           hsla(210,  80%,  50%, 1.00))) bd(hsla(210,  80%, 40%, 1.00) 4px )
-theme--scroll-view-right-arrow-button--focus--hover  = null                        bg(null                      img(null,                           hsla(210, 100%,  60%, 1.00))) bd(hsla(210,  80%, 50%, 1.00) null)
-theme--scroll-view-right-arrow-button--focus--active = null                        bg(null                      img(null,                           hsla(210,  80%,  40%, 1.00))) bd(hsla(210,  80%, 20%, 1.00) null)
+theme--scroll-view-right-arrow-button--focus         = null                        bg(null                      img(null,        hsla(210,  80%,  50%, 1.00))) bd(hsla(210,  80%, 40%, 1.00) 4px )
+theme--scroll-view-right-arrow-button--focus--hover  = null                        bg(null                      img(null,        hsla(210, 100%,  60%, 1.00))) bd(hsla(210,  80%, 50%, 1.00) null)
+theme--scroll-view-right-arrow-button--focus--active = null                        bg(null                      img(null,        hsla(210,  80%,  40%, 1.00))) bd(hsla(210,  80%, 20%, 1.00) null)
 
 // scroll-view-up-arrow-button
-theme--scroll-view-up-arrow-button-----normal        = null                        bg(null                      img('../../Images/Arrow_Up.png',    hsla(  0,   0%,  90%, 1.00))) bd(hsla( 30,  30%, 30%, 1.00) 4px )
-theme--scroll-view-up-arrow-button-----hover         = null                        bg(null                      img(null,                           hsla(  0,   0%, 100%, 1.00))) bd(hsla( 30,  30%, 50%, 1.00) null)
-theme--scroll-view-up-arrow-button-----active        = null                        bg(null                      img(null,                           hsla(  0,   0%,  50%, 1.00))) bd(hsla( 30,  30%, 20%, 1.00) null)
+theme--scroll-view-up-arrow-button-----normal        = null                        bg(null                      img(up-arrow,    hsla(  0,   0%,  90%, 1.00))) bd(hsla( 30,  30%, 30%, 1.00) 4px )
+theme--scroll-view-up-arrow-button-----hover         = null                        bg(null                      img(null,        hsla(  0,   0%, 100%, 1.00))) bd(hsla( 30,  30%, 50%, 1.00) null)
+theme--scroll-view-up-arrow-button-----active        = null                        bg(null                      img(null,        hsla(  0,   0%,  50%, 1.00))) bd(hsla( 30,  30%, 20%, 1.00) null)
 // scroll-view-up-arrow-button
-theme--scroll-view-up-arrow-button-----focus         = null                        bg(null                      img(null,                           hsla(210,  80%,  50%, 1.00))) bd(hsla(210,  80%, 40%, 1.00) 4px )
-theme--scroll-view-up-arrow-button-----focus--hover  = null                        bg(null                      img(null,                           hsla(210, 100%,  60%, 1.00))) bd(hsla(210,  80%, 50%, 1.00) null)
-theme--scroll-view-up-arrow-button-----focus--active = null                        bg(null                      img(null,                           hsla(210,  80%,  40%, 1.00))) bd(hsla(210,  80%, 20%, 1.00) null)
+theme--scroll-view-up-arrow-button-----focus         = null                        bg(null                      img(null,        hsla(210,  80%,  50%, 1.00))) bd(hsla(210,  80%, 40%, 1.00) 4px )
+theme--scroll-view-up-arrow-button-----focus--hover  = null                        bg(null                      img(null,        hsla(210, 100%,  60%, 1.00))) bd(hsla(210,  80%, 50%, 1.00) null)
+theme--scroll-view-up-arrow-button-----focus--active = null                        bg(null                      img(null,        hsla(210,  80%,  40%, 1.00))) bd(hsla(210,  80%, 20%, 1.00) null)
 
 // scroll-view-down-arrow-button
-theme--scroll-view-down-arrow-button---normal        = null                        bg(null                      img('../../Images/Arrow_Down.png',  hsla(  0,   0%,  90%, 1.00))) bd(hsla( 30,  30%, 30%, 1.00) 4px )
-theme--scroll-view-down-arrow-button---hover         = null                        bg(null                      img(null,                           hsla(  0,   0%, 100%, 1.00))) bd(hsla( 30,  30%, 50%, 1.00) null)
-theme--scroll-view-down-arrow-button---active        = null                        bg(null                      img(null,                           hsla(  0,   0%,  50%, 1.00))) bd(hsla( 30,  30%, 20%, 1.00) null)
+theme--scroll-view-down-arrow-button---normal        = null                        bg(null                      img(down-arrow,  hsla(  0,   0%,  90%, 1.00))) bd(hsla( 30,  30%, 30%, 1.00) 4px )
+theme--scroll-view-down-arrow-button---hover         = null                        bg(null                      img(null,        hsla(  0,   0%, 100%, 1.00))) bd(hsla( 30,  30%, 50%, 1.00) null)
+theme--scroll-view-down-arrow-button---active        = null                        bg(null                      img(null,        hsla(  0,   0%,  50%, 1.00))) bd(hsla( 30,  30%, 20%, 1.00) null)
 // scroll-view-down-arrow-button
-theme--scroll-view-down-arrow-button---focus         = null                        bg(null                      img(null,                           hsla(210,  80%,  50%, 1.00))) bd(hsla(210,  80%, 40%, 1.00) 4px )
-theme--scroll-view-down-arrow-button---focus--hover  = null                        bg(null                      img(null,                           hsla(210, 100%,  60%, 1.00))) bd(hsla(210,  80%, 50%, 1.00) null)
-theme--scroll-view-down-arrow-button---focus--active = null                        bg(null                      img(null,                           hsla(210,  80%,  40%, 1.00))) bd(hsla(210,  80%, 20%, 1.00) null)
+theme--scroll-view-down-arrow-button---focus         = null                        bg(null                      img(null,        hsla(210,  80%,  50%, 1.00))) bd(hsla(210,  80%, 40%, 1.00) 4px )
+theme--scroll-view-down-arrow-button---focus--hover  = null                        bg(null                      img(null,        hsla(210, 100%,  60%, 1.00))) bd(hsla(210,  80%, 50%, 1.00) null)
+theme--scroll-view-down-arrow-button---focus--active = null                        bg(null                      img(null,        hsla(210,  80%,  40%, 1.00))) bd(hsla(210,  80%, 20%, 1.00) null)
