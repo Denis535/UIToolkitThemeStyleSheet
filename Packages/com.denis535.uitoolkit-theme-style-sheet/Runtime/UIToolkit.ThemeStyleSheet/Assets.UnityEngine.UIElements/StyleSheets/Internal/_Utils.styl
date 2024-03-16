@@ -21,17 +21,6 @@ img(url, color, scale-mode = null, slice-left = null, slice-right = null, slice-
         slice-scale:  slice-scale,
     }
 
-// selector
-selector(argument)
-    key    = match('^([\w-]+)', argument, g)
-    arg    = match('([.#:].*)', argument, g) or ''
-    key    = replace('(--+)', '--', key)
-    key    = get-key('selector', key)
-    result = get-value(key)
-    result = replace('(\s+)', ' ', result)
-    result = replace('(\.\%)', arg, result)
-    result
-
 // add-theme
 add-theme(theme)
     if theme != null
@@ -235,6 +224,17 @@ get-unity-property(property)
     return '-unity-' + property if property == 'slice-scale'
     // misc
     property
+
+// get-selector
+get-selector(argument)
+    key    = match('^([\w-]+)', argument, g)
+    arg    = match('([.#:].*)', argument, g) or ''
+    key    = replace('(--+)', '--', key)
+    key    = get-key('selector', key)
+    result = get-value(key)
+    result = replace('(\s+)', ' ', result)
+    result = replace('(\.\%)', arg, result)
+    result
 
 // misc
 get-key(key...)

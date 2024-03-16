@@ -71,7 +71,7 @@ function readContent(path) {
                 .trim()
                 .replaceAll(/(__+)/g, '__') // collapse __
                 .replaceAll(/(--+)/g, '--'); // collapse --
-            return '{selector(' + ('\'' + content + '\'') + ')}';
+            return '{get-selector(' + ('\'' + content + '\'') + ')}';
         });
 }
 
