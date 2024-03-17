@@ -12,7 +12,7 @@
 }
 .unity-box.light2 {
   color: #e6e6e6;
-  background-color: #373839;
+  background-color: #383839;
   border-left-color: #634d36;
   border-right-color: #634d36;
   border-top-color: #634d36;
@@ -24,7 +24,7 @@
 }
 .unity-box.light {
   color: #e6e6e6;
-  background-color: #343637;
+  background-color: #353636;
   border-left-color: #634d36;
   border-right-color: #634d36;
   border-top-color: #634d36;
@@ -48,7 +48,7 @@
 }
 .unity-box.dark {
   color: #e6e6e6;
-  background-color: #2f3031;
+  background-color: #303031;
   border-left-color: #634d36;
   border-right-color: #634d36;
   border-top-color: #634d36;
@@ -60,7 +60,7 @@
 }
 .unity-box.dark2 {
   color: #e6e6e6;
-  background-color: #2d2e2f;
+  background-color: #2d2e2e;
   border-left-color: #634d36;
   border-right-color: #634d36;
   border-top-color: #634d36;
@@ -84,7 +84,7 @@
 }
 .unity-box.light2:hover {
   color: #e6e6e6;
-  background-color: #373839;
+  background-color: #383839;
   border-left-color: #634d36;
   border-right-color: #634d36;
   border-top-color: #634d36;
@@ -96,7 +96,7 @@
 }
 .unity-box.light:hover {
   color: #e6e6e6;
-  background-color: #343637;
+  background-color: #353636;
   border-left-color: #634d36;
   border-right-color: #634d36;
   border-top-color: #634d36;
@@ -120,7 +120,7 @@
 }
 .unity-box.dark:hover {
   color: #e6e6e6;
-  background-color: #2f3031;
+  background-color: #303031;
   border-left-color: #634d36;
   border-right-color: #634d36;
   border-top-color: #634d36;
@@ -132,7 +132,7 @@
 }
 .unity-box.dark2:hover {
   color: #e6e6e6;
-  background-color: #2d2e2f;
+  background-color: #2d2e2e;
   border-left-color: #634d36;
   border-right-color: #634d36;
   border-top-color: #634d36;
