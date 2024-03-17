@@ -1,6 +1,5 @@
 .unity-scroller--horizontal .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-tracker {
-  color: #e6e6e6;
-  background-color: #2a2b2c;
+  background-color: #2c2b2a;
   border-left-color: #634d36;
   border-right-color: #634d36;
   border-top-color: #634d36;
@@ -11,8 +10,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-dragger {
-  color: #e6e6e6;
-  background-color: #393b3c;
+  background-color: #3c3b39;
   border-left-color: #634d36;
   border-right-color: #634d36;
   border-top-color: #634d36;
@@ -23,6 +21,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-low-button {
+  background-color: #3c3b39;
   background-image: url('../../Images/Arrow_Left.png');
   -unity-background-image-tint-color: #e6e6e6;
   border-left-color: #634d36;
@@ -35,6 +34,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-high-button {
+  background-color: #3c3b39;
   background-image: url('../../Images/Arrow_Right.png');
   -unity-background-image-tint-color: #e6e6e6;
   border-left-color: #634d36;
@@ -46,58 +46,116 @@
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+.unity-scroller--horizontal .unity-base-slider:hover .unity-base-slider__input #unity-drag-container #unity-tracker {
+  background-color: #2c2b2a;
+  border-left-color: #634d36;
+  border-right-color: #634d36;
+  border-top-color: #634d36;
+  border-bottom-color: #634d36;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
 .unity-scroller--horizontal .unity-base-slider:hover .unity-base-slider__input #unity-drag-container #unity-dragger {
-  color: #fff;
-  background-color: #3e4041;
+  background-color: #41403e;
   border-left-color: #a68059;
   border-right-color: #a68059;
   border-top-color: #a68059;
   border-bottom-color: #a68059;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-low-button:hover {
+  background-color: #41403e;
+  background-image: url('../../Images/Arrow_Left.png');
   -unity-background-image-tint-color: #fff;
   border-left-color: #a68059;
   border-right-color: #a68059;
   border-top-color: #a68059;
   border-bottom-color: #a68059;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-high-button:hover {
+  background-color: #41403e;
+  background-image: url('../../Images/Arrow_Right.png');
   -unity-background-image-tint-color: #fff;
   border-left-color: #a68059;
   border-right-color: #a68059;
   border-top-color: #a68059;
   border-bottom-color: #a68059;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-scroller--horizontal .unity-base-slider:active .unity-base-slider__input #unity-drag-container #unity-tracker {
+  background-color: #2c2b2a;
+  border-left-color: #634d36;
+  border-right-color: #634d36;
+  border-top-color: #634d36;
+  border-bottom-color: #634d36;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider:active .unity-base-slider__input #unity-drag-container #unity-dragger {
-  color: #808080;
-  background-color: #373839;
+  background-color: #393837;
   border-left-color: #423324;
   border-right-color: #423324;
   border-top-color: #423324;
   border-bottom-color: #423324;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-low-button:active {
+  background-color: #393837;
+  background-image: url('../../Images/Arrow_Left.png');
   -unity-background-image-tint-color: #808080;
   border-left-color: #423324;
   border-right-color: #423324;
   border-top-color: #423324;
   border-bottom-color: #423324;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-high-button:active {
+  background-color: #393837;
+  background-image: url('../../Images/Arrow_Right.png');
   -unity-background-image-tint-color: #808080;
   border-left-color: #423324;
   border-right-color: #423324;
   border-top-color: #423324;
   border-bottom-color: #423324;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider:focus .unity-base-slider__input #unity-drag-container #unity-dragger {
-  color: #197fe6;
+  background-color: #3c3b39;
   border-left-color: #1466b8;
   border-right-color: #1466b8;
   border-top-color: #1466b8;
   border-bottom-color: #1466b8;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-low-button:focus {
+  background-color: #3c3b39;
+  background-image: url('../../Images/Arrow_Left.png');
   -unity-background-image-tint-color: #197fe6;
   border-left-color: #1466b8;
   border-right-color: #1466b8;
@@ -109,6 +167,8 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-high-button:focus {
+  background-color: #3c3b39;
+  background-image: url('../../Images/Arrow_Right.png');
   -unity-background-image-tint-color: #197fe6;
   border-left-color: #1466b8;
   border-right-color: #1466b8;
@@ -120,46 +180,78 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider:focus:hover .unity-base-slider__input #unity-drag-container #unity-dragger {
-  color: #39f;
+  background-color: #41403e;
   border-left-color: #197fe6;
   border-right-color: #197fe6;
   border-top-color: #197fe6;
   border-bottom-color: #197fe6;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-low-button:focus:hover {
+  background-color: #41403e;
+  background-image: url('../../Images/Arrow_Left.png');
   -unity-background-image-tint-color: #39f;
   border-left-color: #197fe6;
   border-right-color: #197fe6;
   border-top-color: #197fe6;
   border-bottom-color: #197fe6;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-high-button:focus:hover {
+  background-color: #41403e;
+  background-image: url('../../Images/Arrow_Right.png');
   -unity-background-image-tint-color: #39f;
   border-left-color: #197fe6;
   border-right-color: #197fe6;
   border-top-color: #197fe6;
   border-bottom-color: #197fe6;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider:focus:active .unity-base-slider__input #unity-drag-container #unity-dragger {
-  color: #1466b8;
+  background-color: #393837;
   border-left-color: #0a335c;
   border-right-color: #0a335c;
   border-top-color: #0a335c;
   border-bottom-color: #0a335c;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-low-button:focus:active {
+  background-color: #393837;
+  background-image: url('../../Images/Arrow_Left.png');
   -unity-background-image-tint-color: #1466b8;
   border-left-color: #0a335c;
   border-right-color: #0a335c;
   border-top-color: #0a335c;
   border-bottom-color: #0a335c;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-high-button:focus:active {
+  background-color: #393837;
+  background-image: url('../../Images/Arrow_Right.png');
   -unity-background-image-tint-color: #1466b8;
   border-left-color: #0a335c;
   border-right-color: #0a335c;
   border-top-color: #0a335c;
   border-bottom-color: #0a335c;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal {
   width: auto;

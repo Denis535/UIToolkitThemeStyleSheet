@@ -1,5 +1,5 @@
 .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-tracker {
-  background-color: #4b4d4e;
+  background-color: #4e4d4b;
   border-left-color: rgba(99,77,54,0.5);
   border-right-color: rgba(99,77,54,0.5);
   border-top-color: rgba(99,77,54,0.5);
@@ -10,7 +10,7 @@
   border-bottom-right-radius: 2px;
 }
 .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-dragger {
-  background-color: #b1b3b4;
+  background-color: #b4b3b1;
   border-left-color: rgba(99,77,54,0.5);
   border-right-color: rgba(99,77,54,0.5);
   border-top-color: rgba(99,77,54,0.5);
