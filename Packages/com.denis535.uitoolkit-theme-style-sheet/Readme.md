@@ -55,6 +55,7 @@ This package contains styles for the following elements:
 - https://denis535.itch.io/
 - https://openupm.com/packages/?sort=downloads&q=denis535
 - https://www.youtube.com/channel/UCLFdZl0pFkCkHpDWmodBUFg
+- https://github.com/Denis535/UIToolkitThemeStyleSheet
 
 # If you want to support me
 If you want to support me, please rate my packages, subscribe to my YouTube channel and like my videos.
