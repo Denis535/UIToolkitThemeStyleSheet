@@ -23,45 +23,26 @@ selector--tab-view-content--no-outline = // string: .unity-tab-view.no-outline .
 selector--tab-view-container           = // string: .unity-tab-view            .unity-tab .unity-tab__content-container
 
 // view
-.selector--tab-view                          // styles: add-theme(null                                )
-.selector--tab-view-headers                  // styles: add-theme(null                                )
-.selector--tab-view-contents                 // styles: add-theme(null                                )
+.selector--tab-view-header          // styles: add-text(middle-center, null, null)
 // view
-.selector--tab-view-header                   // styles: add-theme(tab-header------------normal        ).add-font(null, null, null).add-text(middle-center, null, null)
-.selector--tab-view-header-underline         // styles: add-theme(tab-header-underline--normal        )
+.selector--tab-view-content         // styles: add-property(display, none)
+.selector--tab-view-content:checked // styles: add-property(display, flex)
+
 // view
-.selector--tab-view-content                  // styles: add-theme(view------------------normal        ).add-property(display, none)
-.selector--tab-view-content--light2          // styles: add-theme(view------------------light2--normal)
-.selector--tab-view-content--light           // styles: add-theme(view------------------light---normal)
-.selector--tab-view-content--gray            // styles: add-theme(view------------------gray----normal)
-.selector--tab-view-content--dark            // styles: add-theme(view------------------dark----normal)
-.selector--tab-view-content--dark2           // styles: add-theme(view------------------dark2---normal)
-.selector--tab-view-container                // styles: add-theme(null                                )
-
-// view/hover
-.selector--tab-view-header:hover             // styles: add-theme(tab-header------------hover         )
-.selector--tab-view-header-underline:hover   // styles: add-theme(tab-header-underline--hover         )
-// view/hover
-.selector--tab-view-content:hover            // styles: add-theme(view------------------hover         )
-.selector--tab-view-content--light2:hover    // styles: add-theme(view------------------light2--hover )
-.selector--tab-view-content--light:hover     // styles: add-theme(view------------------light---hover )
-.selector--tab-view-content--gray:hover      // styles: add-theme(view------------------gray----hover )
-.selector--tab-view-content--dark:hover      // styles: add-theme(view------------------dark----hover )
-.selector--tab-view-content--dark2:hover     // styles: add-theme(view------------------dark2---hover )
-
-// view/checked
-.selector--tab-view-header:checked           // styles: add-theme(tab-header------------checked       )
-.selector--tab-view-header-underline:checked // styles: add-theme(tab-header-underline--checked       )
-// view/checked
-.selector--tab-view-content:checked          // styles: add-theme(null                                ).add-property(display, flex)
-
-// view/checked/hover
-.selector--tab-view-header:checked:hover           // styles: add-theme(tab-header------------checked--hover)
-.selector--tab-view-header-underline:checked:hover // styles: add-theme(tab-header-underline--checked--hover)
-
-// view/checked/active
-.selector--tab-view-header:checked:active           // styles: add-theme(tab-header------------checked--active)
-.selector--tab-view-header-underline:checked:active // styles: add-theme(tab-header-underline--checked--active)
+.selector--tab-view                  // styles: add-theme(null                                )
+.selector--tab-view-headers          // styles: add-theme(null                                )
+.selector--tab-view-contents         // styles: add-theme(null                                )
+// view
+.selector--tab-view-header           // styles: add-theme(tab-header                          ).add-font(null, null, null).add-text(middle-center, null, null)
+.selector--tab-view-header-underline // styles: add-theme(tab-header-underline                )
+// view
+.selector--tab-view-content          // styles: add-theme(view                                ).add-property(display, none)
+.selector--tab-view-content--light2  // styles: add-theme(view--light2                        )
+.selector--tab-view-content--light   // styles: add-theme(view--light                         )
+.selector--tab-view-content--gray    // styles: add-theme(view--gray                          )
+.selector--tab-view-content--dark    // styles: add-theme(view--dark                          )
+.selector--tab-view-content--dark2   // styles: add-theme(view--dark2                         )
+.selector--tab-view-container        // styles: add-theme(null                                )
 
 // layout
 .selector--tab-view                     // styles: add-layout(null,                        auto, auto, ( 4px             ), (0px), (0px                ))

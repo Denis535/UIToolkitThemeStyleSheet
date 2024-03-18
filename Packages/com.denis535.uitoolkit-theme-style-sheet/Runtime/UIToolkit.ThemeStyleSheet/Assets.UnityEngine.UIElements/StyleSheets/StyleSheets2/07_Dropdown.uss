@@ -10,6 +10,30 @@
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+.unity-base-dropdown .unity-base-dropdown__container-outer:hover {
+  color: #fff;
+  background-color: rgba(40,41,41,0.98);
+  border-left-color: #998066;
+  border-right-color: #998066;
+  border-top-color: #998066;
+  border-bottom-color: #998066;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-base-dropdown .unity-base-dropdown__container-outer:active {
+  color: #e6e6e6;
+  background-color: rgba(40,41,41,0.98);
+  border-left-color: #5c4d3d;
+  border-right-color: #5c4d3d;
+  border-top-color: #5c4d3d;
+  border-bottom-color: #5c4d3d;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
 .unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item {
   color: #e6e6e6;
   background-color: rgba(0,0,0,0);
@@ -22,10 +46,73 @@
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+.unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item:hover {
+  color: #fff;
+  background-color: #b86614;
+  border-left-color: #e68019;
+  border-right-color: #e68019;
+  border-top-color: #e68019;
+  border-bottom-color: #e68019;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item:active {
+  color: #e6e6e6;
+  background-color: #b86614;
+  border-left-color: #e68019;
+  border-right-color: #e68019;
+  border-top-color: #e68019;
+  border-bottom-color: #e68019;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
 .unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item .unity-base-dropdown__checkmark {
   background-color: rgba(0,0,0,0);
   background-image: url('../../Images/Check.png');
   -unity-background-image-tint-color: rgba(0,0,0,0);
+  border-left-color: rgba(0,0,0,0);
+  border-right-color: rgba(0,0,0,0);
+  border-top-color: rgba(0,0,0,0);
+  border-bottom-color: rgba(0,0,0,0);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item:hover .unity-base-dropdown__checkmark {
+  background-color: rgba(0,0,0,0);
+  background-image: url('../../Images/Check.png');
+  -unity-background-image-tint-color: rgba(0,0,0,0);
+  border-left-color: rgba(0,0,0,0);
+  border-right-color: rgba(0,0,0,0);
+  border-top-color: rgba(0,0,0,0);
+  border-bottom-color: rgba(0,0,0,0);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item:active .unity-base-dropdown__checkmark {
+  background-color: rgba(0,0,0,0);
+  background-image: url('../../Images/Check.png');
+  -unity-background-image-tint-color: rgba(0,0,0,0);
+  border-left-color: rgba(0,0,0,0);
+  border-right-color: rgba(0,0,0,0);
+  border-top-color: rgba(0,0,0,0);
+  border-bottom-color: rgba(0,0,0,0);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item:checked .unity-base-dropdown__checkmark {
+  background-color: rgba(0,0,0,0);
+  background-image: url('../../Images/Check.png');
+  -unity-background-image-tint-color: #e6e6e6;
   border-left-color: rgba(0,0,0,0);
   border-right-color: rgba(0,0,0,0);
   border-top-color: rgba(0,0,0,0);
@@ -47,43 +134,6 @@
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.unity-base-dropdown .unity-base-dropdown__container-outer:hover {
-  color: #fff;
-  background-color: rgba(40,41,41,0.98);
-  border-left-color: #998066;
-  border-right-color: #998066;
-  border-top-color: #998066;
-  border-bottom-color: #998066;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-.unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item:hover {
-  color: #fff;
-  background-color: #b86614;
-  border-left-color: #e68019;
-  border-right-color: #e68019;
-  border-top-color: #e68019;
-  border-bottom-color: #e68019;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-.unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item:hover .unity-base-dropdown__checkmark {
-  background-color: rgba(0,0,0,0);
-  background-image: url('../../Images/Check.png');
-  -unity-background-image-tint-color: rgba(0,0,0,0);
-  border-left-color: rgba(0,0,0,0);
-  border-right-color: rgba(0,0,0,0);
-  border-top-color: rgba(0,0,0,0);
-  border-bottom-color: rgba(0,0,0,0);
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
 .unity-base-dropdown .unity-list-view__empty-label:hover {
   color: #fff;
   background-color: #b86614;
@@ -96,18 +146,17 @@
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item:checked .unity-base-dropdown__checkmark {
-  background-color: rgba(0,0,0,0);
-  background-image: url('../../Images/Check.png');
-  -unity-background-image-tint-color: #e6e6e6;
-  border-left-color: rgba(0,0,0,0);
-  border-right-color: rgba(0,0,0,0);
-  border-top-color: rgba(0,0,0,0);
-  border-bottom-color: rgba(0,0,0,0);
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+.unity-base-dropdown .unity-list-view__empty-label:active {
+  color: #e6e6e6;
+  background-color: #b86614;
+  border-left-color: #e68019;
+  border-right-color: #e68019;
+  border-top-color: #e68019;
+  border-bottom-color: #e68019;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 .unity-base-dropdown {
   position: absolute;

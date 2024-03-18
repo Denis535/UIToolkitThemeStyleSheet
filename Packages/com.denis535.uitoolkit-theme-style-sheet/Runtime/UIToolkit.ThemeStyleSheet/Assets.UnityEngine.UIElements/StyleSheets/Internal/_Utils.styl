@@ -21,6 +21,45 @@ img(url, color, scale-mode = null, slice-left = null, slice-right = null, slice-
         slice-scale:  slice-scale,
     }
 
+// add-theme
+add-theme(theme)
+    if theme != null
+        // add-theme
+        add-theme-internal(    selector(), '',                      theme, 'normal'                )
+        try-add-theme-internal(selector(), ':hover',                theme, 'hover'                 )
+        try-add-theme-internal(selector(), ':active',               theme, 'active'                )
+        // add-theme
+        try-add-theme-internal(selector(), ':focus',                theme, 'focus'                 )
+        try-add-theme-internal(selector(), ':focus:hover',          theme, 'focus--hover'          )
+        try-add-theme-internal(selector(), ':focus:active',         theme, 'focus--active'         )
+        // add-theme
+        try-add-theme-internal(selector(), '.invalid',              theme, 'invalid'               )
+        try-add-theme-internal(selector(), '.invalid:hover',        theme, 'invalid--hover'        )
+        try-add-theme-internal(selector(), '.invalid:active',       theme, 'invalid--active'       )
+        // add-theme
+        try-add-theme-internal(selector(), '.invalid:focus',        theme, 'invalid--focus'        )
+        try-add-theme-internal(selector(), '.invalid:focus:hover',  theme, 'invalid--focus--hover' )
+        try-add-theme-internal(selector(), '.invalid:focus:active', theme, 'invalid--focus--active')
+        // add-theme
+        try-add-theme-internal(selector(), ':checked',              theme, 'checked'               )
+        try-add-theme-internal(selector(), ':checked:hover',        theme, 'checked--hover'        )
+        try-add-theme-internal(selector(), ':checked:active',       theme, 'checked--active'       )
+        // add-theme
+        try-add-theme-internal(selector(), ':checked:focus',        theme, 'checked--focus'        )
+        try-add-theme-internal(selector(), ':checked:focus:hover',  theme, 'checked--focus--hover' )
+        try-add-theme-internal(selector(), ':checked:focus:active', theme, 'checked--focus--active')
+add-theme-internal(selector, state, theme, suffix)
+    selector = replace('(\.%)', state, selector)
+    theme    = get-key('theme', theme, suffix)
+    /{selector}
+        add-view-theme(get-value(theme))
+try-add-theme-internal(selector, state, theme, suffix)
+    selector = replace('(\.%)', state, selector)
+    theme    = get-key('theme', theme, suffix)
+    if has-value(theme)
+        /{selector}
+            add-view-theme(get-value(theme))
+
 // add-view
 add-font(url, size, style)
     add-property2 'font-url'            url
@@ -33,18 +72,15 @@ add-text(align, outline, shadow)
     add-property2 'text-shadow'         shadow
 
 // add-view
-add-theme(theme)
-    if theme != null
-        theme = get-value(get-key('theme', theme))
-        add-view-foreground(theme[0])
-        add-view-background(theme[1].background-color, theme[1].background-image)
-        add-view-border(theme[2].border-color, theme[2].border-radius)
-
-// add-view
 add-view(color = null, background-color = null, background-image = null, border-color = null, border-radius = null)
     add-view-foreground                           color
     add-view-background                           background-color background-image
     add-view-border                               border-color border-radius
+add-view-theme(theme)
+    if theme != null
+        add-view-foreground(theme[0])
+        add-view-background(theme[1].background-color, theme[1].background-image)
+        add-view-border(theme[2].border-color, theme[2].border-radius)
 add-view-foreground(color)
     add-property2 'color'                         color
 add-view-background(background-color, background-image)
@@ -227,14 +263,17 @@ get-unity-property(property)
 
 // get-selector
 get-selector(argument)
-    key    = match('^([\w-]+)', argument, g)
-    arg    = match('([.#:].*)', argument, g)
-    key    = replace('(--+)', '--', key)
-    key    = get-key('selector', key)
-    result = get-value(key)
-    result = replace('(\s+)', ' ', result)
-    result = replace('(\.\%)', arg, result) if arg != null
-    result
+    key   = match('^([\w-]+)', argument, g)
+    arg   = match('([.#:].*)', argument, g)
+    value = get-selector-internal(key, arg)
+    value
+get-selector-internal(key, arg)
+    key   = get-key('selector', key)
+    key   = replace('(--+)', '--', key)
+    value = get-value(key)
+    value = replace('(\.%)', arg, value) if arg != null
+    value = replace('(\s+)', ' ', value)
+    value
 
 // misc
 get-key(key...)
@@ -246,3 +285,5 @@ get-value(key)
     if is-defined(get-string(key))
         return get-definition(get-string(key))
     error('Value is undefined: ' + key)
+has-value(key)
+    is-defined(get-string(key))
