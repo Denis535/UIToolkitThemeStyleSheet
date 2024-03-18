@@ -39,7 +39,6 @@ add-text(align, outline, shadow)
     add-property2 'text-align'          align
     add-property2 'text-outline'        outline
     add-property2 'text-shadow'         shadow
-
 // add-view
 add-view(color = null, background-color = null, background-image = null, border-color = null, border-radius = null)
     add-view-foreground                           color
@@ -228,12 +227,12 @@ get-unity-property(property)
 // get-selector
 get-selector(argument)
     key    = match('^([\w-]+)', argument, g)
-    arg    = match('([.#:].*)', argument, g) or ''
+    arg    = match('([.#:].*)', argument, g)
     key    = replace('(--+)', '--', key)
     key    = get-key('selector', key)
     result = get-value(key)
     result = replace('(\s+)', ' ', result)
-    result = replace('(\.\%)', arg, result)
+    result = replace('(\.\%)', arg, result) if arg != null
     result
 
 // misc

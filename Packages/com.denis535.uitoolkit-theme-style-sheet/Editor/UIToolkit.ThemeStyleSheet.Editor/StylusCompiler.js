@@ -16,7 +16,7 @@ const dist = Process.argv[3];
 if (src == null) throw new TypeError("Source path is required");
 if (dist == null) throw new TypeError("Distribution path is required");
 
-Stylus(readContent(src))
+Stylus(readStylus(src))
     .set('filename', Path.basename(src))
     .set('paths', [Path.dirname(src)])
     .define('eval', evalEx, false)
@@ -35,6 +35,7 @@ function onComplete(error, result) {
         console.error(error);
         FS.writeFile(dist, '', onError);
     } else {
+        result = result.replaceAll('.%', '');
         FS.writeFile(dist, result, onError);
     }
 }
@@ -45,7 +46,7 @@ function onError(error) {
 }
 
 // helpers
-function readContent(path) {
+function readStylus(path) {
     return FS.readFileSync(path, 'utf8')
         // // string: ***
         .replaceAll(/(?<!\/\/.*)(\/\/\s*string:s*)(.*)/gm, function (match, comment, content) {
