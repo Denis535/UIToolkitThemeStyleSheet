@@ -21,14 +21,6 @@ img(url, color, scale-mode = null, slice-left = null, slice-right = null, slice-
         slice-scale:  slice-scale,
     }
 
-// add-theme
-add-theme(theme)
-    if theme != null
-        theme = get-value(get-key('theme', theme))
-        add-view-foreground(theme[0])
-        add-view-background(theme[1].background-color, theme[1].background-image)
-        add-view-border(theme[2].border-color, theme[2].border-radius)
-
 // add-view
 add-font(url, size, style)
     add-property2 'font-url'            url
@@ -39,6 +31,15 @@ add-text(align, outline, shadow)
     add-property2 'text-align'          align
     add-property2 'text-outline'        outline
     add-property2 'text-shadow'         shadow
+
+// add-view
+add-theme(theme)
+    if theme != null
+        theme = get-value(get-key('theme', theme))
+        add-view-foreground(theme[0])
+        add-view-background(theme[1].background-color, theme[1].background-image)
+        add-view-border(theme[2].border-color, theme[2].border-radius)
+
 // add-view
 add-view(color = null, background-color = null, background-image = null, border-color = null, border-radius = null)
     add-view-foreground                           color
