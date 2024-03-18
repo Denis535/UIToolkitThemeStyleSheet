@@ -1,4 +1,4 @@
-.unity-base-dropdown .unity-list-view {
+.unity-base-dropdown .unity-base-dropdown__container-outer {
   color: #e6e6e6;
   background-color: rgba(40,41,41,0.98);
   border-left-color: #5c4d3d;
@@ -47,7 +47,7 @@
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-.unity-base-dropdown .unity-list-view:hover {
+.unity-base-dropdown .unity-base-dropdown__container-outer:hover {
   color: #fff;
   background-color: rgba(40,41,41,0.98);
   border-left-color: #998066;
@@ -133,10 +133,10 @@
   margin-right: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-top-width: 0px;
-  border-bottom-width: 0px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 0px;
@@ -149,10 +149,10 @@
   margin-right: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
-  border-left-width: 1px;
-  border-right-width: 1px;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 0px;
