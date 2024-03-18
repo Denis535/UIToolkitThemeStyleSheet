@@ -28,8 +28,6 @@ selector--tab-view-container           = // string: .unity-tab-view            .
 .selector--tab-view-contents                 // styles: add-theme(null                                )
 // view
 .selector--tab-view-header                   // styles: add-theme(tab-header------------normal        ).add-font(null, null, null).add-text(middle-center, null, null)
-.selector--tab-view-header-icon              // styles: add-theme(null                                )
-.selector--tab-view-header-text              // styles: add-theme(null                                )
 .selector--tab-view-header-underline         // styles: add-theme(tab-header-underline--normal        )
 // view
 .selector--tab-view-content                  // styles: add-theme(view------------------normal        ).add-property(display, none)
@@ -41,13 +39,7 @@ selector--tab-view-container           = // string: .unity-tab-view            .
 .selector--tab-view-container                // styles: add-theme(null                                )
 
 // view/hover
-.selector--tab-view                          // styles: add-theme(null                                )
-.selector--tab-view-headers                  // styles: add-theme(null                                )
-.selector--tab-view-contents                 // styles: add-theme(null                                )
-// view/hover
 .selector--tab-view-header:hover             // styles: add-theme(tab-header------------hover         )
-.selector--tab-view-header-icon:hover        // styles: add-theme(null                                )
-.selector--tab-view-header-text:hover        // styles: add-theme(null                                )
 .selector--tab-view-header-underline:hover   // styles: add-theme(tab-header-underline--hover         )
 // view/hover
 .selector--tab-view-content:hover            // styles: add-theme(view------------------hover         )
@@ -58,16 +50,18 @@ selector--tab-view-container           = // string: .unity-tab-view            .
 .selector--tab-view-content--dark2:hover     // styles: add-theme(view------------------dark2---hover )
 
 // view/checked
-.selector--tab-view                          // styles: add-theme(null                                )
-.selector--tab-view-headers                  // styles: add-theme(null                                )
-.selector--tab-view-contents                 // styles: add-theme(null                                )
-// view/checked
 .selector--tab-view-header:checked           // styles: add-theme(tab-header------------checked       )
-.selector--tab-view-header-icon:checked      // styles: add-theme(null                                )
-.selector--tab-view-header-text:checked      // styles: add-theme(null                                )
 .selector--tab-view-header-underline:checked // styles: add-theme(tab-header-underline--checked       )
 // view/checked
 .selector--tab-view-content:checked          // styles: add-theme(null                                ).add-property(display, flex)
+
+// view/checked/hover
+.selector--tab-view-header:checked:hover           // styles: add-theme(tab-header------------checked--hover)
+.selector--tab-view-header-underline:checked:hover // styles: add-theme(tab-header-underline--checked--hover)
+
+// view/checked/active
+.selector--tab-view-header:checked:active           // styles: add-theme(tab-header------------checked--active)
+.selector--tab-view-header-underline:checked:active // styles: add-theme(tab-header-underline--checked--active)
 
 // layout
 .selector--tab-view                     // styles: add-layout(null,                        auto, auto, ( 4px             ), (0px), (0px                ))
