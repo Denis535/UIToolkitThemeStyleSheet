@@ -3,39 +3,42 @@
 // selector
 selector--dropdown                = // string: .unity-base-dropdown
 selector--dropdown-container      = // string: .unity-base-dropdown .unity-base-dropdown__container-outer
-selector--list-view               = // string: .unity-base-dropdown .unity-list-view
-selector--list-item               = // string: .unity-base-dropdown .unity-list-view__item
+selector--list-view               = // string: .unity-base-dropdown .unity-list-view.%
+selector--list-item               = // string: .unity-base-dropdown .unity-list-view__item.%
 selector--dropdown-item           = // string: .unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item.%
 selector--dropdown-item-checkmark = // string: .unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item.% .unity-base-dropdown__checkmark
 selector--dropdown-item-text      = // string: .unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item.% .unity-base-dropdown__label
 selector--empty-list-label        = // string: .unity-base-dropdown .unity-list-view__empty-label.%
 
 // view
-.selector--dropdown                        // styles: add-theme(null                 )
-.selector--dropdown-container              // styles: add-theme(null                 )
-.selector--list-view                       // styles: add-theme(null                 )
-.selector--list-item                       // styles: add-theme(null                 )
-.selector--dropdown-item                   // styles: add-theme(dropdown-item--normal)
-.selector--dropdown-item-checkmark         // styles: add-theme(checkmark------normal)
-.selector--dropdown-item-text              // styles: add-theme(null                 )
-.selector--empty-list-label                // styles: add-theme(dropdown-item--normal)
+.selector--dropdown                        // styles: add-theme(null                  )
+.selector--dropdown-container              // styles: add-theme(null                  )
+.selector--list-view                       // styles: add-theme(dropdown-------normal )
+.selector--list-item                       // styles: add-theme(null                  )
+.selector--dropdown-item                   // styles: add-theme(dropdown-item--normal )
+.selector--dropdown-item-checkmark         // styles: add-theme(checkmark------normal )
+.selector--dropdown-item-text              // styles: add-theme(null                  )
+.selector--empty-list-label                // styles: add-theme(dropdown-item--normal )
 
 // view/hover
-.selector--dropdown-item:hover             // styles: add-theme(dropdown-item--hover)
-.selector--dropdown-item-checkmark:hover   // styles: add-theme(checkmark------hover)
-.selector--dropdown-item-text:hover        // styles: add-theme(null                )
-.selector--empty-list-label:hover          // styles: add-theme(dropdown-item--hover)
+.selector--list-view:hover                 // styles: add-theme(dropdown-------hover  )
+.selector--list-item:hover                 // styles: add-theme(null                  )
+.selector--dropdown-item:hover             // styles: add-theme(dropdown-item--hover  )
+.selector--dropdown-item-checkmark:hover   // styles: add-theme(checkmark------hover  )
+.selector--dropdown-item-text:hover        // styles: add-theme(null                  )
+.selector--empty-list-label:hover          // styles: add-theme(dropdown-item--hover  )
 
 // view/checked
-.selector--dropdown-item:checked           // styles: add-theme(null                )
-.selector--dropdown-item-checkmark:checked // styles: add-theme(checkmark--checked  )
-.selector--dropdown-item-text:checked      // styles: add-theme(null                )
-.selector--empty-list-label:checked        // styles: add-theme(null                )
+.selector--list-item:checked               // styles: add-theme(null                  )
+.selector--dropdown-item:checked           // styles: add-theme(null                  )
+.selector--dropdown-item-checkmark:checked // styles: add-theme(checkmark------checked)
+.selector--dropdown-item-text:checked      // styles: add-theme(null                  )
+.selector--empty-list-label:checked        // styles: add-theme(null                  )
 
 // layout
 .selector--dropdown                // styles: add-layout(absolute, auto, auto, (0px             ), (0px            ), (0px                ))
 .selector--dropdown-container      // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px                ))
-.selector--list-view               // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px   0px  0px  0px))
+.selector--list-view               // styles: add-layout(null,     auto, auto, (0px             ), (1px            ), (0px   0px  0px  0px))
 .selector--list-item               // styles: add-layout(null,     auto, auto, (0px             ), (0px            ), (0px   0px  0px  0px))
 .selector--dropdown-item           // styles: add-layout(null,     auto, auto, (0px             ), (0px 0px 0px 1px), (12px 12px 10px 10px))
 .selector--dropdown-item-checkmark // styles: add-layout(null,     16px, 16px, (0px 12px 0px 0px), (1px            ), (0px                ))
