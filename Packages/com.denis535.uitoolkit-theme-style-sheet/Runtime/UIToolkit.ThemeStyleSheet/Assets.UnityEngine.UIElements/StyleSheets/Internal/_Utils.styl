@@ -24,41 +24,42 @@ img(url, color, scale-mode = null, slice-left = null, slice-right = null, slice-
 // add-theme
 add-theme(theme)
     if theme != null
-        // add-theme
-        add-theme-internal(    selector(), '',                      theme, 'normal'                )
-        try-add-theme-internal(selector(), ':hover',                theme, 'hover'                 )
-        try-add-theme-internal(selector(), ':active',               theme, 'active'                )
-        // add-theme
-        try-add-theme-internal(selector(), ':focus',                theme, 'focus'                 )
-        try-add-theme-internal(selector(), ':focus:hover',          theme, 'focus--hover'          )
-        try-add-theme-internal(selector(), ':focus:active',         theme, 'focus--active'         )
-        // add-theme
-        try-add-theme-internal(selector(), '.invalid',              theme, 'invalid'               )
-        try-add-theme-internal(selector(), '.invalid:hover',        theme, 'invalid--hover'        )
-        try-add-theme-internal(selector(), '.invalid:active',       theme, 'invalid--active'       )
-        // add-theme
-        try-add-theme-internal(selector(), '.invalid:focus',        theme, 'invalid--focus'        )
-        try-add-theme-internal(selector(), '.invalid:focus:hover',  theme, 'invalid--focus--hover' )
-        try-add-theme-internal(selector(), '.invalid:focus:active', theme, 'invalid--focus--active')
-        // add-theme
-        try-add-theme-internal(selector(), ':checked',              theme, 'checked'               )
-        try-add-theme-internal(selector(), ':checked:hover',        theme, 'checked--hover'        )
-        try-add-theme-internal(selector(), ':checked:active',       theme, 'checked--active'       )
-        // add-theme
-        try-add-theme-internal(selector(), ':checked:focus',        theme, 'checked--focus'        )
-        try-add-theme-internal(selector(), ':checked:focus:hover',  theme, 'checked--focus--hover' )
-        try-add-theme-internal(selector(), ':checked:focus:active', theme, 'checked--focus--active')
-add-theme-internal(selector, state, theme, suffix)
-    selector = replace('(\.%)', state, selector)
-    theme    = get-key('theme', theme, suffix)
-    /{selector}
-        add-view-theme(get-value(theme))
-try-add-theme-internal(selector, state, theme, suffix)
-    selector = replace('(\.%)', state, selector)
-    theme    = get-key('theme', theme, suffix)
-    if has-value(theme)
-        /{selector}
+        error-if-no-value('Theme is invalid: %s', get-key('theme', theme, 'normal'))
+        for definition in get-definitions(true)
+            if match('(^theme--' +  theme + '--)', definition, g)
+                suffix = match('(?<=^theme--' +  theme + '--)' + '(.+)', definition, g)
+                add-theme-internal(definition, suffix)
+add-theme-internal(theme, suffix)
+    arg = get-selector-argument(theme, suffix)
+    if arg != null
+        /{replace('(\.%)', arg, selector())}
             add-view-theme(get-value(theme))
+get-selector-argument(theme, suffix)
+    return ''                      if suffix == 'normal'
+    return ':hover'                if suffix == 'hover'
+    return ':active'               if suffix == 'active'
+
+    return ':focus'                if suffix == 'focus'
+    return ':focus:hover'          if suffix == 'focus--hover'
+    return ':focus:active'         if suffix == 'focus--active'
+
+    return '.invalid'              if suffix == 'invalid'
+    return '.invalid:hover'        if suffix == 'invalid--hover'
+    return '.invalid:active'       if suffix == 'invalid--active'
+    
+    return '.invalid:focus'        if suffix == 'invalid--focus'
+    return '.invalid:focus:hover'  if suffix == 'invalid--focus--hover'
+    return '.invalid:focus:active' if suffix == 'invalid--focus--active'
+
+    return ':checked'              if suffix == 'checked'
+    return ':checked:hover'        if suffix == 'checked--hover'
+    return ':checked:active'       if suffix == 'checked--active'
+
+    return ':checked:focus'        if suffix == 'checked--focus'
+    return ':checked:focus:hover'  if suffix == 'checked--focus--hover'
+    return ':checked:focus:active' if suffix == 'checked--focus--active'
+
+    null
 
 // add-view
 add-font(url, size, style)
@@ -270,6 +271,7 @@ get-selector(argument)
 get-selector-internal(key, arg)
     key   = get-key('selector', key)
     key   = replace('(--+)', '--', key)
+    error-if-no-value('Selector is invalid: %s', key)
     value = get-value(key)
     value = replace('(\.%)', arg, value) if arg != null
     value = replace('(\s+)', ' ', value)
@@ -281,9 +283,9 @@ get-key(key...)
     result += '--' + get-string(key[1]) if key[1] != null
     result += '--' + get-string(key[2]) if key[2] != null
     result
-get-value(key)
-    if is-defined(get-string(key))
-        return get-definition(get-string(key))
-    error('Value is undefined: ' + key)
 has-value(key)
-    is-defined(get-string(key))
+    is-defined(get-string(key), true)
+get-value(key)
+    get-definition(get-string(key), true)
+error-if-no-value(text, key)
+    error(s(text, get-string(key))) if !is-defined(get-string(key), true)
