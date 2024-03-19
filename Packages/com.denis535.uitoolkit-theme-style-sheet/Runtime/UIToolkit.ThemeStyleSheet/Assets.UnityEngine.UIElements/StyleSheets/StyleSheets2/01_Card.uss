@@ -288,7 +288,7 @@
 }
 .info-dialog-card {
   color: #e6e6e6;
-  background-color: rgba(37,38,39,0.99);
+  background-color: rgba(35,38,41,0.99);
   border-left-color: #5c4d3d;
   border-right-color: #5c4d3d;
   border-top-color: #5c4d3d;
@@ -300,7 +300,7 @@
 }
 .info-dialog-card:hover {
   color: #e6e6e6;
-  background-color: rgba(37,38,39,0.99);
+  background-color: rgba(35,38,41,0.99);
   border-left-color: #5c4d3d;
   border-right-color: #5c4d3d;
   border-top-color: #5c4d3d;
@@ -312,7 +312,7 @@
 }
 .info-dialog-card:active {
   color: #e6e6e6;
-  background-color: rgba(37,38,39,0.99);
+  background-color: rgba(35,38,41,0.99);
   border-left-color: #5c4d3d;
   border-right-color: #5c4d3d;
   border-top-color: #5c4d3d;
@@ -432,7 +432,7 @@
 }
 .warning-dialog-card {
   color: #e6e6e6;
-  background-color: rgba(37,38,39,0.99);
+  background-color: rgba(41,41,35,0.99);
   border-left-color: #5c4d3d;
   border-right-color: #5c4d3d;
   border-top-color: #5c4d3d;
@@ -444,7 +444,7 @@
 }
 .warning-dialog-card:hover {
   color: #e6e6e6;
-  background-color: rgba(37,38,39,0.99);
+  background-color: rgba(41,41,35,0.99);
   border-left-color: #5c4d3d;
   border-right-color: #5c4d3d;
   border-top-color: #5c4d3d;
@@ -456,7 +456,7 @@
 }
 .warning-dialog-card:active {
   color: #e6e6e6;
-  background-color: rgba(37,38,39,0.99);
+  background-color: rgba(41,41,35,0.99);
   border-left-color: #5c4d3d;
   border-right-color: #5c4d3d;
   border-top-color: #5c4d3d;
@@ -576,7 +576,7 @@
 }
 .error-dialog-card {
   color: #e6e6e6;
-  background-color: rgba(37,38,39,0.99);
+  background-color: rgba(41,35,35,0.99);
   border-left-color: #5c4d3d;
   border-right-color: #5c4d3d;
   border-top-color: #5c4d3d;
@@ -588,7 +588,7 @@
 }
 .error-dialog-card:hover {
   color: #e6e6e6;
-  background-color: rgba(37,38,39,0.99);
+  background-color: rgba(41,35,35,0.99);
   border-left-color: #5c4d3d;
   border-right-color: #5c4d3d;
   border-top-color: #5c4d3d;
@@ -600,7 +600,7 @@
 }
 .error-dialog-card:active {
   color: #e6e6e6;
-  background-color: rgba(37,38,39,0.99);
+  background-color: rgba(41,35,35,0.99);
   border-left-color: #5c4d3d;
   border-right-color: #5c4d3d;
   border-top-color: #5c4d3d;
