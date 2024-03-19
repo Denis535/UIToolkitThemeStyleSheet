@@ -1,55 +1,3 @@
-.card .header {
-  font-size: 130%;
-  -unity-font-style: bold;
-}
-.card .footer {
-  font-size: 120%;
-  -unity-font-style: bold;
-}
-.dialog-card .header {
-  font-size: 130%;
-  -unity-font-style: bold;
-}
-.dialog-card .content {
-  font-size: 120%;
-}
-.dialog-card .footer {
-  font-size: 120%;
-  -unity-font-style: bold;
-}
-.info-dialog-card .header {
-  font-size: 130%;
-  -unity-font-style: bold;
-}
-.info-dialog-card .content {
-  font-size: 120%;
-}
-.info-dialog-card .footer {
-  font-size: 120%;
-  -unity-font-style: bold;
-}
-.warning-dialog-card .header {
-  font-size: 130%;
-  -unity-font-style: bold;
-}
-.warning-dialog-card .content {
-  font-size: 120%;
-}
-.warning-dialog-card .footer {
-  font-size: 120%;
-  -unity-font-style: bold;
-}
-.error-dialog-card .header {
-  font-size: 130%;
-  -unity-font-style: bold;
-}
-.error-dialog-card .content {
-  font-size: 120%;
-}
-.error-dialog-card .footer {
-  font-size: 120%;
-  -unity-font-style: bold;
-}
 .card {
   color: #e6e6e6;
   background-color: rgba(37,38,39,0.99);
@@ -1284,4 +1232,56 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+.card .header {
+  font-size: 130%;
+  -unity-font-style: bold;
+}
+.card .footer {
+  font-size: 120%;
+  -unity-font-style: bold;
+}
+.dialog-card .header {
+  font-size: 130%;
+  -unity-font-style: bold;
+}
+.dialog-card .content {
+  font-size: 120%;
+}
+.dialog-card .footer {
+  font-size: 120%;
+  -unity-font-style: bold;
+}
+.info-dialog-card .header {
+  font-size: 130%;
+  -unity-font-style: bold;
+}
+.info-dialog-card .content {
+  font-size: 120%;
+}
+.info-dialog-card .footer {
+  font-size: 120%;
+  -unity-font-style: bold;
+}
+.warning-dialog-card .header {
+  font-size: 130%;
+  -unity-font-style: bold;
+}
+.warning-dialog-card .content {
+  font-size: 120%;
+}
+.warning-dialog-card .footer {
+  font-size: 120%;
+  -unity-font-style: bold;
+}
+.error-dialog-card .header {
+  font-size: 130%;
+  -unity-font-style: bold;
+}
+.error-dialog-card .content {
+  font-size: 120%;
+}
+.error-dialog-card .footer {
+  font-size: 120%;
+  -unity-font-style: bold;
 }

@@ -38,28 +38,29 @@ get-selector-argument(theme, suffix)
     return ''                      if suffix == 'normal'
     return ':hover'                if suffix == 'hover'
     return ':active'               if suffix == 'active'
-
+    // focus
     return ':focus'                if suffix == 'focus'
     return ':focus:hover'          if suffix == 'focus--hover'
     return ':focus:active'         if suffix == 'focus--active'
-
+    // invalid
     return '.invalid'              if suffix == 'invalid'
     return '.invalid:hover'        if suffix == 'invalid--hover'
     return '.invalid:active'       if suffix == 'invalid--active'
-    
+     // invalid/focus
     return '.invalid:focus'        if suffix == 'invalid--focus'
     return '.invalid:focus:hover'  if suffix == 'invalid--focus--hover'
     return '.invalid:focus:active' if suffix == 'invalid--focus--active'
-
+    // checked
     return ':checked'              if suffix == 'checked'
     return ':checked:hover'        if suffix == 'checked--hover'
     return ':checked:active'       if suffix == 'checked--active'
-
+    // checked/focus
     return ':checked:focus'        if suffix == 'checked--focus'
     return ':checked:focus:hover'  if suffix == 'checked--focus--hover'
     return ':checked:focus:active' if suffix == 'checked--focus--active'
-
-    null
+    // misc
+    return null                    if match('^(light2|light|gray|dark|dark2)', suffix)
+    error('Theme is invalid: ' + theme)
 
 // add-view
 add-font(url, size, style)

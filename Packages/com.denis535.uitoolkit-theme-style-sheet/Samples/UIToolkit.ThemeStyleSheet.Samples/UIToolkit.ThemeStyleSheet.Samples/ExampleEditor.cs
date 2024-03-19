@@ -29,6 +29,9 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 if (EditorGUILayout.LinkButton( "youtube.com" )) {
                     Application.OpenURL( "https://www.youtube.com/channel/UCLFdZl0pFkCkHpDWmodBUFg" );
                 }
+                if (EditorGUILayout.LinkButton( "github.com" )) {
+                    Application.OpenURL( "https://github.com/Denis535/UIToolkitThemeStyleSheet" );
+                }
                 EditorGUILayout.SelectableLabel( "If you want to support me, please rate my packages, subscribe to my YouTube channel and like my videos." );
             }
         }

@@ -49,14 +49,14 @@ function onError(error) {
 function readStylus(path) {
     return FS.readFileSync(path, 'utf8')
         // /// ***
-        .replaceAll(/(?<!\/\/.*)(\/\/\/\s*)(.*)/gm, function (match, comment, content) {
-            content = content
-                .trim()
-                .replaceAll(/(\s+)/g, ' ') // collapse whitespace
-                .replaceAll(/(__+)/g, '__') // collapse __
-                .replaceAll(/(--+)/g, '--'); // collapse --
-            return '    ' + content;
-        })
+        // .replaceAll(/(?<!\/\/.*)(\/\/\/\s*)(.*)/gm, function (match, comment, content) {
+        //     content = content
+        //         .trim()
+        //         .replaceAll(/(\s+)/g, ' ') // collapse whitespace
+        //         .replaceAll(/(__+)/g, '__') // collapse __
+        //         .replaceAll(/(--+)/g, '--'); // collapse --
+        //     return '    ' + content;
+        // })
         // // string: ***
         .replaceAll(/(?<!\/\/.*)(\/\/\s*string:s*)(.*)/gm, function (match, comment, content) {
             content = content

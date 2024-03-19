@@ -1,6 +1,3 @@
-.unity-scroll-view #unity-content-viewport {
-  overflow: hidden;
-}
 .unity-scroll-view {
   color: #e6e6e6;
   background-color: rgba(0,0,0,0);
@@ -379,4 +376,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+}
+.unity-scroll-view #unity-content-viewport {
+  overflow: hidden;
 }

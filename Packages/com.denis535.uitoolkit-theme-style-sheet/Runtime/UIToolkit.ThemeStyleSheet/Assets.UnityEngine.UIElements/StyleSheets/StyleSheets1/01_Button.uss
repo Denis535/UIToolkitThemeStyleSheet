@@ -1,10 +1,4 @@
 .unity-button {
-  -unity-text-align: middle-center;
-}
-.unity-repeat-button {
-  -unity-text-align: middle-center;
-}
-.unity-button {
   color: #e6e6e6;
   background-color: #3b3b3a;
   border-left-color: #5c4d3d;
@@ -335,4 +329,10 @@
   flex-shrink: 1;
   flex-basis: auto;
   align-self: auto;
+}
+.unity-button {
+  -unity-text-align: middle-center;
+}
+.unity-repeat-button {
+  -unity-text-align: middle-center;
 }
