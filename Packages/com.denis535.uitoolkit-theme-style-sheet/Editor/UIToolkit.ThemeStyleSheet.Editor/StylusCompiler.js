@@ -180,5 +180,5 @@ function getDefinitionsEx(global) {
         }
         return result;
     }
-    console.error('Not implemented');
+    throw new Error("Argument 'global' must be defined");
 }
