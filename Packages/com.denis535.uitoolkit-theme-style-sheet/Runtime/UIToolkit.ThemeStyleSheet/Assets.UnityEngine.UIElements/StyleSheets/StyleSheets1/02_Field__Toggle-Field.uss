@@ -2,10 +2,10 @@
   background-color: #e6e6e6;
   background-image: url('../../Images/Check.png');
   -unity-background-image-tint-color: rgba(0,0,0,0);
-  border-left-color: rgba(92,77,61,0.5);
-  border-right-color: rgba(92,77,61,0.5);
-  border-top-color: rgba(92,77,61,0.5);
-  border-bottom-color: rgba(92,77,61,0.5);
+  border-left-color: rgba(92,77,61,0);
+  border-right-color: rgba(92,77,61,0);
+  border-top-color: rgba(92,77,61,0);
+  border-bottom-color: rgba(92,77,61,0);
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   border-bottom-left-radius: 2px;
@@ -24,20 +24,20 @@
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.unity-toggle:active .unity-toggle__input .unity-toggle__checkmark {
+.unity-toggle:checked .unity-toggle__input .unity-toggle__checkmark {
   background-color: #e6e6e6;
   background-image: url('../../Images/Check.png');
-  -unity-background-image-tint-color: rgba(0,0,0,0);
-  border-left-color: rgba(92,77,61,0.5);
-  border-right-color: rgba(92,77,61,0.5);
-  border-top-color: rgba(92,77,61,0.5);
-  border-bottom-color: rgba(92,77,61,0.5);
+  -unity-background-image-tint-color: #1a1a1a;
+  border-left-color: rgba(92,77,61,0);
+  border-right-color: rgba(92,77,61,0);
+  border-top-color: rgba(92,77,61,0);
+  border-bottom-color: rgba(92,77,61,0);
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.unity-toggle:checked .unity-toggle__input .unity-toggle__checkmark {
+.unity-toggle:checked:hover .unity-toggle__input .unity-toggle__checkmark {
   background-color: #e6e6e6;
   background-image: url('../../Images/Check.png');
   -unity-background-image-tint-color: #1a1a1a;
