@@ -12,7 +12,6 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
-        "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.uielements": "1.0.0"
       }
     },

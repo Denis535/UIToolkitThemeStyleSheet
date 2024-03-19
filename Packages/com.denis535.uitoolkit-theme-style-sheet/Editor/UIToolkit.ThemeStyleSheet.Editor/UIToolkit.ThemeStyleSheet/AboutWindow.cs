@@ -1,18 +1,20 @@
-#if UNITY_EDITOR
 #nullable enable
-namespace UIToolkit.ThemeStyleSheet.Samples {
+namespace UIToolkit.ThemeStyleSheet {
     using System;
     using System.Collections;
     using System.Collections.Generic;
     using UnityEditor;
     using UnityEngine;
 
-    [CustomEditor( typeof( Example ), true )]
-    public class ExampleEditor : Editor {
+    public class AboutWindow : EditorWindow {
 
-        // OnInspectorGUI
-        public override void OnInspectorGUI() {
-            base.OnInspectorGUI();
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/About UIToolkit Theme Style Sheet", priority = 10000 )]
+        public new static void Show() {
+            var window = GetWindow<AboutWindow>( true, "About UIToolkit Theme Style Sheet", true );
+            window.minSize = window.maxSize = new Vector2( 800, 600 );
+        }
+
+        public void OnGUI() {
             using (new GUILayout.VerticalScope( GUI.skin.box )) {
                 EditorGUILayout.LabelField( "Links:", EditorStyles.boldLabel );
                 if (EditorGUILayout.LinkButton( "denis535.github.io" )) {
@@ -39,4 +41,3 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
 
     }
 }
-#endif
