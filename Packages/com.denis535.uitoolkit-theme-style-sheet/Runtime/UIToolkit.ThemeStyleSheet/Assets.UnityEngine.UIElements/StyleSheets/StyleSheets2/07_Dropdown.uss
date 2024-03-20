@@ -60,11 +60,11 @@
 }
 .unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item:checked:hover {
   color: #fff;
-  background-color: #73400d;
-  border-left-color: #a15912;
-  border-right-color: #a15912;
-  border-top-color: #a15912;
-  border-bottom-color: #a15912;
+  background-color: #8a4d0f;
+  border-left-color: #b86614;
+  border-right-color: #b86614;
+  border-top-color: #b86614;
+  border-bottom-color: #b86614;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -160,11 +160,11 @@
 }
 .unity-base-dropdown .unity-list-view__empty-label:checked:hover {
   color: #fff;
-  background-color: #73400d;
-  border-left-color: #a15912;
-  border-right-color: #a15912;
-  border-top-color: #a15912;
-  border-bottom-color: #a15912;
+  background-color: #8a4d0f;
+  border-left-color: #b86614;
+  border-right-color: #b86614;
+  border-top-color: #b86614;
+  border-bottom-color: #b86614;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
