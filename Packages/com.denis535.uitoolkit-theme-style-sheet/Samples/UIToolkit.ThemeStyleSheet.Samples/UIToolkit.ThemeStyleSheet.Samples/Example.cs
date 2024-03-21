@@ -172,7 +172,9 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         VisualElementScope.Add( factory.Label( "Small Widget" ) );
                     }
                     using (factory.Content().AsScope()) {
-                        VisualElementScope.Add( factory.Label( "Small Widget" ) );
+                        using (factory.ColumnGroup().Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" ).AsScope()) {
+                            VisualElementScope.Add( factory.Label( "Hello World !!!" ) );
+                        }
                     }
                     using (factory.Footer().AsScope()) {
                         VisualElementScope.Add( factory.Submit( "Submit" ), factory.Cancel( "Cancel" ) );
@@ -188,7 +190,9 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         VisualElementScope.Add( factory.Label( "Medium Widget" ) );
                     }
                     using (factory.Content().AsScope()) {
-                        VisualElementScope.Add( factory.Label( "Medium Widget" ) );
+                        using (factory.ColumnGroup().Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" ).AsScope()) {
+                            VisualElementScope.Add( factory.Label( "Hello World !!!" ) );
+                        }
                     }
                     using (factory.Footer().AsScope()) {
                         VisualElementScope.Add( factory.Submit( "Submit" ), factory.Cancel( "Cancel" ) );
@@ -204,7 +208,9 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         VisualElementScope.Add( factory.Label( "Large Widget" ) );
                     }
                     using (factory.Content().AsScope()) {
-                        VisualElementScope.Add( factory.Label( "Large Widget" ) );
+                        using (factory.ColumnGroup().Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" ).AsScope()) {
+                            VisualElementScope.Add( factory.Label( "Hello World !!!" ) );
+                        }
                     }
                     using (factory.Footer().AsScope()) {
                         VisualElementScope.Add( factory.Submit( "Submit" ), factory.Cancel( "Cancel" ) );
@@ -213,6 +219,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 return root.VisualElement;
             }
         }
+        // Helpers
         private static VisualElement DialogWidget(VisualElementFactory factory) {
             using (var root = factory.DialogWidget().AsScope()) {
                 using (factory.DialogCard().AsScope()) {
@@ -222,8 +229,8 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     using (factory.Content().AsScope()) {
                         VisualElementScope.Add(
                             factory.ColumnGroup()
-                                .Classes( "dark", "medium", "grow-1", "justify-content-center", "align-items-center" )
-                                .Children( factory.Label( "Dialog Widget" ) )
+                                .Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" )
+                                .Children( factory.Label( "Hello World !!!" ) )
                         );
                     }
                     using (factory.Footer().AsScope()) {
@@ -242,8 +249,8 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     using (factory.Content().AsScope()) {
                         VisualElementScope.Add(
                             factory.ColumnGroup()
-                                .Classes( "dark", "medium", "grow-1", "justify-content-center", "align-items-center" )
-                                .Children( factory.Label( "Info Dialog Widget" ) )
+                                .Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" )
+                                .Children( factory.Label( "Hello World !!!" ) )
                         );
                     }
                     using (factory.Footer().AsScope()) {
@@ -262,8 +269,8 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     using (factory.Content().AsScope()) {
                         VisualElementScope.Add(
                             factory.ColumnGroup()
-                                .Classes( "dark", "medium", "grow-1", "justify-content-center", "align-items-center" )
-                                .Children( factory.Label( "Warning Dialog Widget" ) )
+                                .Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" )
+                                .Children( factory.Label( "Hello World !!!" ) )
                         );
                     }
                     using (factory.Footer().AsScope()) {
@@ -282,8 +289,8 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     using (factory.Content().AsScope()) {
                         VisualElementScope.Add(
                             factory.ColumnGroup()
-                                .Classes( "dark", "medium", "grow-1", "justify-content-center", "align-items-center" )
-                                .Children( factory.Label( "Error Dialog Widget" ) )
+                                .Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" )
+                                .Children( factory.Label( "Hello World !!!" ) )
                         );
                     }
                     using (factory.Footer().AsScope()) {
@@ -302,21 +309,31 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     }
                     using (factory.Content().AsScope()) {
                         VisualElementScope.Add(
-                            factory.TabView().Classes( "gray", "medium", "grow-1" ).Children(
-                                factory.Tab( "Tab 1" ).Children(
-                                    factory.VisualElement()
-                                        .Classes( "color-light", "background-color-dark", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
-                                        .Children( factory.Label( "Tab 1" ) )
+                            factory.TabView().Classes( "no-outline", "grow-1" ).Children(
+                                factory.Tab( "Light 2" ).Children(
+                                    factory.ColumnGroup()
+                                        .Classes( "light2", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
+                                        .Children( factory.Label( "Hello World !!!" ) )
                                 ),
-                                factory.Tab( "Tab 2" ).Children(
-                                    factory.VisualElement()
-                                        .Classes( "color-light", "background-color-dark", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
-                                        .Children( factory.Label( "Tab 2" ) )
+                                factory.Tab( "Light" ).Children(
+                                    factory.ColumnGroup()
+                                        .Classes( "light", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
+                                        .Children( factory.Label( "Hello World !!!" ) )
                                 ),
-                                factory.Tab( "Tab 3" ).Children(
-                                    factory.VisualElement()
-                                        .Classes( "color-light", "background-color-dark", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
-                                        .Children( factory.Label( "Tab 3" ) )
+                                factory.Tab( "Gray" ).Children(
+                                    factory.ColumnGroup()
+                                        .Classes( "gray", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
+                                        .Children( factory.Label( "Hello World !!!" ) )
+                                ),
+                                factory.Tab( "Dark" ).Children(
+                                    factory.ColumnGroup()
+                                        .Classes( "dark", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
+                                        .Children( factory.Label( "Hello World !!!" ) )
+                                ),
+                                factory.Tab( "Dark 2" ).Children(
+                                    factory.ColumnGroup()
+                                        .Classes( "dark2", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
+                                        .Children( factory.Label( "Hello World !!!" ) )
                                 )
                             )
                         );
@@ -337,9 +354,9 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     using (factory.Content().AsScope()) {
                         VisualElementScope.Add(
                             factory.ScrollView().Classes( "gray", "medium", "grow-1" ).Children(
-                                factory.VisualElement()
-                                    .Classes( "color-light", "background-color-dark", "width-150pc", "height-150pc", "margin-0px", "shrink-0", "justify-content-center", "align-items-center" )
-                                    .Children( factory.Label( "Scroll View" ) )
+                                factory.ColumnGroup()
+                                    .Classes( "medium", "width-150pc", "height-150pc", "margin-0px", "shrink-0", "justify-content-center", "align-items-center" )
+                                    .Children( factory.Label( "Hello World !!!" ) )
                             )
                         );
                     }
@@ -453,7 +470,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 return root.VisualElement;
             }
         }
-        // Misc
+        // // Helpers
         private static VisualElement Misc(VisualElementFactory factory) {
             using (var root = factory.LargeWidget().AsScope()) {
                 using (factory.Card().AsScope()) {
