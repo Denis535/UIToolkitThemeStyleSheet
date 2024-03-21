@@ -1,5 +1,5 @@
 .unity-scroller--horizontal .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-tracker {
-  background-color: #2e2e2d;
+  background-color: #272726;
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -10,7 +10,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider:hover .unity-base-slider__input #unity-drag-container #unity-tracker {
-  background-color: #2e2e2d;
+  background-color: #272726;
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -21,7 +21,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider:active .unity-base-slider__input #unity-drag-container #unity-tracker {
-  background-color: #2e2e2d;
+  background-color: #272726;
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
