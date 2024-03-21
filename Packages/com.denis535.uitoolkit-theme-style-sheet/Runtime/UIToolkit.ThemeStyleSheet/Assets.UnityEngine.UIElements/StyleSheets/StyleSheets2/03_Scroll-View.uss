@@ -36,7 +36,7 @@
 }
 .unity-scroll-view.light2 {
   color: #e6e6e6;
-  background-color: rgba(48,48,48,0.97);
+  background-color: rgba(57,57,57,0.97);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -48,7 +48,7 @@
 }
 .unity-scroll-view.light2:hover {
   color: #e6e6e6;
-  background-color: rgba(48,48,48,0.97);
+  background-color: rgba(57,57,57,0.97);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -60,7 +60,7 @@
 }
 .unity-scroll-view.light2:active {
   color: #e6e6e6;
-  background-color: rgba(48,48,48,0.97);
+  background-color: rgba(57,57,57,0.97);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -72,7 +72,7 @@
 }
 .unity-scroll-view.light {
   color: #e6e6e6;
-  background-color: rgba(45,45,45,0.97);
+  background-color: rgba(52,52,52,0.97);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -84,7 +84,7 @@
 }
 .unity-scroll-view.light:hover {
   color: #e6e6e6;
-  background-color: rgba(45,45,45,0.97);
+  background-color: rgba(52,52,52,0.97);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -96,7 +96,7 @@
 }
 .unity-scroll-view.light:active {
   color: #e6e6e6;
-  background-color: rgba(45,45,45,0.97);
+  background-color: rgba(52,52,52,0.97);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -108,7 +108,7 @@
 }
 .unity-scroll-view.gray {
   color: #e6e6e6;
-  background-color: rgba(41,41,41,0.97);
+  background-color: rgba(46,46,46,0.97);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -120,7 +120,7 @@
 }
 .unity-scroll-view.gray:hover {
   color: #e6e6e6;
-  background-color: rgba(41,41,41,0.97);
+  background-color: rgba(46,46,46,0.97);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -132,7 +132,7 @@
 }
 .unity-scroll-view.gray:active {
   color: #e6e6e6;
-  background-color: rgba(41,41,41,0.97);
+  background-color: rgba(46,46,46,0.97);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -144,7 +144,7 @@
 }
 .unity-scroll-view.dark {
   color: #e6e6e6;
-  background-color: rgba(37,37,37,0.97);
+  background-color: rgba(40,40,40,0.97);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -156,7 +156,7 @@
 }
 .unity-scroll-view.dark:hover {
   color: #e6e6e6;
-  background-color: rgba(37,37,37,0.97);
+  background-color: rgba(40,40,40,0.97);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -168,7 +168,7 @@
 }
 .unity-scroll-view.dark:active {
   color: #e6e6e6;
-  background-color: rgba(37,37,37,0.97);
+  background-color: rgba(40,40,40,0.97);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
