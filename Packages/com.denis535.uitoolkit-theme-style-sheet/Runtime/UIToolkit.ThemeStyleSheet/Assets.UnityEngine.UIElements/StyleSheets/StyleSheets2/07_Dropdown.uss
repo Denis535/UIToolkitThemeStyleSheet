@@ -1,6 +1,6 @@
 .unity-base-dropdown .unity-base-dropdown__container-outer {
   color: #e6e6e6;
-  background-color: rgba(43,43,43,0.98);
+  background-color: rgba(38,38,38,0.98);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -12,7 +12,7 @@
 }
 .unity-base-dropdown .unity-base-dropdown__container-outer:hover {
   color: #fff;
-  background-color: rgba(43,43,43,0.98);
+  background-color: rgba(38,38,38,0.98);
   border-left-color: #8c8073;
   border-right-color: #8c8073;
   border-top-color: #8c8073;
@@ -48,7 +48,7 @@
 }
 .unity-base-dropdown .unity-list-view__item .unity-base-dropdown__item:checked {
   color: #e6e6e6;
-  background-color: #262626;
+  background-color: #1f1f1f;
   border-left-color: rgba(0,0,0,0);
   border-right-color: rgba(0,0,0,0);
   border-top-color: rgba(0,0,0,0);
@@ -148,7 +148,7 @@
 }
 .unity-base-dropdown .unity-list-view__empty-label:checked {
   color: #e6e6e6;
-  background-color: #262626;
+  background-color: #1f1f1f;
   border-left-color: rgba(0,0,0,0);
   border-right-color: rgba(0,0,0,0);
   border-top-color: rgba(0,0,0,0);

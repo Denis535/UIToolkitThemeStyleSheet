@@ -479,7 +479,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     }
                     using (factory.Content().AsScope()) {
                         VisualElementScope.Add(
-                            factory.ColumnGroup().Classes( "dark", "medium", "grow-1" ).Children(
+                            factory.ColumnGroup().Classes( "gray", "medium", "grow-1" ).Children(
                                 factory.Label( "Label" ).Classes( "medium" ),
                                 factory.Button( "Button" ),
                                 factory.RepeatButton( "Repeat Button" ),
