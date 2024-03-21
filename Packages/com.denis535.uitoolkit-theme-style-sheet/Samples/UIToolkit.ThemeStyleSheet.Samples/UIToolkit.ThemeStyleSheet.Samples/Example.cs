@@ -470,7 +470,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 return root.VisualElement;
             }
         }
-        // // Helpers
+        // Helpers
         private static VisualElement Misc(VisualElementFactory factory) {
             using (var root = factory.LargeWidget().AsScope()) {
                 using (factory.Card().AsScope()) {
