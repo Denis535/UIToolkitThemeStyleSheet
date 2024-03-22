@@ -29,12 +29,12 @@ This package contains styles for the following elements:
     - WarningDialogWidget
     - ErrorDialogWidget
 - Views
-    - TabView    - classes: light2/light/gray/dark/dark2, small/medium/large
-    - ScrollView - classes: light2/light/gray/dark/dark2, small/medium/large, reverse
+    - TabView    - classes: light10/light/gray/dark/dark10, small/medium/large
+    - ScrollView - classes: light10/light/gray/dark/dark10, small/medium/large, reverse
 - Scopes
-    - Scope - classes: light2/light/gray/dark/dark2  small/medium/large, column/row
-    - Group - classes: light2/light/gray/dark/dark2, small/medium/large, column/row
-    - Box   - classes: light2/light/gray/dark/dark2, small/medium/large
+    - Scope - classes: light10/light/gray/dark/dark10  small/medium/large, column/row
+    - Group - classes: light10/light/gray/dark/dark10, small/medium/large, column/row
+    - Box   - classes: light10/light/gray/dark/dark10, small/medium/large
 - Elements
     - Label - classes: small/medium/large
     - Button

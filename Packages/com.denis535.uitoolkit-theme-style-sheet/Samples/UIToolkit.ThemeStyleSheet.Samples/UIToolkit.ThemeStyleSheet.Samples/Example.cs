@@ -376,22 +376,30 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     }
                     using (factory.Content().AsScope()) {
                         VisualElementScope.Add(
-                            factory.RowScope().Children(
-                                factory.ColumnScope().Classes( "light2", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnScope().Classes( "light", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnScope().Classes( "gray", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnScope().Classes( "dark", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnScope().Classes( "dark2", "medium", "width-200px", "height-200px" )
-                            ),
-                            factory.RowScope().Children(
-                                factory.ColumnScope().Classes( "dark2", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnScope().Classes( "dark", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnScope().Classes( "gray", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnScope().Classes( "light", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnScope().Classes( "light2", "medium", "width-200px", "height-200px" )
-                            ),
-                            factory.RowScope().Children(
-                                factory.ColumnScope().Classes( null, "medium", "width-200px", "height-200px" )
+                            factory.RowScope().Classes( "grow-1", "align-items-stretch" ).Children(
+                                factory.ColumnScope().Classes( "light10", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "light9", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "light8", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "light7", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "light6", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "light7", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "light6", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "light5", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "light4", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "light3", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "light2", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "light", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "gray", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "dark", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "dark2", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "dark3", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "dark4", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "dark5", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "dark6", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "dark7", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "dark8", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "dark9", "medium", "grow-1" ),
+                                factory.ColumnScope().Classes( "dark10", "medium", "grow-1" )
                             )
                         );
                     }
@@ -410,22 +418,30 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     }
                     using (factory.Content().AsScope()) {
                         VisualElementScope.Add(
-                            factory.RowScope().Children(
-                                factory.ColumnGroup().Classes( "light2", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "light", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "gray", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "dark", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "dark2", "medium", "width-200px", "height-200px" )
-                            ),
-                            factory.RowScope().Children(
-                                factory.ColumnGroup().Classes( "dark2", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "dark", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "gray", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "light", "medium", "width-200px", "height-200px" ),
-                                factory.ColumnGroup().Classes( "light2", "medium", "width-200px", "height-200px" )
-                            ),
-                            factory.RowScope().Children(
-                                factory.ColumnGroup().Classes( null, "medium", "width-200px", "height-200px" )
+                            factory.RowScope().Classes( "grow-1", "align-items-stretch" ).Children(
+                                factory.ColumnGroup().Classes( "light10", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "light9", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "light8", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "light7", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "light6", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "light7", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "light6", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "light5", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "light4", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "light3", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "light2", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "light", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "gray", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "dark", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "dark2", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "dark3", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "dark4", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "dark5", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "dark6", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "dark7", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "dark8", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "dark9", "medium", "grow-1" ),
+                                factory.ColumnGroup().Classes( "dark10", "medium", "grow-1" )
                             )
                         );
                     }
