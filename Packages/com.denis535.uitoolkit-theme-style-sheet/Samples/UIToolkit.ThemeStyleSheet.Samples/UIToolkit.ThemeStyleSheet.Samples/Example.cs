@@ -227,11 +227,9 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         VisualElementScope.Add( factory.Label( "Dialog Widget" ) );
                     }
                     using (factory.Content().AsScope()) {
-                        VisualElementScope.Add(
-                            factory.ColumnGroup()
-                                .Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" )
-                                .Children( factory.Label( "Hello World !!!" ) )
-                        );
+                        using (factory.ColumnGroup().Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" ).AsScope()) {
+                            VisualElementScope.Add( factory.Label( "Hello World !!!" ) );
+                        }
                     }
                     using (factory.Footer().AsScope()) {
                         VisualElementScope.Add( factory.Submit( "Submit" ), factory.Cancel( "Cancel" ) );
@@ -247,11 +245,9 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         VisualElementScope.Add( factory.Label( "Info Dialog Widget" ) );
                     }
                     using (factory.Content().AsScope()) {
-                        VisualElementScope.Add(
-                            factory.ColumnGroup()
-                                .Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" )
-                                .Children( factory.Label( "Hello World !!!" ) )
-                        );
+                        using (factory.ColumnGroup().Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" ).AsScope()) {
+                            VisualElementScope.Add( factory.Label( "Hello World !!!" ) );
+                        }
                     }
                     using (factory.Footer().AsScope()) {
                         VisualElementScope.Add( factory.Submit( "Submit" ), factory.Cancel( "Cancel" ) );
@@ -267,11 +263,9 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         VisualElementScope.Add( factory.Label( "Warning Dialog Widget" ) );
                     }
                     using (factory.Content().AsScope()) {
-                        VisualElementScope.Add(
-                            factory.ColumnGroup()
-                                .Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" )
-                                .Children( factory.Label( "Hello World !!!" ) )
-                        );
+                        using (factory.ColumnGroup().Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" ).AsScope()) {
+                            VisualElementScope.Add( factory.Label( "Hello World !!!" ) );
+                        }
                     }
                     using (factory.Footer().AsScope()) {
                         VisualElementScope.Add( factory.Submit( "Submit" ), factory.Cancel( "Cancel" ) );
@@ -287,11 +281,9 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         VisualElementScope.Add( factory.Label( "Error Dialog Widget" ) );
                     }
                     using (factory.Content().AsScope()) {
-                        VisualElementScope.Add(
-                            factory.ColumnGroup()
-                                .Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" )
-                                .Children( factory.Label( "Hello World !!!" ) )
-                        );
+                        using (factory.ColumnGroup().Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" ).AsScope()) {
+                            VisualElementScope.Add( factory.Label( "Hello World !!!" ) );
+                        }
                     }
                     using (factory.Footer().AsScope()) {
                         VisualElementScope.Add( factory.Submit( "Submit" ), factory.Cancel( "Cancel" ) );
@@ -308,35 +300,71 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         VisualElementScope.Add( factory.Label( "Tab View" ) );
                     }
                     using (factory.Content().AsScope()) {
-                        VisualElementScope.Add(
-                            factory.TabView().Classes( "no-outline", "grow-1" ).Children(
-                                factory.Tab( "Light 2" ).Children(
-                                    factory.ColumnGroup()
-                                        .Classes( "light2", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
-                                        .Children( factory.Label( "Hello World !!!" ) )
-                                ),
-                                factory.Tab( "Light" ).Children(
-                                    factory.ColumnGroup()
-                                        .Classes( "light", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
-                                        .Children( factory.Label( "Hello World !!!" ) )
-                                ),
-                                factory.Tab( "Gray" ).Children(
-                                    factory.ColumnGroup()
-                                        .Classes( "gray", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
-                                        .Children( factory.Label( "Hello World !!!" ) )
-                                ),
-                                factory.Tab( "Dark" ).Children(
-                                    factory.ColumnGroup()
-                                        .Classes( "dark", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
-                                        .Children( factory.Label( "Hello World !!!" ) )
-                                ),
-                                factory.Tab( "Dark 2" ).Children(
-                                    factory.ColumnGroup()
-                                        .Classes( "dark2", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" )
-                                        .Children( factory.Label( "Hello World !!!" ) )
-                                )
-                            )
-                        );
+                        using (factory.TabView().Classes( "no-outline", "grow-1" ).AsScope()) {
+                            using (factory.Tab( "light10" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "light10", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "light9" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "light9", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "light8" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "light8", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "light7" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "light7", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "light6" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "light6", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "light5" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "light5", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "light4" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "light4", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "light3" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "light3", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "light2" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "light2", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "light" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "light", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "gray" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "gray", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "dark" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "dark", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "dark2" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "dark2", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "dark3" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "dark3", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "dark4" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "dark4", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "dark5" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "dark5", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "dark6" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "dark6", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "dark7" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "dark7", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "dark8" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "dark8", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "dark9" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "dark9", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                            using (factory.Tab( "dark10" ).AsScope()) {
+                                VisualElementScope.Add( factory.ColumnGroup().Classes( "dark10", "medium", "margin-0px", "grow-1", "justify-content-center", "align-items-center" ).Children( factory.Label( "Hello World !!!" ) ) );
+                            }
+                        }
                     }
                     using (factory.Footer().AsScope()) {
                         VisualElementScope.Add( factory.Submit( "Submit" ), factory.Cancel( "Cancel" ) );
@@ -352,13 +380,11 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         VisualElementScope.Add( factory.Label( "Scroll View" ) );
                     }
                     using (factory.Content().AsScope()) {
-                        VisualElementScope.Add(
-                            factory.ScrollView().Classes( "gray", "medium", "grow-1" ).Children(
-                                factory.ColumnGroup()
-                                    .Classes( "medium", "width-150pc", "height-150pc", "margin-0px", "shrink-0", "justify-content-center", "align-items-center" )
-                                    .Children( factory.Label( "Hello World !!!" ) )
-                            )
-                        );
+                        using (factory.ScrollView().Classes( "gray", "medium", "grow-1" ).AsScope()) {
+                            using (factory.ColumnGroup().Classes( "width-150pc", "height-150pc", "medium", "margin-0px", "shrink-0", "justify-content-center", "align-items-center" ).AsScope()) {
+                                VisualElementScope.Add( factory.Label( "Hello World !!!" ) );
+                            }
+                        }
                     }
                     using (factory.Footer().AsScope()) {
                         VisualElementScope.Add( factory.Submit( "Submit" ), factory.Cancel( "Cancel" ) );
@@ -380,8 +406,6 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                                 factory.ColumnScope().Classes( "light10", "medium", "grow-1" ),
                                 factory.ColumnScope().Classes( "light9", "medium", "grow-1" ),
                                 factory.ColumnScope().Classes( "light8", "medium", "grow-1" ),
-                                factory.ColumnScope().Classes( "light7", "medium", "grow-1" ),
-                                factory.ColumnScope().Classes( "light6", "medium", "grow-1" ),
                                 factory.ColumnScope().Classes( "light7", "medium", "grow-1" ),
                                 factory.ColumnScope().Classes( "light6", "medium", "grow-1" ),
                                 factory.ColumnScope().Classes( "light5", "medium", "grow-1" ),
@@ -424,8 +448,6 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                                 factory.ColumnGroup().Classes( "light8", "medium", "grow-1" ),
                                 factory.ColumnGroup().Classes( "light7", "medium", "grow-1" ),
                                 factory.ColumnGroup().Classes( "light6", "medium", "grow-1" ),
-                                factory.ColumnGroup().Classes( "light7", "medium", "grow-1" ),
-                                factory.ColumnGroup().Classes( "light6", "medium", "grow-1" ),
                                 factory.ColumnGroup().Classes( "light5", "medium", "grow-1" ),
                                 factory.ColumnGroup().Classes( "light4", "medium", "grow-1" ),
                                 factory.ColumnGroup().Classes( "light3", "medium", "grow-1" ),
@@ -464,8 +486,6 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                                 factory.Box().Classes( "light10", "medium", "grow-1" ),
                                 factory.Box().Classes( "light9", "medium", "grow-1" ),
                                 factory.Box().Classes( "light8", "medium", "grow-1" ),
-                                factory.Box().Classes( "light7", "medium", "grow-1" ),
-                                factory.Box().Classes( "light6", "medium", "grow-1" ),
                                 factory.Box().Classes( "light7", "medium", "grow-1" ),
                                 factory.Box().Classes( "light6", "medium", "grow-1" ),
                                 factory.Box().Classes( "light5", "medium", "grow-1" ),

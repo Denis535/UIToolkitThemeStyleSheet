@@ -59,7 +59,7 @@ get-selector-argument(theme, suffix)
     return ':checked:focus:hover'  if suffix == 'checked--focus--hover'
     return ':checked:focus:active' if suffix == 'checked--focus--active'
     // misc
-    return null                    if match('^(light2|light|gray|dark|dark2)', suffix)
+    return null                    if match('^(light|gray|dark)', suffix)
     error('Theme is invalid: ' + theme)
 
 // add-view
