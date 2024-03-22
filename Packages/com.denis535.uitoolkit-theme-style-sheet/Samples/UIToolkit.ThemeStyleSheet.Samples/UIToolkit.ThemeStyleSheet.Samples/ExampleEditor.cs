@@ -37,8 +37,8 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 if (EditorGUILayout.LinkButton( "GitHub" )) {
                     Application.OpenURL( "https://github.com/Denis535/UIToolkitThemeStyleSheet" );
                 }
-
                 EditorGUILayout.Separator();
+
                 EditorGUILayout.LabelField( "If you want to support me", EditorStyles.boldLabel );
                 EditorGUILayout.LabelField( "If you want to support me, please rate my packages, subscribe to my YouTube channel and like my videos." );
             }
