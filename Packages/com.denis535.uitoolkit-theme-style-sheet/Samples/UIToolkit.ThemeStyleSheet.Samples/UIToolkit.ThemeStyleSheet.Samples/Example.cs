@@ -444,22 +444,30 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                     }
                     using (factory.Content().AsScope()) {
                         VisualElementScope.Add(
-                            factory.RowScope().Children(
-                                factory.Box().Classes( "light2", "medium", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "light", "medium", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "gray", "medium", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "dark", "medium", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "dark2", "medium", "width-200px", "height-200px" )
-                            ),
-                            factory.RowScope().Children(
-                                factory.Box().Classes( "dark2", "medium", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "dark", "medium", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "gray", "medium", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "light", "medium", "width-200px", "height-200px" ),
-                                factory.Box().Classes( "light2", "medium", "width-200px", "height-200px" )
-                            ),
-                            factory.RowScope().Children(
-                                factory.Box().Classes( null, "medium", "width-200px", "height-200px" )
+                            factory.RowScope().Classes( "grow-1", "align-items-stretch" ).Children(
+                                factory.Box().Classes( "light10", "medium", "grow-1" ),
+                                factory.Box().Classes( "light9", "medium", "grow-1" ),
+                                factory.Box().Classes( "light8", "medium", "grow-1" ),
+                                factory.Box().Classes( "light7", "medium", "grow-1" ),
+                                factory.Box().Classes( "light6", "medium", "grow-1" ),
+                                factory.Box().Classes( "light7", "medium", "grow-1" ),
+                                factory.Box().Classes( "light6", "medium", "grow-1" ),
+                                factory.Box().Classes( "light5", "medium", "grow-1" ),
+                                factory.Box().Classes( "light4", "medium", "grow-1" ),
+                                factory.Box().Classes( "light3", "medium", "grow-1" ),
+                                factory.Box().Classes( "light2", "medium", "grow-1" ),
+                                factory.Box().Classes( "light", "medium", "grow-1" ),
+                                factory.Box().Classes( "gray", "medium", "grow-1" ),
+                                factory.Box().Classes( "dark", "medium", "grow-1" ),
+                                factory.Box().Classes( "dark2", "medium", "grow-1" ),
+                                factory.Box().Classes( "dark3", "medium", "grow-1" ),
+                                factory.Box().Classes( "dark4", "medium", "grow-1" ),
+                                factory.Box().Classes( "dark5", "medium", "grow-1" ),
+                                factory.Box().Classes( "dark6", "medium", "grow-1" ),
+                                factory.Box().Classes( "dark7", "medium", "grow-1" ),
+                                factory.Box().Classes( "dark8", "medium", "grow-1" ),
+                                factory.Box().Classes( "dark9", "medium", "grow-1" ),
+                                factory.Box().Classes( "dark10", "medium", "grow-1" )
                             )
                         );
                     }
