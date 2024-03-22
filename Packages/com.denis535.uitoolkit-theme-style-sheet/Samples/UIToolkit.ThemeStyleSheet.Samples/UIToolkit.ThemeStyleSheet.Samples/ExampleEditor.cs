@@ -13,6 +13,8 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
         // OnInspectorGUI
         public override void OnInspectorGUI() {
             base.OnInspectorGUI();
+            EditorGUILayout.Separator();
+
             using (new GUILayout.VerticalScope( EditorStyles.helpBox )) {
                 EditorGUILayout.LabelField( "Overview", EditorStyles.boldLabel );
                 EditorGUILayout.LabelField( "The UIToolkit theme style sheet." );

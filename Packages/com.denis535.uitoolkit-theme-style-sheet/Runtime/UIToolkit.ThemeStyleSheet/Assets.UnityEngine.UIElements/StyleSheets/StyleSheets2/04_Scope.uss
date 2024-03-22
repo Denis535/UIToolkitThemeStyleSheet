@@ -36,7 +36,7 @@
 }
 .scope.light2 {
   color: #e6e6e6;
-  background-color: rgba(61,61,61,0.95);
+  background-color: rgba(66,66,66,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -48,7 +48,7 @@
 }
 .scope.light2:hover {
   color: #e6e6e6;
-  background-color: rgba(61,61,61,0.95);
+  background-color: rgba(66,66,66,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -60,7 +60,7 @@
 }
 .scope.light2:active {
   color: #e6e6e6;
-  background-color: rgba(61,61,61,0.95);
+  background-color: rgba(66,66,66,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -72,7 +72,7 @@
 }
 .scope.light {
   color: #e6e6e6;
-  background-color: rgba(54,54,54,0.95);
+  background-color: rgba(59,59,59,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -84,7 +84,7 @@
 }
 .scope.light:hover {
   color: #e6e6e6;
-  background-color: rgba(54,54,54,0.95);
+  background-color: rgba(59,59,59,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -96,7 +96,7 @@
 }
 .scope.light:active {
   color: #e6e6e6;
-  background-color: rgba(54,54,54,0.95);
+  background-color: rgba(59,59,59,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -108,7 +108,7 @@
 }
 .scope.gray {
   color: #e6e6e6;
-  background-color: rgba(48,48,48,0.95);
+  background-color: rgba(51,51,51,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -120,7 +120,7 @@
 }
 .scope.gray:hover {
   color: #e6e6e6;
-  background-color: rgba(48,48,48,0.95);
+  background-color: rgba(51,51,51,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -132,7 +132,7 @@
 }
 .scope.gray:active {
   color: #e6e6e6;
-  background-color: rgba(48,48,48,0.95);
+  background-color: rgba(51,51,51,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -144,7 +144,7 @@
 }
 .scope.dark {
   color: #e6e6e6;
-  background-color: rgba(42,42,42,0.95);
+  background-color: rgba(43,43,43,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -156,7 +156,7 @@
 }
 .scope.dark:hover {
   color: #e6e6e6;
-  background-color: rgba(42,42,42,0.95);
+  background-color: rgba(43,43,43,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -168,7 +168,7 @@
 }
 .scope.dark:active {
   color: #e6e6e6;
-  background-color: rgba(42,42,42,0.95);
+  background-color: rgba(43,43,43,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -180,7 +180,7 @@
 }
 .scope.dark2 {
   color: #e6e6e6;
-  background-color: rgba(36,36,36,0.95);
+  background-color: rgba(36,36,36,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -192,7 +192,7 @@
 }
 .scope.dark2:hover {
   color: #e6e6e6;
-  background-color: rgba(36,36,36,0.95);
+  background-color: rgba(36,36,36,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -204,7 +204,7 @@
 }
 .scope.dark2:active {
   color: #e6e6e6;
-  background-color: rgba(36,36,36,0.95);
+  background-color: rgba(36,36,36,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
