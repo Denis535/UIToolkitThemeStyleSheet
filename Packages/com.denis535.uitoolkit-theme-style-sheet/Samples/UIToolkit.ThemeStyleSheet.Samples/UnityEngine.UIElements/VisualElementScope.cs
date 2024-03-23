@@ -19,7 +19,6 @@ namespace UnityEngine.UIElements {
             stack.Pop();
         }
 
-        // Utils
         public static VisualElementScope operator +(VisualElementScope? scope, VisualElement element) {
             scope!.VisualElement.Add( element );
             return scope;
