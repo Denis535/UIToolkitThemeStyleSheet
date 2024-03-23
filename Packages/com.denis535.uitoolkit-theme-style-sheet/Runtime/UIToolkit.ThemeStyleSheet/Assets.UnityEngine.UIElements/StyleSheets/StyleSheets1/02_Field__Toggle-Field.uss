@@ -1,7 +1,7 @@
 .unity-toggle .unity-toggle__input .unity-toggle__checkmark {
-  background-color: #b3b3b3;
+  background-color: #cdcdcb;
   background-image: url('../../Images/Check.png');
-  -unity-background-image-tint-color: rgba(0,0,0,0);
+  -unity-background-image-tint-color: rgba(26,26,26,0);
   border-left-color: rgba(92,77,61,0);
   border-right-color: rgba(92,77,61,0);
   border-top-color: rgba(92,77,61,0);
@@ -12,9 +12,22 @@
   border-bottom-right-radius: 2px;
 }
 .unity-toggle:hover .unity-toggle__input .unity-toggle__checkmark {
-  background-color: #b5b5b5;
+  background-color: #cfcfce;
   background-image: url('../../Images/Check.png');
-  -unity-background-image-tint-color: rgba(0,0,0,0);
+  -unity-background-image-tint-color: rgba(26,26,26,0);
+  border-left-color: rgba(84,77,69,0.5);
+  border-right-color: rgba(84,77,69,0.5);
+  border-top-color: rgba(84,77,69,0.5);
+  border-bottom-color: rgba(84,77,69,0.5);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.unity-toggle:active .unity-toggle__input .unity-toggle__checkmark {
+  background-color: #cacac9;
+  background-image: url('../../Images/Check.png');
+  -unity-background-image-tint-color: rgba(26,26,26,0);
   border-left-color: rgba(84,77,69,0.5);
   border-right-color: rgba(84,77,69,0.5);
   border-top-color: rgba(84,77,69,0.5);
@@ -25,7 +38,7 @@
   border-bottom-right-radius: 2px;
 }
 .unity-toggle:checked .unity-toggle__input .unity-toggle__checkmark {
-  background-color: #b3b3b3;
+  background-color: #cdcdcb;
   background-image: url('../../Images/Check.png');
   -unity-background-image-tint-color: #1a1a1a;
   border-left-color: rgba(92,77,61,0);
@@ -38,7 +51,20 @@
   border-bottom-right-radius: 2px;
 }
 .unity-toggle:checked:hover .unity-toggle__input .unity-toggle__checkmark {
-  background-color: #b5b5b5;
+  background-color: #cfcfce;
+  background-image: url('../../Images/Check.png');
+  -unity-background-image-tint-color: #1a1a1a;
+  border-left-color: rgba(84,77,69,0.5);
+  border-right-color: rgba(84,77,69,0.5);
+  border-top-color: rgba(84,77,69,0.5);
+  border-bottom-color: rgba(84,77,69,0.5);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.unity-toggle:checked:active .unity-toggle__input .unity-toggle__checkmark {
+  background-color: #cacac9;
   background-image: url('../../Images/Check.png');
   -unity-background-image-tint-color: #1a1a1a;
   border-left-color: rgba(84,77,69,0.5);

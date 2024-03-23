@@ -20,8 +20,19 @@
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
+.unity-base-slider:active .unity-base-slider__input #unity-drag-container #unity-tracker {
+  background-color: #4b4b49;
+  border-left-color: rgba(84,77,69,0.5);
+  border-right-color: rgba(84,77,69,0.5);
+  border-top-color: rgba(84,77,69,0.5);
+  border-bottom-color: rgba(84,77,69,0.5);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
 .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-dragger {
-  background-color: #b3b3b2;
+  background-color: #cdcdcb;
   border-left-color: rgba(92,77,61,0);
   border-right-color: rgba(92,77,61,0);
   border-top-color: rgba(92,77,61,0);
@@ -32,7 +43,18 @@
   border-bottom-right-radius: 2px;
 }
 .unity-base-slider:hover .unity-base-slider__input #unity-drag-container #unity-dragger {
-  background-color: #b6b6b4;
+  background-color: #cfcfce;
+  border-left-color: rgba(84,77,69,0.5);
+  border-right-color: rgba(84,77,69,0.5);
+  border-top-color: rgba(84,77,69,0.5);
+  border-bottom-color: rgba(84,77,69,0.5);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.unity-base-slider:active .unity-base-slider__input #unity-drag-container #unity-dragger {
+  background-color: #cacac9;
   border-left-color: rgba(84,77,69,0.5);
   border-right-color: rgba(84,77,69,0.5);
   border-top-color: rgba(84,77,69,0.5);

@@ -25,6 +25,18 @@
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+.unity-tab-view .unity-tab__header:active {
+  color: #fff;
+  background-color: #4b4b49;
+  border-left-color: #38332e;
+  border-right-color: #38332e;
+  border-top-color: #38332e;
+  border-bottom-color: #38332e;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
 .unity-tab-view .unity-tab__header:checked {
   color: #e6e6e6;
   background-color: #4d4d4c;
@@ -49,8 +61,20 @@
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+.unity-tab-view .unity-tab__header:checked:active {
+  color: #fff;
+  background-color: #4b4b49;
+  border-left-color: #38332e;
+  border-right-color: #38332e;
+  border-top-color: #38332e;
+  border-bottom-color: #38332e;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
 .unity-tab-view .unity-tab__header .unity-tab__header-underline {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(205,205,203,0);
   border-left-color: rgba(0,0,0,0);
   border-right-color: rgba(0,0,0,0);
   border-top-color: rgba(0,0,0,0);
@@ -61,7 +85,18 @@
   border-bottom-right-radius: 4px;
 }
 .unity-tab-view .unity-tab__header:hover .unity-tab__header-underline {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(207,207,206,0);
+  border-left-color: rgba(0,0,0,0);
+  border-right-color: rgba(0,0,0,0);
+  border-top-color: rgba(0,0,0,0);
+  border-bottom-color: rgba(0,0,0,0);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-tab-view .unity-tab__header:active .unity-tab__header-underline {
+  background-color: rgba(202,202,201,0);
   border-left-color: rgba(0,0,0,0);
   border-right-color: rgba(0,0,0,0);
   border-top-color: rgba(0,0,0,0);
@@ -72,7 +107,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-tab-view .unity-tab__header:checked .unity-tab__header-underline {
-  background-color: #81817e;
+  background-color: #cdcdcb;
   border-left-color: rgba(0,0,0,0);
   border-right-color: rgba(0,0,0,0);
   border-top-color: rgba(0,0,0,0);
@@ -83,7 +118,18 @@
   border-bottom-right-radius: 4px;
 }
 .unity-tab-view .unity-tab__header:checked:hover .unity-tab__header-underline {
-  background-color: #b3b3b2;
+  background-color: #cfcfce;
+  border-left-color: rgba(0,0,0,0);
+  border-right-color: rgba(0,0,0,0);
+  border-top-color: rgba(0,0,0,0);
+  border-bottom-color: rgba(0,0,0,0);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.unity-tab-view .unity-tab__header:checked:active .unity-tab__header-underline {
+  background-color: #cacac9;
   border-left-color: rgba(0,0,0,0);
   border-right-color: rgba(0,0,0,0);
   border-top-color: rgba(0,0,0,0);
