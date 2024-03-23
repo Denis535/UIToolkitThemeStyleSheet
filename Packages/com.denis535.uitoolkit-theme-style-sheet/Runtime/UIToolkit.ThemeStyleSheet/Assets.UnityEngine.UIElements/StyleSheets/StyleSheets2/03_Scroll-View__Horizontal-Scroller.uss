@@ -32,7 +32,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider .unity-base-slider__input #unity-drag-container #unity-dragger {
-  background-color: #40403f;
+  background-color: #4d4d4c;
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -43,7 +43,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider:hover .unity-base-slider__input #unity-drag-container #unity-dragger {
-  background-color: #434342;
+  background-color: #50504e;
   border-left-color: #8c8073;
   border-right-color: #8c8073;
   border-top-color: #8c8073;
@@ -54,7 +54,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider:active .unity-base-slider__input #unity-drag-container #unity-dragger {
-  background-color: #3e3e3d;
+  background-color: #4b4b49;
   border-left-color: #38332e;
   border-right-color: #38332e;
   border-top-color: #38332e;
@@ -65,7 +65,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider:focus .unity-base-slider__input #unity-drag-container #unity-dragger {
-  background-color: #40403f;
+  background-color: #4d4d4c;
   border-left-color: #1466b8;
   border-right-color: #1466b8;
   border-top-color: #1466b8;
@@ -76,7 +76,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider:focus:hover .unity-base-slider__input #unity-drag-container #unity-dragger {
-  background-color: #434342;
+  background-color: #50504e;
   border-left-color: #197fe6;
   border-right-color: #197fe6;
   border-top-color: #197fe6;
@@ -87,7 +87,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal .unity-base-slider:focus:active .unity-base-slider__input #unity-drag-container #unity-dragger {
-  background-color: #3e3e3d;
+  background-color: #4b4b49;
   border-left-color: #0a335c;
   border-right-color: #0a335c;
   border-top-color: #0a335c;
@@ -98,7 +98,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-low-button {
-  background-color: #40403f;
+  background-color: #4d4d4c;
   background-image: url('../../Images/Arrow_Left.png');
   -unity-background-image-tint-color: #e6e6e6;
   border-left-color: #544d45;
@@ -111,7 +111,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-low-button:hover {
-  background-color: #434342;
+  background-color: #50504e;
   background-image: url('../../Images/Arrow_Left.png');
   -unity-background-image-tint-color: #fff;
   border-left-color: #8c8073;
@@ -124,7 +124,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-low-button:active {
-  background-color: #3e3e3d;
+  background-color: #4b4b49;
   background-image: url('../../Images/Arrow_Left.png');
   -unity-background-image-tint-color: #808080;
   border-left-color: #38332e;
@@ -137,7 +137,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-low-button:focus {
-  background-color: #40403f;
+  background-color: #4d4d4c;
   background-image: url('../../Images/Arrow_Left.png');
   -unity-background-image-tint-color: #197fe6;
   border-left-color: #1466b8;
@@ -150,7 +150,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-low-button:focus:hover {
-  background-color: #434342;
+  background-color: #50504e;
   background-image: url('../../Images/Arrow_Left.png');
   -unity-background-image-tint-color: #39f;
   border-left-color: #197fe6;
@@ -163,7 +163,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-low-button:focus:active {
-  background-color: #3e3e3d;
+  background-color: #4b4b49;
   background-image: url('../../Images/Arrow_Left.png');
   -unity-background-image-tint-color: #1466b8;
   border-left-color: #0a335c;
@@ -176,7 +176,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-high-button {
-  background-color: #40403f;
+  background-color: #4d4d4c;
   background-image: url('../../Images/Arrow_Right.png');
   -unity-background-image-tint-color: #e6e6e6;
   border-left-color: #544d45;
@@ -189,7 +189,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-high-button:hover {
-  background-color: #434342;
+  background-color: #50504e;
   background-image: url('../../Images/Arrow_Right.png');
   -unity-background-image-tint-color: #fff;
   border-left-color: #8c8073;
@@ -202,7 +202,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-high-button:active {
-  background-color: #3e3e3d;
+  background-color: #4b4b49;
   background-image: url('../../Images/Arrow_Right.png');
   -unity-background-image-tint-color: #808080;
   border-left-color: #38332e;
@@ -215,7 +215,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-high-button:focus {
-  background-color: #40403f;
+  background-color: #4d4d4c;
   background-image: url('../../Images/Arrow_Right.png');
   -unity-background-image-tint-color: #197fe6;
   border-left-color: #1466b8;
@@ -228,7 +228,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-high-button:focus:hover {
-  background-color: #434342;
+  background-color: #50504e;
   background-image: url('../../Images/Arrow_Right.png');
   -unity-background-image-tint-color: #39f;
   border-left-color: #197fe6;
@@ -241,7 +241,7 @@
   border-bottom-right-radius: 4px;
 }
 .unity-scroller--horizontal #unity-high-button:focus:active {
-  background-color: #3e3e3d;
+  background-color: #4b4b49;
   background-image: url('../../Images/Arrow_Right.png');
   -unity-background-image-tint-color: #1466b8;
   border-left-color: #0a335c;

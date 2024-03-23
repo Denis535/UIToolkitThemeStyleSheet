@@ -1,7 +1,7 @@
 .unity-base-popup-field .unity-base-popup-field__input .unity-base-popup-field__arrow {
   background-color: rgba(0,0,0,0);
   background-image: url('../../Images/DropdownArrow.png');
-  -unity-background-image-tint-color: #e6e6e6;
+  -unity-background-image-tint-color: #b3b3b3;
   border-left-color: rgba(0,0,0,0);
   border-right-color: rgba(0,0,0,0);
   border-top-color: rgba(0,0,0,0);
@@ -14,7 +14,7 @@
 .unity-base-popup-field:hover .unity-base-popup-field__input .unity-base-popup-field__arrow {
   background-color: rgba(0,0,0,0);
   background-image: url('../../Images/DropdownArrow.png');
-  -unity-background-image-tint-color: #e6e6e6;
+  -unity-background-image-tint-color: #b5b5b5;
   border-left-color: rgba(0,0,0,0);
   border-right-color: rgba(0,0,0,0);
   border-top-color: rgba(0,0,0,0);
@@ -27,7 +27,7 @@
 .unity-base-popup-field:active .unity-base-popup-field__input .unity-base-popup-field__arrow {
   background-color: rgba(0,0,0,0);
   background-image: url('../../Images/DropdownArrow.png');
-  -unity-background-image-tint-color: rgba(230,230,230,0.5);
+  -unity-background-image-tint-color: #b0b0b0;
   border-left-color: rgba(0,0,0,0);
   border-right-color: rgba(0,0,0,0);
   border-top-color: rgba(0,0,0,0);

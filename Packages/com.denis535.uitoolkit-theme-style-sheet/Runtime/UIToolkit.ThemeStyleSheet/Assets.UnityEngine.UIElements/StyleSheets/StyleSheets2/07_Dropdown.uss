@@ -1,6 +1,6 @@
 .unity-base-dropdown .unity-base-dropdown__container-outer {
   color: #e6e6e6;
-  background-color: rgba(38,38,38,0.98);
+  background-color: rgba(38,38,38,0.99);
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -12,7 +12,7 @@
 }
 .unity-base-dropdown .unity-base-dropdown__container-outer:hover {
   color: #fff;
-  background-color: rgba(38,38,38,0.98);
+  background-color: rgba(38,38,38,0.99);
   border-left-color: #8c8073;
   border-right-color: #8c8073;
   border-top-color: #8c8073;

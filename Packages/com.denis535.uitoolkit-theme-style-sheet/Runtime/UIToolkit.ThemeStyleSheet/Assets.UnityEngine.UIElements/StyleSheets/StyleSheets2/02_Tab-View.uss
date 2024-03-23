@@ -3,7 +3,7 @@
 }
 .unity-tab-view .unity-tab__header {
   color: #e6e6e6;
-  background-color: #40403f;
+  background-color: #4d4d4c;
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -15,7 +15,7 @@
 }
 .unity-tab-view .unity-tab__header:hover {
   color: #fff;
-  background-color: #434342;
+  background-color: #50504e;
   border-left-color: #8c8073;
   border-right-color: #8c8073;
   border-top-color: #8c8073;
@@ -27,7 +27,7 @@
 }
 .unity-tab-view .unity-tab__header:checked {
   color: #e6e6e6;
-  background-color: #40403f;
+  background-color: #4d4d4c;
   border-left-color: #544d45;
   border-right-color: #544d45;
   border-top-color: #544d45;
@@ -39,7 +39,7 @@
 }
 .unity-tab-view .unity-tab__header:checked:hover {
   color: #fff;
-  background-color: #434342;
+  background-color: #50504e;
   border-left-color: #8c8073;
   border-right-color: #8c8073;
   border-top-color: #8c8073;
