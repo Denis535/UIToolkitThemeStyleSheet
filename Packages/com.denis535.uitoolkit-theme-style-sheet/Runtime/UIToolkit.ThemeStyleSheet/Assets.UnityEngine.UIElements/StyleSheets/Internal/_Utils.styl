@@ -27,40 +27,42 @@ add-theme(theme)
         error-if-no-value('Theme is invalid: %s', get-key('theme', theme, 'normal'))
         for definition in get-definitions(true)
             if match('(^theme--' +  theme + '--)', definition, g)
-                suffix = match('(?<=^theme--' +  theme + '--)' + '(.+)', definition, g)
-                add-theme-internal(definition, suffix)
-add-theme-internal(theme, suffix)
-    arg = get-selector-argument(theme, suffix)
-    if arg != null
-        /{replace('(\.%)', arg, selector())}
-            add-view-theme(get-value(theme))
-get-selector-argument(theme, suffix)
-    return ''                      if suffix == 'normal'
-    return ':hover'                if suffix == 'hover'
-    return ':active'               if suffix == 'active'
+                state = get-theme-state(theme, definition)
+                state = get-theme-state-selector(state)
+                if state != null
+                    /{replace('(\.%)', state, selector())}
+                        add-view-theme(get-value(definition))
+// get-theme-state
+get-theme-state(theme, definition)
+    match('(?<=^theme--' +  theme + '--)' + '(.+)', definition, g)
+// get-theme-state-selector
+get-theme-state-selector(state)
+    return ''                      if state == 'normal'
+    return ':hover'                if state == 'hover'
+    return ':active'               if state == 'active'
     // focus
-    return ':focus'                if suffix == 'focus'
-    return ':focus:hover'          if suffix == 'focus--hover'
-    return ':focus:active'         if suffix == 'focus--active'
+    return ':focus'                if state == 'focus'
+    return ':focus:hover'          if state == 'focus--hover'
+    return ':focus:active'         if state == 'focus--active'
     // invalid
-    return '.invalid'              if suffix == 'invalid'
-    return '.invalid:hover'        if suffix == 'invalid--hover'
-    return '.invalid:active'       if suffix == 'invalid--active'
+    return '.invalid'              if state == 'invalid'
+    return '.invalid:hover'        if state == 'invalid--hover'
+    return '.invalid:active'       if state == 'invalid--active'
      // invalid/focus
-    return '.invalid:focus'        if suffix == 'invalid--focus'
-    return '.invalid:focus:hover'  if suffix == 'invalid--focus--hover'
-    return '.invalid:focus:active' if suffix == 'invalid--focus--active'
+    return '.invalid:focus'        if state == 'invalid--focus'
+    return '.invalid:focus:hover'  if state == 'invalid--focus--hover'
+    return '.invalid:focus:active' if state == 'invalid--focus--active'
     // checked
-    return ':checked'              if suffix == 'checked'
-    return ':checked:hover'        if suffix == 'checked--hover'
-    return ':checked:active'       if suffix == 'checked--active'
+    return ':checked'              if state == 'checked'
+    return ':checked:hover'        if state == 'checked--hover'
+    return ':checked:active'       if state == 'checked--active'
     // checked/focus
-    return ':checked:focus'        if suffix == 'checked--focus'
-    return ':checked:focus:hover'  if suffix == 'checked--focus--hover'
-    return ':checked:focus:active' if suffix == 'checked--focus--active'
+    return ':checked:focus'        if state == 'checked--focus'
+    return ':checked:focus:hover'  if state == 'checked--focus--hover'
+    return ':checked:focus:active' if state == 'checked--focus--active'
     // misc
-    return null                    if match('^(light|gray|dark)', suffix)
-    error('Theme is invalid: ' + theme)
+    return null                    if match('^(light|gray|dark)', state)
+    error('State is invalid: ' + state)
 
 // add-view
 add-font(url, size, style)
@@ -77,12 +79,17 @@ add-text(align, outline, shadow)
 add-view(color = null, background-color = null, background-image = null, border-color = null, border-radius = null)
     add-view-foreground                           color
     add-view-background                           background-color background-image
-    add-view-border                               border-color border-radius
+    add-view-border                               border-color     border-radius
 add-view-theme(theme)
     if theme != null
-        add-view-foreground(theme[0])
-        add-view-background(theme[1].background-color, theme[1].background-image)
-        add-view-border(theme[2].border-color, theme[2].border-radius)
+        color                                     = theme[0]
+        background-color                          = theme[1].background-color
+        background-image                          = theme[1].background-image
+        border-color                              = theme[2].border-color
+        border-radius                             = theme[2].border-radius
+        add-view-foreground                       color
+        add-view-background                       background-color background-image
+        add-view-border                           border-color     border-radius
 add-view-foreground(color)
     add-property2 'color'                         color
 add-view-background(background-color, background-image)

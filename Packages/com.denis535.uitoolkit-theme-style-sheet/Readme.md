@@ -30,9 +30,10 @@ This package contains styles for the following elements:
     - ErrorDialogWidget
 - Cards
     - Card
-    - InfoCard
-    - WarningCard
-    - ErrorCard
+    - DialogCard
+    - InfoDialogCard
+    - WarningDialogCard
+    - ErrorDialogCard
 - Views
     - TabView    - classes: light10/light/gray/dark/dark10, small/medium/large, no-outline
     - ScrollView - classes: light10/light/gray/dark/dark10, small/medium/large, reverse, no-outline
