@@ -307,7 +307,7 @@ get-formatted-selector(value, args)
     if args
         value = replace('(\.%%)', join('', args), value)
     if arg
-        value = replace('(\.%)', join('', arg), value)
+        value = replace('(\.%)(?!%)', join('', arg), value)
     value
 
 // misc
