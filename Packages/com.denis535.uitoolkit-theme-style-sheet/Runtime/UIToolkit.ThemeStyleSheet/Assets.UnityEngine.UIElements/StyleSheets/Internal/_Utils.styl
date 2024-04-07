@@ -30,8 +30,11 @@ add-theme(theme)
                 state = get-theme-state(theme, definition)
                 state = get-theme-state-selector(state)
                 if state != null
-                    /{replace('(\.%)', state, selector())}
+                    /{replace('(\.%%)', state, selector())}
                         add-view-theme(get-value(definition))
+// get-theme-skin
+// get-theme-skin(theme, definition)
+//     match('(?<=^theme--' +  theme + '--)' + '(.+)', definition, g)
 // get-theme-state
 get-theme-state(theme, definition)
     match('(?<=^theme--' +  theme + '--)' + '(.+)', definition, g)
@@ -272,17 +275,39 @@ get-unity-property(property)
 
 // get-selector
 get-selector(argument)
-    key   = match('^([\w-]+)', argument, g)
-    arg   = match('([.#:].*)', argument, g)
-    value = get-selector-internal(key, arg)
-    value
-get-selector-internal(key, arg)
-    key   = get-key('selector', key)
-    key   = replace('(--+)', '--', key)
+    key   = get-selector-key(argument)
+    value = get-selector-value(key)
+    args  = get-selector-args(argument)
+    get-formatted-selector(value, args)
+// get-selector
+get-selector-key(argument)
+    key = match('(^[\w-]*)', argument, g)
+    key = replace('(--+)', '--', key)
+    key = get-key('selector', key)
+    key
+// get-selector
+get-selector-value(key)
     error-if-no-value('Selector is invalid: %s', key)
     value = get-value(key)
-    value = replace('(\.%)', arg, value) if arg != null
     value = replace('(\s+)', ' ', value)
+    value
+// get-selector
+get-selector-args(argument)
+    args = match('([.#:][\w-]*)', argument, g)
+    result = ()
+    for arg in args
+        if arg != '.null'
+            push(result, arg)
+        else
+            push(result, '')
+    result
+// get-selector
+get-formatted-selector(value, args)
+    arg = shift(args)
+    if args
+        value = replace('(\.%%)', join('', args), value)
+    if arg
+        value = replace('(\.%)', join('', arg), value)
     value
 
 // misc
@@ -291,11 +316,13 @@ get-key(key...)
     result += '--' + get-string(key[1]) if key[1] != null
     result += '--' + get-string(key[2]) if key[2] != null
     result
+// misc
 has-value(key)
     is-defined(get-string(key), true)
+// misc
 get-value(key)
     get-definition(get-string(key), true)
+// misc
 error-if-no-value(text, key)
     if !is-defined(get-string(key), true)
-        text = s(text, get-string(key))
-        error(get-string(text))
+        error(get-string(s(text, get-string(key))))
