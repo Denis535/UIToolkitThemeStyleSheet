@@ -35,8 +35,8 @@ function onComplete(error, result) {
         console.error(error);
         FS.writeFile(dist, '', onError);
     } else {
-        result = result.replaceAll('.%%', '');
-        result = result.replaceAll('.%', '');
+        result = result.replaceAll('.%skin', '');
+        result = result.replaceAll('.%state', '');
         FS.writeFile(dist, result, onError);
     }
 }

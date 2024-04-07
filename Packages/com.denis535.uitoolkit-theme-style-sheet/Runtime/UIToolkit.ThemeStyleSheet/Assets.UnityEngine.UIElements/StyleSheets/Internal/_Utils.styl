@@ -28,18 +28,16 @@ add-theme(theme)
         for definition in get-definitions(true)
             if match('(^theme--' +  theme + '--)', definition, g)
                 state = get-theme-state(theme, definition)
-                state = get-theme-state-selector(state)
                 if state != null
-                    /{replace('(\.%%)', state, selector())}
+                    selector = get-formatted-selector(selector(), null, state)
+                    /{selector}
                         add-view-theme(get-value(definition))
 // get-theme-skin
 // get-theme-skin(theme, definition)
 //     match('(?<=^theme--' +  theme + '--)' + '(.+)', definition, g)
 // get-theme-state
 get-theme-state(theme, definition)
-    match('(?<=^theme--' +  theme + '--)' + '(.+)', definition, g)
-// get-theme-state-selector
-get-theme-state-selector(state)
+    state = match('(?<=^theme--' +  theme + '--)' + '(.+)', definition, g)
     return ''                      if state == 'normal'
     return ':hover'                if state == 'hover'
     return ':active'               if state == 'active'
@@ -278,7 +276,7 @@ get-selector(argument)
     key   = get-selector-key(argument)
     value = get-selector-value(key)
     args  = get-selector-args(argument)
-    get-formatted-selector(value, args)
+    get-formatted-selector(value, shift(args), args)
 // get-selector
 get-selector-key(argument)
     key = match('(^[\w-]*)', argument, g)
@@ -302,12 +300,11 @@ get-selector-args(argument)
             push(result, '')
     result
 // get-selector
-get-formatted-selector(value, args)
-    arg = shift(args)
-    if args
-        value = replace('(\.%%)', join('', args), value)
-    if arg
-        value = replace('(\.%)(?!%)', join('', arg), value)
+get-formatted-selector(value, skin, state)
+    if skin
+        value = replace('(\.%skin)', join('', skin), value)
+    if state
+        value = replace('(\.%state)', join('', state), value)
     value
 
 // misc
