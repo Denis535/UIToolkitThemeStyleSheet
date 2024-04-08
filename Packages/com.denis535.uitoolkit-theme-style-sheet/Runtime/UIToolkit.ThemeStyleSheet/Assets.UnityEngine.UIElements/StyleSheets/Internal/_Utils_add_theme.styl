@@ -13,8 +13,8 @@ add-theme(name)
                 add-theme-internal(value, selector(), null, args)
 // add-theme-internal
 add-theme-internal(theme, selector, skin, state)
-    selector = replace('(\.%skin)',  skin,            selector) if skin
-    selector = replace('(\.%state)', join('', state), selector) if state
+    selector = replace('(\.{skin})',  skin,            selector) if skin
+    selector = replace('(\.{state})', join('', state), selector) if state
     /{selector}
         add-view-theme(theme)
 

@@ -12,8 +12,8 @@ get-selector-internal(key, skin, state)
     error-if-no-value('Selector is invalid: %s', key)
     value = get-value(key)
     value = replace('(\s+)',      ' ',             value)
-    value = replace('(\.%skin)',  skin,            value) if skin
-    value = replace('(\.%state)', join('', state), value) if state
+    value = replace('(\.{skin})',  skin,            value) if skin
+    value = replace('(\.{state})', join('', state), value) if state
     value
 
 // get-selector-key
