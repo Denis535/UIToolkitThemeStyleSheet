@@ -46,7 +46,7 @@ function onError(error) {
     }
 }
 
-// helpers
+// readStylus
 function readStylus(path) {
     return FS.readFileSync(path, 'utf8')
         // // string: ***
@@ -60,12 +60,11 @@ function readStylus(path) {
         })
         // // styles: ***
         .replaceAll(/(?<!\/\/.*)(\/\/\s*styles:\s*)(.*)/gm, function (match, comment, content) {
-            content = content
-                .trim()
-                .replaceAll(/(\s+)/g, ' ') // collapse whitespace
-                .replaceAll(/(__+)/g, '__') // collapse __
-                .replaceAll(/(--+)/g, '--'); // collapse --
-            return '\r\n' + content.split(/(?<=\))\./g).filter(Boolean).map(i => '    ' + i).join('\r\n');
+            return '\r\n' + '    ' + content;
+        })
+        // ).
+        .replaceAll(/(?<!\/\/.*)(?<=\))(\.)/gm, function (match, content) {
+            return '\r\n' + '    ';
         })
         // .selector--***
         .replaceAll(/(?<!\/\/.*)(?:\.selector--)([\w-.#:]+)/gm, function (match, content) {
