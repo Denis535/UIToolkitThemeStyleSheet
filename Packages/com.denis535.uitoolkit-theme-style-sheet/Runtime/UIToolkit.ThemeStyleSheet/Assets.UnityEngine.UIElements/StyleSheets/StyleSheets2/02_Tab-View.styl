@@ -1,15 +1,15 @@
 @import "../Internal/_Theme"
 
 // alias
-alias--tab-view              = // string: .unity-tab-view
-alias--tab-view-headers      = // string: .unity-tab-view .unity-tab-view__header-container
-alias--tab-view-contents     = // string: .unity-tab-view .unity-tab-view__content-container
-alias--tab-header            = // string: .unity-tab-view .unity-tab__header.{state}
-alias--tab-header-icon       = // string: .unity-tab-view .unity-tab__header.{state} .unity-tab__header-image
-alias--tab-header-text       = // string: .unity-tab-view .unity-tab__header.{state} .unity-tab__header-label
-alias--tab-header-underline  = // string: .unity-tab-view .unity-tab__header.{state} .unity-tab__header-underline
-alias--tab-content           = // string: .unity-tab-view.{skin}      .unity-tab.{state}
-alias--tab-content-container = // string: .unity-tab-view            .unity-tab .unity-tab__content-container
+alias--tab-view              = // string: .unity-tab-view.{skin}
+alias--tab-view-headers      = // string: .unity-tab-view.{skin} .unity-tab-view__header-container
+alias--tab-view-contents     = // string: .unity-tab-view.{skin} .unity-tab-view__content-container
+alias--tab-header            = // string: .unity-tab-view.{skin} .unity-tab__header.{state}
+alias--tab-header-icon       = // string: .unity-tab-view.{skin} .unity-tab__header.{state} .unity-tab__header-image
+alias--tab-header-text       = // string: .unity-tab-view.{skin} .unity-tab__header.{state} .unity-tab__header-label
+alias--tab-header-underline  = // string: .unity-tab-view.{skin} .unity-tab__header.{state} .unity-tab__header-underline
+alias--tab-content           = // string: .unity-tab-view.{skin} .unity-tab.{state}
+alias--tab-content-container = // string: .unity-tab-view.{skin} .unity-tab.{state} .unity-tab__content-container
 
 // style
 .selector--tab-view                 // styles: null
@@ -19,7 +19,7 @@ alias--tab-content-container = // string: .unity-tab-view            .unity-tab 
 .selector--tab-content              // styles: add-property(display, none)
 .selector--tab-content.null:checked // styles: add-property(display, flex)
 
-// theme
+// style
 .selector--tab-view              // styles: add-theme(null                )
 .selector--tab-view-headers      // styles: add-theme(null                )
 .selector--tab-view-contents     // styles: add-theme(null                )
@@ -28,7 +28,7 @@ alias--tab-content-container = // string: .unity-tab-view            .unity-tab 
 .selector--tab-content           // styles: add-theme(view                ).add-property(display, none)
 .selector--tab-content-container // styles: add-theme(null                )
 
-// layout
+// style
 .selector--tab-view               // styles: add-layout(null,                        auto, auto, ( 4px             ), (0px), (0px                ))
 .selector--tab-view-headers       // styles: add-layout(null,                        auto, auto, (-3px -3px 0px 0px), (0px), (0px                ))
 .selector--tab-view-contents      // styles: add-layout(null,                        auto, auto, ( 0px  0px 6px 0px), (0px), (0px                ))
@@ -43,7 +43,7 @@ alias--tab-content-container = // string: .unity-tab-view            .unity-tab 
 .selector--tab-content.no-outline // styles: add-layout(border: 0px                                                                               )
 .selector--tab-content-container  // styles: add-layout(null,                        auto, auto, ( 0px             ), (0px), (0px                ))
 
-// flex
+// style
 .selector--tab-view              // styles: add-flex(0, 1, auto, auto).add-flex2(column, flex-start, null, stretch)
 .selector--tab-view-headers      // styles: add-flex(0, 1, auto, auto).add-flex2(row,    flex-start, null, stretch)
 .selector--tab-view-contents     // styles: add-flex(1, 1, auto, auto).add-flex2(column, flex-start, null, stretch)
