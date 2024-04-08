@@ -6,6 +6,9 @@ selector--scroll-view-content-and-vertical-scroller = // string: .unity-scroll-v
 selector--scroll-view-content                       = // string: .unity-scroll-view.{skin}      #unity-content-viewport
 selector--scroll-view-container                     = // string: .unity-scroll-view            #unity-content-container
 
+// style
+.selector--scroll-view-content                       // styles: add-property(overflow, hidden)
+
 // theme
 .selector--scroll-view                               // styles: add-theme(view         )
 .selector--scroll-view-content-and-vertical-scroller // styles: add-theme(null         )
@@ -28,6 +31,3 @@ selector--scroll-view-container                     = // string: .unity-scroll-v
 .selector--scroll-view-content                       // styles: add-flex(1, 1, auto, auto).add-flex2(column,         flex-start, null, stretch)
 .selector--scroll-view-content.reverse               // styles: add-flex(1, 1, auto, auto).add-flex2(column-reverse, flex-start, null, stretch)
 .selector--scroll-view-container                     // styles: add-flex(1, 1, auto, auto).add-flex2(column,         flex-start, null, stretch)
-
-// misc
-.selector--scroll-view-content                       // styles: add-property(overflow, hidden)
