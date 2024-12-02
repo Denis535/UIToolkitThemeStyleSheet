@@ -4,11 +4,9 @@ namespace UnityEngine.UIElements {
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
-    using UnityEngine.Scripting;
 
-    public class ColumnScope : VisualElement {
-        [Preserve]
-        public new class UxmlFactory : UxmlFactory<ColumnScope, UxmlTraits> { }
+    [UxmlElement]
+    public partial class ColumnScope : VisualElement {
 
         public ColumnScope() {
             AddToClassList( "scope" );
@@ -16,9 +14,8 @@ namespace UnityEngine.UIElements {
         }
 
     }
-    public class RowScope : VisualElement {
-        [Preserve]
-        public new class UxmlFactory : UxmlFactory<RowScope, UxmlTraits> { }
+    [UxmlElement]
+    public partial class RowScope : VisualElement {
 
         public RowScope() {
             AddToClassList( "scope" );

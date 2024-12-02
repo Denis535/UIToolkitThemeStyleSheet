@@ -5,11 +5,9 @@ namespace UnityEngine.UIElements {
     using System.Collections.Generic;
     using System.Linq;
     using UnityEngine;
-    using UnityEngine.Scripting;
 
-    public class Card : VisualElement {
-        [Preserve]
-        public new class UxmlFactory : UxmlFactory<Card, UxmlTraits> { }
+    [UxmlElement]
+    public partial class Card : VisualElement {
 
         public Header? Header => Children().OfType<Header>().FirstOrDefault();
         public Content? Content => Children().OfType<Content>().FirstOrDefault();
@@ -20,30 +18,24 @@ namespace UnityEngine.UIElements {
         }
 
     }
-    // Header
-    public class Header : VisualElement {
-        [Preserve]
-        public new class UxmlFactory : UxmlFactory<Header, UxmlTraits> { }
+    [UxmlElement]
+    public partial class Header : VisualElement {
 
         public Header() {
             AddToClassList( "header" );
         }
 
     }
-    // Content
-    public class Content : VisualElement {
-        [Preserve]
-        public new class UxmlFactory : UxmlFactory<Content, UxmlTraits> { }
+    [UxmlElement]
+    public partial class Content : VisualElement {
 
         public Content() {
             AddToClassList( "content" );
         }
 
     }
-    // Footer
-    public class Footer : VisualElement {
-        [Preserve]
-        public new class UxmlFactory : UxmlFactory<Footer, UxmlTraits> { }
+    [UxmlElement]
+    public partial class Footer : VisualElement {
 
         public Footer() {
             AddToClassList( "footer" );

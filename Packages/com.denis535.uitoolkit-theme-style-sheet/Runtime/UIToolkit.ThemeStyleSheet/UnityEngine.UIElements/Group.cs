@@ -4,11 +4,9 @@ namespace UnityEngine.UIElements {
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
-    using UnityEngine.Scripting;
 
-    public class ColumnGroup : VisualElement {
-        [Preserve]
-        public new class UxmlFactory : UxmlFactory<ColumnGroup, UxmlTraits> { }
+    [UxmlElement]
+    public partial class ColumnGroup : VisualElement {
 
         public ColumnGroup() {
             AddToClassList( "group" );
@@ -16,9 +14,8 @@ namespace UnityEngine.UIElements {
         }
 
     }
-    public class RowGroup : VisualElement {
-        [Preserve]
-        public new class UxmlFactory : UxmlFactory<RowGroup, UxmlTraits> { }
+    [UxmlElement]
+    public partial class RowGroup : VisualElement {
 
         public RowGroup() {
             AddToClassList( "group" );
