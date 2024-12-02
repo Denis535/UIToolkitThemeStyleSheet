@@ -13,7 +13,7 @@ Or you should import the ```ThemeStyleSheet.uss``` and ```LibraryStyleSheet.uss`
 ```
 
 # Reference
-This package contains styles for the following elements:
+This package provides you with styles for the following elements:
 - Views
     - View
     - WidgetView
@@ -60,8 +60,7 @@ This package contains styles for the following elements:
     - SliderField
     - IntSliderField
     - ToggleField
-
-This package adds support for the following files to the editor:
+This package extends the editor to add support for additional formats:
 - Pug
 - Stylus (with more advanced syntax)
 
