@@ -18,6 +18,16 @@ This package adds support for the following files to the editor:
 - Stylus (with more advanced syntax)
 
 This package contains styles for the following elements:
+- Views
+    - View
+    - LeftView
+    - SmallView
+    - MediumView
+    - LargeView
+    - DialogView
+    - InfoDialogView
+    - WarningDialogView
+    - ErrorDialogView
 - Widgets
     - Widget
     - LeftWidget
