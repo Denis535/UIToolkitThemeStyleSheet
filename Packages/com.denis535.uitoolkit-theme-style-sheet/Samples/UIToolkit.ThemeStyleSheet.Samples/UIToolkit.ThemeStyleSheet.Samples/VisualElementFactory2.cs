@@ -102,7 +102,8 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                 return root.VisualElement;
             }
         }
-        // Helpers
+
+        // Widget
         public static VisualElement DialogWidget(VisualElementFactory factory) {
             using (var root = factory.DialogWidget().AsScope()) {
                 using (factory.DialogCard().AsScope()) {

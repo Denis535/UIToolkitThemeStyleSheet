@@ -8,21 +8,13 @@ namespace UIToolkit.ThemeStyleSheet {
     using UnityEditorInternal;
     using UnityEngine;
 
-    public static class MenuBar {
+    public static class PackageMenuBar {
 
         // CreateAsset
         [MenuItem( "Assets/Create/UI Toolkit/Pug" )]
         public static void CreateAsset_Pug() {
             ProjectWindowUtil.CreateAssetWithContent( "New Pug.pug", "" );
         }
-        //[MenuItem( "Assets/Create/UI Toolkit/Css" )]
-        //public static void CreateAsset_Css() {
-        //    ProjectWindowUtil.CreateAssetWithContent( "New Css.css", "" );
-        //}
-        //[MenuItem( "Assets/Create/UI Toolkit/Sass" )]
-        //public static void CreateAsset_Sass() {
-        //    ProjectWindowUtil.CreateAssetWithContent( "New Sass.sass", "" );
-        //}
         [MenuItem( "Assets/Create/UI Toolkit/Stylus" )]
         public static void CreateAsset_Stylus() {
             ProjectWindowUtil.CreateAssetWithContent( "New Stylus.styl", "" );
@@ -52,9 +44,15 @@ namespace UIToolkit.ThemeStyleSheet {
         }
 
         // EmbedPackage
-        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Make Package Embedded", priority = 100 )]
-        public static void MakePackageEmbedded() {
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/Embed Package", priority = 100 )]
+        public static void EmbedPackage() {
             UnityEditor.PackageManager.Client.Embed( "com.denis535.uitoolkit-theme-style-sheet" );
+        }
+
+        // AboutPackage
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/About Package", priority = 1_000_000 )]
+        public static void AboutPackage() {
+            _ = EditorWindow.GetWindow<AboutPackageWindow>();
         }
 
     }

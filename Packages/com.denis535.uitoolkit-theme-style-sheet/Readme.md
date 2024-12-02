@@ -1,5 +1,5 @@
 # Overview
-This package provides you with the beautiful UIToolkit theme style sheets and some additions and tools.
+This package provides you with the ```UIToolkit``` theme stylesheets, as well as some additional visual elements and tools.
 
 # How to use it
 To use this package in your project you should import the ```ThemeStyleSheet.tss```:
@@ -13,10 +13,6 @@ Or you should import the ```ThemeStyleSheet.uss``` and ```LibraryStyleSheet.uss`
 ```
 
 # Reference
-This package adds support for the following files to the editor:
-- Pug
-- Stylus (with more advanced syntax)
-
 This package contains styles for the following elements:
 - Views
     - View
@@ -61,6 +57,10 @@ This package contains styles for the following elements:
     - SliderField
     - IntSliderField
     - ToggleField
+
+This package adds support for the following files to the editor:
+- Pug
+- Stylus (with more advanced syntax)
 
 # Media
 - https://youtu.be/ggnuNOZXIlg

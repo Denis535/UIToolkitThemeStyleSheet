@@ -6,19 +6,28 @@ namespace UIToolkit.ThemeStyleSheet {
     using UnityEditor;
     using UnityEngine;
 
-    public class AboutWindow : EditorWindow {
+    public class AboutPackageWindow : EditorWindow {
 
-        [MenuItem( "Tools/UIToolkit Theme Style Sheet/About UIToolkit Theme Style Sheet", priority = 1_000_000 )]
-        public new static void Show() {
-            var window = GetWindow<AboutWindow>( true, "About UIToolkit Theme Style Sheet", true );
-            window.minSize = window.maxSize = new Vector2( 800, 600 );
+        // Constructor
+        public AboutPackageWindow() : base() {
+            titleContent = new GUIContent( "About UIToolkit Theme Style Sheet package" );
+            minSize = maxSize = new Vector2( 1200, 800 );
         }
 
+        // OnEnable
+        public void OnEnable() {
+            ShowUtility();
+            Focus();
+        }
+        public void OnDisable() {
+        }
+
+        // OnGUI
         public void OnGUI() {
             using (new GUILayout.VerticalScope( EditorStyles.helpBox )) {
                 {
                     EditorGUILayout.LabelField( "Overview", EditorStyles.boldLabel );
-                    EditorGUILayout.LabelField( "The UIToolkit theme style sheet." );
+                    EditorGUILayout.LabelField( "This package provides you with the UIToolkit theme stylesheets, as well as some additional visual elements and tools." );
                 }
                 EditorGUILayout.Separator();
                 {

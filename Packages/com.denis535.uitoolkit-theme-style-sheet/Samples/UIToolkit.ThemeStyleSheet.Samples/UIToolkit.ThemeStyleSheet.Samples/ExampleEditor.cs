@@ -16,7 +16,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             using (new GUILayout.VerticalScope( EditorStyles.helpBox )) {
                 {
                     EditorGUILayout.LabelField( "Overview", EditorStyles.boldLabel );
-                    EditorGUILayout.LabelField( "The UIToolkit theme style sheet." );
+                    EditorGUILayout.LabelField( "This package provides you with the UIToolkit theme stylesheets, as well as some additional visual elements and tools." );
                 }
                 EditorGUILayout.Separator();
                 {
