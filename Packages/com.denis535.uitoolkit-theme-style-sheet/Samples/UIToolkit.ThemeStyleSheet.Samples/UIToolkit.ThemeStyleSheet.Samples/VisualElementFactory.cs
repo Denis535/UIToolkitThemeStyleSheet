@@ -18,17 +18,17 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
         [SerializeField] private AudioClip? invalidClick = default;
         [SerializeField] private AudioClip? tik = default;
         [SerializeField] private AudioClip? focus = default;
-        [SerializeField] private AudioClip? dialog = default;
-        [SerializeField] private AudioClip? infoDialog = default;
-        [SerializeField] private AudioClip? warningDialog = default;
-        [SerializeField] private AudioClip? errorDialog = default;
+        [SerializeField] private AudioClip? openDialog = default;
+        [SerializeField] private AudioClip? openInfoDialog = default;
+        [SerializeField] private AudioClip? openWarningDialog = default;
+        [SerializeField] private AudioClip? openErrorDialog = default;
 
         // AudioSource
         private AudioSource AudioSource { get; set; } = default!;
 
         // Awake
         public void Awake() {
-            AudioSource = GetComponent<AudioSource>();
+            AudioSource = GetComponent<AudioSource>() ?? throw new InvalidOperationException( "Component 'AudioSource' was not found" );
         }
         public void OnDestroy() {
         }
@@ -101,7 +101,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             return result;
         }
 
-        // Card
+        // DialogCard
         public Card DialogCard() {
             var result = Create<Card>( "dialog-card", "dialog-card" );
             return result;
@@ -338,19 +338,19 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
         }
         // Helpers
         private void PlayDialog(AttachToPanelEvent evt) {
-            PlaySound( dialog, true );
+            PlaySound( openDialog, true );
             PlayAppearance( (VisualElement) evt.target );
         }
         private void PlayInfoDialog(AttachToPanelEvent evt) {
-            PlaySound( infoDialog, true );
+            PlaySound( openInfoDialog, true );
             PlayAppearance( (VisualElement) evt.target );
         }
         private void PlayWarningDialog(AttachToPanelEvent evt) {
-            PlaySound( warningDialog, true );
+            PlaySound( openWarningDialog, true );
             PlayAppearance( (VisualElement) evt.target );
         }
         private void PlayErrorDialog(AttachToPanelEvent evt) {
-            PlaySound( errorDialog, true );
+            PlaySound( openErrorDialog, true );
             PlayAppearance( (VisualElement) evt.target );
         }
         // Helpers

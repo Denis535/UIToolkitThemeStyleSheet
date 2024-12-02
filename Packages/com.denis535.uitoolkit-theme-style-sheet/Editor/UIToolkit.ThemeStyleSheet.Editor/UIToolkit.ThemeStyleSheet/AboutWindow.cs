@@ -8,7 +8,7 @@ namespace UIToolkit.ThemeStyleSheet {
 
     public class AboutWindow : EditorWindow {
 
-        [MenuItem( "Tools/UIToolkit Theme Style Sheet/About UIToolkit Theme Style Sheet" )]
+        [MenuItem( "Tools/UIToolkit Theme Style Sheet/About UIToolkit Theme Style Sheet", priority = 1_000_000 )]
         public new static void Show() {
             var window = GetWindow<AboutWindow>( true, "About UIToolkit Theme Style Sheet", true );
             window.minSize = window.maxSize = new Vector2( 800, 600 );
@@ -23,9 +23,7 @@ namespace UIToolkit.ThemeStyleSheet {
                 EditorGUILayout.Separator();
                 {
                     EditorGUILayout.LabelField( "Links", EditorStyles.boldLabel );
-                    if (EditorGUILayout.LinkButton( "denis535.github.io" )) Application.OpenURL( "https://denis535.github.io" );
-                    if (EditorGUILayout.LinkButton( "github.com (Unity Shooter Example)" )) Application.OpenURL( "https://github.com/Denis535/UnityShooterExample" );
-                    if (EditorGUILayout.LinkButton( "github.com (Unity Framework)" )) Application.OpenURL( "https://github.com/Denis535/UnityFramework" );
+                    if (EditorGUILayout.LinkButton( "denis535.github.io" )) Application.OpenURL( "https://denis535.github.io/#uitoolkit-theme-style-sheet-unity" );
                     EditorGUILayout.Space( 2f );
                     if (EditorGUILayout.LinkButton( "nuget.org" )) Application.OpenURL( "https://www.nuget.org/profiles/Denis535" );
                     if (EditorGUILayout.LinkButton( "openupm.com" )) Application.OpenURL( "https://openupm.com/packages/?sort=downloads&q=denis535" );
