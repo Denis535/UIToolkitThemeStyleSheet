@@ -34,51 +34,55 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
         }
 
         // VisualElement
-        public VisualElement VisualElement() {
-            var result = Create<VisualElement>( null );
+        //public VisualElement VisualElement() {
+        //    var result = Create<VisualElement>( null );
+        //    return result;
+        //}
+
+        // Widget
+        public VisualElement Widget() {
+            var result = Create<VisualElement>( "widget", "widget" );
+            return result;
+        }
+        public VisualElement RootWidget() {
+            var result = Create<VisualElement>( "root-widget", "root-widget" );
+            return result;
+        }
+        public VisualElement LeftWidget() {
+            var result = Create<VisualElement>( "left-widget", "left-widget" );
+            return result;
+        }
+        public VisualElement SmallWidget() {
+            var result = Create<VisualElement>( "small-widget", "small-widget" );
+            return result;
+        }
+        public VisualElement MediumWidget() {
+            var result = Create<VisualElement>( "medium-widget", "medium-widget" );
+            return result;
+        }
+        public VisualElement LargeWidget() {
+            var result = Create<VisualElement>( "large-widget", "large-widget" );
             return result;
         }
 
         // Widget
-        public Widget Widget() {
-            var result = Create<Widget>( "widget" );
-            return result;
-        }
-        public Widget LeftWidget() {
-            var result = Create<Widget>( "left-widget", "left-widget" );
-            return result;
-        }
-        public Widget SmallWidget() {
-            var result = Create<Widget>( "small-widget", "small-widget" );
-            return result;
-        }
-        public Widget MediumWidget() {
-            var result = Create<Widget>( "medium-widget", "medium-widget" );
-            return result;
-        }
-        public Widget LargeWidget() {
-            var result = Create<Widget>( "large-widget", "large-widget" );
-            return result;
-        }
-
-        // Widget
-        public Widget DialogWidget() {
-            var result = Create<Widget>( "dialog-widget", "dialog-widget" );
+        public VisualElement DialogWidget() {
+            var result = Create<VisualElement>( "dialog-widget", "dialog-widget" );
             result.OnAttachToPanel( PlayDialog );
             return result;
         }
-        public Widget InfoDialogWidget() {
-            var result = Create<Widget>( "info-dialog-widget", "info-dialog-widget" );
+        public VisualElement InfoDialogWidget() {
+            var result = Create<VisualElement>( "info-dialog-widget", "info-dialog-widget" );
             result.OnAttachToPanel( PlayInfoDialog );
             return result;
         }
-        public Widget WarningDialogWidget() {
-            var result = Create<Widget>( "warning-dialog-widget", "warning-dialog-widget" );
+        public VisualElement WarningDialogWidget() {
+            var result = Create<VisualElement>( "warning-dialog-widget", "warning-dialog-widget" );
             result.OnAttachToPanel( PlayWarningDialog );
             return result;
         }
-        public Widget ErrorDialogWidget() {
-            var result = Create<Widget>( "error-dialog-widget", "error-dialog-widget" );
+        public VisualElement ErrorDialogWidget() {
+            var result = Create<VisualElement>( "error-dialog-widget", "error-dialog-widget" );
             result.OnAttachToPanel( PlayErrorDialog );
             return result;
         }
@@ -101,7 +105,7 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
             return result;
         }
 
-        // DialogCard
+        // Card
         public Card DialogCard() {
             var result = Create<Card>( "dialog-card", "dialog-card" );
             return result;

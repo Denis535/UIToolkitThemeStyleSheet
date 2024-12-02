@@ -7,8 +7,33 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
     using UnityEngine.UIElements;
 
     public class Example : MonoBehaviour {
+        private enum Index {
+            // None
+            None,
+            // Widget
+            Widget,
+            RootWidget,
+            LeftWidget,
+            SmallWidget,
+            MediumWidget,
+            LargeWidget,
+            // Widget
+            DialogWidget,
+            InfoDialogWidget,
+            WarningDialogWidget,
+            ErrorDialogWidget,
+            // View
+            TabView,
+            ScrollView,
+            // Scope
+            Scope,
+            Group,
+            Box,
+            // Misc
+            Misc
+        }
 
-        private int toolbarIndex = 0;
+        private Index index = 0;
 
         // Document
         private UIDocument Document { get; set; } = default!;
@@ -31,102 +56,79 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
 
         // OnGUI
         public void OnGUI() {
-            var prevToolbarIndex = toolbarIndex;
-            toolbarIndex = GUILayout.Toolbar(
-                toolbarIndex,
-                new[] {
-                    // None
-                    "None",
-                    // Widget
-                    "Widget",
-                    "Left Widget",
-                    "Small Widget",
-                    "Medium Widget",
-                    "Large Widget",
-                    // Widget
-                    "Dialog Widget",
-                    "Info Dialog Widget",
-                    "Warning Dialog Widget",
-                    "Error Dialog Widget",
-                    // View
-                    "Tab View",
-                    "Scroll View",
-                    // Scope
-                    "Scope",
-                    "Group",
-                    "Box",
-                    // Misc
-                    "Misc"
-                },
-                null,
-                GUI.ToolbarButtonSize.FitToContents );
+            var prevIndex = index;
+            index = (Index) GUILayout.Toolbar( (int) index, Enum.GetNames( typeof( Index ) ), null, GUI.ToolbarButtonSize.FitToContents );
             // None
-            if (toolbarIndex == 0 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.None && index != prevIndex) {
                 Document.rootVisualElement.Clear();
             }
             // Widget
-            if (toolbarIndex == 1 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.Widget && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.Widget( Factory ) );
             }
-            if (toolbarIndex == 2 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.RootWidget && index != prevIndex) {
+                Document.rootVisualElement.Clear();
+                Document.rootVisualElement.Add( VisualElementFactory2.RootWidget( Factory ) );
+            }
+            if (index == Index.LeftWidget && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.LeftWidget( Factory ) );
             }
-            if (toolbarIndex == 3 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.SmallWidget && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.SmallWidget( Factory ) );
             }
-            if (toolbarIndex == 4 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.MediumWidget && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.MediumWidget( Factory ) );
             }
-            if (toolbarIndex == 5 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.LargeWidget && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.LargeWidget( Factory ) );
             }
             // Widget
-            if (toolbarIndex == 6 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.DialogWidget && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.DialogWidget( Factory ) );
             }
-            if (toolbarIndex == 7 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.InfoDialogWidget && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.InfoDialogWidget( Factory ) );
             }
-            if (toolbarIndex == 8 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.WarningDialogWidget && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.WarningDialogWidget( Factory ) );
             }
-            if (toolbarIndex == 9 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.ErrorDialogWidget && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.ErrorDialogWidget( Factory ) );
             }
             // TabView
-            if (toolbarIndex == 10 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.TabView && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.TabView( Factory ) );
             }
             // ScrollView
-            if (toolbarIndex == 11 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.ScrollView && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.ScrollView( Factory ) );
             }
             // Scope
-            if (toolbarIndex == 12 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.Scope && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.Scope( Factory ) );
             }
-            if (toolbarIndex == 13 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.Group && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.Group( Factory ) );
             }
-            if (toolbarIndex == 14 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.Box && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.Box( Factory ) );
             }
             // Misc
-            if (toolbarIndex == 15 && toolbarIndex != prevToolbarIndex) {
+            if (index == Index.Misc && index != prevIndex) {
                 Document.rootVisualElement.Clear();
                 Document.rootVisualElement.Add( VisualElementFactory2.Misc( Factory ) );
             }

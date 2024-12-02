@@ -16,7 +16,28 @@ namespace UIToolkit.ThemeStyleSheet.Samples {
                         _ = VisualElementScope.Current + factory.Label( "Widget" );
                     }
                     using (factory.Content().AsScope()) {
+                        using (factory.ColumnGroup().Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" ).AsScope()) {
+                            _ = VisualElementScope.Current + factory.Label( "Hello World !!!" );
+                        }
+                    }
+                    using (factory.Footer().AsScope()) {
+                        _ = VisualElementScope.Current + factory.Submit( "Submit" );
+                        _ = VisualElementScope.Current + factory.Cancel( "Cancel" );
+                    }
+                }
+                return root.VisualElement;
+            }
+        }
+        public static VisualElement RootWidget(VisualElementFactory factory) {
+            using (var root = factory.Widget().AsScope()) {
+                using (factory.Card().AsScope()) {
+                    using (factory.Header().AsScope()) {
                         _ = VisualElementScope.Current + factory.Label( "Widget" );
+                    }
+                    using (factory.Content().AsScope()) {
+                        using (factory.ColumnGroup().Classes( "gray", "medium", "grow-1", "justify-content-center", "align-items-center" ).AsScope()) {
+                            _ = VisualElementScope.Current + factory.Label( "Hello World !!!" );
+                        }
                     }
                     using (factory.Footer().AsScope()) {
                         _ = VisualElementScope.Current + factory.Submit( "Submit" );

@@ -16,16 +16,19 @@ Or you should import the ```ThemeStyleSheet.uss``` and ```LibraryStyleSheet.uss`
 This package contains styles for the following elements:
 - Views
     - View
-    - LeftView
-    - SmallView
-    - MediumView
-    - LargeView
-    - DialogView
-    - InfoDialogView
-    - WarningDialogView
-    - ErrorDialogView
+    - WidgetView
+    - RootWidgetView
+    - LeftWidgetView
+    - SmallWidgetView
+    - MediumWidgetView
+    - LargeWidgetView
+    - DialogWidgetView
+    - InfoDialogWidgetView
+    - WarningDialogWidgetView
+    - ErrorDialogWidgetView
 - Widgets
     - Widget
+    - RootWidget
     - LeftWidget
     - SmallWidget
     - MediumWidget
