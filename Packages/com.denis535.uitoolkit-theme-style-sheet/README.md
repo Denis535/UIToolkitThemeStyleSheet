@@ -1,5 +1,5 @@
 # Overview
-This package provides you with the ```UIToolkit``` theme stylesheets, as well as some additional visual elements and tools.
+This package provides you with the UIToolkit theme stylesheets, as well as some additional visual elements and tools.
 
 # How to use it
 To use this package in your project you should import the ```ThemeStyleSheet.tss```:
