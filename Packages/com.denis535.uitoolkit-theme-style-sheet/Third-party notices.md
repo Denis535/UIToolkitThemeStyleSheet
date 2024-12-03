@@ -2,17 +2,17 @@
 This package contains the third-party assets under their own respective licenses.
 
 ## Inter font
-These assets are developed by Rasmus Andersson.
-And it's licensed under the SIL Open Font License, Version 1.1.
+These assets are developed by ```Rasmus Andersson```.
+And it's licensed under the ```SIL Open Font License, Version 1.1```.
 Files:
 - Assets.UnityEngine.UIElements/Fonts/
 Links:
 - https://rsms.me/inter/
 - https://github.com/rsms/inter/blob/master/LICENSE.txt
 
-## Assets of com.unity.ui package
-These assets are developed by Unity.
-And it's licensed under the Unity Companion License for Unity-dependent projects.
+## com.unity.ui package
+These assets are developed by ```Unity Technologies```.
+And it's licensed under the ```Unity Companion License``` for Unity-dependent projects.
 Files:
 - Assets.UnityEngine.UIElements/Images/
 Links:
