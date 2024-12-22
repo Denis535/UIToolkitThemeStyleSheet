@@ -1,5 +1,5 @@
 # Overview
-This package provides you with the UIToolkit theme stylesheets, as well as some additional visual elements and tools.
+This package provides you with the UIToolkit theme style sheets, as well as some additional visual elements and tools.
 
 # How to use it
 To use this package in your project you should import the ```ThemeStyleSheet.tss```:
@@ -16,6 +16,7 @@ Or you should import the ```ThemeStyleSheet.uss``` and ```LibraryStyleSheet.uss`
 This package provides you with styles for the following elements:
 - Views
     - View
+    - IndieView
     - WidgetView
     - RootWidgetView
     - LeftWidgetView
@@ -91,8 +92,8 @@ This package extends the editor to add support for additional formats:
 - https://openupm.com/packages/?sort=downloads&q=denis535
 - https://www.fab.com/sellers/Denis535
 - https://assetstore.unity.com/publishers/90787
-- https://www.youtube.com/channel/UCLFdZl0pFkCkHpDWmodBUFg
 - https://www.udemy.com/user/denis-84102
+- https://www.youtube.com/channel/UCLFdZl0pFkCkHpDWmodBUFg
 
 # If you want to support me
 If you want to support me, please rate my packages, subscribe to my YouTube channel and like my videos.
