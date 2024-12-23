@@ -6,10 +6,10 @@ namespace UIToolkit.ThemeStyleSheet {
     using UnityEditor;
     using UnityEngine;
 
-    public class AboutPackageWindow : EditorWindow {
+    public class AboutWindow : EditorWindow {
 
         // Constructor
-        public AboutPackageWindow() : base() {
+        public AboutWindow() : base() {
             titleContent = new GUIContent( "About UIToolkit Theme Style Sheet package" );
             minSize = maxSize = new Vector2( 1200, 800 );
         }
@@ -27,7 +27,7 @@ namespace UIToolkit.ThemeStyleSheet {
             using (new GUILayout.VerticalScope( EditorStyles.helpBox )) {
                 {
                     EditorGUILayout.LabelField( "Overview", EditorStyles.boldLabel );
-                    EditorGUILayout.LabelField( "This package provides you with the UIToolkit theme stylesheets, as well as some additional visual elements and tools." );
+                    EditorGUILayout.LabelField( "This package provides you with the UIToolkit theme style sheets, as well as some additional visual elements and tools." );
                 }
                 EditorGUILayout.Separator();
                 {
@@ -40,8 +40,8 @@ namespace UIToolkit.ThemeStyleSheet {
                     if (EditorGUILayout.LinkButton( "fab.com" )) Application.OpenURL( "https://www.fab.com/sellers/Denis535" );
                     if (EditorGUILayout.LinkButton( "assetstore.unity.com" )) Application.OpenURL( "https://assetstore.unity.com/publishers/90787" );
                     EditorGUILayout.Space( 2f );
-                    if (EditorGUILayout.LinkButton( "youtube.com" )) Application.OpenURL( "https://www.youtube.com/channel/UCLFdZl0pFkCkHpDWmodBUFg" );
                     if (EditorGUILayout.LinkButton( "udemy.com" )) Application.OpenURL( "https://www.udemy.com/user/denis-84102" );
+                    if (EditorGUILayout.LinkButton( "youtube.com" )) Application.OpenURL( "https://www.youtube.com/channel/UCLFdZl0pFkCkHpDWmodBUFg" );
                 }
                 EditorGUILayout.Separator();
                 {
